@@ -1,0 +1,10 @@
+{
+    "sections": {
+      "userguide_banner": {
+        "type": "userguide-banner"
+      }
+    },
+    "order": [
+      "userguide_banner"
+    ]
+  }
