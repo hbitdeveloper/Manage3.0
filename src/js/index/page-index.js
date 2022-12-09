@@ -4,4 +4,6 @@
  * @LastEditTime: 2022-12-08 12:45:33
  * @FilePath: \shopify3.0\src\js\index\page-index.js
  */
-import '../../css/slide-swiper.css'
+import '../../css/slide-swiper.css';
+
+console.log(1);
