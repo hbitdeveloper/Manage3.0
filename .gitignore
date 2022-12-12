@@ -1,12 +1,10 @@
 config.yml
 node_modules/
-theme/
 dist/
 theme-zip/
 report.html
 theme-ready.tmp
 theme/config/settings_data.json
-themes/
 *.lock
 LICENSE
 .idea

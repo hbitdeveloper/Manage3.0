@@ -8,3 +8,4 @@ import $ from 'jquery'
 import '../../css/theme.css'
 window.jQuery = window.$ = $
 __webpack_public_path__ = window.__webpack_public_path__;
+console.log("demo")
