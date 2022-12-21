@@ -47,6 +47,9 @@
 .video-swiper .swiper-slide {
     width: 68.07292vw;
 }
+.video-swiper .swiper-slide-active {
+    border-bottom: solid 8px var(--primary-color);
+}
 
 .slide {
     display: flex;
@@ -855,6 +858,9 @@
 
     .video-swiper .slide-content {
         top: 11.33333vw;
+    }
+    .video-swiper .swiper-slide-active {
+        border-bottom: solid 4px var(--primary-color);
     }
 
     .slide-title {
