@@ -199,6 +199,61 @@
     },
     "voice_swiper": {
       "type": "voice-swiper",
+      "blocks": {
+        "793b22ad-996f-4971-b006-ebd433677546": {
+          "type": "image",
+          "settings": {
+            "p_name": "Portable\nPower Stati-1",
+            "p_link": "https:\/\/us.roborock.com\/pages\/roborock-q7",
+            "rating": 4,
+            "review_title": "The best robovac!",
+            "user_comment": "I've been a huge fan of Jackery for many years now, I've owned the original 1000 and still own a 300 that we use regularlyThes ...",
+            "user_name": "Amazon C.",
+            "user_avator": "shopify:\/\/shop_images\/1_2x_147924d7-f3ad-459e-9390-b3718a166720.png",
+            "image": "shopify:\/\/shop_images\/pc-1.png",
+            "m_image": "shopify:\/\/shop_images\/mb-1.jpg",
+            "pc_x": 29,
+            "pc_y": 30,
+            "m_x": 64,
+            "m_y": 37
+          }
+        },
+        "2093c4e1-6fe0-4dd1-8bd5-71616d912ae2": {
+          "type": "image",
+          "settings": {
+            "p_name": "",
+            "p_link": "",
+            "rating": 4,
+            "review_title": "",
+            "user_comment": "",
+            "user_name": "",
+            "pc_x": 28,
+            "pc_y": 14,
+            "m_x": 63,
+            "m_y": 37
+          }
+        },
+        "1698624f-63d3-44df-a160-9c25edd33b20": {
+          "type": "image",
+          "settings": {
+            "p_name": "",
+            "p_link": "",
+            "rating": 4,
+            "review_title": "",
+            "user_comment": "",
+            "user_name": "",
+            "pc_x": 28,
+            "pc_y": 14,
+            "m_x": 63,
+            "m_y": 37
+          }
+        }
+      },
+      "block_order": [
+        "793b22ad-996f-4971-b006-ebd433677546",
+        "2093c4e1-6fe0-4dd1-8bd5-71616d912ae2",
+        "1698624f-63d3-44df-a160-9c25edd33b20"
+      ],
       "settings": {
         "title": "Voice from Our Custo"
       }
