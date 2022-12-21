@@ -1,25 +1,124 @@
 {
   "sections": {
     "slide_swiper": {
-      "type": "slide-swiper"
+      "type": "slide-swiper",
+      "blocks": {
+        "0b6dcb64-01f7-4134-83e3-4d3f9cdc7778": {
+          "type": "image",
+          "settings": {
+            "title": "Two line123\nslide title.",
+            "link": "https:\/\/us.roborock.com\/",
+            "link_text": "View more",
+            "image": "shopify:\/\/shop_images\/pc_7b81a0fd-b42b-49a8-bae9-63404a53eb1f.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb_fc3b1a84-4806-4423-b754-b583472e4407.jpg"
+          }
+        },
+        "e940ffb5-f55f-4416-86fe-e3f0db293801": {
+          "type": "image",
+          "settings": {
+            "title": "Two line\nslide title.",
+            "link": "https:\/\/us.roborock.com\/",
+            "link_text": "View more",
+            "image": "shopify:\/\/shop_images\/pc_63155f50-5e6f-498b-9eee-a676f2adad42.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb.jpg"
+          }
+        },
+        "a728b691-491b-446b-b8a8-e460bec8c3ba": {
+          "type": "image",
+          "settings": {
+            "title": "Two line\nslide title.",
+            "link": "https:\/\/us.roborock.com\/",
+            "link_text": "View more",
+            "image": "shopify:\/\/shop_images\/pc_3dfc0afe-db0e-4183-abca-2fdb039e96e9.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb_213ce581-bf77-4693-8055-4c1646816ffc.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "0b6dcb64-01f7-4134-83e3-4d3f9cdc7778",
+        "e940ffb5-f55f-4416-86fe-e3f0db293801",
+        "a728b691-491b-446b-b8a8-e460bec8c3ba"
+      ],
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
     },
     "collection_swiper": {
-      "type": "collection-swiper"
+      "type": "collection-swiper",
+      "blocks": {
+        "a7c7d6b6-5765-4d13-9073-b5747aa40640": {
+          "type": "image",
+          "settings": {
+            "title": "Solar Generator",
+            "link": "https:\/\/www.dji.com\/cn",
+            "link_text": "VIEW MORE",
+            "help_text": "Help you choose",
+            "help_link": "https:\/\/www.dji.com\/cn",
+            "image": "shopify:\/\/shop_images\/pc_7b81a0fd-b42b-49a8-bae9-63404a53eb1f.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb_fc3b1a84-4806-4423-b754-b583472e4407.jpg",
+            "thumbnail_image": "shopify:\/\/shop_images\/2000pro.png"
+          }
+        },
+        "91772b6d-966f-445d-9398-7b8155e26ba7": {
+          "type": "image",
+          "settings": {
+            "title": "Portable Power Stati",
+            "link": "https:\/\/www.dji.com\/cn",
+            "link_text": "VIEW MORE",
+            "help_text": "Help you choose",
+            "help_link": "https:\/\/www.dji.com\/cn",
+            "image": "shopify:\/\/shop_images\/pc_63155f50-5e6f-498b-9eee-a676f2adad42.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb.jpg",
+            "thumbnail_image": "shopify:\/\/shop_images\/Portable-Power-Station.png"
+          }
+        },
+        "0d179f3e-99ef-49c6-abfa-0e860058caac": {
+          "type": "image",
+          "settings": {
+            "title": "Solar Panel",
+            "link": "https:\/\/www.dji.com\/cn",
+            "link_text": "VIEW MORE",
+            "help_text": "Help you choose",
+            "help_link": "",
+            "image": "shopify:\/\/shop_images\/pc_3dfc0afe-db0e-4183-abca-2fdb039e96e9.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb_213ce581-bf77-4693-8055-4c1646816ffc.jpg",
+            "thumbnail_image": "shopify:\/\/shop_images\/Solar-Panel.png"
+          }
+        }
+      },
+      "block_order": [
+        "a7c7d6b6-5765-4d13-9073-b5747aa40640",
+        "91772b6d-966f-445d-9398-7b8155e26ba7",
+        "0d179f3e-99ef-49c6-abfa-0e860058caac"
+      ],
+      "settings": {
+      }
     },
     "video_swiper": {
-      "type": "video-swiper"
+      "type": "video-swiper",
+      "settings": {
+      }
     },
     "scene_swiper": {
-      "type": "scene-swiper"
+      "type": "scene-swiper",
+      "settings": {
+      }
     },
     "product_swiper": {
-      "type": "product-swiper"
+      "type": "product-swiper",
+      "settings": {
+      }
     },
     "voice_swiper": {
-      "type": "voice-swiper"
+      "type": "voice-swiper",
+      "settings": {
+      }
     },
     "support_section": {
-      "type": "index-support"
+      "type": "index-support",
+      "settings": {
+      }
     }
   },
   "order": [
