@@ -133,28 +133,28 @@ module.exports = {
         }, {
             reload: false
         }),
-        new CopyPlugin({ // 复制公共新增theme liquid
-            patterns: [{
-                    from: path.resolve(__dirname, 'src/liquid/common/snippets/'),
-                    to: path.resolve(__dirname, `theme/${shopifyStore}/snippets/`),
-                    noErrorOnMissing: true // 处理空文件夹报错
-                },
-                {
-                    from: path.resolve(__dirname, 'src/liquid/common/sections/'),
-                    to: path.resolve(__dirname, `theme/${shopifyStore}/sections/`),
-                    noErrorOnMissing: true
-                },
-                {
-                    from: path.resolve(__dirname, 'src/liquid/common/layout/'),
-                    to: path.resolve(__dirname, `theme/${shopifyStore}/layout/`),
-                    noErrorOnMissing: true
-                },
-                {
-                    from: path.resolve(__dirname, 'src/liquid/common/assets/'),
-                    to: path.resolve(__dirname, `theme/${shopifyStore}/assets/`),
-                    noErrorOnMissing: true
-                }
-            ]
-        })
+        // new CopyPlugin({ // 复制公共新增theme liquid
+        //     patterns: [{
+        //             from: path.resolve(__dirname, 'src/liquid/common/snippets/'),
+        //             to: path.resolve(__dirname, `theme/${shopifyStore}/**/snippets/`),
+        //             noErrorOnMissing: true // 处理空文件夹报错
+        //         },
+        //         {
+        //             from: path.resolve(__dirname, 'src/liquid/common/sections/'),
+        //             to: path.resolve(__dirname, `theme/${shopifyStore}/**/sections/`),
+        //             noErrorOnMissing: true
+        //         },
+        //         {
+        //             from: path.resolve(__dirname, 'src/liquid/common/layout/'),
+        //             to: path.resolve(__dirname, `theme/${shopifyStore}/**/layout/`),
+        //             noErrorOnMissing: true
+        //         },
+        //         {
+        //             from: path.resolve(__dirname, 'src/liquid/common/assets/'),
+        //             to: path.resolve(__dirname, `theme/${shopifyStore}/**/assets/`),
+        //             noErrorOnMissing: true
+        //         }
+        //     ]
+        // })
     ],
 }

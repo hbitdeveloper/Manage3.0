@@ -18,22 +18,42 @@ module.exports = merge(common, {
         new CopyPlugin({
             patterns: [{
                     from: path.resolve(__dirname, `src/liquid/dev/snippets/`),
-                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'master'}/snippets/`),
+                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/snippets/`),
                     noErrorOnMissing: true // 处理空文件夹报错
                 },
                 {
+                    from: path.resolve(__dirname, 'src/liquid/common/snippets/'),
+                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/snippets/`),
+                    noErrorOnMissing: true
+                },
+                {
                     from: path.resolve(__dirname, 'src/liquid/dev/sections/'),
-                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'master'}/sections/`),
+                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/sections/`),
+                    noErrorOnMissing: true
+                },
+                {
+                    from: path.resolve(__dirname, 'src/liquid/common/sections/'),
+                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/sections/`),
                     noErrorOnMissing: true
                 },
                 {
                     from: path.resolve(__dirname, 'src/liquid/dev/layout/'),
-                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'master'}/layout/`),
+                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/layout/`),
+                    noErrorOnMissing: true
+                },
+                {
+                    from: path.resolve(__dirname, 'src/liquid/common/layout/'),
+                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/layout/`),
                     noErrorOnMissing: true
                 },
                 {
                     from: path.resolve(__dirname, 'src/liquid/dev/assets/'),
-                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'master'}/assets/`),
+                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/assets/`),
+                    noErrorOnMissing: true
+                },
+                {
+                    from: path.resolve(__dirname, 'src/liquid/common/assets/'),
+                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/assets/`),
                     noErrorOnMissing: true
                 }
             ]
