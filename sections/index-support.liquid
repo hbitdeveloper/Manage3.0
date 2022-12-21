@@ -1,61 +1,22 @@
-
-
-<div class="support-section-title">Support</div>
-        <div class="support-more underlines-btn">View more ></div>
-        <div class="support-accordion">
-            <div class="col-container">
-                <img src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/icon_4.png?v=1670394111" alt="">
-                <p>30-Day Money -back Guarantee</p>
-                <div class="accordion-arrow"><span class="iconfont jackery-icon-arrow-right"></span></div>
-                <div class="support-content">
-                    <span>
-                        Free shipping costs on every Jackery order. Fast Shipping: 3 - 4 business days FedEx shipping
-                    service
-                    for: CA/AL/GA/LA/MA/MO/NC/SC/NC/VA/AR/IL/KS/OK/TX. Warm Reminder: please note if the Solar Generator
-                    bundle is purchased, all items included will be shipped in separate packages.
-                    </span>
-                </div>
-            </div>
-            <div class="col-container">
-                <img src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/icon_3.png?v=1670394111" alt="">
-                <p>Free & Fast Delivery</p>
-                <div class="accordion-arrow"><span class="iconfont jackery-icon-arrow-right"></span></div>
-                <div class="support-content">
-                    <span>
-                        Free shipping costs on every Jackery order. Fast Shipping: 3 - 4 business days FedEx shipping
-                    service
-                    for: CA/AL/GA/LA/MA/MO/NC/SC/NC/VA/AR/IL/KS/OK/TX. Warm Reminder: please note if the Solar Generator
-                    bundle is purchased, all items included will be shipped in separate packages.
-                    </span>
-                </div>
-            </div>
-            <div class="col-container">
-                <img src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/icon_2.png?v=1670394111" alt="">
-                <p>Free RMA Return</p>
-                <div class="accordion-arrow"><span class="iconfont jackery-icon-arrow-right"></span></div>
-                <div class="support-content">
-                    <span>
-                        Free shipping costs on every Jackery order. Fast Shipping: 3 - 4 business days FedEx shipping
-                    service
-                    for: CA/AL/GA/LA/MA/MO/NC/SC/NC/VA/AR/IL/KS/OK/TX. Warm Reminder: please note if the Solar Generator
-                    bundle is purchased, all items included will be shipped in separate packages.
-                    </span>
-                </div>
-            </div>
-            <div class="col-container">
-                <img src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/icon_4.png?v=1670394111" alt="">
-                <p>30-Day Money -back Guarantee</p>
-                <div class="accordion-arrow"><span class="iconfont jackery-icon-arrow-right"></span></div>
-                <div class="support-content">
-                    <span>
-                        Free shipping costs on every Jackery order. Fast Shipping: 3 - 4 business days FedEx shipping
-                    service
-                    for: CA/AL/GA/LA/MA/MO/NC/SC/NC/VA/AR/IL/KS/OK/TX. Warm Reminder: please note if the Solar Generator
-                    bundle is purchased, all items included will be shipped in separate packages.
-                    </span>
-                </div>
-            </div>
+<div class="index-container">
+<div class="support-section-title h2">{{section.settings.title | escape}}</div>
+        <div style="text-align: center;">
+          <a class="support-more underlines-btn h5" href="{{section.settings.link}}">{{section.settings.link_text | escape}} <span class="iconfont jackery-icon-arrow-right"></span></a>
         </div>
+        <div class="support-accordion">
+            {% for block in section.blocks %}
+            {%- assign img_url = block.settings.image | img_url: '100x' -%}
+            <div class="col-container">
+                <img src="{{img_url}}" alt="{{block.settings.title}}">
+                <p class="h4">{{block.settings.title | escape}}</p>
+                <div class="accordion-arrow"><span class="iconfont jackery-icon-arrow-right"></span></div>
+                <div class="support-content">
+                    <span class="p">{{block.settings.content | escape}}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+</div>
 
 <script src="{{ 'index-support.bundle.js' | asset_url }}" defer="defer"></script>
 
@@ -64,7 +25,18 @@
   "name": "Index support",
   "tag": "section",
   "class": "section index-section-support",
-  "settings": [],
-  "blocks": []
+  "settings": [
+    {"type": "text", "id": "title", "label": "Section title", "default": "Support"},
+    {"type": "url", "id": "link", "label": "Slide link"},
+    {"type": "text", "id": "link_text", "label": "Button text", "default": "View more"}
+  ],
+  "blocks": [{
+      "type": "image", "name": "Index Support",
+      "settings": [
+        {"type": "text", "id": "title", "label": "Heading", "default": "Two line slide title."},
+        {"type": "textarea", "id": "content", "label": "Support content"},
+        {"type": "image_picker", "id": "image", "label": "Icon"}
+     ]
+  }]
 }
 {% endschema %}
