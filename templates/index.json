@@ -97,27 +97,72 @@
     },
     "video_swiper": {
       "type": "video-swiper",
+      "blocks": {
+        "f04accb4-c77f-4f5e-abe3-1aed48d378be": {
+          "type": "image",
+          "settings": {
+            "title": "Osmo Action 3",
+            "link": "https:\/\/www.dji.com\/cn",
+            "link_text": "View more",
+            "video_url": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/AC202%20Video\/F83_AC202_Showreel_Clean_-10s_V3_2400-1440_20220913.mp4",
+            "video_pic": "shopify:\/\/shop_images\/RV-Life-mb.jpg"
+          }
+        },
+        "562dc564-b293-4812-9b71-c68dd65e11df": {
+          "type": "image",
+          "settings": {
+            "title": "Two line slide title - 1.",
+            "link": "",
+            "link_text": "View more",
+            "video_url": ""
+          }
+        },
+        "0f3270bb-9e1d-4cf4-815a-8f243c04fc14": {
+          "type": "image",
+          "settings": {
+            "title": "Two line slide title - 1.",
+            "link": "",
+            "link_text": "View more",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "f04accb4-c77f-4f5e-abe3-1aed48d378be",
+        "562dc564-b293-4812-9b71-c68dd65e11df",
+        "0f3270bb-9e1d-4cf4-815a-8f243c04fc14"
+      ],
       "settings": {
       }
     },
     "scene_swiper": {
       "type": "scene-swiper",
       "settings": {
+        "title": "Application Scenarios of Jackery Solar"
       }
     },
     "product_swiper": {
       "type": "product-swiper",
       "settings": {
+        "title": "Featured Products",
+        "p_title": "Shop now",
+        "p_more": "Product Compare",
+        "home_featured_products": "",
+        "products_to_show": 4
       }
     },
     "voice_swiper": {
       "type": "voice-swiper",
       "settings": {
+        "title": "Voice from Our Custo"
       }
     },
     "support_section": {
       "type": "index-support",
       "settings": {
+        "title": "Support",
+        "link": "",
+        "link_text": "View more"
       }
     }
   },
