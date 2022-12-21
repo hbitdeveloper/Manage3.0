@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-user-guide",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
