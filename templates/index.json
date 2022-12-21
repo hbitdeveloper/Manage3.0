@@ -111,10 +111,11 @@
         "562dc564-b293-4812-9b71-c68dd65e11df": {
           "type": "image",
           "settings": {
-            "title": "Two line slide title - 1.",
-            "link": "",
+            "title": "DJI 3 Pro",
+            "link": "https:\/\/www.dji.com\/cn",
             "link_text": "View more",
-            "video_url": ""
+            "video_url": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/F31_HG306_shot-on_CLEAN__10s_V1_2400x1440.mp4",
+            "video_pic": "shopify:\/\/shop_images\/Home-Backup-mb.jpg"
           }
         },
         "0f3270bb-9e1d-4cf4-815a-8f243c04fc14": {
