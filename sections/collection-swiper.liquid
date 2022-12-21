@@ -13,14 +13,15 @@
                         style="background-image: url({{m_img_url}})">
                     </div>
 
-                    <div class="slide-content slide-content-img">
-                        <img src="{{p_img_url}}"
-                            alt="" srcset="">
-                        <a class="a-button-fill" href="{{block.settings.link}}">{{block.settings.link_text | escape}} ></a>
-                    </div>
-                    <div class="slide-info">
-                        <div class="slid-collection-title h1">{{block.settings.title | escape}}</div>
-                        <a class="slid-collection-link h4 underlines-btn">{{block.settings.help_text | escape}} ></a>
+                    <div class="index-container absolute">
+                        <div class="slide-content slide-content-img absolute ">
+                            <img src="{{p_img_url}}" alt="" srcset="">
+                            <a class="a-button-fill h5" href="{{block.settings.link}}">{{block.settings.link_text | escape}} <span class="iconfont jackery-icon-arrow-right"></span></a>
+                        </div>
+                        <div class="slide-info absolute left-0 top-0 flex flex-col">
+                            <div class="slid-collection-title h2">{{block.settings.title | escape}}</div>
+                            <a class="slid-collection-link h5 underlines-btn">{{block.settings.help_text | escape}} <span class="iconfont jackery-icon-arrow-right"></span></a>
+                        </div>
                     </div>
                 </div>
             {% endfor %}
@@ -33,7 +34,7 @@
                         <div class="slideshow-thumbnail-img"
                             style="background-image: url({{p_img_url}});">
                         </div>
-                        <div class="slideshow-thumbnail-name">{{block.settings.title | escape}}</div>
+                        <div class="slideshow-thumbnail-name h5">{{block.settings.title | escape}}</div>
                     </div>
                 {% endfor %}
             </div>
