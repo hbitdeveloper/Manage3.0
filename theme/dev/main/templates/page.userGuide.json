@@ -2,8 +2,7 @@
   "sections": {
     "main": {
       "type": "page-user-guide",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
