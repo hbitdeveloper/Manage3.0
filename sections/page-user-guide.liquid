@@ -1,20 +1,4 @@
 <style>
-ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article,
-aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {border: none; outline: none; margin: 0; padding: 0;}
-
-em,i {font-style: normal;}
-strong {font-weight: normal;}
-a {text-decoration: none; color: #333; cursor: pointer;}
-ul,ol,li {list-style: none;}
-img {border: none; vertical-align: middle;}
-
-:root {
-	--gap: 20px;
-	--radius: 12px;
-	--border-primary: 2px solid #FD5000;
-	--border-grey: 1px solid #ccc;
-}
-
 .img-icon {width: 96px; height: 96px; font-size: 96px; color: var(--primary-color); display: inline-block;}
 
 .accordion {width: 100%;}
@@ -31,7 +15,7 @@ img {border: none; vertical-align: middle;}
 .layer-container {width: 100%; max-width: 1200px; margin: 0 auto;}
 
 .banner {
-	width: 100%; height: 100%; max-height: 890px; padding-top: 100px;
+	width: 100%; height: 100vh; max-height: 890px; padding-top: 100px;
 	background: url("res3/user-guide-banner.jpg") center no-repeat; background-size: cover;
 }
 .banner h5 {width: 34vw; margin-top: 22px;}
@@ -91,14 +75,14 @@ img {border: none; vertical-align: middle;}
 .contact ul li b {margin-bottom: 25px;}
 </style>
 
-<section class="layer banner">
+<div class="layer banner">
   <div class="layer-container">
     <h1>User Guide</h1>
     <h5>Get detailed operating instructions and product care information for all Jackery products</h5>
   </div>
-</section>
+</div>
 
-<section class="layer layer-container manuals">
+<div class="layer layer-container manuals">
   <h2>User Manuals</h2>
   <ul class="tab">
     <li class="h4 on">Portable Power Station</li>
@@ -109,7 +93,7 @@ img {border: none; vertical-align: middle;}
     <input type="text" placeholder="Search Product Model" />
     <button type="button">Search</button>
   </div>
-  <ul class="list">
+  <ul class="list tab-content">
     <li>
       <i class="img-icon iconfont jackery-icon-pdf"></i>
       <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
@@ -152,9 +136,9 @@ img {border: none; vertical-align: middle;}
     </li>
   </ul>
   <a class="more h5" href="#">View More <i class="iconfont jackery-icon-arrowdown"></i></a>
-</section>
+</div>
 
-<section class="layer layer-container manuals">
+<div class="layer layer-container manuals">
   <h2>User Guide Video</h2>
   <ul class="tab">
     <li class="h4 on">Solar Generator</li>
@@ -168,9 +152,9 @@ img {border: none; vertical-align: middle;}
   </div>
   
   {% comment %} include slideshow video-slideshow {% endcomment %}
-</section>
+</div>
 
-<section class="layer layer-container manuals maintenance">
+<div class="layer layer-container manuals maintenance">
   <h2>Product Maintenance</h2>
   <ul class="tab">
     <li class="h4 on">Portable Power Station</li>
@@ -194,9 +178,9 @@ img {border: none; vertical-align: middle;}
       <a class="h5" href="#">LEARN MORE<i class="iconfont jackery-icon-arrow-right"></i></a>
     </li>
   </ul>
-</section>
+</div>
 
-<section class="layer layer-container manuals faq">
+<div class="layer layer-container manuals faq">
   <h2>FAQ</h2>
   <ul class="tab">
     <li class="h4 on">Solar Generator</li>
@@ -243,9 +227,9 @@ img {border: none; vertical-align: middle;}
       </li>
     </ul>
   </div>
-</section>
+</div>
 
-<section class="layer layer-container manuals contact">
+<div class="layer layer-container manuals contact">
   <h2>Contact Us</h2>
   <ul>
     <li>
@@ -263,4 +247,12 @@ img {border: none; vertical-align: middle;}
       <p>&lt; 9AM to 5PM PST (Weekdays) &gt;</p>
     </li>
   </ul>
-</section>
+</div>
+
+
+{% schema %}
+{
+  "name": "user guide", "class": "div-user-guide", "tag": "section",
+  "settings": []
+}
+{% endschema %}
