@@ -152,8 +152,10 @@
         "0f97aba0-b7db-4542-bfc0-227ce2fb3d72": {
           "type": "image",
           "settings": {
-            "title": "Two line slide title.",
-            "link": ""
+            "title": "Camping",
+            "link": "https:\/\/us.roborock.com\/pages\/roborock-q5",
+            "image": "shopify:\/\/shop_images\/Camping-pc.jpg",
+            "m_image": "shopify:\/\/shop_images\/Camping--mb.jpg"
           }
         },
         "75f0eb1f-5197-4dc1-9375-f8fd3b67bad9": {
