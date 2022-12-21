@@ -17,8 +17,10 @@
           "type": "image",
           "settings": {
             "title": "Two line\nslide title.",
-            "link": "",
-            "link_text": "Optional button"
+            "link": "https:\/\/us.roborock.com\/",
+            "link_text": "View more",
+            "image": "shopify:\/\/shop_images\/pc_63155f50-5e6f-498b-9eee-a676f2adad42.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb.jpg"
           }
         },
         "a728b691-491b-446b-b8a8-e460bec8c3ba": {
