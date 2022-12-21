@@ -121,10 +121,11 @@
         "0f3270bb-9e1d-4cf4-815a-8f243c04fc14": {
           "type": "image",
           "settings": {
-            "title": "Two line slide title - 1.",
-            "link": "",
+            "title": "DJI RS 3 Pro",
+            "link": "https:\/\/www.dji.com\/cn",
             "link_text": "View more",
-            "video_url": ""
+            "video_url": "",
+            "video_pic": "shopify:\/\/shop_images\/mb-1.jpg"
           }
         }
       },
