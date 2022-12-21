@@ -5,7 +5,7 @@
                     {%- assign m_img_url = block.settings.m_image | img_url: '750x' -%}
                     {%- assign banner_icon = block.settings.banner_icon | img_url: '671x' -%}
 
-                    <div class="swiper-slide slide">
+                    <div class="swiper-slide slide" icon="{{block.settings.banner_icon}}">
                         <div class="slide-image pc-block absolute"
                             style="background-image: url({{img_url}})">
                         </div>
