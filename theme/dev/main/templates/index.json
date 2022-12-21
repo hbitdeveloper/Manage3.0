@@ -1,0 +1,127 @@
+{
+  "sections": {
+    "slide_swiper": {
+      "type": "slide-swiper",
+      "blocks": {
+        "5fa7c954-ba7d-4122-b7aa-e0eb1ecd1fb6": {
+          "type": "image",
+          "settings": {
+            "title": "Two linex\nslide title.",
+            "link": "https:\/\/us.roborock.com\/",
+            "link_text": "View more",
+            "image": "shopify:\/\/shop_images\/pc_7b81a0fd-b42b-49a8-bae9-63404a53eb1f.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb_fc3b1a84-4806-4423-b754-b583472e4407.jpg"
+          }
+        },
+        "322b25b9-38fe-4573-87cc-3786bb95eb6e": {
+          "type": "image",
+          "settings": {
+            "title": "Two line\nslide title333333.",
+            "link": "https:\/\/www.dji.com\/cn\/mavic-3-classic?site=brandsite&from=nav",
+            "link_text": "View more",
+            "image": "shopify:\/\/shop_images\/9926e72a649011b9071762d7a2ab80de.png",
+            "m_image": "shopify:\/\/shop_images\/1_e1eeeef0-9781-4e34-b84d-726c1b70cc3b.png"
+          }
+        },
+        "181f077f-5f4a-4a1f-810e-4921c7852a35": {
+          "type": "image",
+          "settings": {
+            "title": "Two line\nslide title4444.",
+            "link": "https:\/\/us.roborock.com\/pages\/roborock-q5",
+            "link_text": "View more",
+            "image": "shopify:\/\/shop_images\/9926e72a649011b9071762d7a2ab80de.png",
+            "m_image": "shopify:\/\/shop_images\/1_e1eeeef0-9781-4e34-b84d-726c1b70cc3b.png"
+          }
+        }
+      },
+      "block_order": [
+        "5fa7c954-ba7d-4122-b7aa-e0eb1ecd1fb6",
+        "322b25b9-38fe-4573-87cc-3786bb95eb6e",
+        "181f077f-5f4a-4a1f-810e-4921c7852a35"
+      ],
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "collection_swiper": {
+      "type": "collection-swiper",
+      "blocks": {
+        "60705e85-a34a-4990-a796-02c62bab0683": {
+          "type": "image",
+          "settings": {
+            "title": "Solar Generator",
+            "link": "https:\/\/www.dji.com\/cn",
+            "link_text": "View more",
+            "help_text": "Help you choose",
+            "help_link": "https:\/\/www.dji.com\/cn",
+            "image": "shopify:\/\/shop_images\/pc_7b81a0fd-b42b-49a8-bae9-63404a53eb1f.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb_fc3b1a84-4806-4423-b754-b583472e4407.jpg",
+            "thumbnail_image": "shopify:\/\/shop_images\/2000pro.png"
+          }
+        },
+        "6204146a-6c45-45dc-9cf1-6a32e65a434c": {
+          "type": "image",
+          "settings": {
+            "title": "Portable Power Stati",
+            "link": "https:\/\/www.dji.com\/cn",
+            "link_text": "View more",
+            "help_text": "Help you choose",
+            "help_link": "https:\/\/www.dji.com\/cn",
+            "image": "shopify:\/\/shop_images\/pc_63155f50-5e6f-498b-9eee-a676f2adad42.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb.jpg",
+            "thumbnail_image": "shopify:\/\/shop_images\/Portable-Power-Station.png"
+          }
+        },
+        "1ce1ca6d-b83a-4231-a5de-ef4c968aa00a": {
+          "type": "image",
+          "settings": {
+            "title": "Solar Panel",
+            "link": "https:\/\/www.dji.com\/cn",
+            "link_text": "View more",
+            "help_text": "Help you choose",
+            "help_link": "https:\/\/www.dji.com\/cn",
+            "image": "shopify:\/\/shop_images\/pc_3dfc0afe-db0e-4183-abca-2fdb039e96e9.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb_213ce581-bf77-4693-8055-4c1646816ffc.jpg",
+            "thumbnail_image": "shopify:\/\/shop_images\/Solar-Panel.png"
+          }
+        }
+      },
+      "block_order": [
+        "60705e85-a34a-4990-a796-02c62bab0683",
+        "6204146a-6c45-45dc-9cf1-6a32e65a434c",
+        "1ce1ca6d-b83a-4231-a5de-ef4c968aa00a"
+      ],
+      "settings": {}
+    },
+    "video_swiper": {
+      "type": "video-swiper",
+      "settings": {}
+    },
+    "scene_swiper": {
+      "type": "scene-swiper",
+      "settings": {}
+    },
+    "product_swiper": {
+      "type": "product-swiper",
+      "settings": {}
+    },
+    "voice_swiper": {
+      "type": "voice-swiper",
+      "settings": {}
+    },
+    "support_section": {
+      "type": "index-support",
+      "settings": {}
+    }
+  },
+  "order": [
+    "slide_swiper",
+    "collection_swiper",
+    "video_swiper",
+    "scene_swiper",
+    "product_swiper",
+    "voice_swiper",
+    "support_section"
+  ]
+}
