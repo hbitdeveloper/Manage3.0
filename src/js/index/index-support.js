@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-07 16:21:06
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-09 11:34:01
+ * @LastEditTime: 2022-12-13 18:14:09
  * @FilePath: \shopify3.0\src\js\index\index-support.js
  */
 class IndexSupport {
@@ -62,7 +62,8 @@ class IndexSupport {
                         flex: 1,
                         alignItems: 'flex-start',
                         padding: '1.04167vw 1.5625vw 1.5625vw 1.5625vw',
-                        ease: colEase
+                        ease: colEase,
+                        backgroundColor: '#DEDEDE'
                     }, 0);
 
                     gsap.to($thisContainer.find('img'), 0.3, {
@@ -75,7 +76,8 @@ class IndexSupport {
                         flex: 0,
                         alignItems: 'center',
                         padding: '3.75vw 0.83333vw 1.5625vw 0.83333vw',
-                        ease: colEase
+                        ease: colEase,
+                        backgroundColor: '#E8E8E8'
                     }, 0);
 
                     gsap.to($colContainer.not($thisContainer).find('img'), 0.3, {
@@ -86,7 +88,8 @@ class IndexSupport {
                 } else {
                     const activeH = $thisContainer.find('.support-content span').height() || 150
                     gsap.to($thisContainer, 0.3, {
-                        height: 'auto'
+                        height: 'auto',
+                        ackgroundColor: '#DEDEDE'
                     }, 0)
 
                     gsap.set($thisContainer.find('.jackery-icon-arrow-right')[0], {

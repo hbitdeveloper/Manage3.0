@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-01 17:11:17
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-08 10:30:36
+ * @LastEditTime: 2022-12-16 15:35:08
  * @FilePath: \shopify3.0\src\js\index\video-swiper.js
  */
 class VideoSlideshow {
@@ -68,6 +68,28 @@ class VideoSlideshow {
         this.slideshow.on('slideNextTransitionStart', () => this.animate('next'));
         this.slideshow.on('slidePrevTransitionStart', () => this.animate('prev'));
     }
+    autoplayVideo(modal) {
+        var video = modal.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+        if (!video) return;
+        // HTML5 video play
+        if (video.tagName.toLowerCase() === 'video') {
+            video.play();
+            return;
+        }
+        video.src = video.src + (video.src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
+    }
+    stopVideo(modal) {
+        // YouTube or HTML5 video in the modal
+        var video = modal.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+        if (!video) return;
+        // pause HTML5 video
+        if (video.tagName.toLowerCase() === 'video') {
+            video.pause();
+            return;
+        }
+        // Remove autoplay from video src
+        video.src = video.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
+    }
     animate(direction = 'next') {
         gsap.set(this.DOM.el.querySelectorAll(".slide-content"), {
             opacity: 0
@@ -119,6 +141,25 @@ class VideoSlideshow {
                 video.currentTime = 0
             }
         }
+
+        // video modal
+        const vModalID = this.DOM.activeSlide.getAttribute("block-id")
+        const vModalSrc = this.DOM.activeSlide.getAttribute("block-src")
+        const vModalDOM = document.querySelector(".video-swiper-modal")
+        vModalDOM.setAttribute("id", 's' + vModalID)
+
+        let player = videojs('index-section-video');
+        player.src({ type: "video/mp4", src: vModalSrc });
+
+        const that = this
+        modals.init({
+            callbackOpen: function (toggle, modal) {
+                that.autoplayVideo(modal);
+            },
+            callbackClose: function (toggle, modal) {
+                that.stopVideo(modal);
+            }
+        });
     }
 }
 

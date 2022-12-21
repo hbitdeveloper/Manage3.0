@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-05 18:29:39
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-08 10:27:41
+ * @LastEditTime: 2022-12-13 18:58:11
  * @FilePath: \shopify3.0\src\js\index\product-swiper.js
  */
 class ProductSlideshow {
@@ -28,7 +28,8 @@ class ProductSlideshow {
                 delay: this.config.slideshow.delay,
                 disableOnInteraction: false,
             },
-            slidesPerView: $(window).width() > 750 ? 1.8 : 0,
+            // slidesPerView: $(window).width() > 750 ? 1.8 : 0,
+            slidesPerView: $(window).width() > 750 ? 'auto' : 0,
             spaceBetween: 0,
             effect: $(window).width() > 750 ? "slide" : "fade",
             centeredSlides: true,
@@ -93,14 +94,6 @@ class ProductSlideshow {
             y: '0%',
             opacity: 1
         })
-
-        setTimeout(() => {
-            const activeWidth = $(".swiper-slide-active").width() || 1000
-            const nextButton = this.DOM.el.querySelector(".slideshow-navigation-button.next")
-            const preButton = this.DOM.el.querySelector(".slideshow-navigation-button.prev")
-            nextButton.style.transform = `translateX(${activeWidth/2-90}px)`
-            preButton.style.transform = `translateX(-${activeWidth/2-40}px)`
-        }, 400);
     }
 }
 

@@ -7,7 +7,7 @@
  */
 const isProduction = process.env.NODE_ENV === 'production';
 const shopifyStore = process.env.SHOPIFY_STORE;
-const shopifyTheme = process.env.SHOPIFY_THEME || 'master';
+const shopifyTheme = process.env.SHOPIFY_THEME || 'main';
 
 const path = require('path');
 const read = require('read-yaml');
@@ -16,7 +16,6 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// const { VueLoaderPlugin } = require('vue-loader/dist/index');
 const CopyPlugin = require('copy-webpack-plugin');
 const glob = require('glob');
 
@@ -36,6 +35,7 @@ const initEntry = () => {
 
 module.exports = {
     mode: isProduction ? 'production' : 'development',
+    devtool: 'eval-source-map',
     entry: initEntry(),
     output: {
         filename: '[name].bundle.js',
@@ -48,15 +48,7 @@ module.exports = {
         },
     },
     module: {
-        rules: [{
-                test: /\.svelte$/,
-                use: {
-                    loader: 'svelte-loader',
-                    options: {
-                        emitCss: false
-                    },
-                },
-            },
+        rules: [
             {
                 test: /\.m?js$/,
                 exclude: /(node_modules)/,
@@ -84,20 +76,13 @@ module.exports = {
                         loader: 'postcss-loader'
                     },
                 ],
-            },
-            {
-                test: /\.vue$/,
-                use: [{
-                    loader: 'vue-loader'
-                }]
-            },
+            }
         ],
     },
     stats: {
         children: false
     },
     plugins: [
-        // new VueLoaderPlugin(),
         new BundleAnalyzerPlugin({
             //   analyzerMode: env === 'analyze' ? 'static' : 'disabled',
             analyzerMode: 'disabled',

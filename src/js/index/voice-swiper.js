@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-06 19:57:09
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-08 10:25:10
+ * @LastEditTime: 2022-12-20 11:51:45
  * @FilePath: \shopify3.0\src\js\index\voice-swiper.js
  */
 class vSlideshow {
@@ -70,8 +70,8 @@ class vSlideshow {
         this.initEvents();
     }
     initEvents() {
-        this.slideshow.on('slideNextTransitionStart', () => this.animate('next'));
-        this.slideshow.on('slidePrevTransitionStart', () => this.animate('prev'));
+        this.slideshow.on('slideNextTransitionEnd', () => this.animate('next'));
+        this.slideshow.on('slidePrevTransitionEnd', () => this.animate('prev'));
         const comments = document.querySelectorAll(".slideshow-thumbnail-container .swiper-slide .voice-user-comment-all")
 
         const slide_next = document.querySelector(".user-voice .voice-text .next-voice-btn")
@@ -117,7 +117,7 @@ class vSlideshow {
         gsap.set(this.DOM.el.querySelectorAll(".slide-content"), {
             opacity: 0
         })
-        gsap.set(this.DOM.el.querySelectorAll(".slide-info"), {
+        $(window).width() > 750 && gsap.set(this.DOM.el.querySelectorAll(".slide-info"), {
             opacity: 0
         })
 

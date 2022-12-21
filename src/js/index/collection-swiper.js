@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-11-24 10:07:30
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-08 17:50:44
+ * @LastEditTime: 2022-12-14 19:10:10
  * @FilePath: \shopify3.0\src\js\index\collection-swiper.js
  */
 class Slideshow2 {
@@ -21,7 +21,7 @@ class Slideshow2 {
           freeMode: true,
           watchSlidesProgress: true,
           direction: $(window).width() > 750 ? "vertical" : "horizontal",
-          clickable: true,
+          clickable: true
         });
         this.slideshow = new Swiper(document.querySelector('.slideshow22222'), {
             speed: 500,
@@ -29,13 +29,14 @@ class Slideshow2 {
             updateOnImagesReady: true,
             lazy: true,
             effect: "fade",
+            initialSlide: $(window).width() > 750 ? 0 : 1,
             scrollbar: {
                 el: '.swiper-scrollbar',
             },
             on: {
                 init: function () {
                     self.animate('next');
-                },
+                }
             },
             thumbs: {
               swiper: self.swiperImg
@@ -56,20 +57,6 @@ class Slideshow2 {
               });
             })
         }, 200);
-
-        window.onresize = () => {
-            this_.swiperImg.destroy(false)
-            this.swiperImg = new Swiper(this.DOM.el.querySelector(".slideshow-thumbnail-container"), {
-                spaceBetween: 10,
-                loop: false,
-                slidesPerView: 'auto',
-                slidesPerGroup: 1,
-                freeMode: true,
-                watchSlidesProgress: true,
-                direction: $(window).width() > 750 ? "vertical" : "horizontal",
-                clickable: true
-            });
-        }
     }
     animate(direction = 'next') {
         gsap.set(this.DOM.el.querySelectorAll(".slide-content"), {
