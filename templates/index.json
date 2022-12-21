@@ -139,6 +139,36 @@
     },
     "scene_swiper": {
       "type": "scene-swiper",
+      "blocks": {
+        "990015fb-2180-4e55-9513-3dfb9ad2d04f": {
+          "type": "image",
+          "settings": {
+            "title": "RV Life",
+            "link": "https:\/\/us.roborock.com\/pages\/roborock-q5",
+            "image": "shopify:\/\/shop_images\/RV-Life-pc.jpg",
+            "m_image": "shopify:\/\/shop_images\/RV-Life-mb.jpg"
+          }
+        },
+        "0f97aba0-b7db-4542-bfc0-227ce2fb3d72": {
+          "type": "image",
+          "settings": {
+            "title": "Two line slide title.",
+            "link": ""
+          }
+        },
+        "75f0eb1f-5197-4dc1-9375-f8fd3b67bad9": {
+          "type": "image",
+          "settings": {
+            "title": "Two line slide title.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "990015fb-2180-4e55-9513-3dfb9ad2d04f",
+        "0f97aba0-b7db-4542-bfc0-227ce2fb3d72",
+        "75f0eb1f-5197-4dc1-9375-f8fd3b67bad9"
+      ],
       "settings": {
         "title": "Application Scenarios of Jackery Solar"
       }
