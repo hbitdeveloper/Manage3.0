@@ -161,8 +161,10 @@
         "75f0eb1f-5197-4dc1-9375-f8fd3b67bad9": {
           "type": "image",
           "settings": {
-            "title": "Two line slide title.",
-            "link": ""
+            "title": "Off-grid living",
+            "link": "https:\/\/us.roborock.com\/pages\/roborock-q5",
+            "image": "shopify:\/\/shop_images\/Off-grid-living-pc.jpg",
+            "m_image": "shopify:\/\/shop_images\/Off-grid-living-mb.jpg"
           }
         }
       },
