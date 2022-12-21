@@ -48,6 +48,10 @@
     width: 68.07292vw;
 }
 
+.video-swiper .swiper-slide-active {
+    border-bottom: solid 8px var(--primary-color);
+}
+
 .slide {
     display: flex;
     justify-content: center;
@@ -864,6 +868,9 @@
         align-items: end;
     }
 
+    .video-swiper .swiper-slide-active {
+        border-bottom: solid 4px var(--primary-color);
+    }
     .video-swiper .slide-title {
         height: auto;
         padding-bottom: 0;
