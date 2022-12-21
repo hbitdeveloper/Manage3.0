@@ -31,9 +31,9 @@
             "title": "Two line\nslide title4444.",
             "link": "https:\/\/us.roborock.com\/pages\/roborock-q5",
             "link_text": "View more",
-            "image": "shopify:\/\/shop_images\/9926e72a649011b9071762d7a2ab80de.png",
-            "m_image": "shopify:\/\/shop_images\/1_e1eeeef0-9781-4e34-b84d-726c1b70cc3b.png",
-            "banner_icon": "shopify:\/\/shop_images\/7b39de404295807e99627a3b4dece62b_00ba7217-4b8e-403d-ae95-313d9a66c5b0.png"
+            "image": "shopify:\/\/shop_images\/pc_3dfc0afe-db0e-4183-abca-2fdb039e96e9.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb_213ce581-bf77-4693-8055-4c1646816ffc.jpg",
+            "banner_icon": "shopify:\/\/shop_images\/DISCOVER_2x_53827856-79f6-4950-9dfb-a1ecaf24195e.png"
           }
         }
       },
@@ -100,7 +100,7 @@
     "video_swiper": {
       "type": "video-swiper",
       "blocks": {
-        "1cf01d7d-c5f4-47a2-859c-32482dc93f62": {
+        "f04accb4-c77f-4f5e-abe3-1aed48d378be": {
           "type": "image",
           "settings": {
             "title": "Osmo Action 3",
@@ -110,38 +110,39 @@
             "video_pic": "shopify:\/\/shop_images\/RV-Life-mb.jpg"
           }
         },
-        "2afd5554-e2e1-4b13-8baa-227ed733d36b": {
+        "562dc564-b293-4812-9b71-c68dd65e11df": {
           "type": "image",
           "settings": {
             "title": "DJI 3 Pro",
             "link": "https:\/\/www.dji.com\/cn",
             "link_text": "View more",
             "video_url": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/F31_HG306_shot-on_CLEAN__10s_V1_2400x1440.mp4",
-            "video_pic": "shopify:\/\/shop_images\/RV-Life-mb.jpg"
+            "video_pic": "shopify:\/\/shop_images\/Home-Backup-mb.jpg"
           }
         },
-        "4562561a-f705-4adc-8234-2f914f247d87": {
+        "0f3270bb-9e1d-4cf4-815a-8f243c04fc14": {
           "type": "image",
           "settings": {
             "title": "DJI RS 3 Pro",
             "link": "https:\/\/www.dji.com\/cn",
             "link_text": "View more",
-            "video_url": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/M3P%20shot%20on\/F113_HG703_%E5%AE%98%E7%BD%91%E9%A6%96%E9%A1%B5_10s_V4_2400x1440.mp4",
-            "video_pic": "shopify:\/\/shop_images\/mb-2.jpg"
+            "video_url": "",
+            "video_pic": "shopify:\/\/shop_images\/mb-1.jpg"
           }
         }
       },
       "block_order": [
-        "1cf01d7d-c5f4-47a2-859c-32482dc93f62",
-        "2afd5554-e2e1-4b13-8baa-227ed733d36b",
-        "4562561a-f705-4adc-8234-2f914f247d87"
+        "f04accb4-c77f-4f5e-abe3-1aed48d378be",
+        "562dc564-b293-4812-9b71-c68dd65e11df",
+        "0f3270bb-9e1d-4cf4-815a-8f243c04fc14"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "scene_swiper": {
       "type": "scene-swiper",
       "blocks": {
-        "0eed8bb5-67c6-40fb-8952-7831b7fc5750": {
+        "990015fb-2180-4e55-9513-3dfb9ad2d04f": {
           "type": "image",
           "settings": {
             "title": "RV Life",
@@ -150,7 +151,7 @@
             "m_image": "shopify:\/\/shop_images\/RV-Life-mb.jpg"
           }
         },
-        "604c889c-d6e1-4e8f-9dfa-5d5935e1718a": {
+        "0f97aba0-b7db-4542-bfc0-227ce2fb3d72": {
           "type": "image",
           "settings": {
             "title": "Camping",
@@ -159,7 +160,7 @@
             "m_image": "shopify:\/\/shop_images\/Camping--mb.jpg"
           }
         },
-        "c33583bc-dd3d-4496-8fdd-ce7b526e209c": {
+        "75f0eb1f-5197-4dc1-9375-f8fd3b67bad9": {
           "type": "image",
           "settings": {
             "title": "Off-grid living",
@@ -168,7 +169,7 @@
             "m_image": "shopify:\/\/shop_images\/Off-grid-living-mb.jpg"
           }
         },
-        "9f037527-eb3c-4713-8616-f1af9a58a621": {
+        "28e6c769-dba9-44d2-b727-73f7a06cc720": {
           "type": "image",
           "settings": {
             "title": "Home Backup",
@@ -179,10 +180,10 @@
         }
       },
       "block_order": [
-        "0eed8bb5-67c6-40fb-8952-7831b7fc5750",
-        "604c889c-d6e1-4e8f-9dfa-5d5935e1718a",
-        "c33583bc-dd3d-4496-8fdd-ce7b526e209c",
-        "9f037527-eb3c-4713-8616-f1af9a58a621"
+        "990015fb-2180-4e55-9513-3dfb9ad2d04f",
+        "0f97aba0-b7db-4542-bfc0-227ce2fb3d72",
+        "75f0eb1f-5197-4dc1-9375-f8fd3b67bad9",
+        "28e6c769-dba9-44d2-b727-73f7a06cc720"
       ],
       "settings": {
         "title": "Application Scenarios of Jackery Solar"
@@ -201,7 +202,7 @@
     "voice_swiper": {
       "type": "voice-swiper",
       "blocks": {
-        "121fc729-1828-4f0c-9974-3c065e68e9bf": {
+        "793b22ad-996f-4971-b006-ebd433677546": {
           "type": "image",
           "settings": {
             "p_name": "Portable\nPower Stati-1",
@@ -213,13 +214,13 @@
             "user_avator": "shopify:\/\/shop_images\/1_2x_147924d7-f3ad-459e-9390-b3718a166720.png",
             "image": "shopify:\/\/shop_images\/pc-1.png",
             "m_image": "shopify:\/\/shop_images\/mb-1.jpg",
-            "pc_x": 29,
-            "pc_y": 13,
-            "m_x": 63,
-            "m_y": 35
+            "pc_x": 30,
+            "pc_y": 30,
+            "m_x": 64,
+            "m_y": 37
           }
         },
-        "3ca908f4-d9ca-4868-8f36-81174a8547de": {
+        "2093c4e1-6fe0-4dd1-8bd5-71616d912ae2": {
           "type": "image",
           "settings": {
             "p_name": "Portable\nPower Stati-2",
@@ -231,35 +232,35 @@
             "user_avator": "shopify:\/\/shop_images\/2_2x_9e0d0e02-9040-4ec8-abc2-a8f2371c70cf.png",
             "image": "shopify:\/\/shop_images\/pc-3.png",
             "m_image": "shopify:\/\/shop_images\/mb-3.jpg",
-            "pc_x": 24,
-            "pc_y": 13,
+            "pc_x": 28,
+            "pc_y": 14,
             "m_x": 63,
-            "m_y": 29
+            "m_y": 37
           }
         },
-        "51d3888e-0ea5-4c42-97e7-16d488f92787": {
+        "1698624f-63d3-44df-a160-9c25edd33b20": {
           "type": "image",
           "settings": {
             "p_name": "Portable\nPower Stati-3",
             "p_link": "https:\/\/us.roborock.com\/pages\/roborock-q7",
-            "rating": 1,
+            "rating": 2,
             "review_title": "Great little vacuum",
             "user_comment": "PC\/H5 Gilroy 字间距0 不加粗  字号24 行高36",
             "user_name": "DeLarse M.",
             "user_avator": "shopify:\/\/shop_images\/2x.png",
             "image": "shopify:\/\/shop_images\/pc-2.png",
             "m_image": "shopify:\/\/shop_images\/mb-2.jpg",
-            "pc_x": 20,
-            "pc_y": 12,
-            "m_x": 32,
-            "m_y": 23
+            "pc_x": 28,
+            "pc_y": 14,
+            "m_x": 63,
+            "m_y": 37
           }
         }
       },
       "block_order": [
-        "121fc729-1828-4f0c-9974-3c065e68e9bf",
-        "3ca908f4-d9ca-4868-8f36-81174a8547de",
-        "51d3888e-0ea5-4c42-97e7-16d488f92787"
+        "793b22ad-996f-4971-b006-ebd433677546",
+        "2093c4e1-6fe0-4dd1-8bd5-71616d912ae2",
+        "1698624f-63d3-44df-a160-9c25edd33b20"
       ],
       "settings": {
         "title": "Voice from Our Custo"
@@ -268,7 +269,7 @@
     "support_section": {
       "type": "index-support",
       "blocks": {
-        "5ed88dbe-f70b-461d-88e0-463ab0b3bb51": {
+        "2b914513-88bc-4386-b158-b0fa060c56d5": {
           "type": "image",
           "settings": {
             "title": "Free & Fast Delivery",
@@ -276,7 +277,7 @@
             "image": "shopify:\/\/shop_images\/icon_3.png"
           }
         },
-        "0f044a38-dd59-4bed-84c0-6d93bdaf6876": {
+        "965ebb7d-d32f-4cc5-a794-4bc597f76a7f": {
           "type": "image",
           "settings": {
             "title": "30-Day Money -back Guarantee",
@@ -284,7 +285,7 @@
             "image": "shopify:\/\/shop_images\/icon_2.png"
           }
         },
-        "76f90db6-504a-43d4-a0c8-bb064b610669": {
+        "73a0ab93-1d93-4404-afc3-3149b9788472": {
           "type": "image",
           "settings": {
             "title": "Free RMA Return",
@@ -292,7 +293,7 @@
             "image": "shopify:\/\/shop_images\/icon_3.png"
           }
         },
-        "a9005292-168c-45e9-9b15-ce444c6a7762": {
+        "bf1eed8c-08a1-44b8-8bf7-c53008c7a943": {
           "type": "image",
           "settings": {
             "title": "Customer Support",
@@ -302,14 +303,14 @@
         }
       },
       "block_order": [
-        "5ed88dbe-f70b-461d-88e0-463ab0b3bb51",
-        "0f044a38-dd59-4bed-84c0-6d93bdaf6876",
-        "76f90db6-504a-43d4-a0c8-bb064b610669",
-        "a9005292-168c-45e9-9b15-ce444c6a7762"
+        "2b914513-88bc-4386-b158-b0fa060c56d5",
+        "965ebb7d-d32f-4cc5-a794-4bc597f76a7f",
+        "73a0ab93-1d93-4404-afc3-3149b9788472",
+        "bf1eed8c-08a1-44b8-8bf7-c53008c7a943"
       ],
       "settings": {
         "title": "Support",
-        "link": "https:\/\/www.jackery.com\/products\/jackery-explorer-1000-2-x-solarsaga-100w-solar-generator",
+        "link": "",
         "link_text": "View more"
       }
     }
