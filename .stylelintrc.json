@@ -1,14 +1,17 @@
 {
   "extends": "stylelint-config-standard",
   "plugins": [
-		"stylelint-order"
-	],
-	"rules": {
-		"string-quotes": "single",
-		"order/order": [
-			"custom-properties",
-			"declarations"
-		],
-		"order/properties-alphabetical-order": true
-	}
+    "stylelint-order"
+  ],
+  "rules": {
+    "string-quotes": "single",
+    "declaration-block-semicolon-newline-after": null,
+    "rule-empty-line-before": null,
+    "selector-list-comma-newline-after": null,
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-alphabetical-order": true
+  }
 }
