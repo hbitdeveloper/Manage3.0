@@ -76,11 +76,14 @@
         "0d179f3e-99ef-49c6-abfa-0e860058caac": {
           "type": "image",
           "settings": {
-            "title": "Two line slide title.",
-            "link": "",
-            "link_text": "View more",
+            "title": "Solar Panel",
+            "link": "https:\/\/www.dji.com\/cn",
+            "link_text": "VIEW MORE",
             "help_text": "Help you choose",
-            "help_link": ""
+            "help_link": "",
+            "image": "shopify:\/\/shop_images\/pc_3dfc0afe-db0e-4183-abca-2fdb039e96e9.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb_213ce581-bf77-4693-8055-4c1646816ffc.jpg",
+            "thumbnail_image": "shopify:\/\/shop_images\/Solar-Panel.png"
           }
         }
       },
