@@ -63,11 +63,14 @@
         "91772b6d-966f-445d-9398-7b8155e26ba7": {
           "type": "image",
           "settings": {
-            "title": "Two line slide title.",
-            "link": "",
-            "link_text": "View more",
+            "title": "Portable Power Stati",
+            "link": "https:\/\/www.dji.com\/cn",
+            "link_text": "VIEW MORE",
             "help_text": "Help you choose",
-            "help_link": ""
+            "help_link": "https:\/\/www.dji.com\/cn",
+            "image": "shopify:\/\/shop_images\/pc_63155f50-5e6f-498b-9eee-a676f2adad42.jpg",
+            "m_image": "shopify:\/\/shop_images\/mb.jpg",
+            "thumbnail_image": "shopify:\/\/shop_images\/Portable-Power-Station.png"
           }
         },
         "0d179f3e-99ef-49c6-abfa-0e860058caac": {
