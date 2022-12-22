@@ -21,6 +21,7 @@
 .banner h5 {width: 34vw; margin-top: 22px;}
 
 .manuals h2 {text-align: center; margin-top: 6.25vw;}
+.manuals a {text-decoration: none;}
 .manuals .tab {
 	margin: 2.6vw auto;
 	display: flex; align-items: center; justify-content: center;
@@ -28,6 +29,9 @@
 .manuals .tab li {cursor: pointer; border-bottom: 3px transparent solid; margin-right: 3.125vw; transition: all 0.3s;}
 .manuals .tab li:last-child {margin-right: 0;}
 .manuals .tab li.on, .manuals .tab li:hover {font-weight: 500; border-color: var(--primary-color);}
+
+.manuals .tab-content:not(.on) {display: none;}
+
 .manuals .search-box {
 	width: 100%; max-width: 540px; height: 46px; margin: 0 auto 2.6vw;
 	display: flex; align-items: center; justify-content: center;
@@ -82,7 +86,7 @@
   </div>
 </div>
 
-<div class="layer layer-container manuals">
+<div class="layer layer-container manuals pdf">
   <h2>User Manuals</h2>
   <ul class="tab">
     <li class="h4 on">Portable Power Station</li>
@@ -135,10 +139,24 @@
       <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
     </li>
   </ul>
+  <ul class="list tab-content">
+    <li>
+      <i class="img-icon iconfont jackery-icon-pdf"></i>
+      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
+      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
+    </li>
+  </ul>
+  <ul class="list tab-content">
+    <li>
+      <i class="img-icon iconfont jackery-icon-pdf"></i>
+      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
+      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
+    </li>
+  </ul>
   <a class="more h5" href="#">View More <i class="iconfont jackery-icon-arrowdown"></i></a>
 </div>
 
-<div class="layer layer-container manuals">
+<div class="layer layer-container manuals video">
   <h2>User Guide Video</h2>
   <ul class="tab">
     <li class="h4 on">Solar Generator</li>
@@ -249,6 +267,7 @@
   </ul>
 </div>
 
+{{ 'user-guide.bundle.js' | asset_url | script_tag }}
 
 {% schema %}
 {
