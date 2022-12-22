@@ -22,5 +22,13 @@
         "node_modules/"
     ],
     "rules": {
+        // 开发环境换行符
+        "linebreak-style": ["off", "windows"],
+        "quotes": "off",
+        // 要求或禁止末尾逗号
+        "comma-dangle": 0,
+        // js语句结尾必须使用分号
+        "semi": [0, "never"],
+        "no-param-reassign": ["error", { "props": false }]
     }
 }
