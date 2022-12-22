@@ -19,7 +19,6 @@
   src: url('https://cdn.shopify.com/s/files/1/0550/0524/9633/files/gilroy-light.woff2?v=1670917251') format('woff2'), url('https://cdn.shopify.com/s/files/1/0550/0524/9633/files/gilroy-light.woff?v=1670917251') format('woff');
 }
 
-/* font-family */
 :root {
   --primary-color: #fd5000;  /* 系统主题色 */
   --text-black: #000;
