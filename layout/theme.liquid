@@ -29,7 +29,7 @@
 
     {%- if template contains 'index' -%}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-      <script src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/swiper-bundle.min.js?v=1670922530"></script>
+      {{ 'swiper.js' | asset_url | script_tag }}
       <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 
       {{ 'page-index.bundle.js' | asset_url | script_tag }}
