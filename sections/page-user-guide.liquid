@@ -21,6 +21,7 @@
 .banner h5 {width: 34vw; margin-top: 22px;}
 
 .manuals h2 {text-align: center; margin-top: 6.25vw;}
+.manuals a {text-decoration: none;}
 .manuals .tab {
 	margin: 2.6vw auto;
 	display: flex; align-items: center; justify-content: center;
@@ -249,6 +250,7 @@
   </ul>
 </div>
 
+{{ 'user-guide.bundle.js' | asset_url | script_tag }}
 
 {% schema %}
 {
