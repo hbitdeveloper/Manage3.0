@@ -3,6 +3,8 @@
 {% assign SP = section.blocks | where: 'pdf_type', "Solar Panel" %}
 {% assign ACC = section.blocks | where: 'pdf_type', "Accessories" %}
 
+{{ SG | json }}
+
 <h2>{{ section.settings.title }}</h2>
 <ul class="tab">
   {% if SG.size > 0 %}<li class="h4">{{ 'collection.solar_generator' | t }}</li>{% endif %}
