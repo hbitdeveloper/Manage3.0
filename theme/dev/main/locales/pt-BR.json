@@ -431,5 +431,11 @@
       "copy_code_success": "Código copiado",
       "print_gift_card": "Imprimir"
     }
+  },
+  "collection": {
+    "solar_generator": "Solar Generator",
+    "portable_power_station": "Portable Power Station",
+    "solar_panel": "Solar Panel",
+    "accessories": "Accessories"
   }
 }

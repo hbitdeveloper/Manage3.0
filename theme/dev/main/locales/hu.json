@@ -424,5 +424,11 @@
       "copy_code_success": "Sikeres volt a kód másolása",
       "print_gift_card": "Nyomtatás"
     }
+  },
+  "collection": {
+    "solar_generator": "Solar Generator",
+    "portable_power_station": "Portable Power Station",
+    "solar_panel": "Solar Panel",
+    "accessories": "Accessories"
   }
 }

@@ -431,5 +431,11 @@
       "copy_code_success": "Kod je uspješno kopiran",
       "print_gift_card": "Ispiši"
     }
+  },
+  "collection": {
+    "solar_generator": "Solar Generator",
+    "portable_power_station": "Portable Power Station",
+    "solar_panel": "Solar Panel",
+    "accessories": "Accessories"
   }
 }

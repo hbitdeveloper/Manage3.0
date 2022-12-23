@@ -438,5 +438,11 @@
       "copy_code_success": "Kód sa úspešne skopíroval",
       "print_gift_card": "Tlačiť"
     }
+  },
+  "collection": {
+    "solar_generator": "Solar Generator",
+    "portable_power_station": "Portable Power Station",
+    "solar_panel": "Solar Panel",
+    "accessories": "Accessories"
   }
 }
