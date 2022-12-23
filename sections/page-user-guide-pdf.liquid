@@ -1,7 +1,7 @@
-{% assign SG = section.blocks | where: 'pdf_type', "Solar Generator" %}
-{% assign PPS = section.blocks | where: 'pdf_type', "Portable Power Station" %}
-{% assign SP = section.blocks | where: 'pdf_type', "Solar Panel" %}
-{% assign ACC = section.blocks | where: 'pdf_type', "Accessories" %}
+{% assign SG = section.blocks | where: 'type', "SG_PDF" %}
+{% assign PPS = section.blocks | where: 'type', "PPS_PDF" %}
+{% assign SP = section.blocks | where: 'type', "SP_PDF" %}
+{% assign ACC = section.blocks | where: 'type', "ACC_PDF" %}
 
 {{ SG | json }}
 {{ section.blocks | json }}
@@ -47,18 +47,27 @@
   ],
   "blocks": [
     {
-      "type": "pdf", "name": "PDF File", "settings": [
+      "type": "SG_PDF", "name": "Solar Generator PDF", "settings": [
         {"type": "text", "id": "file_name", "label": "pdf file name", "default": "Jackery Explorer 160 Power Station User Manual"},
-        {"type": "url", "id": "link", "label": "pdf file link"},
-        {
-          "type": "select", "id": "pdf_type", "label": "PDF Type", "default": "Portable Power Station",
-          "options": [
-            {"value": "Solar Generator", "label": "Solar Generator"},
-            {"value": "Portable Power Station", "label": "Portable Power Station"},
-            {"value": "Solar Panel", "label": "Solar Panel"},
-            {"value": "Accessories", "label": "Accessories"}
-          ]
-        }
+        {"type": "url", "id": "link", "label": "pdf file link"}
+      ]
+    },
+    {
+      "type": "PPS_PDF", "name": "Power Station PDF", "settings": [
+        {"type": "text", "id": "file_name", "label": "pdf file name", "default": "Jackery Explorer 160 Power Station User Manual"},
+        {"type": "url", "id": "link", "label": "pdf file link"}
+      ]
+    },
+    {
+      "type": "SP_PDF", "name": "Solar Panel PDF", "settings": [
+        {"type": "text", "id": "file_name", "label": "pdf file name", "default": "Jackery Explorer 160 Power Station User Manual"},
+        {"type": "url", "id": "link", "label": "pdf file link"}
+      ]
+    },
+    {
+      "type": "ACC_PDF", "name": "Accessories PDF", "settings": [
+        {"type": "text", "id": "file_name", "label": "pdf file name", "default": "Jackery Explorer 160 Power Station User Manual"},
+        {"type": "url", "id": "link", "label": "pdf file link"}
       ]
     }
   ]
