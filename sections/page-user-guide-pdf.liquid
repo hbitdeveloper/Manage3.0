@@ -23,6 +23,7 @@
     <b class="h5">{{ block.file_name }}</b>
     <a class="h5" href="{{ block.link }}"><i class="iconfont jackery-icon-download"></i>{{ section.settings.download }}</a>
   </li>
+  {% endfor %}
 </ul>
 {% endif %}
 
@@ -42,15 +43,19 @@
     {"type": "url", "id": "more_url", "label": "view more url"}
   ],
   "blocks": [
-    {"type": "text", "id": "file_name", "label": "pdf file name", "default": "Jackery Explorer 160 Power Station User Manual"},
-    {"type": "url", "id": "link", "label": "pdf file link"},
     {
-      "type": "select", "id": "pdf_type", "label": "PDF Type", "default": "Portable Power Station",
-      "options": [
-        {"value": "Solar Generator", "label": "Solar Generator"},
-        {"value": "Portable Power Station", "label": "Portable Power Station"},
-        {"value": "Solar Panel", "label": "Solar Panel"},
-        {"value": "Accessories", "label": "Accessories"}
+      "type": "pdf", "name": "PDF File", "settings": [
+        {"type": "text", "id": "file_name", "label": "pdf file name", "default": "Jackery Explorer 160 Power Station User Manual"},
+        {"type": "url", "id": "link", "label": "pdf file link"},
+        {
+          "type": "select", "id": "pdf_type", "label": "PDF Type", "default": "Portable Power Station",
+          "options": [
+            {"value": "Solar Generator", "label": "Solar Generator"},
+            {"value": "Portable Power Station", "label": "Portable Power Station"},
+            {"value": "Solar Panel", "label": "Solar Panel"},
+            {"value": "Accessories", "label": "Accessories"}
+          ]
+        }
       ]
     }
   ]
