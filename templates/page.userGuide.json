@@ -65,6 +65,48 @@
             "file_name": "Jackery Explorer 160 Power Station User Manual",
             "link": ""
           }
+        },
+        "c420f0fb-64e0-4e34-b9ba-8aa26c7383fc": {
+          "type": "PPS_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "4e5559de-a20f-4b6b-b21f-7e9434a2eb71": {
+          "type": "PPS_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "ef6897f9-49ae-44d1-8340-99a7587ca66d": {
+          "type": "PPS_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "4bd18fad-1584-4f70-83de-e73c6075f92f": {
+          "type": "PPS_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "836534d7-4a77-4d47-bb7e-124691bb4a61": {
+          "type": "PPS_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "65a25bf5-71f8-4c38-8e0b-8a9242f40284": {
+          "type": "PPS_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -75,7 +117,13 @@
         "0b32c5b0-6dfa-479c-92ce-b68e03f0d5c5",
         "598a28d3-bb0b-4962-b19f-e925892286ae",
         "4b469db3-9fee-43d9-a764-b80049fdb803",
-        "d37cc166-adee-4ec2-b46c-a97f9aa527d1"
+        "d37cc166-adee-4ec2-b46c-a97f9aa527d1",
+        "c420f0fb-64e0-4e34-b9ba-8aa26c7383fc",
+        "4e5559de-a20f-4b6b-b21f-7e9434a2eb71",
+        "ef6897f9-49ae-44d1-8340-99a7587ca66d",
+        "4bd18fad-1584-4f70-83de-e73c6075f92f",
+        "836534d7-4a77-4d47-bb7e-124691bb4a61",
+        "65a25bf5-71f8-4c38-8e0b-8a9242f40284"
       ],
       "settings": {
         "title": "User Manuals",
