@@ -5,6 +5,11 @@
       "settings": {
       }
     },
+    "pdf": {
+      "type": "page-user-guide-pdf",
+      "settings": {
+      }
+    },
     "video": {
       "type": "page-user-guide-video",
       "settings": {
@@ -28,6 +33,7 @@
   },
   "order": [
     "main",
+    "pdf",
     "video",
     "maintenance",
     "faq",
