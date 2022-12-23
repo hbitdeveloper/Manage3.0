@@ -1,22 +1,11 @@
 <style>
 .img-icon {width: 96px; height: 96px; font-size: 96px; color: var(--primary-color); display: inline-block;}
 
-.accordion {width: 100%;}
-.accordion .jackery-icon-arrowdown {transition: all 0.3s;}
-.accordion ul li {display: flex; flex-flow: column; border-bottom: var(--border-grey); margin-bottom: 2.6042vw;}
-.accordion ul li h4 {font-weight: 500; display: flex; align-items: center; justify-content: space-between;}
-.accordion ul li input {opacity: 0; display: none;}
-.accordion label {margin-bottom: var(--gap); cursor: pointer;}
-.accordion .a_content {max-height: 0; padding-bottom: 0; overflow-y: hidden; transition: all 0.3s;}
-
-.accordion ul li input:checked ~ label .jackery-icon-arrowdown {transform: rotate(180deg);}
-.accordion ul li input:checked ~ .a_content {max-height: 500px; padding-bottom: 2.6042vw;}
-
 .layer-container {width: 100%; max-width: 1200px; margin: 0 auto;}
 
 .banner {
 	width: 100%; height: 100vh; max-height: 890px; padding-top: 100px;
-	background: url("res3/user-guide-banner.jpg") center no-repeat; background-size: cover;
+	background: url("{{block.settings.image | img_url}}") center no-repeat; background-size: cover;
 }
 .banner h5 {width: 34vw; margin-top: 22px;}
 
@@ -69,209 +58,26 @@
 .maintenance .list li b {height: 78px; padding: 0;}
 .maintenance .list li img {width: 100%; height: 200px; object-fit: cover;}
 
-.faq .accordion {max-width: 800px; margin: 0 auto;}
-
-.contact ul {margin: 2.6042vw 0 6.25vw; display: grid; grid-template-columns: repeat(2,1fr); grid-gap: var(--gap);}
-.contact ul li {
-	width: 100%; height: 418px; text-align: center; background: rgba(204,204,204,0.26); padding: 32px 0;
-	display: flex; flex-flow: column; justify-content: center; align-items: center;
+@media only screen and (min-width: 768px) {
+  .banner {background-image: url("{{block.settings.m_image | img_url}}")}
 }
-.contact ul li b {margin-bottom: 25px;}
 </style>
 
-<div class="layer banner">
-  <div class="layer-container">
-    <h1>User Guide</h1>
-    <h5>Get detailed operating instructions and product care information for all Jackery products</h5>
-  </div>
-</div>
-
-<div class="layer layer-container manuals pdf">
-  <h2>User Manuals</h2>
-  <ul class="tab">
-    <li class="h4 on">Portable Power Station</li>
-    <li class="h4">Solar Panel</li>
-    <li class="h4">Accessories</li>
-  </ul>
-  <div class="search-box">
-    <input type="text" placeholder="Search Product Model" />
-    <button type="button">Search</button>
-  </div>
-  <ul class="list tab-content">
-    <li>
-      <i class="img-icon iconfont jackery-icon-pdf"></i>
-      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
-      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
-    </li>
-    <li>
-      <i class="img-icon iconfont jackery-icon-pdf"></i>
-      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
-      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
-    </li>
-    <li>
-      <i class="img-icon iconfont jackery-icon-pdf"></i>
-      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
-      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
-    </li>
-    <li>
-      <i class="img-icon iconfont jackery-icon-pdf"></i>
-      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
-      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
-    </li>
-    <li>
-      <i class="img-icon iconfont jackery-icon-pdf"></i>
-      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
-      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
-    </li>
-    <li>
-      <i class="img-icon iconfont jackery-icon-pdf"></i>
-      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
-      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
-    </li>
-    <li>
-      <i class="img-icon iconfont jackery-icon-pdf"></i>
-      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
-      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
-    </li>
-    <li>
-      <i class="img-icon iconfont jackery-icon-pdf"></i>
-      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
-      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
-    </li>
-  </ul>
-  <ul class="list tab-content">
-    <li>
-      <i class="img-icon iconfont jackery-icon-pdf"></i>
-      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
-      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
-    </li>
-  </ul>
-  <ul class="list tab-content">
-    <li>
-      <i class="img-icon iconfont jackery-icon-pdf"></i>
-      <b class="h5">Jackery Explorer 160 Power Station User Manual</b>
-      <a class="h5" href="#"><i class="iconfont jackery-icon-download"></i>DOWNLOAD</a>
-    </li>
-  </ul>
-  <a class="more h5" href="#">View More <i class="iconfont jackery-icon-arrowdown"></i></a>
-</div>
-
-<div class="layer layer-container manuals video">
-  <h2>User Guide Video</h2>
-  <ul class="tab">
-    <li class="h4 on">Solar Generator</li>
-    <li class="h4">Portable Power Station</li>
-    <li class="h4">Solar Panel</li>
-    <li class="h4">Accessories</li>
-  </ul>
-  <div class="search-box">
-    <input type="text" placeholder="Search Video" />
-    <button type="button">Search</button>
-  </div>
-  
-  {% comment %} include slideshow video-slideshow {% endcomment %}
-</div>
-
-<div class="layer layer-container manuals maintenance">
-  <h2>Product Maintenance</h2>
-  <ul class="tab">
-    <li class="h4 on">Portable Power Station</li>
-    <li class="h4">Solar Panel</li>
-  </ul>
-  
-  <ul class="list">
-    <li>
-      <img src="res3/user-guide-banner.jpg" alt="1" />
-      <b class="h5">The use environment of Power station</b>
-      <a class="h5" href="#">LEARN MORE<i class="iconfont jackery-icon-arrow-right"></i></a>
-    </li>
-    <li>
-      <img src="res3/user-guide-banner.jpg" alt="1" />
-      <b class="h5">The use environment of Power station</b>
-      <a class="h5" href="#">LEARN MORE<i class="iconfont jackery-icon-arrow-right"></i></a>
-    </li>
-    <li>
-      <img src="res3/user-guide-banner.jpg" alt="1" />
-      <b class="h5">The use environment of Power station</b>
-      <a class="h5" href="#">LEARN MORE<i class="iconfont jackery-icon-arrow-right"></i></a>
-    </li>
-  </ul>
-</div>
-
-<div class="layer layer-container manuals faq">
-  <h2>FAQ</h2>
-  <ul class="tab">
-    <li class="h4 on">Solar Generator</li>
-    <li class="h4">Portable Power Station</li>
-    <li class="h4">Solar Panel</li>
-    <li class="h4">Accessories</li>
-  </ul>
-  
-  <div class="accordion">
-    <ul>
-      <li>
-        <input type="checkbox" id="accordion_item_1">
-        <label for="accordion_item_1">
-          <h4>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
-            <i class="iconfont jackery-icon-arrowdown"></i>
-          </h4>
-        </label>
-        <div class="a_content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          <br><br>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          <br><br>
-          Duis aute irre dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-      </li>
-      <li>
-        <input type="checkbox" id="accordion_item_2">
-        <label for="accordion_item_2">
-          <h4>
-            What is the length of the AC adapter cable for the power station
-            <i class="iconfont jackery-icon-arrowdown"></i>
-          </h4>
-        </label>
-        <div class="a_content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          <br><br>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          <br><br>
-          Duis aute irre dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<div class="layer layer-container manuals contact">
-  <h2>Contact Us</h2>
-  <ul>
-    <li>
-      <i class="img-icon iconfont jackery-icon-email"></i>
-      <b class="h5">Email</b>
-      <a href="#">hello@jackery.com</a>
-      <p>( US/CA )</p>
-      <p>&lt; 9AM to 5PM PST &gt;</p>
-    </li>
-    <li>
-      <i class="img-icon iconfont jackery-icon-message"></i>
-      <b class="h5">Tel & SMS</b>
-      <p>1-888-502-2236</p>
-      <p>( US/CA )</p>
-      <p>&lt; 9AM to 5PM PST (Weekdays) &gt;</p>
-    </li>
-  </ul>
+<div class="layer-container">
+  <h1>{{ section.settings.title }}</h1>
+  <h5>{{ section.settings.subTitle }}</h5>
 </div>
 
 {{ 'user-guide.bundle.js' | asset_url | script_tag }}
 
 {% schema %}
 {
-  "name": "user guide", "class": "div-user-guide", "tag": "section",
-  "settings": []
+  "name": "user guide", "class": "layer banner", "tag": "div",
+  "settings": [
+    {"type": "text", "id": "title", "label": "banner title", "default": "User Guide"},
+    {"type": "text", "id": "subTitle", "label": "banner sub title", "default": "Get detailed operating instructions and product care information for all Jackery products"},
+    {"type": "image_picker", "id": "image", "label": "Image"},
+    {"type": "image_picker", "id": "m_image", "label": "Mobile Image"}
+  ]
 }
 {% endschema %}

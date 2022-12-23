@@ -424,5 +424,11 @@
       "copy_code_success": "Koden kopierades",
       "print_gift_card": "Skriv ut"
     }
+  },
+  "collection": {
+    "solar_generator": "Solar Generator",
+    "portable_power_station": "Portable Power Station",
+    "solar_panel": "Solar Panel",
+    "accessories": "Accessories"
   }
 }

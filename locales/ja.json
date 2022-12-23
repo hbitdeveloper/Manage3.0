@@ -424,5 +424,11 @@
       "copy_code_success": "コードは正常にコピーされました",
       "print_gift_card": "印刷する"
     }
+  },
+  "collection": {
+    "solar_generator": "Solar Generator",
+    "portable_power_station": "Portable Power Station",
+    "solar_panel": "Solar Panel",
+    "accessories": "Accessories"
   }
 }
