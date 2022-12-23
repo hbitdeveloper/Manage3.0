@@ -27,6 +27,42 @@
 </ul>
 {% endif %}
 
+{% if PPS.size > 0 %}
+<ul class="list tab-content on">
+  {% for block in PPS %}
+  <li>
+    <i class="img-icon iconfont jackery-icon-pdf"></i>
+    <b class="h5">{{ block.file_name }}</b>
+    <a class="h5" href="{{ block.link }}"><i class="iconfont jackery-icon-download"></i>{{ section.settings.download }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if SP.size > 0 %}
+<ul class="list tab-content">
+  {% for block in SP %}
+  <li>
+    <i class="img-icon iconfont jackery-icon-pdf"></i>
+    <b class="h5">{{ block.file_name }}</b>
+    <a class="h5" href="{{ block.link }}"><i class="iconfont jackery-icon-download"></i>{{ section.settings.download }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if ACC.size > 0 %}
+<ul class="list tab-content">
+  {% for block in ACC %}
+  <li>
+    <i class="img-icon iconfont jackery-icon-pdf"></i>
+    <b class="h5">{{ block.file_name }}</b>
+    <a class="h5" href="{{ block.link }}"><i class="iconfont jackery-icon-download"></i>{{ section.settings.download }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
 {% if section.settings.more_url != blank %}
   <a class="more h5" href="{{ section.settings.more_url }}">{{ section.settings.more }} <i class="iconfont jackery-icon-arrowdown"></i></a>
 {% endif %}
