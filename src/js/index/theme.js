@@ -5,8 +5,7 @@
  * @FilePath: \shopify3.0\src\js\index\theme.js
  */
 import $ from 'jquery'
-import '../../css/theme.css'
-import '../../css/common.css'
+import '../../css/theme.less'
 window.jQuery = window.$ = $
 __webpack_public_path__ = window.__webpack_public_path__;
 

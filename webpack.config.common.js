@@ -76,7 +76,16 @@ module.exports = {
                         loader: 'postcss-loader'
                     },
                 ],
-            }
+            },
+            {
+                test: /\.less$/i,
+                    use: [
+                        // compiles Less to CSS 
+                        MiniCssExtractPlugin.loader,
+                        'css-loader',
+                        'less-loader',
+                    ],
+                }
         ],
     },
     stats: {
