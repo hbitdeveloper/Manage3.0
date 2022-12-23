@@ -17,7 +17,7 @@
 
 {% if SG.size > 0 %}
 <ul class="list tab-content">
-  {% for block in SG %}
+  {% for block in SG limit: 8 %}
   <li>
     <i class="img-icon iconfont jackery-icon-pdf"></i>
     <b class="h5">{{ block.settings.file_name }}</b>
@@ -29,7 +29,7 @@
 
 {% if PPS.size > 0 %}
 <ul class="list tab-content on">
-  {% for block in PPS %}
+  {% for block in PPS limit: 8 %}
   <li>
     <i class="img-icon iconfont jackery-icon-pdf"></i>
     <b class="h5">{{ block.settings.file_name }}</b>
@@ -41,7 +41,7 @@
 
 {% if SP.size > 0 %}
 <ul class="list tab-content">
-  {% for block in SP %}
+  {% for block in SP limit: 8 %}
   <li>
     <i class="img-icon iconfont jackery-icon-pdf"></i>
     <b class="h5">{{ block.settings.file_name }}</b>
@@ -53,7 +53,7 @@
 
 {% if ACC.size > 0 %}
 <ul class="list tab-content">
-  {% for block in ACC %}
+  {% for block in ACC limit: 8 %}
   <li>
     <i class="img-icon iconfont jackery-icon-pdf"></i>
     <b class="h5">{{ block.settings.file_name }}</b>
