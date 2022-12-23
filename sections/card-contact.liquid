@@ -6,22 +6,41 @@
 }
 .contact ul li b {margin-bottom: 25px;}
 </style>
-<div class="layer layer-container manuals contact">
-  <h2>Contact Us</h2>
-  <ul>
-    <li>
-      <i class="img-icon iconfont jackery-icon-email"></i>
-      <b class="h5">Email</b>
-      <a href="#">hello@jackery.com</a>
-      <p>( US/CA )</p>
-      <p>&lt; 9AM to 5PM PST &gt;</p>
-    </li>
-    <li>
-      <i class="img-icon iconfont jackery-icon-message"></i>
-      <b class="h5">Tel & SMS</b>
-      <p>1-888-502-2236</p>
-      <p>( US/CA )</p>
-      <p>&lt; 9AM to 5PM PST (Weekdays) &gt;</p>
-    </li>
-  </ul>
-</div>
+<h2>{{ section.settings.title }}</h2>
+<ul>
+  <li>
+    <i class="img-icon iconfont jackery-icon-email"></i>
+    <b class="h5">{{ section.settings.email_text }}</b>
+    <a href="{{ section.settings.email }}">{{ section.settings.email }}</a>
+    <p>{{ section.settings.email_country }}</p>
+    <p>&lt; {{ section.settings.email_time }} &gt;</p>
+  </li>
+  <li>
+    <i class="img-icon iconfont jackery-icon-message"></i>
+    <b class="h5">{{ section.settings.tel_text }}</b>
+    <p>{{ section.settings.tel }}</p>
+    <p>{{ section.settings.tel_country }}</p>
+    <p>&lt; {{ section.settings.tel_time }} &gt;</p>
+  </li>
+</ul>
+
+{% schema %}
+  {
+    "name": "Contact", "class": "layer layer-container contact", "tag": "div",
+    "settings": [
+      {"type": "text", "id": "title", "label": "Contact Us title", "default": "Contact Us"},
+
+      {"type": "header", "content": "Email related settings"},
+      {"type": "text", "id": "email_text", "label": "email text", "default": "Email"},
+      {"type": "text", "id": "email", "label": "email address", "default": "hello@jackery.com"},
+      {"type": "text", "id": "email_country", "label": "email country", "default": "( US/CA )"},
+      {"type": "text", "id": "email_time", "label": "email service time", "default": "9AM to 5PM PST"},
+
+      {"type": "header", "content": "Tel related settings"},
+      {"type": "text", "id": "tel_text", "label": "tel text", "default": "Tel & SMS"},
+      {"type": "text", "id": "tel", "label": "telephone", "default": "1-888-502-2236"},
+      {"type": "text", "id": "tel_country", "label": "tel country", "default": "( US/CA )"},
+      {"type": "text", "id": "tel_time", "label": "tel service time", "default": "9AM to 5PM PST (Weekdays)"}
+    ]
+  }
+  {% endschema %}
