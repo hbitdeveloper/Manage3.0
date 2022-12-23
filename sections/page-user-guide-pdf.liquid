@@ -4,6 +4,7 @@
 {% assign ACC = section.blocks | where: 'pdf_type', "Accessories" %}
 
 {{ SG | json }}
+{{ section.blocks | json }}
 
 <h2>{{ section.settings.title }}</h2>
 <ul class="tab">
