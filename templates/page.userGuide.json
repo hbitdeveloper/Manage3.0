@@ -3,11 +3,104 @@
     "main": {
       "type": "page-user-guide",
       "settings": {
+        "title": "User Guide",
+        "subTitle": "Get detailed operating instructions and product care information for all Jackery products"
       }
     },
     "pdf": {
       "type": "page-user-guide-pdf",
+      "blocks": {
+        "4437362d-dff5-4376-bd08-6d1654000d77": {
+          "type": "pdf",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": "https:\/\/cdn.shopifycdn.net\/s\/files\/1\/0550\/0524\/9633\/files\/Off-grid-living-mb.jpg?v=1669953091",
+            "pdf_type": "Solar Generator"
+          }
+        },
+        "20e2b8ca-4726-47cc-a879-9f9183cfaaff": {
+          "type": "pdf",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": "",
+            "pdf_type": "Portable Power Station"
+          }
+        },
+        "877213b7-b17b-413a-8466-b949b2a713f5": {
+          "type": "pdf",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": "",
+            "pdf_type": "Solar Panel"
+          }
+        },
+        "87ad1cec-15f0-440a-96b3-7ca8105bd977": {
+          "type": "pdf",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": "",
+            "pdf_type": "Accessories"
+          }
+        },
+        "47670578-5308-438b-9b9d-53033a94ef31": {
+          "type": "pdf",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": "",
+            "pdf_type": "Portable Power Station"
+          }
+        },
+        "5c8ff7be-333f-4f67-bbb0-a1e2473a4521": {
+          "type": "pdf",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": "",
+            "pdf_type": "Solar Generator"
+          }
+        },
+        "dad79e8c-e6c7-4367-982f-76d7421014f2": {
+          "type": "pdf",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": "",
+            "pdf_type": "Portable Power Station"
+          }
+        },
+        "64cf277e-45c4-4722-bd2a-4849dbafd7d1": {
+          "type": "pdf",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": "",
+            "pdf_type": "Portable Power Station"
+          }
+        },
+        "0addb668-f51b-4670-a72f-28b6c072b2f9": {
+          "type": "pdf",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": "",
+            "pdf_type": "Portable Power Station"
+          }
+        }
+      },
+      "block_order": [
+        "4437362d-dff5-4376-bd08-6d1654000d77",
+        "20e2b8ca-4726-47cc-a879-9f9183cfaaff",
+        "877213b7-b17b-413a-8466-b949b2a713f5",
+        "87ad1cec-15f0-440a-96b3-7ca8105bd977",
+        "47670578-5308-438b-9b9d-53033a94ef31",
+        "5c8ff7be-333f-4f67-bbb0-a1e2473a4521",
+        "dad79e8c-e6c7-4367-982f-76d7421014f2",
+        "64cf277e-45c4-4722-bd2a-4849dbafd7d1",
+        "0addb668-f51b-4670-a72f-28b6c072b2f9"
+      ],
       "settings": {
+        "title": "User Manuals",
+        "placeholder": "Search Product Model",
+        "button": "Search",
+        "download": "DOWNLOAD",
+        "more": "View More",
+        "more_url": ""
       }
     },
     "video": {
