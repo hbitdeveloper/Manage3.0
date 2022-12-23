@@ -2,30 +2,35 @@
   "sections": {
     "main": {
       "type": "page-user-guide",
-      "settings": {}
-    },
-    "pdf": {
-      "type": "page-user-guide-pdf",
-      "settings": {}
+      "settings": {
+      }
     },
     "video": {
       "type": "page-user-guide-video",
-      "settings": {}
+      "settings": {
+      }
     },
     "maintenance": {
       "type": "page-user-guide-maintenance",
-      "settings": {}
+      "settings": {
+      }
     },
     "faq": {
       "type": "faq",
-      "settings": {}
+      "settings": {
+      }
     },
     "contact": {
       "type": "card-contact",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
-    "main", "pdf", "video", "maintenance", "faq", "contact"
+    "main",
+    "video",
+    "maintenance",
+    "faq",
+    "contact"
   ]
 }
