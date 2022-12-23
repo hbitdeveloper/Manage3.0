@@ -3,9 +3,29 @@
     "main": {
       "type": "page-user-guide",
       "settings": {}
+    },
+    "pdf": {
+      "type": "page-user-guide-pdf",
+      "settings": {}
+    },
+    "video": {
+      "type": "page-user-guide-video",
+      "settings": {}
+    },
+    "maintenance": {
+      "type": "page-user-guide-maintenance",
+      "settings": {}
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {}
+    },
+    "contact": {
+      "type": "card-contact",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main", "pdf", "video", "maintenance", "faq", "contact"
   ]
 }

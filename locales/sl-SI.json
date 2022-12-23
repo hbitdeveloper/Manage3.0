@@ -438,5 +438,11 @@
       "copy_code_success": "Koda je uspešno kopirana",
       "print_gift_card": "Natisni"
     }
+  },
+  "collection": {
+    "solar_generator": "Solar Generator",
+    "portable_power_station": "Portable Power Station",
+    "solar_panel": "Solar Panel",
+    "accessories": "Accessories"
   }
 }

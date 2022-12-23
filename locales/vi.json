@@ -424,5 +424,11 @@
       "copy_code_success": "Đã sao chép mã thành công",
       "print_gift_card": "In"
     }
+  },
+  "collection": {
+    "solar_generator": "Solar Generator",
+    "portable_power_station": "Portable Power Station",
+    "solar_panel": "Solar Panel",
+    "accessories": "Accessories"
   }
 }

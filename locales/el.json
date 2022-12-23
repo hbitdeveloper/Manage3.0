@@ -424,5 +424,11 @@
       "copy_code_success": "Η αντιγραφή του κωδικού ήταν επιτυχής",
       "print_gift_card": "Εκτύπωση"
     }
+  },
+  "collection": {
+    "solar_generator": "Solar Generator",
+    "portable_power_station": "Portable Power Station",
+    "solar_panel": "Solar Panel",
+    "accessories": "Accessories"
   }
 }
