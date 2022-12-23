@@ -1,58 +1,12 @@
-{% assign SG = section.blocks | where: 'pdf_type', "Solar Generator" %}
-{% assign PPS = section.blocks | where: 'pdf_type', "Portable Power Station" %}
-{% assign SP = section.blocks | where: 'pdf_type', "Solar Panel" %}
-{% assign ACC = section.blocks | where: 'pdf_type', "Accessories" %}
-
-<h2>{{ section.settings.title }}</h2>
-<ul class="tab">
-  {% if SG.size > 0 %}<li class="h4">{{ 'collection.solar_generator' | t }}</li>{% endif %}
-  {% if PPS.size > 0 %}<li class="h4 on">{{ 'collection.portable_power_station' | t }}</li>{% endif %}
-  {% if SP.size > 0 %}<li class="h4">{{ 'collection.solar_panel' | t }}</li>{% endif %}
-  {% if ACC.size > 0 %}<li class="h4">{{ 'collection.accessories' | t }}</li>{% endif %}
-</ul>
-<div class="search-box">
-  <input type="text" placeholder="{{ section.settings.placeholder }}" />
-  <button type="button">{{ section.settings.button }}</button>
-</div>
-
-{% if SG.size > 0 %}
-<ul class="list tab-content">
-  {% for block in SG %}
-  <li>
-    <i class="img-icon iconfont jackery-icon-pdf"></i>
-    <b class="h5">{{ block.file_name }}</b>
-    <a class="h5" href="{{ block.link }}"><i class="iconfont jackery-icon-download"></i>{{ section.settings.download }}</a>
-  </li>
-</ul>
-{% endif %}
-
-{% if section.settings.more_url != blank %}
-  <a class="more h5" href="{{ section.settings.more_url }}">{{ section.settings.more }} <i class="iconfont jackery-icon-arrowdown"></i></a>
-{% endif %}
-
 {% schema %}
-{
-  "name": "user guide pdf", "class": "layer layer-container manuals pdf", "tag": "div",
-  "settings": [
-    {"type": "text", "id": "title", "label": "title", "default": "User Manuals"},
-    {"type": "text", "id": "placeholder", "label": "search placeholder", "default": "Search Product Model"},
-    {"type": "text", "id": "button", "label": "search button text", "default": "Search"},
-    {"type": "text", "id": "download", "label": "download text", "default": "DOWNLOAD"},
-    {"type": "text", "id": "more", "label": "view more", "default": "View More"},
-    {"type": "url", "id": "more_url", "label": "view more url"}
-  ],
-  "blocks": [
-    {"type": "text", "id": "file_name", "label": "pdf file name", "default": "Jackery Explorer 160 Power Station User Manual"},
-    {"type": "url", "id": "link", "label": "pdf file link"},
-    {
-      "type": "select", "id": "pdf_type", "label": "PDF Type", "default": "Portable Power Station",
-      "options": [
-        {"value": "Solar Generator", "label": "Solar Generator"},
-        {"value": "Portable Power Station", "label": "Portable Power Station"},
-        {"value": "Solar Panel", "label": "Solar Panel"},
-        {"value": "Accessories", "label": "Accessories"}
-      ]
-    }
-  ]
-}
+  {
+    "name": "Section name",
+    "settings": []
+  }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
