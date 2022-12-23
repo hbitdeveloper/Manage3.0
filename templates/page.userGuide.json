@@ -9,6 +9,74 @@
     },
     "pdf": {
       "type": "page-user-guide-pdf",
+      "blocks": {
+        "376f00b3-d833-48fd-a5cb-20dd71e0c7e2": {
+          "type": "SG_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "8744da7f-492b-49e9-b317-c097c5d68c9e": {
+          "type": "SG_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "302819c4-04ec-4961-a85d-968b2810cd5c": {
+          "type": "PPS_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "273c85f8-9b99-4a44-bbc2-bf35d2906839": {
+          "type": "PPS_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "0b32c5b0-6dfa-479c-92ce-b68e03f0d5c5": {
+          "type": "SP_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "598a28d3-bb0b-4962-b19f-e925892286ae": {
+          "type": "SP_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "4b469db3-9fee-43d9-a764-b80049fdb803": {
+          "type": "ACC_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        },
+        "d37cc166-adee-4ec2-b46c-a97f9aa527d1": {
+          "type": "ACC_PDF",
+          "settings": {
+            "file_name": "Jackery Explorer 160 Power Station User Manual",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "376f00b3-d833-48fd-a5cb-20dd71e0c7e2",
+        "8744da7f-492b-49e9-b317-c097c5d68c9e",
+        "302819c4-04ec-4961-a85d-968b2810cd5c",
+        "273c85f8-9b99-4a44-bbc2-bf35d2906839",
+        "0b32c5b0-6dfa-479c-92ce-b68e03f0d5c5",
+        "598a28d3-bb0b-4962-b19f-e925892286ae",
+        "4b469db3-9fee-43d9-a764-b80049fdb803",
+        "d37cc166-adee-4ec2-b46c-a97f9aa527d1"
+      ],
       "settings": {
         "title": "User Manuals",
         "placeholder": "Search Product Model",

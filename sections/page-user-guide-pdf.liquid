@@ -3,9 +3,6 @@
 {% assign SP = section.blocks | where: 'type', "SP_PDF" %}
 {% assign ACC = section.blocks | where: 'type', "ACC_PDF" %}
 
-{{ SG | json }}
-{{ section.blocks | json }}
-
 <h2>{{ section.settings.title }}</h2>
 <ul class="tab">
   {% if SG.size > 0 %}<li class="h4">{{ 'collection.solar_generator' | t }}</li>{% endif %}
