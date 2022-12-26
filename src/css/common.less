@@ -264,13 +264,20 @@
     color: #FFF;
     opacity: 0;
 }
+.slideshow-navigation-button .iconfont {
+    font-size: 4.16vw;
+    transition: all .25s;
+}
+.slideshow-navigation-button.prev .iconfont {
+    transform: rotateY(180deg);
+}
 
 .slideshow-navigation-button.next {
     border-radius: 50%;
 }
 
 .slideshow-navigation-button .iconfont  {
-    color: var(--text-disable-color);
+    color: var(--text-info-color);
 }
 
 .slideshow:hover .slideshow-navigation-button {
@@ -284,14 +291,14 @@
 }
 
 .slideshow-navigation-button.prev {
-    left: 130px;
+    left: 6.7vw;
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 50%;
 }
 
 .slideshow-navigation-button.next {
-    right: 130px;
+    right: 6.7vw;
     top: 50%;
     border-radius: 50%;
     transform: translate(0, -50%);
