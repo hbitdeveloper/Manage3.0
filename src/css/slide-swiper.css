@@ -649,8 +649,13 @@
 .user-voice .slideshow-pagination-zzz {
     display: none;
 }
-
-
+.user-voice .slideshow-pagination-voice {
+    left: 12.5vw;
+    bottom: 40px;
+}
+.user-voice .vocie-thumbnail-container .swiper-thumbs {
+    padding-bottom: 110px;
+}
 .index-section-support {
     display: flex;
     flex-direction: column;
