@@ -1,0 +1,83 @@
+<style>
+.img-icon {width: 96px; height: 96px; font-size: 96px; color: var(--primary-color); display: inline-block;}
+
+.layer-container {width: 100%; max-width: 1200px; margin: 0 auto;}
+
+.banner {
+	width: 100%; height: 100vh; max-height: 890px; padding-top: 100px;
+	background: url("{{block.settings.image | img_url}}") center no-repeat; background-size: cover;
+}
+.banner h5 {width: 34vw; margin-top: 22px;}
+
+.manuals h2 {text-align: center; margin-top: 6.25vw;}
+.manuals a {text-decoration: none;}
+.manuals .tab {
+	margin: 2.6vw auto;
+	display: flex; align-items: center; justify-content: center;
+}
+.manuals .tab li {cursor: pointer; border-bottom: 3px transparent solid; margin-right: 3.125vw; transition: all 0.3s;}
+.manuals .tab li:last-child {margin-right: 0;}
+.manuals .tab li.on, .manuals .tab li:hover {font-weight: 500; border-color: var(--primary-color);}
+
+.manuals .tab-content:not(.on) {display: none;}
+
+.manuals .search-box {
+	width: 100%; max-width: 540px; height: 46px; margin: 0 auto 2.6vw;
+	display: flex; align-items: center; justify-content: center;
+}
+.search-box input, .search-box button {height: 46px; line-height: 46px;}
+.search-box input {
+	text-indent: var(--gap); border: 2px var(--input-border-color) solid; border-right: none; flex: auto;
+	border-top-left-radius: var(--radius); border-bottom-left-radius: var(--radius);
+}
+.search-box button {
+	width: 146px; color: #fff; font-size: 18px; background-color: var(--primary-color);
+	border-top-right-radius: var(--radius); border-bottom-right-radius: var(--radius);
+}
+.manuals .list {display: grid; grid-template-columns: repeat(4,1fr); grid-gap: var(--gap);}
+.manuals .list li {
+	width: 100%; height: 418px; text-align: center; background: #fff; box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.2);
+	display: flex; flex-flow: column; justify-content: center; align-items: center; transition: all 0.3s;
+}
+.manuals .list li:hover {transform: scale(1.035); box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.5);}
+.manuals .list li b {font-weight: 500; padding: 0 var(--gap); margin: 30px 0;}
+.manuals .list li a {
+	width: 96%; max-width: 240px; height: 48px; color: var(--primary-color); background: transparent; border-radius: 24px; border: var(--border-primary);
+	margin: 0 auto; display: flex; align-items: center; justify-content: center; transition: all 0.3s;
+}
+.manuals .list li a .jackery-icon-download {margin-right: 5px;}
+.manuals .list li a .jackery-icon-arrow-right {margin-left: 5px;}
+.manuals .list li a:hover {color: #fff; background: var(--primary-color);}
+
+.manuals .more {color: var(--primary-color); text-align: center; margin: 2.6042vw auto 0; display: block;}
+.manuals .more i {margin-left: 5px;}
+
+.maintenance .list {grid-template-columns: repeat(3,1fr);}
+.maintenance .list li {padding: var(--gap); justify-content: flex-start;}
+.maintenance .list li a {max-width: 300px; height: 66px; border-radius: 33px;}
+.maintenance .list li b {height: 78px; padding: 0;}
+.maintenance .list li img {width: 100%; height: 200px; object-fit: cover;}
+
+@media only screen and (min-width: 768px) {
+  .banner {background-image: url("{{block.settings.m_image | img_url}}")}
+}
+</style>
+
+<div class="layer-container">
+  <h1>{{ section.settings.title }}</h1>
+  <h5>{{ section.settings.subTitle }}</h5>
+</div>
+
+{{ 'user-guide.bundle.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "user guide", "class": "layer banner", "tag": "div",
+  "settings": [
+    {"type": "text", "id": "title", "label": "banner title", "default": "User Guide"},
+    {"type": "text", "id": "subTitle", "label": "banner sub title", "default": "Get detailed operating instructions and product care information for all Jackery products"},
+    {"type": "image_picker", "id": "image", "label": "Image"},
+    {"type": "image_picker", "id": "m_image", "label": "Mobile Image"}
+  ]
+}
+{% endschema %}

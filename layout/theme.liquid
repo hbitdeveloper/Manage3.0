@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+    {% comment %} ali iconfont {% endcomment %}
+    <link rel="stylesheet" rel="preload" href="https://at.alicdn.com/t/c/font_3813355_e0vfifkesla.css?spm=a313x.7781069.1998910419.55&file=font_3813355_e0vfifkesla.css">
+    
+    {{ 'theme.bundle.css' | asset_url | stylesheet_tag }}
+
+    {%- comment -%} Required for lazy-loading with Webpack on Shopify CDN {%- endcomment -%}
+    {%- capture randomFile -%}{{ 'theme.bundle.js' | asset_url }}{%- endcapture -%}
+    {%- assign assetsPath = randomFile | split: 'theme.bundle.js' | first -%}
+    <script>window.__webpack_public_path__ = "{{ assetsPath }}"</script>
+    <link rel="preload" href="{{ 'theme.bundle.js' | asset_url }}" as="script">
+
+    {%- if template contains 'index' -%}
+      {{- 'page-index.bundle.css' | asset_url | stylesheet_tag -}}
+      <link rel="stylesheet" rel="preload" href="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/swiper-bundle.min.css?v=1670922528">
+      <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    {%- endif -%}
+
+    {{ 'common.bundle.css' | asset_url | stylesheet_tag }}
+
+    {%- if template contains 'index' -%}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+      {{ 'swiper.js' | asset_url | script_tag }}
+      <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+
+      {{ 'page-index.bundle.js' | asset_url | script_tag }}
+    {%- endif -%}
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% render 'meta-tags' %}
+
+    {% comment %} <script src="{{ 'global.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+    {{ 'theme.bundle.js' | asset_url | script_tag }}
+    {{ content_for_header }}
+    
+    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    if (Shopify.designMode) {
+      document.documentElement.classList.add('shopify-design-mode');
+    }
+    </script>
+  </head>
+
+  <body class="gradient">
+    {%- if settings.cart_type == 'drawer' -%}
+      {%- render 'cart-drawer' -%}
+    {%- endif -%}
+
+    {% comment %} {% section 'announcement-bar' %}
+    {% section 'header' %} {% endcomment %}
+    {% section 'header' %}
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+    {% comment %} {% section 'footer' %} {% endcomment %}
+  </body>
+</html>
