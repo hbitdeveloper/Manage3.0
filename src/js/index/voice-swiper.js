@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-06 19:57:09
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-26 16:26:32
+ * @LastEditTime: 2022-12-26 17:14:32
  * @FilePath: \3.0-manger\src\js\index\voice-swiper.js
  */
 class vSlideshow {
@@ -70,8 +70,8 @@ class vSlideshow {
         this.initEvents();
     }
     initEvents() {
-        this.slideshow.on('slideNextTransitionEnd', () => this.animate('next'));
-        this.slideshow.on('slidePrevTransitionEnd', () => this.animate('prev'));
+        this.slideshow.on('slideNextTransitionStart', () => this.animate('next'));
+        this.slideshow.on('slidePrevTransitionStart', () => this.animate('prev'));
         const comments = document.querySelectorAll(".slideshow-thumbnail-container .swiper-slide .voice-user-comment-all")
 
         const slide_next = document.querySelector(".user-voice .voice-text .next-voice-btn")
