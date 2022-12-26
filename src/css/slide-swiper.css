@@ -1075,6 +1075,7 @@
     }
     .user-voice .voice-text .slideshow-pagination-voice {
         bottom: -8.5vw;
+        left: unset;
     }
     .user-voice .slideshow-pagination-item.active .pagination-separator {
         background: var(--primary-color);

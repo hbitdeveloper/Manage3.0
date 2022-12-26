@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-06 19:57:09
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-26 17:14:32
+ * @LastEditTime: 2022-12-26 17:46:33
  * @FilePath: \3.0-manger\src\js\index\voice-swiper.js
  */
 class vSlideshow {
@@ -67,7 +67,7 @@ class vSlideshow {
               swiper: this.swiperImg
             } : null,
         });
-        this.initEvents();
+        this.initEvents();``
     }
     initEvents() {
         this.slideshow.on('slideNextTransitionStart', () => this.animate('next'));
