@@ -106,7 +106,14 @@
     text-align: right;
     opacity: 0;
 }
-
+.slide-swiper .slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.slide-swiper .slide-link {
+    width: max-content;
+}
 .banner-icon {
     height: 5.88542vw;
 }
@@ -312,20 +319,12 @@
     margin-bottom: 11px;
 }
 
-.slide-link, .slide-link .iconfont {
-    color: var(--text-black);
-}
 .slide-link .iconfont {
     font-size: 20px;
 }
 
 .video-swiper .slide-link, .video-swiper .slide-link .iconfont {
     color: #FFFFFF;
-}
-
-.slide-link:hover {
-    color: var(--text-black);
-    text-decoration: none;
 }
 
 .slide-title span {
