@@ -1,0 +1,72 @@
+<div class="swiper-container slideshow slide-swiper-container">
+    <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                    {%- assign img_url = block.settings.image | img_url: '1920x' -%}
+                    {%- assign m_img_url = block.settings.m_image | img_url: '750x' -%}
+                    {%- assign banner_icon = block.settings.banner_icon | img_url: '671x' -%}
+
+                    <div class="swiper-slide slide" icon="{{block.settings.banner_icon}}">
+                        <div class="slide-image pc-block absolute"
+                            style="background-image: url({{img_url}})">
+                        </div>
+
+                        <div class="slide-image mobile-block absolute"
+                            style="background-image: url({{m_img_url}})">
+                        </div>
+
+                        <div class="index-container absolute">
+                            <div class="slide-content absolute right-0 top-0">
+                                <span class="slide-title h1">{{block.settings.title | escape}}</span>
+                                <a class="slide-link h5 underlines-btn" href="{{block.settings.link}}">{{block.settings.link_text | escape}} <span class="iconfont jackery-icon-arrow-right"></span></a>
+                            </div>
+
+                            <img class="banner-icon absolute left-0 bottom-0" src="{{banner_icon}}" alt="banner-xingrenzhaung" />
+
+                            <img class="banner-brand-left absolute left-0 top-0" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/1_d4621f27-b474-43ea-902e-f00f790cf09b.png?v=1670915016" alt="jackery-brand" />
+
+                            <img class="banner-brand-right absolute bottom-0 right-0" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/2_55109115-cdac-4786-9031-e7168f04d355.png?v=1670915016" alt="jackery-brand" />
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+    <div class="slideshow-pagination"></div>
+</div>
+
+<script src="{{ 'slide-swiper.bundle.js' | asset_url }}" defer="defer"></script>
+<script>
+    const params = {
+        autoplay: {{ section.settings.autoplay }}, 
+        speed: {{ section.settings.autoplay_speed }}
+    }
+    function loadSlideshow() {
+        if(window.Slideshow) {
+            new Slideshow(document.querySelector('.slide-swiper-container'), params)
+            return
+        }
+        setTimeout(() => { loadSlideshow() }, 100);
+    }
+    loadSlideshow()
+</script>
+{% schema %}
+{
+  "name": "Slide swiper",
+  "tag": "section",
+  "class": "section slide-swiper",
+  "settings": [
+      {"type": "checkbox", "id": "autoplay", "label": "Auto-change slides", "default": true},
+      {"type": "range", "id": "autoplay_speed", "label": "Change images every", "default": 7, "min": 5, "max": 10, "step": 1, "unit": "s"}
+  ],
+  "blocks": [{
+    "type": "image", "name": "Slide Banner",
+    "settings": [
+        {"type": "textarea", "id": "title", "label": "Heading", "default": "Two line\nslide title."},
+        {"type": "url", "id": "link", "label": "Slide link"},
+        {"type": "text", "id": "link_text", "label": "Slide link text", "default": "Optional button"},
+        {"type": "image_picker", "id": "image", "label": "Image"},
+        {"type": "image_picker", "id": "m_image", "label": "Mobile Image"},
+        {"type": "image_picker", "id": "banner_icon", "label": "Banner Icon Image"}
+    ]
+  }]
+}
+{% endschema %}

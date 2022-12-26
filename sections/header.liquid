@@ -1,0 +1,81 @@
+<header class="site-header left-0 right-0 top-0 site-header-white {% if section.settings.show_announcement_bar %}announcement-bar-show{% endif %}">
+        <div class="announcement-bar text-base items-center justify-center relative">
+            Welcome to Jackery <span class="iconfont jackery-icon-fuliliwu-"></span>
+            <div class="index-container absolute right-0 left-0 top-0 bottom-0"><i class="iconfont jackery-icon-guanbi absolute right-0"></i></div>
+        </div>
+        <div class="header-main flex items-center">
+            <div class="index-container flex justify-between relative">
+                <a href="#">
+                    <img class="header-logo" src="https://cdn.shopify.com/s/files/1/0970/9262/files/logo_c7e490ee-fd54-484a-823b-52ae67d17f83.png?v=1666780958" alt="logo">
+                </a>
+
+
+                <div class="header-menu flex items-center">
+                    <div class="header-navs flex">
+                        <div class="nav-item text-base underlines-btn">Shop</div>
+                        <div class="nav-item text-base underlines-btn">About Jackery</div>
+                        <div class="nav-item text-base underlines-btn">Support</div>
+                        <div class="nav-item text-base underlines-btn">Benefits</div>
+                    </div>
+    
+                    <div class="header-icons flex">
+                        <span class="iconfont jackery-icon-sousuo"></span>
+                        <span class="iconfont jackery-icon-yonghu"></span>
+                        <span class="iconfont jackery-icon-gouwuche"></span>
+                    </div>
+
+                    <div class="header-local flex items-center">
+                        <span>EN</span>
+                        <span class="iconfont jackery-icon-arrow-right"></span>
+                    </div>
+                </div>
+
+                <div class="header-m-menu absolute mobile-block right-0"><span class="iconfont jackery-icon-menu"></span></div>
+            </div>
+        </div>
+    </header>
+
+{% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script> {% endcomment %}
+<script>
+        // gsap.registerPlugin(ScrollTrigger);
+        // const headerDom = document.querySelector(".site-header")
+        // const announcement = document.querySelector(".site-header").querySelector(".announcement-bar")
+        // gsap.to(headerDom, {
+        //     scrollTrigger: {
+        //         start: 80,
+        //         toggleClass: {
+        //             className: 'site-header-white',
+        //             targets: '.site-header'
+        //         },
+        //         onUpdate: (self) => {
+        //             self.direction === -1 ? announcement.classList.remove("announcement-hide") : announcement.classList.add("announcement-hide")
+        //         }
+        //     }
+        // })
+
+        $(document).ready(function(){
+            const headerSelectors = {
+                announcementBarBtn: {{ section.settings.show_announcement_bar }} ? document.querySelector(".site-header .announcement-bar .jackery-icon-guanbi") : null,
+                headerDom: document.querySelector(".site-header"),
+                mainContent: document.querySelector(".content-for-layout")
+            }
+            headerSelectors.mainContent.classList.add("layout-hide-announcement")
+            if(headerSelectors.announcementBarBtn) {
+                headerSelectors.mainContent.classList.remove("layout-hide-announcement")
+                headerSelectors.announcementBarBtn.addEventListener("click", () => {
+                    headerSelectors.headerDom.classList.remove("announcement-bar-show")
+                    headerSelectors.mainContent.classList.add("layout-hide-announcement")
+                })
+            }
+        })
+    </script>
+
+{% schema %}
+{
+  "name": "Header and menus",
+  "class": "section-header",
+  "settings": [
+      {"type": "checkbox", "id": "show_announcement_bar", "label": "Show announcement bar", "default": true}
+  ]
+}
+{% endschema %}
