@@ -254,8 +254,7 @@
 }
 
 .product-swiper .slideshow-pagination {
-    bottom: 1.2vw;
-    display: none;
+    bottom: -5.2vw;
 }
 
 
@@ -1009,7 +1008,11 @@
     }
 
     .product-swiper .slideshow-pagination {
-        bottom: -5.2vw;
+        bottom: -8.6vw;
+        display: flex;
+    }
+    .product-swiper .slideshow-navigation-button {
+        display: none;
     }
     .product-swiper .product-swiper-bg {
         background: #FFFFFF;
