@@ -494,6 +494,7 @@
     bottom: unset;
     width: 23.85417vw;
     overflow-x: visible;
+    flex-wrap: nowrap;
 }
 
 .user-voice .voice-text .slideshow-thumbnail-container .slideshow-thumbnail {
@@ -620,8 +621,8 @@
 
 .next-voice-btn {
     position: absolute;
-    top: 34vw;
-    left: 13.6vw;
+    bottom: -11px;
+    left: 44vw;
 }
 
 .user-voice .swiper-container .slide-info {
@@ -649,7 +650,7 @@
 .user-voice .slideshow-pagination-zzz {
     display: none;
 }
-.user-voice .slideshow-pagination-voice {
+.user-voice .voice-text .slideshow-pagination-voice {
     left: 12.5vw;
     bottom: 40px;
 }
