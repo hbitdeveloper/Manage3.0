@@ -349,7 +349,8 @@
     transition: .3s opacity;
     z-index: 10;
 }
-.video-swiper .slideshow-pagination-item.active .pagination-separator {
+.video-swiper .slideshow-pagination-item.active .pagination-separator,
+.product-swiper .slideshow-pagination-item.active .pagination-separator {
     background: var(--primary-color);
 }
 .thumb-container .slideshow-pagination {
@@ -1008,15 +1009,7 @@
     }
 
     .product-swiper .slideshow-pagination {
-        bottom: -8.6vw;
-        display: flex;
-    }
-    .product-swiper .slideshow-pagination-item {
-        margin: 0 0.66667vw;
-    }
-
-    .product-swiper .slideshow-navigation-button {
-        display: none;
+        bottom: -5.2vw;
     }
     .product-swiper .product-swiper-bg {
         background: #FFFFFF;
