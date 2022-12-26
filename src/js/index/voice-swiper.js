@@ -1,8 +1,8 @@
 /*
  * @Date: 2022-12-06 19:57:09
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-20 11:51:45
- * @FilePath: \shopify3.0\src\js\index\voice-swiper.js
+ * @LastEditTime: 2022-12-26 16:26:32
+ * @FilePath: \3.0-manger\src\js\index\voice-swiper.js
  */
 class vSlideshow {
     constructor(el) {
@@ -28,7 +28,7 @@ class vSlideshow {
           watchSlidesProgress: true,
           effect: "slide",
           pagination: {
-            el: '.slideshow-pagination-zzz',
+            el: '.slideshow-pagination-voice',
             clickable: false,
             bulletClass: 'slideshow-pagination-item',
             bulletActiveClass: 'active pagination-active',
