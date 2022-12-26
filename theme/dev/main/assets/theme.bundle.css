@@ -812,7 +812,6 @@ p,
 }
 .slideshow-pagination-item.active .pagination-separator {
   width: 120px;
-  background: var(--primary-color);
 }
 .pagination-separator {
   position: relative;
