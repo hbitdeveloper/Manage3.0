@@ -1,11 +1,13 @@
 /*
  * @Date: 2022-11-26 17:10:31
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-16 17:25:28
- * @FilePath: \shopify3.0\src\js\index\theme.js
+ * @LastEditTime: 2022-12-27 14:59:32
+ * @FilePath: \3.0-manger\src\js\index\theme.js
  */
 import $ from 'jquery'
 import '../../css/theme.less'
+import DetailsDisclosure from '../components/details-disclosure'
+
 window.jQuery = window.$ = $
 __webpack_public_path__ = window.__webpack_public_path__;
 

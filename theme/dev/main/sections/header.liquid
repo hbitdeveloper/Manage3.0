@@ -25,8 +25,41 @@
                     </div>
 
                     <div class="header-local flex items-center">
-                        <span>EN</span>
-                        <span class="iconfont jackery-icon-arrow-right"></span>
+                        <details-disclosure>
+                                <details id="Details-HeaderMenu-1">
+                                    <summary 
+                                        class="header__menu-item list-menu__item link focus-inset" role="button" aria-expanded="false"
+                                        aria-controls="HeaderMenu-MenuList-1">
+                                        <span>EN</span>
+                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                    </summary>
+                                    
+                                    <ul id="HeaderMenu-MenuList-1"
+                                        class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list"
+                                        tabindex="-1">
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                USA
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                CA
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                JP
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                DE
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                KR
+                                            </a></li>
+                                    </ul>
+                                </details>
+                        </details-disclosure>
                     </div>
                 </div>
 
@@ -67,6 +100,9 @@
                     headerSelectors.mainContent.classList.add("layout-hide-announcement")
                 })
             }
+
+
+            customElements.define('details-disclosure', DetailsDisclosure);
         })
     </script>
 
