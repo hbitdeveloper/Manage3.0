@@ -983,11 +983,11 @@
         text-align: center;
     }
     .product-swiper .slide-product-compare {
-        bottom: -12vw;
+        bottom: -14vw;
         right: 0;
-        font-size: 3.46667vw;
+        font-size: 4.5vw;
         color: var(--text-black);
-        line-height: 5.6vw;
+        line-height: 4.5vw;
     }
     .product-swiper .slide-product-price {
         margin-top: 1.06667vw;

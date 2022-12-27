@@ -463,10 +463,10 @@ p,
   }
   .a-button-solid,
   .a-button-fill {
-    border-radius: 4.66667vw;
+    border-radius: 6.5vw;
     border-width: 1px;
-    font-size: 3.46667vw;
-    line-height: 4.8vw;
+    font-size: 4.5vw;
+    line-height: 4.5vw;
     padding: 2.2vw 10vw;
   }
   /* 版心 */
