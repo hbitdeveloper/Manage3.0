@@ -505,7 +505,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background: #FBFBFB;
+    background: #FBFBFB!important;
     margin-bottom: 0;
     height: 100%;
     width: 23.85417vw;
@@ -517,7 +517,7 @@
 }
 
 .user-voice .voice-text .slideshow-thumbnail-container .swiper-slide-active {
-    background-color: #FD5000;
+    background-color: #FD5000!important;
     border-radius: 4.6875vw 0px 0px 0px;
 }
 
