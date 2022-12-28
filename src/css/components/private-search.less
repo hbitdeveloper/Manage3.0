@@ -59,6 +59,9 @@ menu-drawer+.header__search {
     background-color: rgb(255, 255, 255);
     z-index: 3;
     border-radius: 0px 0px 12px 12px;
+    .hidden {
+        display: none;
+    }
 }
 
 details[open]>.search-modal {
@@ -241,15 +244,15 @@ predictive-search[loading] .predictive-search {
     display: none;
 }
 .predictive-search__heading {
-    border-bottom: 0.1rem solid rgba(18, 18, 18, 0.08);
+    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
     margin: 0 auto;
-    padding: 1.5rem 0 0.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: calc(100% - 4rem);
     color: rgba(18, 18, 18, 0.7);
     font-size: 13px;
+    line-height: 35px;
 }
 
 predictive-search .spinner {
@@ -291,13 +294,12 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 
 .predictive-search__list-item[aria-selected="true"] .predictive-search__item-heading,
 .predictive-search__list-item:hover .predictive-search__item-heading {
-    text-decoration: underline;
     text-underline-offset: 0.3rem;
 }
 
 .predictive-search__item {
     display: flex;
-    padding: 1rem 2rem;
+    padding: 14px 25px;
     text-align: left;
     text-decoration: none;
     width: 100%;
@@ -306,7 +308,6 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 .predictive-search__item--link {
     display: grid;
     grid-template-columns: 5rem 1fr;
-    grid-column-gap: 2rem;
     grid-template-areas: 'product-image product-content';
 }
 
@@ -326,6 +327,8 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 
 .predictive-search__item-heading {
     margin: 0;
+    font-size: 14px;
+    color: #333;
 }
 
 .predictive-search__item .price {
@@ -341,9 +344,9 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 .predictive-search__item--term {
     justify-content: space-between;
     align-items: center;
-    padding: 1.3rem 2rem;
     word-break: break-all;
-    line-height: calc(1 + 0.4 / 1.0);
+    line-height: 1;
+    font-size: 14px;
 }
 
 @media screen and (min-width: 750px) {
@@ -354,8 +357,8 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 }
 
 .predictive-search__item--term .icon-arrow {
-    width: calc(1.0 * 1.4rem);
-    height: calc(1.0 * 1.4rem);
+    width: 14px;
+    height: 14px;
     flex-shrink: 0;
     margin-left: calc(1.0 * 2rem);
     color: rgb(18, 18, 18);
