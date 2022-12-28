@@ -869,7 +869,7 @@ p,
     padding-left: 2.1vw;
   }
   .header-main .index-container a {
-    height: 4.8vw;
+    height: 100%;
   }
   .announcement-bar .jackery-icon-fuliliwu- {
     color: var(--primary-color);
