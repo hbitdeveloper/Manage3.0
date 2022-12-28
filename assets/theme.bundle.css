@@ -324,6 +324,7 @@ p,
 .ra-btn .iconfont {
   transition: all 0.2s;
   color: var(--text-info-color);
+  font-size: 60px;
 }
 .ra-btn:hover .iconfont {
   color: var(--primary-color);
