@@ -215,6 +215,14 @@
               "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
               "menu_img": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
             }
+          },
+          "24207690-9b51-4d55-ac1e-41aaac0ba401": {
+            "type": "benefits",
+            "settings": {
+              "menu_title": "Account",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/2_a6726043-81bf-4495-8325-e6571c954cbb.png"
+            }
           }
         },
         "block_order": [
@@ -226,7 +234,8 @@
           "7eb3d710-b1f7-4a68-b7ca-5e522a08f8c4",
           "9940a298-2037-41a8-b498-aaf76556b4d0",
           "0154d338-38e3-47cc-8a24-39021c9ddf63",
-          "25c4d1db-5f4a-4142-b8fc-85e225e0fa71"
+          "25c4d1db-5f4a-4142-b8fc-85e225e0fa71",
+          "24207690-9b51-4d55-ac1e-41aaac0ba401"
         ],
         "settings": {
           "show_announcement_bar": true
