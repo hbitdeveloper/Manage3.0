@@ -143,7 +143,21 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "ad8082fe-f6d5-4f5b-a88e-21ae0e909426": {
+            "type": "support",
+            "settings": {
+              "menu_title": "How to Buy",
+              "menu_url": "https:\/\/ca.jackery.com\/pages\/where-to-buy",
+              "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
+            }
+          }
+        },
+        "block_order": [
+          "ad8082fe-f6d5-4f5b-a88e-21ae0e909426"
+        ],
         "settings": {
+          "show_announcement_bar": true
         }
       },
       "footer": {
@@ -203,7 +217,10 @@
           "color_scheme": "background-1"
         }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
