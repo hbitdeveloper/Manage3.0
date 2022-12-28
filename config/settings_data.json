@@ -247,6 +247,14 @@
               "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
               "menu_img": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
             }
+          },
+          "830f9cb5-d216-4f96-8ca8-9314ef979671": {
+            "type": "about_jackery",
+            "settings": {
+              "menu_title": "Jackery Care",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/2_a6726043-81bf-4495-8325-e6571c954cbb.png"
+            }
           }
         },
         "block_order": [
@@ -262,7 +270,8 @@
           "24207690-9b51-4d55-ac1e-41aaac0ba401",
           "cd00e3b0-87b6-4ef6-b158-1679c7ab40e9",
           "0b0202ec-fa08-4355-85dd-b2515a4c4968",
-          "f0afeb56-5e81-415b-a21c-bb4e9f4191d5"
+          "f0afeb56-5e81-415b-a21c-bb4e9f4191d5",
+          "830f9cb5-d216-4f96-8ca8-9314ef979671"
         ],
         "settings": {
           "show_announcement_bar": true
