@@ -1,9 +1,10 @@
 /*
  * @Date: 2022-12-28 09:45:19
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-28 09:45:20
+ * @LastEditTime: 2022-12-28 10:01:37
  * @FilePath: \3.0-manger\src\js\components\private-search.js
  */
+import {debounce} from '../utils/index'
 export default class PredictiveSearch extends HTMLElement {
     constructor() {
         super();

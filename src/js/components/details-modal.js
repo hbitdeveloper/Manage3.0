@@ -1,9 +1,11 @@
 /*
  * @Date: 2022-12-27 15:21:01
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-28 09:44:01
+ * @LastEditTime: 2022-12-28 10:00:54
  * @FilePath: \3.0-manger\src\js\components\details-modal.js
  */
+
+import {removeTrapFocus, trapFocus} from '../utils/index'
 export default class DetailsModal extends HTMLElement {
   constructor() {
     super();

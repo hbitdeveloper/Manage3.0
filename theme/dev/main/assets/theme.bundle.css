@@ -788,6 +788,7 @@ p,
 }
 .announcement-bar-show .announcement-bar {
   display: flex;
+  z-index: 9;
 }
 .announcement-bar .index-container .jackery-icon-guanbi {
   cursor: pointer;
@@ -986,6 +987,9 @@ details-disclosure > details {
 .header__search .header__icon::marker {
   content: '';
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 /* Search */
 menu-drawer + .header__search {
   display: none;
@@ -1038,7 +1042,7 @@ details[open] .modal-overlay {
 details[open] .modal-overlay::after {
   position: absolute;
   content: '';
-  background-color: #121212;
+  background-color: rgba(18, 18, 18, 0.5);
   top: 100%;
   left: 0;
   right: 0;
