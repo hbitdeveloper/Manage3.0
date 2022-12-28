@@ -183,6 +183,14 @@
               "menu_url": "https:\/\/ca.jackery.com\/pages\/warranty-return",
               "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
             }
+          },
+          "7eb3d710-b1f7-4a68-b7ca-5e522a08f8c4": {
+            "type": "support",
+            "settings": {
+              "menu_title": "FAQ",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
+            }
           }
         },
         "block_order": [
@@ -190,7 +198,8 @@
           "805d4931-8602-487a-a0ba-5e29ee5a63bb",
           "e43d6528-05e6-4d03-8e97-e31fd80e89d1",
           "27fe53d3-0da8-4ed1-9781-3b585fe57348",
-          "32721c79-301b-4328-a83e-50c8b7db83ea"
+          "32721c79-301b-4328-a83e-50c8b7db83ea",
+          "7eb3d710-b1f7-4a68-b7ca-5e522a08f8c4"
         ],
         "settings": {
           "show_announcement_bar": true
