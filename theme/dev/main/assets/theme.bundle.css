@@ -1250,7 +1250,7 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 .nav-item-menu {
   position: fixed;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: all 0.2s ease;
   background: #F5F5F5;
   left: 0;
   right: 0;
@@ -1281,11 +1281,13 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   font-weight: bold;
   color: #000;
   margin-bottom: 24px;
+  display: block;
 }
 .nav-menuItem-bg {
   background: url(https://cdn.shopify.com/s/files/1/0550/0524/9633/files/109f3404fb4ead1f3f5c080c7a70f404.png?v=1672216981);
   width: 600px;
   height: 340px;
   background-size: cover;
+  transition: all 0.3s;
 }
 
