@@ -25,7 +25,7 @@
                                             {% case block.type %}
                                                 {% when 'about_jackery' %}
                                                     <a 
-                                                        class="nav-menuItem underlines-btn" 
+                                                        class="nav-menuItem underlines-btn {% if forloop.index0 == 0 %}active{% endif %}" 
                                                         href="{{block.settings.menu_url}}"
                                                         img="{{img_url}}"
                                                     >
@@ -48,7 +48,7 @@
                                                 {%- assign img_url = block.settings.menu_img | img_url: '600x' -%}
                                                 {% when 'support' %}
                                                     <a 
-                                                        class="nav-menuItem underlines-btn" 
+                                                        class="nav-menuItem underlines-btn {% if forloop.index0 == 0 %}active{% endif %}" 
                                                         href="{{block.settings.menu_url}}"
                                                         img="{{img_url}}"
                                                     >
@@ -71,7 +71,7 @@
                                             {% case block.type %}
                                                 {% when 'benefits' %}
                                                     <a 
-                                                        class="nav-menuItem underlines-btn" 
+                                                        class="nav-menuItem underlines-btn {% if forloop.index0 == 0 %}active{% endif %}"
                                                         href="{{block.settings.menu_url}}"
                                                         img="{{img_url}}"
                                                     >
@@ -233,6 +233,11 @@
                     menuBg.style.background = `url(${list_0})`
                     list.forEach(item => {
                         item.addEventListener("mouseover", () => {
+                            list.forEach((e, i) => {
+                                e.classList.remove("active")
+                            });
+
+                            item.classList.add("active")
                             const url = item.getAttribute("img")
                             menuBg.style.background = `url(${url})`
                         })
