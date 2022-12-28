@@ -151,10 +151,19 @@
               "menu_url": "https:\/\/ca.jackery.com\/pages\/where-to-buy",
               "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
             }
+          },
+          "805d4931-8602-487a-a0ba-5e29ee5a63bb": {
+            "type": "support",
+            "settings": {
+              "menu_title": "User Guide",
+              "menu_url": "https:\/\/ca.jackery.com\/pages\/warranty-return",
+              "menu_img": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
+            }
           }
         },
         "block_order": [
-          "ad8082fe-f6d5-4f5b-a88e-21ae0e909426"
+          "ad8082fe-f6d5-4f5b-a88e-21ae0e909426",
+          "805d4931-8602-487a-a0ba-5e29ee5a63bb"
         ],
         "settings": {
           "show_announcement_bar": true
