@@ -208,7 +208,8 @@ p {
 }
 
 .rate>label:before {
-    content: '★';
+    content: '\ea29';
+    font-family: 'iconfont';
 }
 
 .rate>label.checked~label,.rate>label.checked {
