@@ -143,7 +143,165 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "ad8082fe-f6d5-4f5b-a88e-21ae0e909426": {
+            "type": "support",
+            "settings": {
+              "menu_title": "How to Buy",
+              "menu_url": "https:\/\/ca.jackery.com\/pages\/where-to-buy",
+              "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
+            }
+          },
+          "805d4931-8602-487a-a0ba-5e29ee5a63bb": {
+            "type": "support",
+            "settings": {
+              "menu_title": "User Guide",
+              "menu_url": "https:\/\/ca.jackery.com\/pages\/warranty-return",
+              "menu_img": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
+            }
+          },
+          "e43d6528-05e6-4d03-8e97-e31fd80e89d1": {
+            "type": "support",
+            "settings": {
+              "menu_title": "Service Policy",
+              "menu_url": "https:\/\/ca.jackery.com\/pages\/warranty-return",
+              "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
+            }
+          },
+          "27fe53d3-0da8-4ed1-9781-3b585fe57348": {
+            "type": "support",
+            "settings": {
+              "menu_title": "Smart Self-service",
+              "menu_url": "https:\/\/ca.jackery.com\/pages\/warranty-return",
+              "menu_img": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
+            }
+          },
+          "32721c79-301b-4328-a83e-50c8b7db83ea": {
+            "type": "support",
+            "settings": {
+              "menu_title": "Affiliate",
+              "menu_url": "https:\/\/ca.jackery.com\/pages\/warranty-return",
+              "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
+            }
+          },
+          "7eb3d710-b1f7-4a68-b7ca-5e522a08f8c4": {
+            "type": "support",
+            "settings": {
+              "menu_title": "FAQ",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
+            }
+          },
+          "9940a298-2037-41a8-b498-aaf76556b4d0": {
+            "type": "benefits",
+            "settings": {
+              "menu_title": "Welcome",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/2_a6726043-81bf-4495-8325-e6571c954cbb.png"
+            }
+          },
+          "0154d338-38e3-47cc-8a24-39021c9ddf63": {
+            "type": "benefits",
+            "settings": {
+              "menu_title": "Jackery Promos",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
+            }
+          },
+          "25c4d1db-5f4a-4142-b8fc-85e225e0fa71": {
+            "type": "benefits",
+            "settings": {
+              "menu_title": "Refer &Get Reward",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
+            }
+          },
+          "24207690-9b51-4d55-ac1e-41aaac0ba401": {
+            "type": "benefits",
+            "settings": {
+              "menu_title": "Account",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/2_a6726043-81bf-4495-8325-e6571c954cbb.png"
+            }
+          },
+          "cd00e3b0-87b6-4ef6-b158-1679c7ab40e9": {
+            "type": "benefits",
+            "settings": {
+              "menu_title": "Membership",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
+            }
+          },
+          "0b0202ec-fa08-4355-85dd-b2515a4c4968": {
+            "type": "benefits",
+            "settings": {
+              "menu_title": "How to Choose",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
+            }
+          },
+          "f0afeb56-5e81-415b-a21c-bb4e9f4191d5": {
+            "type": "about_jackery",
+            "settings": {
+              "menu_title": "Our Story",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
+            }
+          },
+          "830f9cb5-d216-4f96-8ca8-9314ef979671": {
+            "type": "about_jackery",
+            "settings": {
+              "menu_title": "Jackery Care",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/2_a6726043-81bf-4495-8325-e6571c954cbb.png"
+            }
+          },
+          "ddf1164a-d78a-47cc-a140-3c5309e48b54": {
+            "type": "about_jackery",
+            "settings": {
+              "menu_title": "News",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
+            }
+          },
+          "89a63be2-dc72-4d29-ba75-ec29e8e25568": {
+            "type": "about_jackery",
+            "settings": {
+              "menu_title": "Events",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/2_a6726043-81bf-4495-8325-e6571c954cbb.png"
+            }
+          },
+          "ceb4d545-745b-43ee-b6da-50d747869d23": {
+            "type": "about_jackery",
+            "settings": {
+              "menu_title": "Affiliate",
+              "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
+              "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
+            }
+          }
+        },
+        "block_order": [
+          "ad8082fe-f6d5-4f5b-a88e-21ae0e909426",
+          "805d4931-8602-487a-a0ba-5e29ee5a63bb",
+          "e43d6528-05e6-4d03-8e97-e31fd80e89d1",
+          "27fe53d3-0da8-4ed1-9781-3b585fe57348",
+          "32721c79-301b-4328-a83e-50c8b7db83ea",
+          "7eb3d710-b1f7-4a68-b7ca-5e522a08f8c4",
+          "9940a298-2037-41a8-b498-aaf76556b4d0",
+          "0154d338-38e3-47cc-8a24-39021c9ddf63",
+          "25c4d1db-5f4a-4142-b8fc-85e225e0fa71",
+          "24207690-9b51-4d55-ac1e-41aaac0ba401",
+          "cd00e3b0-87b6-4ef6-b158-1679c7ab40e9",
+          "0b0202ec-fa08-4355-85dd-b2515a4c4968",
+          "f0afeb56-5e81-415b-a21c-bb4e9f4191d5",
+          "830f9cb5-d216-4f96-8ca8-9314ef979671",
+          "ddf1164a-d78a-47cc-a140-3c5309e48b54",
+          "89a63be2-dc72-4d29-ba75-ec29e8e25568",
+          "ceb4d545-745b-43ee-b6da-50d747869d23"
+        ],
         "settings": {
+          "show_announcement_bar": true
         }
       },
       "footer": {
@@ -203,7 +361,10 @@
           "color_scheme": "background-1"
         }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
