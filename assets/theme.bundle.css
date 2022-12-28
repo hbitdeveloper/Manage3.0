@@ -775,7 +775,7 @@ p,
 }
 .header-navs .nav-item {
   color: var(--text-main-color);
-  line-height: 78px;
+  line-height: 80px;
   margin-left: 58px;
 }
 .header-navs .nav-item::after {

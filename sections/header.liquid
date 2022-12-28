@@ -13,19 +13,65 @@
                 <div class="header-menu flex items-center">
                     <div class="header-navs flex">
                         <div class="nav-item text-base underlines-btn">Shop</div>
-                        <div class="nav-item text-base underlines-btn">About Jackery</div>
-                        <div class="nav-item text-base underlines-btn">Support</div>
+
+                        <div class="nav-item text-base underlines-btn">
+                            About Jackery
+                            <div class="nav-item-menu">
+                                <div class="index-container">
+                                    <div class="nav-menuItem-list">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'about_jackery' %}
+                                                    <a 
+                                                        class="nav-menuItem underlines-btn" 
+                                                        href="{{block.settings.menu_url}}"
+                                                    >
+                                                        {{block.settings.menu_title | escape}}
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="nav-menuItem-bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item text-base underlines-btn">
+                            Support
+                            <div class="nav-item-menu">
+                                <div class="index-container">
+                                    <div class="nav-menuItem-list">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'support' %}
+                                                    <a 
+                                                        class="nav-menuItem underlines-btn" 
+                                                        href="{{block.settings.menu_url}}"
+                                                    >
+                                                        {{block.settings.menu_title | escape}}
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="nav-menuItem-bg"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="nav-item text-base underlines-btn">
                             Benefits
                             <div class="nav-item-menu">
                                 <div class="index-container">
                                     <div class="nav-menuItem-list">
-                                        <div class="nav-menuItem underlines-btn">Our Story</div>
-                                        <div class="nav-menuItem underlines-btn">Jackery Care</div>
-                                        <div class="nav-menuItem underlines-btn">News</div>
-                                        <div class="nav-menuItem underlines-btn">Events</div>
-                                        <div class="nav-menuItem underlines-btn">Affiliate</div>
-                                        <div class="nav-menuItem underlines-btn">Blog</div>
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'benefits' %}
+                                                    <a 
+                                                        class="nav-menuItem underlines-btn" 
+                                                        href="{{block.settings.menu_url}}"
+                                                    >
+                                                        {{block.settings.menu_title | escape}}
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
                                     </div>
                                     <div class="nav-menuItem-bg"></div>
                                 </div>
@@ -176,6 +222,104 @@
   "class": "section-header",
   "settings": [
       {"type": "checkbox", "id": "show_announcement_bar", "label": "Show announcement bar", "default": true}
-  ]
+  ],
+  "blocks": [
+      {
+        "type": "benefits",
+        "name": "Benefits menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Menu title"},
+            {"type": "url", "id": "menu_url", "label": "Menu url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Menu image"}
+        ]
+      },
+      {
+        "type": "support",
+        "name": "Support menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Menu title"},
+            {"type": "url", "id": "menu_url", "label": "Menu url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Menu image"}
+        ]
+      },
+      {
+        "type": "about_jackery",
+        "name": "About jackery menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Menu title"},
+            {"type": "url", "id": "menu_url", "label": "Menu url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Menu image"}
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "alignment",
+            "label": "Vertical alignment",
+            "default": "top-middle",
+            "info": "Aligns when next to other custom content",
+            "options": [
+              {
+                "value": "top-middle",
+                "label": "Top"
+              },
+              {
+                "value": "center",
+                "label": "Middle"
+              },
+              {
+                "value": "bottom-middle",
+                "label": "Bottom"
+              }
+            ]
+          }
+        ]
+      }
+    ]
 }
 {% endschema %}
