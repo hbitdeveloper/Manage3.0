@@ -173,10 +173,6 @@
     margin-bottom: 10vw;
 }
 
-/* .collection-swiper .swiper-wrapper {
-    transform: translate3d(0px, 0, 0px)!important;
-} */
-
 .swiper-slide-active {
     z-index: 9;
 }
