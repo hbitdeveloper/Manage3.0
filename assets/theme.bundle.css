@@ -775,8 +775,11 @@ p,
 }
 .header-navs .nav-item {
   color: var(--text-main-color);
-  line-height: 32px;
+  line-height: 78px;
   margin-left: 58px;
+}
+.header-navs .nav-item::after {
+  bottom: 0;
 }
 .header-icons {
   justify-content: space-between;
@@ -982,6 +985,7 @@ menu-drawer + .header__search {
   background-color: #ffffff;
   z-index: 3;
   border-radius: 0px 0px 12px 12px;
+  overflow: hidden;
 }
 .predictive-search .hidden {
   display: none;
@@ -1242,5 +1246,46 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   grid-area: product-image;
   object-fit: contain;
   font-family: 'object-fit: contain';
+}
+.nav-item-menu {
+  position: fixed;
+  overflow: hidden;
+  transition: all 0.3s;
+  background: #F5F5F5;
+  left: 0;
+  right: 0;
+  top: 78px;
+  cursor: auto;
+}
+.announcement-bar-show .nav-item-menu {
+  top: 114px;
+  max-height: 0;
+}
+.header-navs .nav-item:hover .nav-item-menu {
+  max-height: calc(100vh - 78px);
+}
+.announcement-bar-show .header-navs .nav-item:hover .nav-item-menu {
+  max-height: calc(100vh - 114px);
+}
+.nav-item-menu .index-container {
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+}
+.nav-item-menu .nav-menuItem-list {
+  margin-right: 100px;
+}
+.nav-item-menu .nav-menuItem-list .nav-menuItem {
+  line-height: 27px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 24px;
+}
+.nav-menuItem-bg {
+  background: url(https://cdn.shopify.com/s/files/1/0550/0524/9633/files/109f3404fb4ead1f3f5c080c7a70f404.png?v=1672216981);
+  width: 600px;
+  height: 340px;
+  background-size: cover;
 }
 
