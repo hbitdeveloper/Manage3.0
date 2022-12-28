@@ -51,11 +51,14 @@ menu-drawer+.header__search {
     display: none;
     position: absolute;
     top: calc(100% + 0.1rem);
-    width: calc(100% + 0.2rem);
-    left: -0.1rem;
-    border: 0.1rem solid rgba(18, 18, 18, 0.2);
+    max-width: 40vw;
+    width: 100%;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
     background-color: rgb(255, 255, 255);
     z-index: 3;
+    border-radius: 0px 0px 12px 12px;
 }
 
 details[open]>.search-modal {
@@ -191,7 +194,7 @@ predictive-search .search-modal__close-button {
 
 @media screen and (min-width: 990px) {
     .search-modal__form {
-        max-width: 47.8rem;
+        max-width: 40vw;
     }
 
     .search-modal__close-button {
@@ -234,7 +237,9 @@ predictive-search[open] .predictive-search,
 predictive-search[loading] .predictive-search {
     display: block;
 }
-
+.visually-hidden {
+    display: none;
+}
 .predictive-search__heading {
     border-bottom: 0.1rem solid rgba(18, 18, 18, 0.08);
     margin: 0 auto;
@@ -244,6 +249,7 @@ predictive-search[loading] .predictive-search {
     align-items: center;
     width: calc(100% - 4rem);
     color: rgba(18, 18, 18, 0.7);
+    font-size: 13px;
 }
 
 predictive-search .spinner {
