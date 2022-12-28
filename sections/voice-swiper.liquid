@@ -16,12 +16,12 @@
                             </div>
                             <div class="slide-content slide-content-img"></div>
 
-                            <a class="slide-info pc-block" href="{{block.settings.p_link}}" style="bottom: {{block.settings.pc_y}}vw;left: {{block.settings.pc_x}}vw;display:flex!important;">
+                            <a class="slide-info pc-block absolute" href="{{block.settings.p_link}}" style="bottom: {{block.settings.pc_y}}vw;left: {{block.settings.pc_x}}vw;display:flex!important;">
                                 <img src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/icon-_2x_0cdd2b58-1c28-427e-af1b-b68c5f8df76d.png?v=1670312292" alt="{{block.settings.p_name}}">
                                 <div class="voice-user-productname h5">{{block.settings.p_name | escape}}</div>
                             </a>
 
-                            <a class="slide-info mobile-block" href="{{block.settings.p_link}}" style="bottom: {{block.settings.m_y}}vw;left: {{block.settings.m_x}}vw;display:flex!important;justify-content: flex-start;">
+                            <a class="slide-info mobile-block absolute" href="{{block.settings.p_link}}" style="bottom: {{block.settings.m_y}}vw;left: {{block.settings.m_x}}vw;display:flex!important;justify-content: flex-start;">
                                 <img src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/icon-_2x_0cdd2b58-1c28-427e-af1b-b68c5f8df76d.png?v=1670312292" alt="{{block.settings.p_name}}">
                                 <div class="voice-user-productname h5">{{block.settings.p_name | escape}}</div>
                             </a>
@@ -71,22 +71,15 @@
                         {% endfor %}
                     </div>
                 </div>
-            </div>
 
-            <div class="slideshow-pagination-zzz"></div>
+                <div class="slideshow-pagination slideshow-pagination-voice"></div>
 
-            <div class="next-voice-btn">
+                <div class="next-voice-btn">
                     <div class="ra-btn in">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-                            <circle class="cbtn-bg" cx="50" cy="50" r="23" fill="none" stroke="#B4B1B5" stroke-width="1" />
-                            <circle class="cbtn-fg" cx="50" cy="50" r="23" fill="none" stroke="#FD5000" stroke-width="1.5" />
-                            <g class="cbtn-acnt">
-                                <path class="cbtn-arrow" fill="none" stroke="#FD5000" stroke-width="2"
-                                    d="M47.7 39.4L58.2 50 47.7 60.5M36.5 50h21.4" />
-                            </g>
-                        </svg>
+                        <span class="iconfont jackery-icon-Next"></span>
                     </div>
-                </div>
+            </div>
+            </div>
         </div>
     </section>
 <script src="{{ 'voice-swiper.bundle.js' | asset_url }}" defer="defer">

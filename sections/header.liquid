@@ -3,30 +3,176 @@
             Welcome to Jackery <span class="iconfont jackery-icon-fuliliwu-"></span>
             <div class="index-container absolute right-0 left-0 top-0 bottom-0"><i class="iconfont jackery-icon-guanbi absolute right-0"></i></div>
         </div>
-        <div class="header-main flex items-center">
-            <div class="index-container flex justify-between relative">
-                <a href="#">
-                    <img class="header-logo" src="https://cdn.shopify.com/s/files/1/0970/9262/files/logo_c7e490ee-fd54-484a-823b-52ae67d17f83.png?v=1666780958" alt="logo">
+        <div class="header-main flex items-center relative">
+            <div class="index-container flex justify-between">
+                <a href="#" class="flex items-center" style="text-decoration: none;">
+                    <span class="iconfont jackery-icon-jackery header-logo"></span>
                 </a>
 
 
                 <div class="header-menu flex items-center">
                     <div class="header-navs flex">
                         <div class="nav-item text-base underlines-btn">Shop</div>
-                        <div class="nav-item text-base underlines-btn">About Jackery</div>
-                        <div class="nav-item text-base underlines-btn">Support</div>
-                        <div class="nav-item text-base underlines-btn">Benefits</div>
+
+                        <div class="nav-item text-base underlines-btn">
+                            About Jackery
+                            <div class="nav-item-menu">
+                                <div class="index-container">
+                                    <div class="nav-menuItem-list">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'about_jackery' %}
+                                                    <a 
+                                                        class="nav-menuItem underlines-btn" 
+                                                        href="{{block.settings.menu_url}}"
+                                                    >
+                                                        {{block.settings.menu_title | escape}}
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="nav-menuItem-bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item text-base underlines-btn">
+                            Support
+                            <div class="nav-item-menu">
+                                <div class="index-container">
+                                    <div class="nav-menuItem-list">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'support' %}
+                                                    <a 
+                                                        class="nav-menuItem underlines-btn" 
+                                                        href="{{block.settings.menu_url}}"
+                                                    >
+                                                        {{block.settings.menu_title | escape}}
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="nav-menuItem-bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item text-base underlines-btn">
+                            Benefits
+                            <div class="nav-item-menu">
+                                <div class="index-container">
+                                    <div class="nav-menuItem-list">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'benefits' %}
+                                                    <a 
+                                                        class="nav-menuItem underlines-btn" 
+                                                        href="{{block.settings.menu_url}}"
+                                                    >
+                                                        {{block.settings.menu_title | escape}}
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="nav-menuItem-bg"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
     
                     <div class="header-icons flex">
-                        <span class="iconfont jackery-icon-sousuo"></span>
+                        <details-modal class="header__search">
+                                <details>
+                                    <summary
+                                        class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
+                                        aria-haspopup="dialog" aria-label="Search" role="button">
+                                        <span class="iconfont jackery-icon-sousuo"></span>
+                                    </summary>
+                                    <div class="search-modal modal__content" role="dialog" aria-modal="true"
+                                        aria-label="Search">
+                                        <div class="modal-overlay"></div>
+                                        <div class="search-modal__content search-modal__content-bottom index-container relative" tabindex="-1">
+                                            <span class="iconfont jackery-icon-jackery"></span>
+                                            <predictive-search class="search-modal__form"
+                                                data-loading-text="Loading...">
+                                                <form action="/search" method="get" role="search"
+                                                    class="search search-modal__form">
+                                                    <div class="field">
+                                                        <input class="search__input field__input" id="Search-In-Modal"
+                                                            type="search" name="q" value="" placeholder="Search"
+                                                            role="combobox" aria-expanded="false"
+                                                            aria-owns="predictive-search-results-list"
+                                                            aria-controls="predictive-search-results-list"
+                                                            aria-haspopup="listbox" aria-autocomplete="list"
+                                                            autocorrect="off" autocomplete="off" autocapitalize="off"
+                                                            spellcheck="false" aria-activedescendant="">
+                                                        <input type="hidden" name="options[prefix]" value="last">
+                                                        <button class="search__button field__button"
+                                                            aria-label="Search">
+                                                            <span class="iconfont jackery-icon-sousuo"></span>
+                                                        </button>
+
+                                                        <button type="button"
+                                                class="search-modal__close-button modal__close-button link link--text focus-inset"
+                                                aria-label="Close">
+                                                <span class="iconfont jackery-icon-guanbi"></span>
+                                            </button>
+                                                    </div>
+
+                                                    <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                                                    <div class="predictive-search__loading-state">
+                                                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                        </svg>
+                                                    </div>
+                                                    </div>
+                                                    <span class="predictive-search-status visually-hidden" role="status"
+                                                        aria-hidden="true"></span>
+                                                </form>
+                                            </predictive-search>
+                                        </div>
+                                    </div>
+                                </details>
+                        </details-modal>
                         <span class="iconfont jackery-icon-yonghu"></span>
                         <span class="iconfont jackery-icon-gouwuche"></span>
                     </div>
 
                     <div class="header-local flex items-center">
-                        <span>EN</span>
-                        <span class="iconfont jackery-icon-arrow-right"></span>
+                        <details-disclosure>
+                                <details id="Details-HeaderMenu-1">
+                                    <summary 
+                                        class="header__menu-item list-menu__item link focus-inset" role="button" aria-expanded="false"
+                                        aria-controls="HeaderMenu-MenuList-1">
+                                        <span>EN</span>
+                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                    </summary>
+                                    
+                                    <ul id="HeaderMenu-MenuList-1"
+                                        class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list"
+                                        tabindex="-1">
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                USA
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                CA
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                JP
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                DE
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                KR
+                                            </a></li>
+                                    </ul>
+                                </details>
+                        </details-disclosure>
                     </div>
                 </div>
 
@@ -76,6 +222,104 @@
   "class": "section-header",
   "settings": [
       {"type": "checkbox", "id": "show_announcement_bar", "label": "Show announcement bar", "default": true}
-  ]
+  ],
+  "blocks": [
+      {
+        "type": "benefits",
+        "name": "Benefits menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Menu title"},
+            {"type": "url", "id": "menu_url", "label": "Menu url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Menu image"}
+        ]
+      },
+      {
+        "type": "support",
+        "name": "Support menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Menu title"},
+            {"type": "url", "id": "menu_url", "label": "Menu url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Menu image"}
+        ]
+      },
+      {
+        "type": "about_jackery",
+        "name": "About jackery menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Menu title"},
+            {"type": "url", "id": "menu_url", "label": "Menu url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Menu image"}
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "alignment",
+            "label": "Vertical alignment",
+            "default": "top-middle",
+            "info": "Aligns when next to other custom content",
+            "options": [
+              {
+                "value": "top-middle",
+                "label": "Top"
+              },
+              {
+                "value": "center",
+                "label": "Middle"
+              },
+              {
+                "value": "bottom-middle",
+                "label": "Bottom"
+              }
+            ]
+          }
+        ]
+      }
+    ]
 }
 {% endschema %}
