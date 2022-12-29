@@ -311,6 +311,14 @@
               "menu_url": "https:\/\/www.jackery.com\/",
               "menu_img": "shopify:\/\/shop_images\/3_a2d1c991-1399-4634-80a6-5e984cfed48e.png"
             }
+          },
+          "03578407-0a2a-406a-bbba-9093b8ca7c8b": {
+            "type": "shop_link",
+            "settings": {
+              "menu_title": "Products Compare",
+              "menu_url": "https:\/\/www.jackery.com\/",
+              "menu_img": "shopify:\/\/shop_images\/4_a8b158f0-bb26-4542-91ba-0883ffc76f44.png"
+            }
           }
         },
         "block_order": [
@@ -334,7 +342,8 @@
           "1715a4ab-58f6-4e9d-be26-2533968ebd2c",
           "9d383151-8314-4c54-a988-519e247de414",
           "543d8f07-3e7d-4384-85d8-bb3773433977",
-          "96f74c17-7f89-4757-80d9-29dfa958a35a"
+          "96f74c17-7f89-4757-80d9-29dfa958a35a",
+          "03578407-0a2a-406a-bbba-9093b8ca7c8b"
         ],
         "settings": {
           "show_announcement_bar": true,
