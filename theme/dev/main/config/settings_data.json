@@ -279,6 +279,46 @@
               "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
               "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
             }
+          },
+          "1715a4ab-58f6-4e9d-be26-2533968ebd2c": {
+            "type": "shop_link",
+            "settings": {
+              "menu_title": "All Products",
+              "menu_url": "https:\/\/www.jackery.com\/",
+              "menu_img": "shopify:\/\/shop_images\/883158d23962c61ae781c79a39e2c36b.png"
+            }
+          },
+          "9d383151-8314-4c54-a988-519e247de414": {
+            "type": "shop_link",
+            "settings": {
+              "menu_title": "Outdoor solution",
+              "menu_url": "https:\/\/www.jackery.com\/",
+              "menu_img": "shopify:\/\/shop_images\/1_e77c095c-c262-448c-9be7-0980621dc762.png"
+            }
+          },
+          "543d8f07-3e7d-4384-85d8-bb3773433977": {
+            "type": "shop_link",
+            "settings": {
+              "menu_title": "Indoor solution",
+              "menu_url": "https:\/\/www.jackery.com\/",
+              "menu_img": "shopify:\/\/shop_images\/2_9d9a206f-2daf-46ab-bebe-9410d92382a6.png"
+            }
+          },
+          "96f74c17-7f89-4757-80d9-29dfa958a35a": {
+            "type": "shop_link",
+            "settings": {
+              "menu_title": "How to Choose",
+              "menu_url": "https:\/\/www.jackery.com\/",
+              "menu_img": "shopify:\/\/shop_images\/3_a2d1c991-1399-4634-80a6-5e984cfed48e.png"
+            }
+          },
+          "03578407-0a2a-406a-bbba-9093b8ca7c8b": {
+            "type": "shop_link",
+            "settings": {
+              "menu_title": "Products Compare",
+              "menu_url": "https:\/\/www.jackery.com\/",
+              "menu_img": "shopify:\/\/shop_images\/4_a8b158f0-bb26-4542-91ba-0883ffc76f44.png"
+            }
           }
         },
         "block_order": [
@@ -298,10 +338,16 @@
           "830f9cb5-d216-4f96-8ca8-9314ef979671",
           "ddf1164a-d78a-47cc-a140-3c5309e48b54",
           "89a63be2-dc72-4d29-ba75-ec29e8e25568",
-          "ceb4d545-745b-43ee-b6da-50d747869d23"
+          "ceb4d545-745b-43ee-b6da-50d747869d23",
+          "1715a4ab-58f6-4e9d-be26-2533968ebd2c",
+          "9d383151-8314-4c54-a988-519e247de414",
+          "543d8f07-3e7d-4384-85d8-bb3773433977",
+          "96f74c17-7f89-4757-80d9-29dfa958a35a",
+          "03578407-0a2a-406a-bbba-9093b8ca7c8b"
         ],
         "settings": {
-          "show_announcement_bar": true
+          "show_announcement_bar": true,
+          "announcement_bar_text": "<p>Welcome to Jackery<\/p>"
         }
       },
       "footer": {
