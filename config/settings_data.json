@@ -279,6 +279,14 @@
               "menu_url": "https:\/\/faq.jackery.com\/hc\/en-us",
               "menu_img": "shopify:\/\/shop_images\/1_7e86b0fd-4cb2-48a9-b8c2-2d8cbf5559c7.png"
             }
+          },
+          "1715a4ab-58f6-4e9d-be26-2533968ebd2c": {
+            "type": "shop_link",
+            "settings": {
+              "menu_title": "All Products",
+              "menu_url": "https:\/\/www.jackery.com\/",
+              "menu_img": "shopify:\/\/shop_images\/883158d23962c61ae781c79a39e2c36b.png"
+            }
           }
         },
         "block_order": [
@@ -298,10 +306,12 @@
           "830f9cb5-d216-4f96-8ca8-9314ef979671",
           "ddf1164a-d78a-47cc-a140-3c5309e48b54",
           "89a63be2-dc72-4d29-ba75-ec29e8e25568",
-          "ceb4d545-745b-43ee-b6da-50d747869d23"
+          "ceb4d545-745b-43ee-b6da-50d747869d23",
+          "1715a4ab-58f6-4e9d-be26-2533968ebd2c"
         ],
         "settings": {
-          "show_announcement_bar": true
+          "show_announcement_bar": true,
+          "announcement_bar_text": "<p>Welcome to Jackery<\/p>"
         }
       },
       "footer": {
