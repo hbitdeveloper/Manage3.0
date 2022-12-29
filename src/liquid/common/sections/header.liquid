@@ -78,7 +78,7 @@
                                                 {%- assign img_url = block.settings.menu_img | img_url: '180x' -%}
                                                 {% case block.type %}
                                                     {% when 'shop_link' %}
-                                                        <a href="{{block.settings.img_url}}" class="nav-shop-scence-item block" style="background: url({{img_url}});">
+                                                        <a href="{{block.settings.img_url}}" class="nav-shop-scence-item flex" style="background: url({{img_url}});">
                                                             <span>{{block.settings.menu_title | escape}}</span>
                                                         </a>
                                                 {% endcase %}
