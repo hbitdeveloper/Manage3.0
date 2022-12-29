@@ -35,19 +35,26 @@
                                             </div>
 
                                             {% for link in main_menu.links %}
-                                                <div class="nav-shop-collection-products {% if forloop.index0 == 0 %}active{% endif %}">
-                                                    {%- assign category = childlink.url | replace: '/collections/', '' -%}
-                                                    {% for product in collections[category].products limit: 8 %}
-                                                    <div class="collection-products-item">
-                                                        <img class="collection-products-item-img" src="{{product.featured_image | img_url: '290x'}}" alt="{{ product.title }}">
-                                                        <span>{{ product.title }}</span>
+                                                {% case link.title %}
+                                                {% when 'Products' %}
+                                                {% for childlink in link.links %}
+                                                {%- assign category = childlink.url | replace: '/collections/', '' -%}
+                                                <div class="header-products-container {% if forloop.index0 == 0 %}active{% endif %}">
+                                                    <div class="nav-shop-collection-products">
+                                                        {% for product in collections[category].products limit: 8 %}
+                                                        <div class="collection-products-item">
+                                                            <img class="collection-products-item-img" src="{{product.featured_image | img_url: '290x'}}" alt="{{ product.title }}">
+                                                            <span>{{ product.title }}</span>
+                                                        </div>
+                                                        {% endfor %}
                                                     </div>
-                                                    {% endfor %}
+                                                    {% if collections[category].products_count > 8 %}
+                                                        <a href="{{ childlink.url }}" class="a-button-fill nav-shop-collection-more">VIEW MORE</a>
+                                                    {% endif %}
                                                 </div>
+                                                {% endfor %}
+                                                {% endcase %}
                                             {% endfor %}
-                                            {% if collections[category].products_count > 9 %}
-                                                <a href="{{ childlink.url }}" class="a-button-fill nav-shop-collection-more">VIEW MORE</a>
-                                            {% endif %}
                                         </div>
                                         <div class="nav-shop-scence">
                                             {% for block in section.blocks %}

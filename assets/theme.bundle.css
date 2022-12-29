@@ -1394,4 +1394,10 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   padding: 13px 30px;
   line-height: 1;
 }
+.header-products-container {
+  display: none;
+}
+.header-products-container.active {
+  display: block;
+}
 
