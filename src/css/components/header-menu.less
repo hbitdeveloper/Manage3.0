@@ -92,6 +92,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
   .collection-taps-item span {
    font-size: 20px;
@@ -105,9 +106,22 @@
   .collection-taps-item:last-child {
     margin-right: 0;
   }
-  .collection-taps-item.active {
-    border-bottom: solid 4px var(--primary-color);
+  .collection-taps-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background: red;
+    display: none;
   }
+//   .collection-taps-item.active {
+//     border-bottom: solid 4px var(--primary-color);
+//   }
+.collection-taps-item.active::after {
+    display: block;
+}
   .collection-taps-item.active span {
     color: var(--primary-color);
   }
@@ -130,6 +144,7 @@
     padding: 2.3vw 0.9vw 1.67vw 0.9vw;
     background: #fff;
     text-decoration: none;
+    position: relative;
   }
   .collection-products-item span {
     display: block;
