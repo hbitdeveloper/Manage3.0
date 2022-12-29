@@ -25,7 +25,7 @@
                                             {% case block.type %}
                                                 {% when 'about_jackery' %}
                                                     <a 
-                                                        class="nav-menuItem underlines-btn {% if forloop.index0 == 0 %}active{% endif %}" 
+                                                        class="nav-menuItem underlines-btn" 
                                                         href="{{block.settings.menu_url}}"
                                                         img="{{img_url}}"
                                                     >
@@ -48,7 +48,7 @@
                                                 {%- assign img_url = block.settings.menu_img | img_url: '600x' -%}
                                                 {% when 'support' %}
                                                     <a 
-                                                        class="nav-menuItem underlines-btn {% if forloop.index0 == 0 %}active{% endif %}" 
+                                                        class="nav-menuItem underlines-btn" 
                                                         href="{{block.settings.menu_url}}"
                                                         img="{{img_url}}"
                                                     >
@@ -71,7 +71,7 @@
                                             {% case block.type %}
                                                 {% when 'benefits' %}
                                                     <a 
-                                                        class="nav-menuItem underlines-btn {% if forloop.index0 == 0 %}active{% endif %}"
+                                                        class="nav-menuItem underlines-btn"
                                                         href="{{block.settings.menu_url}}"
                                                         img="{{img_url}}"
                                                     >
@@ -228,6 +228,12 @@
                 if(menuNav) {
                     const list = menuNav.querySelectorAll(".nav-menuItem")
                     const menuBg = menuNav.querySelector(".nav-menuItem-bg")
+                    // default 
+                    const _first = menuNav.querySelector(".nav-menuItem")
+                    if(_first) {
+                        _first.classList.add("active")
+                        menuBg.style.background = `url(${_first.getAttribute("img")})`
+                    }
 
                     list.forEach(item => {
                         item.addEventListener("mouseover", () => {
