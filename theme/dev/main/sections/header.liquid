@@ -228,9 +228,7 @@
                 if(menuNav) {
                     const list = menuNav.querySelectorAll(".nav-menuItem")
                     const menuBg = menuNav.querySelector(".nav-menuItem-bg")
-
-                    const list_0 = list[0]?.getAttribute("img") || ""
-                    menuBg.style.background = `url(${list_0})`
+                    
                     list.forEach(item => {
                         item.addEventListener("mouseover", () => {
                             list.forEach((e, i) => {
