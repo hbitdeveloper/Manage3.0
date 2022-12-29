@@ -1,6 +1,6 @@
 <header class="site-header left-0 right-0 top-0 site-header-white {% if section.settings.show_announcement_bar %}announcement-bar-show{% endif %}">
         <div class="announcement-bar text-base items-center justify-center relative">
-            <p>{{section.settings.announcement_bar_text}}</p> <span class="iconfont jackery-icon-fuliliwu-"></span>
+            {{section.settings.announcement_bar_text}} <span class="iconfont jackery-icon-fuliliwu-"></span>
             <div class="index-container absolute right-0 left-0 top-0 bottom-0"><i class="iconfont jackery-icon-guanbi absolute right-0"></i>
             </div>
         </div>
@@ -251,7 +251,7 @@
   "class": "section-header",
   "settings": [
       {"type": "checkbox", "id": "show_announcement_bar", "label": "Show announcement bar", "default": true},
-      {"type": "richtext", "id": "announcement_bar_text", "label": "Announcement bar text", "default": "Welcome to Jackery"}
+      {"type": "richtext", "id": "announcement_bar_text", "label": "Announcement bar text", "default": "<p>Welcome to Jackery</p>"}
   ],
   "blocks": [
       {
