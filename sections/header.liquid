@@ -43,6 +43,7 @@
                                                     <div class="nav-shop-collection-products">
                                                         {% for product in collections[category].products limit: 8 %}
                                                         <a href="{{product.url}}" class="collection-products-item">
+                                                            {% include 'product-tag', product: product %}
                                                             <img class="collection-products-item-img" src="{{product.featured_image | img_url: '290x'}}" alt="{{ product.title }}">
                                                             <span>{{ product.title }}</span>
                                                         </a>
