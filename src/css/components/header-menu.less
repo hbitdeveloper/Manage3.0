@@ -106,10 +106,10 @@
     margin-right: 0;
   }
   .collection-taps-item.active {
-    border-bottom: solid 4px #FE5000;
+    border-bottom: solid 4px var(--primary-color);
   }
   .collection-taps-item.active span {
-    color: #FE5000;
+    color: var(--primary-color);
   }
   .collection-taps-img {
     height: 4.6vw;
@@ -129,6 +129,7 @@
   .collection-products-item {
     padding: 2.3vw 0.9vw 1.67vw 0.9vw;
     background: #fff;
+    text-decoration: none;
   }
   .collection-products-item span {
     display: block;
@@ -136,6 +137,9 @@
      font-weight: 400;
      color: #000000;
      line-height: 21px;
+  }
+  .collection-products-item:hover span {
+    color: var(--primary-color);
   }
   .nav-shop-collection-more {
     width: max-content!important;
