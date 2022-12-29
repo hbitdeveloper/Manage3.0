@@ -1,6 +1,6 @@
 <header class="site-header left-0 right-0 top-0 site-header-white {% if section.settings.show_announcement_bar %}announcement-bar-show{% endif %}">
         <div class="announcement-bar text-base items-center justify-center relative">
-            {{section.settings.announcement_bar_text}} <span class="iconfont jackery-icon-fuliliwu-"></span>
+            <p>{{section.settings.announcement_bar_text}}</p> <span class="iconfont jackery-icon-fuliliwu-"></span>
             <div class="index-container absolute right-0 left-0 top-0 bottom-0"><i class="iconfont jackery-icon-guanbi absolute right-0"></i>
             </div>
         </div>
@@ -228,7 +228,7 @@
                 if(menuNav) {
                     const list = menuNav.querySelectorAll(".nav-menuItem")
                     const menuBg = menuNav.querySelector(".nav-menuItem-bg")
-                    
+
                     list.forEach(item => {
                         item.addEventListener("mouseover", () => {
                             list.forEach((e, i) => {
