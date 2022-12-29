@@ -74,21 +74,15 @@
                                             <a class="a-button-fill nav-shop-collection-more">VIEW MORE</a>
                                         </div>
                                         <div class="nav-shop-scence">
-                                            <div class="nav-shop-scence-item" style="background: url(https://cdn.shopify.com/s/files/1/0550/0524/9633/files/883158d23962c61ae781c79a39e2c36b.png?v=1672280453);">
-                                                <span>All Products</span>
-                                            </div>
-                                            <div class="nav-shop-scence-item" style="background: url(https://cdn.shopify.com/s/files/1/0550/0524/9633/files/1_e77c095c-c262-448c-9be7-0980621dc762.png?v=1672280452);">
-                                                <span>Outdoor solution</span>
-                                            </div>
-                                            <div class="nav-shop-scence-item" style="background: url(https://cdn.shopify.com/s/files/1/0550/0524/9633/files/2_9d9a206f-2daf-46ab-bebe-9410d92382a6.png?v=1672280453);">
-                                                <span>Indoor solution</span>
-                                            </div>
-                                            <div class="nav-shop-scence-item" style="background: url(https://cdn.shopify.com/s/files/1/0550/0524/9633/files/3_a2d1c991-1399-4634-80a6-5e984cfed48e.png?v=1672280452);">
-                                                <span>How to Choose</span>
-                                            </div>
-                                            <div class="nav-shop-scence-item" style="background: url(https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_a8b158f0-bb26-4542-91ba-0883ffc76f44.png?v=1672280452);">
-                                                <span>Products Compare</span>
-                                            </div>
+                                            {% for block in section.blocks %}
+                                                {%- assign img_url = block.settings.menu_img | img_url: '180x' -%}
+                                                {% case block.type %}
+                                                    {% when 'shop_link' %}
+                                                        <a href="{{block.settings.img_url}}" class="nav-shop-scence-item block" style="background: url({{img_url}});">
+                                                            <span>{{block.settings.menu_title | escape}}</span>
+                                                        </a>
+                                                {% endcase %}
+                                            {% endfor %}
                                         </div>
                                     </div>
                             </div>
@@ -336,7 +330,8 @@
   "class": "section-header",
   "settings": [
       {"type": "checkbox", "id": "show_announcement_bar", "label": "Show announcement bar", "default": true},
-      {"type": "richtext", "id": "announcement_bar_text", "label": "Announcement bar text", "default": "<p>Welcome to Jackery</p>"}
+      {"type": "richtext", "id": "announcement_bar_text", "label": "Announcement bar text", "default": "<p>Welcome to Jackery</p>"},
+      {"type": "link_list", "id": "main_menu_link_list", "label": "Menu", "default": "main-menu"}
   ],
   "blocks": [
       {
@@ -364,6 +359,15 @@
             {"type": "text", "id": "menu_title", "label": "Menu title"},
             {"type": "url", "id": "menu_url", "label": "Menu url"},
             {"type": "image_picker", "id": "menu_img", "label": "Menu image"}
+        ]
+      },
+      {
+        "type": "shop_link",
+        "name": "Shop link menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Link title"},
+            {"type": "url", "id": "menu_url", "label": "Url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Link image"}
         ]
       }
     ]
