@@ -26,7 +26,7 @@
 
                                                         {% for childlink in link.links %}
                                                         <div class="collection-taps-item {% if forloop.index0 == 0 %}active{% endif %}">
-                                                            <span></span>
+                                                            <span>{{childlink.title}}</span>
                                                             <img class="collection-taps-img" src="{{childlink.image | img_url: '200x'}}" alt="{{childlink.title}}">
                                                         </div>
                                                         {% endfor %}
@@ -42,10 +42,10 @@
                                                 <div class="header-products-container {% if forloop.index0 == 0 %}active{% endif %}">
                                                     <div class="nav-shop-collection-products">
                                                         {% for product in collections[category].products limit: 8 %}
-                                                        <div class="collection-products-item">
+                                                        <a href="{{product.url}}" class="collection-products-item">
                                                             <img class="collection-products-item-img" src="{{product.featured_image | img_url: '290x'}}" alt="{{ product.title }}">
                                                             <span>{{ product.title }}</span>
-                                                        </div>
+                                                        </a>
                                                         {% endfor %}
                                                     </div>
                                                     {% if collections[category].products_count > 8 %}
@@ -303,6 +303,21 @@
                         })
                     })
                 }
+            })
+
+            const collectionMenus = document.querySelector(".nav-shop-menu")
+            const collectionItem = collectionMenus.querySelectorAll(".collection-taps-item")
+            const headerProducts = document.querySelectorAll(".header-products-container")
+            collectionItem.forEach((collection, index, arr) => {
+                collection.addEventListener("mouseover", () => {
+                    collectionItem.forEach((e, i) => {
+                        e.classList.remove("active")
+                        headerProducts[i].classList.remove("active")
+                    });
+
+                    collection.classList.add("active")
+                    headerProducts[i].classList.add("active")
+                })
             })
         })
     </script>
