@@ -34,41 +34,20 @@
                                                 {% endfor %}
                                             </div>
 
-                                            <div class="nav-shop-collection-products">
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000Solar Generator 2000Solar Generator 2000</span>
+                                            {% for link in main_menu.links %}
+                                                <div class="nav-shop-collection-products {% if forloop.index0 == 0 %}active{% endif %}">
+                                                    {%- assign category = childlink.url | replace: '/collections/', '' -%}
+                                                    {% for product in collections[category].products limit: 8 %}
+                                                    <div class="collection-products-item">
+                                                        <img class="collection-products-item-img" src="{{product.featured_image | img_url: '290x'}}" alt="{{ product.title }}">
+                                                        <span>{{ product.title }}</span>
+                                                    </div>
+                                                    {% endfor %}
                                                 </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                            </div>
-                                            <a class="a-button-fill nav-shop-collection-more">VIEW MORE</a>
+                                            {% endfor %}
+                                            {% if collections[category].products_count > 9 %}
+                                                <a href="{{ childlink.url }}" class="a-button-fill nav-shop-collection-more">VIEW MORE</a>
+                                            {% endif %}
                                         </div>
                                         <div class="nav-shop-scence">
                                             {% for block in section.blocks %}
