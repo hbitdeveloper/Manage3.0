@@ -1,7 +1,8 @@
 <header class="site-header left-0 right-0 top-0 site-header-white {% if section.settings.show_announcement_bar %}announcement-bar-show{% endif %}">
         <div class="announcement-bar text-base items-center justify-center relative">
-            Welcome to Jackery <span class="iconfont jackery-icon-fuliliwu-"></span>
-            <div class="index-container absolute right-0 left-0 top-0 bottom-0"><i class="iconfont jackery-icon-guanbi absolute right-0"></i></div>
+            {{section.settings.announcement_bar_text}} <span class="iconfont jackery-icon-fuliliwu-"></span>
+            <div class="index-container absolute right-0 left-0 top-0 bottom-0"><i class="iconfont jackery-icon-guanbi absolute right-0"></i>
+            </div>
         </div>
         <div class="header-main flex items-center relative">
             <div class="index-container flex justify-between">
@@ -12,7 +13,80 @@
 
                 <div class="header-menu flex items-center">
                     <div class="header-navs flex">
-                        <div class="nav-item text-base underlines-btn">Shop</div>
+                        <div class="nav-item text-base underlines-btn">
+                            Shop
+                            <div class="nav-shop-menu">
+                                    <div class="index-container flex">
+                                        <div class="nav-shop-collection">
+                                            <div class="nav-shop-collection-taps flex">
+                                                <div class="collection-taps-item active">
+                                                    <span>Solar Generator</span>
+                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/d6269fabd0ea4b27b5f6516121a2744c.png?v=1672281626" alt="">
+                                                </div>
+                                                <div class="collection-taps-item">
+                                                    <span>Portable Power Stati</span>
+                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/1_c9151073-7318-40ab-af09-37490ad6695d.png?v=1672281626" alt="">
+                                                </div>
+                                                <div class="collection-taps-item">
+                                                    <span>Solar Panel</span>
+                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/2_b9d1fd88-9eb7-46d5-b3d1-061f9664f552.png?v=1672281626" alt="">
+                                                </div>
+                                                <div class="collection-taps-item">
+                                                    <span>Accessories</span>
+                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/3_cd2dd57c-bd22-4257-9caf-5558fccd2ebd.png?v=1672281628" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="nav-shop-collection-products">
+                                                <div class="collection-products-item">
+                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
+                                                    <span>Solar Generator 2000Solar Generator 2000Solar Generator 2000</span>
+                                                </div>
+                                                <div class="collection-products-item">
+                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
+                                                    <span>Solar Generator 2000</span>
+                                                </div>
+                                                <div class="collection-products-item">
+                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
+                                                    <span>Solar Generator 2000</span>
+                                                </div>
+                                                <div class="collection-products-item">
+                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
+                                                    <span>Solar Generator 2000</span>
+                                                </div>
+                                                <div class="collection-products-item">
+                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
+                                                    <span>Solar Generator 2000</span>
+                                                </div>
+                                                <div class="collection-products-item">
+                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
+                                                    <span>Solar Generator 2000</span>
+                                                </div>
+                                                <div class="collection-products-item">
+                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
+                                                    <span>Solar Generator 2000</span>
+                                                </div>
+                                                <div class="collection-products-item">
+                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
+                                                    <span>Solar Generator 2000</span>
+                                                </div>
+                                            </div>
+                                            <a class="a-button-fill nav-shop-collection-more">VIEW MORE</a>
+                                        </div>
+                                        <div class="nav-shop-scence">
+                                            {% for block in section.blocks %}
+                                                {%- assign img_url = block.settings.menu_img | img_url: '180x' -%}
+                                                {% case block.type %}
+                                                    {% when 'shop_link' %}
+                                                        <a href="{{block.settings.img_url}}" class="nav-shop-scence-item block" style="background: url({{img_url}});">
+                                                            <span>{{block.settings.menu_title | escape}}</span>
+                                                        </a>
+                                                {% endcase %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
 
                         <div class="nav-item text-base underlines-btn">
                             About Jackery
@@ -20,11 +94,13 @@
                                 <div class="index-container">
                                     <div class="nav-menuItem-list">
                                         {% for block in section.blocks %}
+                                            {%- assign img_url = block.settings.menu_img | img_url: '600x' -%}
                                             {% case block.type %}
                                                 {% when 'about_jackery' %}
                                                     <a 
                                                         class="nav-menuItem underlines-btn" 
                                                         href="{{block.settings.menu_url}}"
+                                                        img="{{img_url}}"
                                                     >
                                                         {{block.settings.menu_title | escape}}
                                                     </a>
@@ -42,10 +118,12 @@
                                     <div class="nav-menuItem-list">
                                         {% for block in section.blocks %}
                                             {% case block.type %}
+                                                {%- assign img_url = block.settings.menu_img | img_url: '600x' -%}
                                                 {% when 'support' %}
                                                     <a 
                                                         class="nav-menuItem underlines-btn" 
                                                         href="{{block.settings.menu_url}}"
+                                                        img="{{img_url}}"
                                                     >
                                                         {{block.settings.menu_title | escape}}
                                                     </a>
@@ -62,11 +140,13 @@
                                 <div class="index-container">
                                     <div class="nav-menuItem-list">
                                         {% for block in section.blocks %}
+                                            {%- assign img_url = block.settings.menu_img | img_url: '600x' -%}
                                             {% case block.type %}
                                                 {% when 'benefits' %}
                                                     <a 
-                                                        class="nav-menuItem underlines-btn" 
+                                                        class="nav-menuItem underlines-btn"
                                                         href="{{block.settings.menu_url}}"
+                                                        img="{{img_url}}"
                                                     >
                                                         {{block.settings.menu_title | escape}}
                                                     </a>
@@ -213,6 +293,34 @@
                     headerSelectors.mainContent.classList.add("layout-hide-announcement")
                 })
             }
+
+
+            const headerMenus = document.querySelectorAll(".nav-item")
+            headerMenus.forEach(menu => {
+                const menuNav = menu.querySelector(".nav-item-menu")
+                if(menuNav) {
+                    const list = menuNav.querySelectorAll(".nav-menuItem")
+                    const menuBg = menuNav.querySelector(".nav-menuItem-bg")
+                    // default 
+                    const _first = menuNav.querySelector(".nav-menuItem")
+                    if(_first) {
+                        _first.classList.add("active")
+                        menuBg.style.background = `url(${_first.getAttribute("img")})`
+                    }
+
+                    list.forEach(item => {
+                        item.addEventListener("mouseover", () => {
+                            list.forEach((e, i) => {
+                                e.classList.remove("active")
+                            });
+
+                            item.classList.add("active")
+                            const url = item.getAttribute("img")
+                            menuBg.style.background = `url(${url})`
+                        })
+                    })
+                }
+            })
         })
     </script>
 
@@ -221,7 +329,9 @@
   "name": "Header and menus",
   "class": "section-header",
   "settings": [
-      {"type": "checkbox", "id": "show_announcement_bar", "label": "Show announcement bar", "default": true}
+      {"type": "checkbox", "id": "show_announcement_bar", "label": "Show announcement bar", "default": true},
+      {"type": "richtext", "id": "announcement_bar_text", "label": "Announcement bar text", "default": "<p>Welcome to Jackery</p>"},
+      {"type": "link_list", "id": "main_menu_link_list", "label": "Menu", "default": "main-menu"}
   ],
   "blocks": [
       {
@@ -252,72 +362,12 @@
         ]
       },
       {
-        "type": "image",
-        "name": "Image",
+        "type": "shop_link",
+        "name": "Shop link menu",
         "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
-            "type": "url",
-            "id": "link",
-            "label": "Link"
-          },
-          {
-            "type": "select",
-            "id": "width",
-            "label": "Width",
-            "default": "100%",
-            "options": [
-              {
-                "value": "25%",
-                "label": "25%"
-              },
-              {
-                "value": "33%",
-                "label": "33%"
-              },
-              {
-                "value": "50%",
-                "label": "50%"
-              },
-              {
-                "value": "66%",
-                "label": "66%"
-              },
-              {
-                "value": "75%",
-                "label": "75%"
-              },
-              {
-                "value": "100%",
-                "label": "100%"
-              }
-            ]
-          },
-          {
-            "type": "select",
-            "id": "alignment",
-            "label": "Vertical alignment",
-            "default": "top-middle",
-            "info": "Aligns when next to other custom content",
-            "options": [
-              {
-                "value": "top-middle",
-                "label": "Top"
-              },
-              {
-                "value": "center",
-                "label": "Middle"
-              },
-              {
-                "value": "bottom-middle",
-                "label": "Bottom"
-              }
-            ]
-          }
+            {"type": "text", "id": "menu_title", "label": "Link title"},
+            {"type": "url", "id": "menu_url", "label": "Url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Link image"}
         ]
       }
     ]
