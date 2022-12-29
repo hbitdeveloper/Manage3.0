@@ -27,7 +27,7 @@
                                                         {% for childlink in link.links %}
                                                         <div class="collection-taps-item {% if forloop.index0 == 0 %}active{% endif %}">
                                                             <span sg="{{childlink | json}}">{{childlink.title | escape}}</span>
-                                                            <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/d6269fabd0ea4b27b5f6516121a2744c.png?v=1672281626" alt="">
+                                                            <img class="collection-taps-img" src="{{childlink.image | img_url: '200x'}}" alt="{{childlink.title}}">
                                                         </div>
                                                         {% endfor %}
                                                     {% endcase %}
