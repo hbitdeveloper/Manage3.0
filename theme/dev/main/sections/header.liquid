@@ -1,3 +1,4 @@
+{%- assign main_menu = linklists[section.settings.main_menu_link_list] -%}
 <header class="site-header left-0 right-0 top-0 site-header-white {% if section.settings.show_announcement_bar %}announcement-bar-show{% endif %}">
         <div class="announcement-bar text-base items-center justify-center relative">
             {{section.settings.announcement_bar_text}} <span class="iconfont jackery-icon-fuliliwu-"></span>
@@ -19,22 +20,18 @@
                                     <div class="index-container flex">
                                         <div class="nav-shop-collection">
                                             <div class="nav-shop-collection-taps flex">
-                                                <div class="collection-taps-item active">
-                                                    <span>Solar Generator</span>
-                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/d6269fabd0ea4b27b5f6516121a2744c.png?v=1672281626" alt="">
-                                                </div>
-                                                <div class="collection-taps-item">
-                                                    <span>Portable Power Stati</span>
-                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/1_c9151073-7318-40ab-af09-37490ad6695d.png?v=1672281626" alt="">
-                                                </div>
-                                                <div class="collection-taps-item">
-                                                    <span>Solar Panel</span>
-                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/2_b9d1fd88-9eb7-46d5-b3d1-061f9664f552.png?v=1672281626" alt="">
-                                                </div>
-                                                <div class="collection-taps-item">
-                                                    <span>Accessories</span>
-                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/3_cd2dd57c-bd22-4257-9caf-5558fccd2ebd.png?v=1672281628" alt="">
-                                                </div>
+                                                {% for link in main_menu.links %}
+                                                    {% case link.title %}
+                                                        {% when 'Products' %}
+
+                                                        {% for childlink in link.links %}
+                                                        <div class="collection-taps-item {% if forloop.index0 == 0 %}active{% endif %}">
+                                                            <span sg="{{childlink | json}}">{{childlink.title | escape}}</span>
+                                                            <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/d6269fabd0ea4b27b5f6516121a2744c.png?v=1672281626" alt="">
+                                                        </div>
+                                                        {% endfor %}
+                                                    {% endcase %}
+                                                {% endfor %}
                                             </div>
 
                                             <div class="nav-shop-collection-products">
@@ -78,7 +75,7 @@
                                                 {%- assign img_url = block.settings.menu_img | img_url: '180x' -%}
                                                 {% case block.type %}
                                                     {% when 'shop_link' %}
-                                                        <a href="{{block.settings.img_url}}" class="nav-shop-scence-item block" style="background: url({{img_url}});">
+                                                        <a href="{{block.settings.img_url}}" class="nav-shop-scence-item flex" style="background: url({{img_url}});">
                                                             <span>{{block.settings.menu_title | escape}}</span>
                                                         </a>
                                                 {% endcase %}
