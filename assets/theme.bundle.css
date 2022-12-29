@@ -1374,7 +1374,7 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   text-align: center;
 }
 .collection-products-item-img {
-  width: 100%;
+  height: 130px;
 }
 .collection-products-item {
   padding: 2.3vw 0.9vw 1.67vw 0.9vw;
