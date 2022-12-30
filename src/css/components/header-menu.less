@@ -331,4 +331,20 @@ input.mobile-toggle:checked~.mobile-toggle-nav span {
         transform: translateY(-50%);
         color: var(--text-info-color);
     }
+    .mb-menu {
+        top: calc(10.6vw + 49px);
+    }
+    .announcement-bar-show .mb-menu {
+        background: #F9FAFA;
+        top: calc(20.6vw + 49px);
+        position: fixed;
+        left: -100vw;
+        width: 100vw;
+        bottom: 0;
+        overflow-y: scroll;
+        transition: left 0.3s;
+    }
+    input.mobile-toggle:checked~.m-menu {
+      left: 0;
+    }
 }
