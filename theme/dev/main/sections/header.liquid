@@ -248,28 +248,69 @@
                     <span></span>
                     <span></span>
                 </div>
-            </div>
+
+                <div class="absolute mobile-block mb-search">
+                    <details-modal class="header__search">
+                                <details>
+                                    <summary
+                                        class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
+                                        aria-haspopup="dialog" aria-label="Search" role="button">
+                                        <input type="text" />
+                                    </summary>
+                                    <div class="search-modal modal__content" role="dialog" aria-modal="true"
+                                        aria-label="Search">
+                                        <div class="modal-overlay"></div>
+                                        <div class="search-modal__content search-modal__content-bottom index-container relative" tabindex="-1">
+                                            <span class="iconfont jackery-icon-jackery"></span>
+                                            <predictive-search 
+                                                class="search-modal__form"
+                                                data-loading-text="Loading..."
+                                            >
+                                                <form action="/search" method="get" role="search"
+                                                    class="search search-modal__form">
+                                                    <div class="field">
+                                                        <input class="search__input field__input" id="Search-In-Modal"
+                                                            type="search" name="q" value="" placeholder="Search"
+                                                            role="combobox" aria-expanded="false"
+                                                            aria-owns="predictive-search-results-list"
+                                                            aria-controls="predictive-search-results-list"
+                                                            aria-haspopup="listbox" aria-autocomplete="list"
+                                                            autocorrect="off" autocomplete="off" autocapitalize="off"
+                                                            spellcheck="false" aria-activedescendant="">
+                                                        <input type="hidden" name="options[prefix]" value="last">
+                                                        <button class="search__button field__button"
+                                                            aria-label="Search">
+                                                            <span class="iconfont jackery-icon-sousuo"></span>
+                                                        </button>
+
+                                                        <button type="button"
+                                                class="search-modal__close-button modal__close-button link link--text focus-inset"
+                                                aria-label="Close">
+                                                <span class="iconfont jackery-icon-guanbi"></span>
+                                            </button>
+                                                    </div>
+
+                                                    <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                                                    <div class="predictive-search__loading-state">
+                                                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                        </svg>
+                                                    </div>
+                                                    </div>
+                                                    <span class="predictive-search-status visually-hidden" role="status"
+                                                        aria-hidden="true"></span>
+                                                </form>
+                                            </predictive-search>
+                                        </div>
+                                    </div>
+                                </details>
+                    </details-modal>
+                </div>
+            </div> 
         </div>
     </header>
 
-{% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script> {% endcomment %}
 <script>
-        // gsap.registerPlugin(ScrollTrigger);
-        // const headerDom = document.querySelector(".site-header")
-        // const announcement = document.querySelector(".site-header").querySelector(".announcement-bar")
-        // gsap.to(headerDom, {
-        //     scrollTrigger: {
-        //         start: 80,
-        //         toggleClass: {
-        //             className: 'site-header-white',
-        //             targets: '.site-header'
-        //         },
-        //         onUpdate: (self) => {
-        //             self.direction === -1 ? announcement.classList.remove("announcement-hide") : announcement.classList.add("announcement-hide")
-        //         }
-        //     }
-        // })
-
         $(document).ready(function(){
             const headerSelectors = {
                 announcementBarBtn: {{ section.settings.show_announcement_bar }} ? document.querySelector(".site-header .announcement-bar .jackery-icon-guanbi") : null,
