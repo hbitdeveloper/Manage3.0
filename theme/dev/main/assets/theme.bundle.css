@@ -834,20 +834,54 @@ p,
   .site-header .header-main {
     height: 10.6vw;
   }
-  .site-header .header-menu {
+  .site-header .header-menu .header-navs {
     display: none;
+  }
+  .site-header .header-menu {
+    transition: left 0.3s;
+    left: -100vw !important;
+  }
+  input.mobile-toggle:checked ~ .header-menu {
+    left: 0!important;
+    display: flex!important;
+    height: 100%;
   }
   .site-header .index-container {
     justify-content: center;
   }
   .header-logo {
     height: auto;
-    font-size: 7.5vw !important;
+    font-size: 6.5vw !important;
     color: var(--primary-color);
   }
   .header-m-menu {
     top: 50%;
     transform: translateY(-50%);
+  }
+  .site-header .header-menu {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .header-icons {
+    width: auto;
+  }
+  .header-local {
+    margin-left: 0;
+  }
+  .header-local .jackery-icon-arrow-right {
+    display: none;
+  }
+  .header-local .header__menu-item span {
+    font-size: 21px;
+    padding: 0 4px;
+  }
+  .header-icons .iconfont {
+    padding: 0 4px;
+  }
+  .header__search {
+    display: none!important;
   }
   /* section - header */
 }
