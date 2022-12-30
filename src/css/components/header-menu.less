@@ -302,6 +302,7 @@ input.mobile-toggle:checked~.mobile-toggle-nav span {
         height: 48px!important;
         display: flex;
         align-items: center;
+        margin: 0;
     }
     .header__search .index-container input {
         height: 32px;
@@ -309,5 +310,18 @@ input.mobile-toggle:checked~.mobile-toggle-nav span {
         border-radius: 20px;
         border: 1px solid #DDDDDD;
         background: #f0f0f0;
+    }
+    details[open]>.search-modal {
+        border-top: solid 1px #dddddd;
+    }
+    details[open]>.search-modal .search-modal__content {
+        padding: 0;
+    }
+    details[open]>.search-modal .field {
+        border: none;
+    }
+    .predictive-search {
+        transform: translate(0%);
+        max-width: 100%;
     }
 }
