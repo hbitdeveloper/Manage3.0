@@ -808,7 +808,6 @@ p,
     margin: 0 auto;
     max-width: 90%;
     width: 85vw;
-    position: relative;
   }
   .announcement-bar {
     background: #eeeae2;
@@ -842,7 +841,7 @@ p,
     left: -100vw !important;
   }
   input.mobile-toggle:checked ~ .header-menu {
-    left: 0!important;
+    left: 7.5vw !important;
     display: flex!important;
     height: 100%;
   }
@@ -1469,11 +1468,13 @@ input.mobile-toggle {
   position: absolute;
   top: 0;
   z-index: 3;
+  right: 7.5vw;
 }
 .mobile-toggle-nav {
   width: 20px;
   height: 20px;
   line-height: 1px;
+  right: 7.5vw;
 }
 .mobile-toggle-nav span {
   width: 20px;
