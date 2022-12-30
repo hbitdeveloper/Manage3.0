@@ -1523,9 +1523,17 @@ input.mobile-toggle:checked ~ .mobile-toggle-nav span {
   transform: rotate(45deg) translate(-4px, -4.5px);
   background: #333;
 }
-.mb-search {
-  top: 100%;
-  left: 0;
-  right: 0;
+@media screen and (max-width: 1280px) {
+  .mb-search {
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  .mb-search .header__search {
+    display: flex!important;
+  }
+  .search-modal__content .jackery-icon-jackery {
+    display: none;
+  }
 }
 
