@@ -1548,6 +1548,7 @@ input.mobile-toggle:checked ~ .mobile-toggle-nav span {
     display: flex;
     align-items: center;
     margin: 0;
+    max-width: 100%;
   }
   .header__search .index-container input {
     height: 32px;
@@ -1568,6 +1569,12 @@ input.mobile-toggle:checked ~ .mobile-toggle-nav span {
   .predictive-search {
     transform: translate(0%);
     max-width: 100%;
+  }
+  .header__icon--summary .jackery-icon-sousuo {
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-info-color);
   }
 }
 
