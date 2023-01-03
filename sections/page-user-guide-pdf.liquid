@@ -71,22 +71,22 @@
 {
   "sg": [
     {% for block in SG %}
-      {"file_name": "{{ block.settings.file_name }}", "link": "{{ block.settings.link }}""}{% if forloop.last != true %},{% endif %}
+      {"file_name": "{{ block.settings.file_name }}", "link": "{{ block.settings.link }}"}{% if forloop.last != true %},{% endif %}
     {% endfor %}
   ],
   "pps": [
     {% for block in PPS %}
-      {"file_name": "{{ block.settings.file_name }}", "link": "{{ block.settings.link }}""}{% if forloop.last != true %},{% endif %}
+      {"file_name": "{{ block.settings.file_name }}", "link": "{{ block.settings.link }}"}{% if forloop.last != true %},{% endif %}
     {% endfor %}
   ],
   "sp": [
     {% for block in SP %}
-      {"file_name": "{{ block.settings.file_name }}", "link": "{{ block.settings.link }}""}{% if forloop.last != true %},{% endif %}
+      {"file_name": "{{ block.settings.file_name }}", "link": "{{ block.settings.link }}"}{% if forloop.last != true %},{% endif %}
     {% endfor %}
   ],
   "acc": [
     {% for block in ACC %}
-      {"file_name": "{{ block.settings.file_name }}", "link": "{{ block.settings.link }}""}{% if forloop.last != true %},{% endif %}
+      {"file_name": "{{ block.settings.file_name }}", "link": "{{ block.settings.link }}"}{% if forloop.last != true %},{% endif %}
     {% endfor %}
   ]
 }
