@@ -369,7 +369,7 @@
                                                 {%- assign img_url = block.settings.menu_img | img_url: '180x' -%}
                                                 {% case block.type %}
                                                     {% when 'shop_link' %}
-                                                        <div class="m-header-scence-item {% if forloop.index0 == 0 %}m-header-scence-item-first{% endif %} flex items-center justify-center" style="background-image: url({{img_url}});">
+                                                        <div class="m-header-scence-item flex items-center justify-center" style="background-image: url({{img_url}});">
                                                             <span>{{block.settings.menu_title | escape}}</span>
                                                         </div>
                                                 {% endcase %}
