@@ -1610,7 +1610,7 @@ input.mobile-toggle:checked ~ .mobile-toggle-nav span {
   input.mobile-toggle:checked ~ .m-menu {
     left: 0;
   }
-  .menu-li .m-menu-content:not(.m-header-scence) {
+  .menu-li .m-menu-content:not(.m-header-scence, .collection-more) {
     height: 62px;
   }
   .m-menu-content .m-menu-item-name {
