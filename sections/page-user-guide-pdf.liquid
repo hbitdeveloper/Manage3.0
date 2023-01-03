@@ -5,10 +5,10 @@
 
 <h2>{{ section.settings.title }}</h2>
 <ul class="tab">
-  {% if SG.size > 0 %}<li class="h4">{{ 'collection.solar_generator' | t }}</li>{% endif %}
-  {% if PPS.size > 0 %}<li class="h4 on">{{ 'collection.portable_power_station' | t }}</li>{% endif %}
-  {% if SP.size > 0 %}<li class="h4">{{ 'collection.solar_panel' | t }}</li>{% endif %}
-  {% if ACC.size > 0 %}<li class="h4">{{ 'collection.accessories' | t }}</li>{% endif %}
+  {% if SG.size > 0 %}<li class="h4" data-type="sg">{{ 'collection.solar_generator' | t }}</li>{% endif %}
+  {% if PPS.size > 0 %}<li class="h4 on" data-type="pps">{{ 'collection.portable_power_station' | t }}</li>{% endif %}
+  {% if SP.size > 0 %}<li class="h4" data-type="sp">{{ 'collection.solar_panel' | t }}</li>{% endif %}
+  {% if ACC.size > 0 %}<li class="h4" data-type="acc">{{ 'collection.accessories' | t }}</li>{% endif %}
 </ul>
 <div class="search-box">
   <input type="text" placeholder="{{ section.settings.placeholder }}" />
