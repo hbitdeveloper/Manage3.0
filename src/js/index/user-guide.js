@@ -25,9 +25,9 @@ class UserGuide {
       const input = DOM.querySelector(".search-box input");
       const { type } = DOM.querySelector(".tab li.on").dataset;
       if (input.value) {
-        tabContent(DOM.querySelector(`.tab-content .${type}`), me.config.pdf[type].filter((v) => new RegExp(input.value).test(v.file_name)))
+        tabContent(DOM.querySelector(`.tab-content.${type}`), me.config.pdf[type].filter((v) => new RegExp(input.value).test(v.file_name)))
       } else {
-        tabContent(DOM.querySelector(`.tab-content .${type}`), me.config.pdf[type])
+        tabContent(DOM.querySelector(`.tab-content.${type}`), me.config.pdf[type])
       }
     }
     function tab(li, content) {
