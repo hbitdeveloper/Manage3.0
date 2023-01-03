@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-28 09:45:19
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-28 10:17:03
+ * @LastEditTime: 2023-01-03 16:55:53
  * @FilePath: \3.0-manger\src\js\components\private-search.js
  */
 import {debounce} from '../utils/index'
@@ -196,10 +196,11 @@ export default class PredictiveSearch extends HTMLElement {
         this.predictiveSearchResults.style.maxHeight = this.resultsMaxHeight || `${this.getResultsMaxHeight()}px`;
         this.setAttribute('open', true);
         this.input.setAttribute('aria-expanded', true);
+        this.input.focus()
         this.isOpen = true;
     }
 
-    close(clearSearchTerm = false) {
+    close(clearSearchTerm = true) {
         if (clearSearchTerm) {
             this.input.value = '';
             this.removeAttribute('results');
