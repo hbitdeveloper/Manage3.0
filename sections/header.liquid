@@ -519,6 +519,15 @@
                     headerProducts[index].classList.add("active")
                 })
             })
+
+            const mHeaderMenu = document.querySelector(".m-h-menu")
+            const mHeaderItems = mHeaderMenu.querySelectorAll(".menu-li")
+            mHeaderItems.forEach(item => {
+                item.addEventListener("click", (e) => {
+                    e.stopPropagation()
+                    item.classList.toggle("active");
+                })
+            })
         })
     </script>
 
