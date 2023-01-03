@@ -369,13 +369,17 @@ input.mobile-toggle:checked~.mobile-toggle-nav span {
     }
 
     .m-menu {
-        top: calc(20.6vw + 48px);
+        top: calc(10.6vw + 48px);
         position: fixed;
         left: -100vw;
         width: 100vw;
         bottom: 0;
         background: #f5f5f5;
         transition: left 0.3s;
+    }
+
+    .announcement-bar-show .m-menu {
+      top: calc(20.6vw + 48px);
     }
 
     input.mobile-toggle:checked~.m-menu {
