@@ -1302,6 +1302,7 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   right: 0;
   top: 78px;
   cursor: auto;
+  max-height: 0;
 }
 .nav-shop-menu {
   overflow-y: scroll;
@@ -1309,7 +1310,6 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 .announcement-bar-show .nav-item-menu,
 .announcement-bar-show .nav-shop-menu {
   top: 114px;
-  max-height: 0;
 }
 .header-navs .nav-item:hover .nav-item-menu,
 .header-navs .nav-item:hover .nav-shop-menu {
@@ -1772,6 +1772,7 @@ input.mobile-toggle:checked ~ .mobile-toggle-nav span {
     background-size: cover;
     width: calc(50% - 4px);
     margin-bottom: 12px;
+    background-position: center;
   }
   .m-header-scence-item:nth-child(2n + 3) {
     margin-left: 8px;
