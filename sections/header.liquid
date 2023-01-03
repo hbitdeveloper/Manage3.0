@@ -384,20 +384,51 @@
 										<span class="iconfont jackery-icon-arrow-right"></span>
 									</div>
 									<ul class="nav-child-item">
-										<a href="https://demo-us.jackery.com/" class="m-menu-content nav-child-content flex items-center justify-between">
-                                            <div class="m-menu-item-name">Welcome</div>
-                                            <span class="iconfont jackery-icon-arrow-right"></span>
-                                        </a>
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'about_jackery' %}
+                                                    <a href="{{block.settings.menu_url}}" class="m-menu-content nav-child-content flex items-center justify-between">
+                                                        <div class="m-menu-item-name">{{block.settings.menu_title | escape}}</div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+									</ul>
+								</li>
 
-                                        <a href="https://demo-us.jackery.com/" class="m-menu-content nav-child-content flex items-center justify-between">
-                                            <div class="m-menu-item-name">Welcome</div>
-                                            <span class="iconfont jackery-icon-arrow-right"></span>
-                                        </a>
+                                <li class="menu-li">
+									<div class="flex items-center justify-between m-menu-content">
+										<div class="m-menu-item-name">Support</div>
+										<span class="iconfont jackery-icon-arrow-right"></span>
+									</div>
+									<ul class="nav-child-item">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'support' %}
+                                                    <a href="{{block.settings.menu_url}}" class="m-menu-content nav-child-content flex items-center justify-between">
+                                                        <div class="m-menu-item-name">{{block.settings.menu_title | escape}}</div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+									</ul>
+								</li>
 
-                                        <a href="https://demo-us.jackery.com/" class="m-menu-content nav-child-content flex items-center justify-between">
-                                            <div class="m-menu-item-name">Welcome</div>
-                                            <span class="iconfont jackery-icon-arrow-right"></span>
-                                        </a>
+                                <li class="menu-li">
+									<div class="flex items-center justify-between m-menu-content">
+										<div class="m-menu-item-name">Benefits</div>
+										<span class="iconfont jackery-icon-arrow-right"></span>
+									</div>
+									<ul class="nav-child-item">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'benefits' %}
+                                                    <a href="{{block.settings.menu_url}}" class="m-menu-content nav-child-content flex items-center justify-between">
+                                                        <div class="m-menu-item-name">{{block.settings.menu_title | escape}}</div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
 									</ul>
 								</li>
 							</ul>
