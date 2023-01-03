@@ -6,6 +6,8 @@ class UserGuide {
   }
 
   init() {
+    const me = this;
+
     function tabContent(ul, data) {
       let li = "";
       const download = document.querySelector(".tab-content li a").innerText;
@@ -19,12 +21,12 @@ class UserGuide {
       ul.innerHTML = li;
     }
     function search() {
-      const input = this.DOM.el.querySelector(".search-box input");
-      const { type } = this.DOM.el.querySelector(".tab li.on").dataset;
+      const input = me.DOM.el.querySelector(".search-box input");
+      const { type } = me.DOM.el.querySelector(".tab li.on").dataset;
       if (input.value) {
-        tabContent(this.DOM.el.querySelector(`.tab-content .${type}`), this.config.pdf[type].filter((v) => new RegExp(input.value).test(v.file_name)))
+        tabContent(me.DOM.el.querySelector(`.tab-content .${type}`), me.config.pdf[type].filter((v) => new RegExp(input.value).test(v.file_name)))
       } else {
-        tabContent(this.DOM.el.querySelector(`.tab-content .${type}`), this.config.pdf[type])
+        tabContent(me.DOM.el.querySelector(`.tab-content .${type}`), me.config.pdf[type])
       }
     }
     function tab(li, content) {
@@ -40,10 +42,10 @@ class UserGuide {
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      this.config.pdf = JSON.parse(document.querySelector("#user-guide-json").innerText);
+      me.config.pdf = JSON.parse(document.querySelector("#user-guide-json").innerText);
       tab(document.querySelectorAll('.pdf .tab li'), document.querySelectorAll('.pdf .tab-content'));
 
-      this.DOM.el.querySelector(".search-box button").onclick = () => search()
+      me.DOM.el.querySelector(".search-box button").onclick = () => search()
     })
   }
 }
