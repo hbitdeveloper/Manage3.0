@@ -7,7 +7,7 @@ class UserGuide {
 
   installPdf() {
     const me = this;
-    const DOM = document.querySelector(".manuals.pdf");
+    let DOM = null;
 
     function tabContent(ul, data) {
       let li = "";
@@ -44,8 +44,9 @@ class UserGuide {
 
     document.addEventListener('DOMContentLoaded', () => {
       me.config.pdf = JSON.parse(document.querySelector("#user-guide-json").innerText);
-      tab(document.querySelectorAll('.pdf .tab li'), document.querySelectorAll('.pdf .tab-content'));
+      DOM = document.querySelector(".manuals.pdf");
 
+      tab(document.querySelectorAll('.pdf .tab li'), document.querySelectorAll('.pdf .tab-content'));
       DOM.querySelector(".search-box button").onclick = () => search()
     })
   }
