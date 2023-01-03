@@ -1118,6 +1118,9 @@ details[open] .modal-overlay::after {
   background: #fff;
   color: #999999;
 }
+.mb-search .search-modal__content .iconfont {
+  background: #f0f0f0;
+}
 predictive-search .search__button {
   position: absolute;
   left: 24px;
@@ -1602,13 +1605,16 @@ input.mobile-toggle:checked ~ .mobile-toggle-nav span {
     width: 85vw;
   }
   .m-menu {
-    top: calc(20.6vw + 48px);
+    top: calc(10.6vw + 48px);
     position: fixed;
     left: -100vw;
     width: 100vw;
     bottom: 0;
     background: #f5f5f5;
     transition: left 0.3s;
+  }
+  .announcement-bar-show .m-menu {
+    top: calc(20.6vw + 48px);
   }
   input.mobile-toggle:checked ~ .m-menu {
     left: 0;
@@ -1720,7 +1726,7 @@ input.mobile-toggle:checked ~ .mobile-toggle-nav span {
   }
   .mb-menu-product-line {
     width: 150px;
-    height: 130px;
+    height: 130px!important;
     background: #fff;
     margin-right: 5px;
     display: flex;
@@ -1747,7 +1753,7 @@ input.mobile-toggle:checked ~ .mobile-toggle-nav span {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     word-break: break-all;
   }
   .nav-item.active .mb-menu-product-list {
