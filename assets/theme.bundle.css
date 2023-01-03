@@ -1781,10 +1781,10 @@ input.mobile-toggle:checked ~ .mobile-toggle-nav span {
     font-weight: bold;
     color: #FFFFFF;
   }
-  .m-header-scence-item-first {
+  .m-header-scence-item:first-child {
     width: 100%;
   }
-  .m-header-scence-item-first span {
+  .m-header-scence-item:first-child span {
     font-size: 18px;
   }
   .m-header-scence {
