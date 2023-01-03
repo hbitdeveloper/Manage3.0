@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-28 09:45:19
  * @LastEditors: Leo
- * @LastEditTime: 2023-01-03 16:55:53
+ * @LastEditTime: 2023-01-03 17:23:11
  * @FilePath: \3.0-manger\src\js\components\private-search.js
  */
 import {debounce} from '../utils/index'
@@ -198,6 +198,7 @@ export default class PredictiveSearch extends HTMLElement {
         this.input.setAttribute('aria-expanded', true);
         this.input.focus()
         this.isOpen = true;
+        console.log(this.input)
     }
 
     close(clearSearchTerm = true) {
