@@ -1,3 +1,4 @@
+{%- assign main_menu = linklists[section.settings.main_menu_link_list] -%}
 <header class="site-header left-0 right-0 top-0 site-header-white {% if section.settings.show_announcement_bar %}announcement-bar-show{% endif %}">
         <div class="announcement-bar text-base items-center justify-center relative">
             {{section.settings.announcement_bar_text}} <span class="iconfont jackery-icon-fuliliwu-"></span>
@@ -9,7 +10,8 @@
                 <a href="#" class="flex items-center" style="text-decoration: none;">
                     <span class="iconfont jackery-icon-jackery header-logo"></span>
                 </a>
-
+                
+                <input class="mobile-toggle right-0" type="checkbox">
 
                 <div class="header-menu flex items-center">
                     <div class="header-navs flex">
@@ -19,66 +21,49 @@
                                     <div class="index-container flex">
                                         <div class="nav-shop-collection">
                                             <div class="nav-shop-collection-taps flex">
-                                                <div class="collection-taps-item active">
-                                                    <span>Solar Generator</span>
-                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/d6269fabd0ea4b27b5f6516121a2744c.png?v=1672281626" alt="">
-                                                </div>
-                                                <div class="collection-taps-item">
-                                                    <span>Portable Power Stati</span>
-                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/1_c9151073-7318-40ab-af09-37490ad6695d.png?v=1672281626" alt="">
-                                                </div>
-                                                <div class="collection-taps-item">
-                                                    <span>Solar Panel</span>
-                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/2_b9d1fd88-9eb7-46d5-b3d1-061f9664f552.png?v=1672281626" alt="">
-                                                </div>
-                                                <div class="collection-taps-item">
-                                                    <span>Accessories</span>
-                                                    <img class="collection-taps-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/3_cd2dd57c-bd22-4257-9caf-5558fccd2ebd.png?v=1672281628" alt="">
-                                                </div>
+                                                {% for link in main_menu.links %}
+                                                    {% case link.title %}
+                                                        {% when 'Products' %}
+
+                                                        {% for childlink in link.links %}
+                                                        <div class="collection-taps-item {% if forloop.index0 == 0 %}active{% endif %}">
+                                                            <span>{{childlink.title}}</span>
+                                                            <img class="collection-taps-img" src="{{childlink.image | img_url: '200x'}}" alt="{{childlink.title}}">
+                                                        </div>
+                                                        {% endfor %}
+                                                    {% endcase %}
+                                                {% endfor %}
                                             </div>
 
-                                            <div class="nav-shop-collection-products">
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000Solar Generator 2000Solar Generator 2000</span>
+                                            {% for link in main_menu.links %}
+                                                {% case link.title %}
+                                                {% when 'Products' %}
+                                                {% for childlink in link.links %}
+                                                {%- assign category = childlink.url | replace: '/collections/', '' -%}
+                                                <div class="header-products-container {% if forloop.index0 == 0 %}active{% endif %}">
+                                                    <div class="nav-shop-collection-products">
+                                                        {% for product in collections[category].products limit: 8 %}
+                                                        <a href="{{product.url}}" class="collection-products-item">
+                                                            {% include 'product-tag', product: product %}
+                                                            <img class="collection-products-item-img" src="{{product.featured_image | img_url: '290x'}}" alt="{{ product.title }}">
+                                                            <span>{{ product.title }}</span>
+                                                        </a>
+                                                        {% endfor %}
+                                                    </div>
+                                                    {% if collections[category].products_count > 8 %}
+                                                        <a href="{{ childlink.url }}" class="a-button-fill nav-shop-collection-more">VIEW MORE</a>
+                                                    {% endif %}
                                                 </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                                <div class="collection-products-item">
-                                                    <img class="collection-products-item-img" src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/4_814d712d-8f6a-4be4-9bd2-1ff0d63cbb82.png?v=1672283172" alt="">
-                                                    <span>Solar Generator 2000</span>
-                                                </div>
-                                            </div>
-                                            <a class="a-button-fill nav-shop-collection-more">VIEW MORE</a>
+                                                {% endfor %}
+                                                {% endcase %}
+                                            {% endfor %}
                                         </div>
                                         <div class="nav-shop-scence">
                                             {% for block in section.blocks %}
                                                 {%- assign img_url = block.settings.menu_img | img_url: '180x' -%}
                                                 {% case block.type %}
                                                     {% when 'shop_link' %}
-                                                        <a href="{{block.settings.img_url}}" class="nav-shop-scence-item block" style="background: url({{img_url}});">
+                                                        <a href="{{block.settings.img_url}}" class="nav-shop-scence-item flex" style="background: url({{img_url}});">
                                                             <span>{{block.settings.menu_title | escape}}</span>
                                                         </a>
                                                 {% endcase %}
@@ -172,8 +157,10 @@
                                         <div class="modal-overlay"></div>
                                         <div class="search-modal__content search-modal__content-bottom index-container relative" tabindex="-1">
                                             <span class="iconfont jackery-icon-jackery"></span>
-                                            <predictive-search class="search-modal__form"
-                                                data-loading-text="Loading...">
+                                            <predictive-search 
+                                                class="search-modal__form"
+                                                data-loading-text="Loading..."
+                                            >
                                                 <form action="/search" method="get" role="search"
                                                     class="search search-modal__form">
                                                     <div class="field">
@@ -256,29 +243,202 @@
                     </div>
                 </div>
 
-                <div class="header-m-menu absolute mobile-block right-0"><span class="iconfont jackery-icon-menu"></span></div>
-            </div>
+                <div class="mobile-toggle-nav header-m-menu absolute mobile-block right-0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="absolute mobile-block mb-search">
+                    <details-modal class="header__search">
+                                <details>
+                                    <summary
+                                        class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
+                                        aria-haspopup="dialog" aria-label="Search" role="button">
+                                        <div class="index-container relative">
+                                            <input style="text-indent: 24px;" type="text" placeholder="Search" />
+
+                                            <span class="iconfont jackery-icon-sousuo absolute"></span>
+                                        </div>
+                                    </summary>
+                                    <div class="search-modal modal__content" role="dialog" aria-modal="true"
+                                        aria-label="Search">
+                                        <div class="modal-overlay"></div>
+                                        <div class="search-modal__content search-modal__content-bottom index-container relative" tabindex="-1">
+                                            <span class="iconfont jackery-icon-jackery"></span>
+                                            <predictive-search 
+                                                class="search-modal__form"
+                                                data-loading-text="Loading..."
+                                            >
+                                                <form action="/search" method="get" role="search"
+                                                    class="search search-modal__form">
+                                                    <div class="field">
+                                                        <input class="search__input field__input" id="Search-In-Modal"
+                                                            type="search" name="q" value="" placeholder="Search"
+                                                            role="combobox" aria-expanded="false"
+                                                            aria-owns="predictive-search-results-list"
+                                                            aria-controls="predictive-search-results-list"
+                                                            aria-haspopup="listbox" aria-autocomplete="list"
+                                                            autocorrect="off" autocomplete="off" autocapitalize="off"
+                                                            spellcheck="false" aria-activedescendant="">
+                                                        <input type="hidden" name="options[prefix]" value="last">
+                                                        <button class="search__button field__button"
+                                                            aria-label="Search">
+                                                            <span class="iconfont jackery-icon-sousuo"></span>
+                                                        </button>
+
+                                                        <button type="button"
+                                                class="search-modal__close-button modal__close-button link link--text focus-inset"
+                                                aria-label="Close">
+                                                <span class="iconfont jackery-icon-guanbi"></span>
+                                            </button>
+                                                    </div>
+
+                                                    <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                                                    <div class="predictive-search__loading-state">
+                                                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                        </svg>
+                                                    </div>
+                                                    </div>
+                                                    <span class="predictive-search-status visually-hidden" role="status"
+                                                        aria-hidden="true"></span>
+                                                </form>
+                                            </predictive-search>
+                                        </div>
+                                    </div>
+                                </details>
+                    </details-modal>
+                </div>
+
+                <div class="absolute m-menu m-h-menu mobile-block">
+						<div class="">
+							<ul class="nav">
+								<li class="menu-li">
+									<div class="flex items-center justify-between mobile-nav-product-header m-menu-content">
+										<div class="nav-product-header-title m-menu-item-name">Shop</div>
+										<span class="iconfont jackery-icon-arrow-right "></span>
+									</div>
+									<ul class="nav-child-item mobile-nav-product">
+                                        {% for link in main_menu.links %}
+                                            {% case link.title %}
+                                                {% when 'Products' %}
+                                                {% for childlink in link.links %}
+                                                <li class="menu-li nav-item">
+                                                    <div class="flex items-center justify-between nav-collection-header m-menu-content">
+                                                        <div class="flex items-center">
+                                                            <img src="{{childlink.image | img_url: '120x'}}" style="max-height: 30px;" alt="{{childlink.title}}">
+                                                            <span class="collection-name">{{childlink.title}}</span>
+                                                        </div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </div>
+
+                                                    <div class="mb-menu-product-main">
+                                                        <ul class="mb-menu-product-list">
+                                                            {% for link in main_menu.links %}
+                                                                {% case link.title %}
+                                                                {% when 'Products' %}
+                                                                {% for childlink in link.links %}
+                                                                {%- assign category = childlink.url | replace: '/collections/', '' -%}
+                                                                    {% for product in collections[category].products limit: 8 %}
+                                                                    <li class="mb-menu-product-line">
+                                                                        <img src="{{product.featured_image | img_url: '286x'}}" alt="{{ product.title }}">
+                                                                        <span>{{ product.title }}</span>
+                                                                    </li>
+                                                                    {% endfor %}
+                                                                {% endfor %}
+                                                                {% endcase %}
+                                                            {% endfor %}
+                                                        </ul>
+
+                                                        <div class="m-menu-content collection-more">
+                                                            <a class="a-button-fill" href="{{ childlink.url }}">
+                                                            
+                                                                VIEW MORE
+                                                                <span class="iconfont  jackery-icon-arrow-right"></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                {% endfor %}
+                                            {% endcase %}
+                                        {% endfor %}
+
+                                        <div class="m-header-scence m-menu-content flex">
+                                            {% for block in section.blocks %}
+                                                {%- assign img_url = block.settings.menu_img | img_url: '180x' -%}
+                                                {% case block.type %}
+                                                    {% when 'shop_link' %}
+                                                        <div class="m-header-scence-item flex items-center justify-center" style="background-image: url({{img_url}});">
+                                                            <span>{{block.settings.menu_title | escape}}</span>
+                                                        </div>
+                                                {% endcase %}
+                                            {% endfor %}
+                                        </div>
+									</ul>
+								</li>
+
+								<li class="menu-li">
+									<div class="flex items-center justify-between m-menu-content">
+										<div class="m-menu-item-name">About Jackery</div>
+										<span class="iconfont jackery-icon-arrow-right"></span>
+									</div>
+									<ul class="nav-child-item">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'about_jackery' %}
+                                                    <a href="{{block.settings.menu_url}}" class="m-menu-content nav-child-content flex items-center justify-between">
+                                                        <div class="m-menu-item-name">{{block.settings.menu_title | escape}}</div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+									</ul>
+								</li>
+
+                                <li class="menu-li">
+									<div class="flex items-center justify-between m-menu-content">
+										<div class="m-menu-item-name">Support</div>
+										<span class="iconfont jackery-icon-arrow-right"></span>
+									</div>
+									<ul class="nav-child-item">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'support' %}
+                                                    <a href="{{block.settings.menu_url}}" class="m-menu-content nav-child-content flex items-center justify-between">
+                                                        <div class="m-menu-item-name">{{block.settings.menu_title | escape}}</div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+									</ul>
+								</li>
+
+                                <li class="menu-li">
+									<div class="flex items-center justify-between m-menu-content">
+										<div class="m-menu-item-name">Benefits</div>
+										<span class="iconfont jackery-icon-arrow-right"></span>
+									</div>
+									<ul class="nav-child-item">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'benefits' %}
+                                                    <a href="{{block.settings.menu_url}}" class="m-menu-content nav-child-content flex items-center justify-between">
+                                                        <div class="m-menu-item-name">{{block.settings.menu_title | escape}}</div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+									</ul>
+								</li>
+							</ul>
+						</div>
+				</div>
+            </div> 
         </div>
     </header>
 
-{% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script> {% endcomment %}
 <script>
-        // gsap.registerPlugin(ScrollTrigger);
-        // const headerDom = document.querySelector(".site-header")
-        // const announcement = document.querySelector(".site-header").querySelector(".announcement-bar")
-        // gsap.to(headerDom, {
-        //     scrollTrigger: {
-        //         start: 80,
-        //         toggleClass: {
-        //             className: 'site-header-white',
-        //             targets: '.site-header'
-        //         },
-        //         onUpdate: (self) => {
-        //             self.direction === -1 ? announcement.classList.remove("announcement-hide") : announcement.classList.add("announcement-hide")
-        //         }
-        //     }
-        // })
-
         $(document).ready(function(){
             const headerSelectors = {
                 announcementBarBtn: {{ section.settings.show_announcement_bar }} ? document.querySelector(".site-header .announcement-bar .jackery-icon-guanbi") : null,
@@ -320,6 +480,30 @@
                         })
                     })
                 }
+            })
+
+            const collectionMenus = document.querySelector(".nav-shop-menu")
+            const collectionItem = collectionMenus.querySelectorAll(".collection-taps-item")
+            const headerProducts = document.querySelectorAll(".header-products-container")
+            collectionItem.forEach((collection, index, arr) => {
+                collection.addEventListener("mouseover", () => {
+                    collectionItem.forEach((e, i) => {
+                        e.classList.remove("active")
+                        headerProducts[i].classList.remove("active")
+                    });
+
+                    collection.classList.add("active")
+                    headerProducts[index].classList.add("active")
+                })
+            })
+
+            const mHeaderMenu = document.querySelector(".m-h-menu")
+            const mHeaderItems = mHeaderMenu.querySelectorAll(".menu-li")
+            mHeaderItems.forEach(item => {
+                item.addEventListener("click", (e) => {
+                    e.stopPropagation()
+                    item.classList.toggle("active");
+                })
             })
         })
     </script>
