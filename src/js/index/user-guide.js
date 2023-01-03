@@ -2,11 +2,12 @@ class UserGuide {
   constructor(el) {
     this.DOM = { el };
     this.config = { pdf: null };
-    this.init();
+    this.installPdf();
   }
 
-  init() {
+  installPdf() {
     const me = this;
+    const DOM = document.querySelector(".manuals.pdf");
 
     function tabContent(ul, data) {
       let li = "";
@@ -21,12 +22,12 @@ class UserGuide {
       ul.innerHTML = li;
     }
     function search() {
-      const input = me.DOM.el.querySelector(".search-box input");
-      const { type } = me.DOM.el.querySelector(".tab li.on").dataset;
+      const input = DOM.querySelector(".search-box input");
+      const { type } = DOM.querySelector(".tab li.on").dataset;
       if (input.value) {
-        tabContent(me.DOM.el.querySelector(`.tab-content .${type}`), me.config.pdf[type].filter((v) => new RegExp(input.value).test(v.file_name)))
+        tabContent(DOM.querySelector(`.tab-content .${type}`), me.config.pdf[type].filter((v) => new RegExp(input.value).test(v.file_name)))
       } else {
-        tabContent(me.DOM.el.querySelector(`.tab-content .${type}`), me.config.pdf[type])
+        tabContent(DOM.querySelector(`.tab-content .${type}`), me.config.pdf[type])
       }
     }
     function tab(li, content) {
@@ -45,10 +46,10 @@ class UserGuide {
       me.config.pdf = JSON.parse(document.querySelector("#user-guide-json").innerText);
       tab(document.querySelectorAll('.pdf .tab li'), document.querySelectorAll('.pdf .tab-content'));
 
-      me.DOM.el.querySelector(".search-box button").onclick = () => search()
+      DOM.querySelector(".search-box button").onclick = () => search()
     })
   }
 }
 
-const userGuide = new UserGuide(document.querySelector(".manuals.pdf"));
+const userGuide = new UserGuide();
 export default userGuide;
