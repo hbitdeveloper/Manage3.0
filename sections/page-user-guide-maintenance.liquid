@@ -38,14 +38,15 @@
     {
       "type": "Maintenance_PPS", "name": "Power Station Maintenance", "settings": [
         {"type": "text", "id": "title", "label": "Maintenance Title", "default": "The use environment of Power station"},
-        {"type": "textarea", "id": "content", "label": "Maintenance Content"},
+        {"type": "richtext", "id": "content", "label": "Maintenance Content"},
         {"type": "image_picker", "id": "image", "label": "Maintenance image", "info": "Recommended size: 840px*378px"}
       ]
     },
     {
       "type": "Maintenance_SP", "name": "Solar Panel Maintenance", "settings": [
-        {"type": "text", "id": "file_name", "label": "pdf file name", "default": "Jackery Explorer 160 Power Station User Manual"},
-        {"type": "url", "id": "link", "label": "pdf file link"}
+        {"type": "text", "id": "title", "label": "Maintenance Title", "default": "The use environment of solar panel"},
+        {"type": "richtext", "id": "content", "label": "Maintenance Content"},
+        {"type": "image_picker", "id": "image", "label": "Maintenance image", "info": "Recommended size: 840px*378px"}
       ]
     }
   ]
