@@ -1,17 +1,29 @@
 class UserGuide {
   constructor(el) {
     this.DOM = { el };
-    this.config = { pdf: null };
-    this.installPdf();
+    this.config = { pdf: null, maintenance: null };
+    this.pdf();
+    this.maintenance()
   }
 
-  installPdf() {
+  // eslint-disable-next-line no-underscore-dangle,class-methods-use-this
+  $$(entity) {
+    return entity ? document.querySelector(entity) : null
+  }
+
+  // eslint-disable-next-line no-underscore-dangle,class-methods-use-this
+  all(entity) {
+    // return entity ? document.querySelectorAll(entity) : []
+    return entity ? $(entity).get() : []
+  }
+
+  pdf() {
     const me = this;
     let DOM = null;
 
     function tabContent(ul, data) {
       let li = "";
-      const download = document.querySelector(".tab-content li a").innerText;
+      const download = me.$$(".tab-content li a").innerText;
       data.forEach((item) => {
         li += `<li>
           <i class="img-icon iconfont jackery-icon-pdf"></i>
@@ -46,9 +58,47 @@ class UserGuide {
       me.config.pdf = JSON.parse(document.querySelector("#user-guide-json").innerText);
       DOM = document.querySelector(".manuals.pdf");
 
-      tab(document.querySelectorAll('.pdf .tab li'), document.querySelectorAll('.pdf .tab-content'));
-      tab(document.querySelectorAll('.maintenance .tab li'), document.querySelectorAll('.maintenance .tab-content'));
+      tab(me.all('.pdf .tab li'), me.all('.pdf .tab-content'));
+      tab(me.all('.maintenance .tab li'), me.all('.maintenance .tab-content'));
       DOM.querySelector(".search-box button").onclick = () => search()
+    })
+  }
+
+  maintenance() {
+    const me = this;
+
+    function modal(data, _class, db) {
+      const m = document.createElement('aside');
+      m.className = `yModal ${_class || ""}`;
+      m.innerHTML = `
+        <i class="mask"></i>
+        <div class="y-modal-body">
+          <svg class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"></path></svg>
+          <img src="${data.image}" alt="${data.title}">
+          <div class="content">
+            <h4>${data.title}</h4>
+            ${data.content}
+          </div>
+        </div>
+      `;
+      document.body.appendChild(m);
+
+      me.$$(".yModal .icon-close").onclick = me.$$(".yModal .mask").onclick = () => {
+        document.body.removeChild(m);
+        db && db()
+      }
+    }
+    function learn(el, type) {
+      el.forEach((item, index) => {
+        item.querySelector("button").onclick = () => modal(me.config.maintenance[type][index])
+      })
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      me.config.maintenance = JSON.parse(me.$$("#product-maintenance").innerText);
+
+      learn(me.all(".maintenance .tab-content.pps li"), "pps");
+      learn(me.all(".maintenance .tab-content.sp li"), "sp");
     })
   }
 }

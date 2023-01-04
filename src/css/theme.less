@@ -31,6 +31,8 @@
   --radius: 12px;  /* 通用圆角 */
   --border-primary: 2px solid #fd5000;  /* 主题边框线和颜色 */
   --border-grey: 1px solid #ccc;  /* 次要边框线和颜色 */
+  --normal-color: #fff;
+  --border-color-link: 1px solid #ddd;
 }
 
 * {
@@ -54,7 +56,7 @@ div,a,p,span,i,h1,h2,h3,h4,h5,h6,table,button,ul,li {
   -webkit-tap-highlight-color: transparent;
 }
 ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article,
-aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {border: none;}
+aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { border: none; }
 
 em,i {
   font-style: normal;
@@ -228,11 +230,11 @@ p,
   display: flex;
   font-size: 1.25vw;
   font-weight: 300;
+  font-weight: bold;
   line-height: 1.25vw;
   padding: 0.625vw 1.5vw;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-weight: bold;
 }
 
 .a-button-fill:hover {
@@ -241,8 +243,8 @@ p,
 }
 
 .a-button-fill .iconfont {
-  line-height: 1;
   font-weight: bold;
+  line-height: 1;
 }
 
 /* button */
@@ -259,10 +261,10 @@ p,
   cursor: pointer;
   float: right;
   font-size: 1.71875vw;
+  margin-right: 8px;
   overflow: hidden;
   white-space: nowrap;
   width: 1.71875vw;
-  margin-right: 8px;
 }
 
 .rate > label::before {
@@ -279,19 +281,19 @@ p,
 
 /* -----按钮箭头----- */
 .ra-btn {
+  align-items: center;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 3.125vw;
   height: 100px;
+  justify-content: center;
   position: relative;
   width: 100px;
   .iconfont {
-    transition: all .2s;
     color: var(--text-info-color);
-    font-size: 60px!important;
+    font-size: 60px !important;
+    transition: all 0.2s;
   }
-  font-size: 3.125vw;
 }
 .ra-btn:hover .iconfont {
   color: var(--primary-color);
@@ -305,6 +307,7 @@ p,
   max-width: 90%;
   width: 1671px;
 }
+
 /* 版心 */
 
 @media screen and (max-width: 768px) {
@@ -422,8 +425,6 @@ p,
 
   /* -----rate----- */
 }
-
-
 
 @import url(./common.less);
 @import url(./components//details-disclosure.less);
