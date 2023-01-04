@@ -1,6 +1,29 @@
 <style>
 .img-icon {width: 96px; height: 96px; font-size: 96px; color: var(--primary-color); display: inline-block;}
 
+.yModal, .yModal .mask {width: 100%; height: 100%; top: 0; left: 0;}
+.yModal {
+	position: fixed;  z-index: 99999999; background: rgba(0, 0, 0, 0.7);
+	display: flex; display: -webkit-flex; justify-content: center; align-items: center;
+}
+.yModal .mask, .yModal .icon-close {position: absolute; z-index: 1;}
+.yModal .icon-close {width: 24px; height: 24px; cursor: pointer; top: var(--gap); right: var(--gap);}
+.yModal .icon-close path {stroke-width: 5px; stroke: var(--normal-color); stroke-linecap: round; stroke-linejoin: round;}
+.yModal .y-modal-body {
+	width: 100%; max-width: 43.75vw; background-color: var(--normal-color); margin: auto;
+	position: relative; z-index: 2;
+}
+.yModal .y-modal-body img {max-width: 100%;}
+.yModal .y-modal-body .content {width: 100%; padding: var(--gap);}
+.yModal .y-modal-body h4 {
+	width: 100%; line-height: 39px; color: var(--text-main-color); font-weight: bold;
+	
+}
+.yModal .y-modal-body p {width: 100%; color: var(--text-sub-color); white-space: pre-line;}
+@media screen and (max-width: 768px) {
+	.yModal .y-modal-body {margin: 0; border-radius: 0;}
+}
+
 .layer-container {width: 100%; max-width: 1200px; margin: 0 auto;}
 
 .banner {
@@ -41,20 +64,20 @@
 }
 .manuals .list li:hover {transform: scale(1.035); box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.5);}
 .manuals .list li b {font-weight: 500; padding: 0 var(--gap); margin: 30px 0;}
-.manuals .list li button {
+.manuals .list li .a-button {
 	width: 96%; max-width: 240px; height: 48px; color: var(--primary-color); background: transparent; border-radius: 24px; border: var(--border-primary);
 	margin: 0 auto; display: flex; align-items: center; justify-content: center; transition: all 0.3s;
 }
-.manuals .list li button .jackery-icon-download {margin-right: 5px;}
-.manuals .list li button .jackery-icon-arrow-right {margin-left: 5px;}
-.manuals .list li button:hover {color: #fff; background: var(--primary-color);}
+.manuals .list li .a-button .jackery-icon-download {margin-right: 5px;}
+.manuals .list li .a-button .jackery-icon-arrow-right {margin-left: 5px;}
+.manuals .list li .a-button:hover {color: #fff; background: var(--primary-color);}
 
 .manuals .more {color: var(--primary-color); text-align: center; margin: 2.6042vw auto 0; display: block;}
 .manuals .more i {margin-left: 5px;}
 
 .maintenance .list {grid-template-columns: repeat(3,1fr);}
 .maintenance .list li {padding: var(--gap); justify-content: flex-start;}
-.maintenance .list li button {max-width: 300px; height: 66px; border-radius: 33px;}
+.maintenance .list li .a-button {max-width: 300px; height: 66px; border-radius: 33px;}
 .maintenance .list li b {height: 78px; padding: 0;}
 .maintenance .list li img {width: 100%; height: 200px; object-fit: cover;}
 
