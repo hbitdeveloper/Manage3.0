@@ -90,7 +90,7 @@ class UserGuide {
     }
     function learn(el, type) {
       el.forEach((item, index) => {
-        item.querySelector("button").onclick = () => modal(me.config.maintenance[type][index])
+        item.querySelector("button").onclick = () => { modal(me.config.maintenance[type][index]) }
       })
     }
 
