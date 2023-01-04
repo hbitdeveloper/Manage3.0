@@ -203,7 +203,68 @@
     },
     "faq": {
       "type": "faq",
+      "blocks": {
+        "bdb58104-6043-4783-87ba-39fef2f1380a": {
+          "type": "FAQ_SG",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br\/><br\/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br\/><br\/>Duis aute irre dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat<br\/>nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+          }
+        },
+        "f14d25ce-bcae-4660-bd49-12b42edf5ae6": {
+          "type": "FAQ_SG",
+          "settings": {
+            "title": "What is the length of the AC adapter cable for the power station",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br\/><br\/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br\/><br\/>Duis aute irre dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat<br\/>nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+          }
+        },
+        "ac3bec07-f9de-4c18-90ee-eeef89d45009": {
+          "type": "FAQ_PPS",
+          "settings": {
+            "title": "titleasdasd",
+            "content": "<p>content23423423423434<\/p>"
+          }
+        },
+        "82b30c64-89a4-430b-948a-a30e6860a1a8": {
+          "type": "FAQ_PPS",
+          "settings": {
+            "title": "title",
+            "content": "<p>content<\/p>"
+          }
+        },
+        "d74766e6-a2bb-4cd3-bc89-9af7fdc53660": {
+          "type": "FAQ_SP",
+          "settings": {
+            "title": "e123123123",
+            "content": "<p>content12312323123<\/p>"
+          }
+        },
+        "8ad1e4b2-488f-4933-9bfa-6694dd705e28": {
+          "type": "FAQ_SP",
+          "settings": {
+            "title": "title235345",
+            "content": "<p>content56456456456546<\/p>"
+          }
+        },
+        "edf74f7e-1569-47a5-8720-1a24f520e895": {
+          "type": "FAQ_ACC",
+          "settings": {
+            "title": "title1231454245",
+            "content": "<p>content345345345345435<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bdb58104-6043-4783-87ba-39fef2f1380a",
+        "f14d25ce-bcae-4660-bd49-12b42edf5ae6",
+        "ac3bec07-f9de-4c18-90ee-eeef89d45009",
+        "82b30c64-89a4-430b-948a-a30e6860a1a8",
+        "d74766e6-a2bb-4cd3-bc89-9af7fdc53660",
+        "8ad1e4b2-488f-4933-9bfa-6694dd705e28",
+        "edf74f7e-1569-47a5-8720-1a24f520e895"
+      ],
       "settings": {
+        "title": "FAQ"
       }
     },
     "contact": {
