@@ -62,6 +62,8 @@
     }
     </script>
   {% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
+
+  {% render 'shogun-head' %}
 </head>
 
   <body class="gradient">

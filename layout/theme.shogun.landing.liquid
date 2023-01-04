@@ -70,6 +70,8 @@ This file can be re-written at any time.
     </script>
   {% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
 
+
+  {% render 'shogun-head' %}
 </head>
 
 
