@@ -7,11 +7,13 @@
 	display: flex; display: -webkit-flex; justify-content: center; align-items: center;
 }
 .yModal .mask, .yModal .icon-close {position: absolute; z-index: 1;}
-.yModal .icon-close {fill: currentColor; cursor: pointer; top: var(--gap); right: var(--gap);}
+.yModal .icon-close {width: 24px; height: 24px; cursor: pointer; top: var(--gap); right: var(--gap);}
+.yModal .icon-close path {stroke-width: 5px; stroke: var(--normal-color); stroke-linecap: round; stroke-linejoin: round;}
 .yModal .y-modal-body {
-	width: 100%; max-width: 840px; background-color: var(--normal-color); margin: auto;
+	width: 100%; max-width: 43.75vw; background-color: var(--normal-color); margin: auto;
 	position: relative; z-index: 2;
 }
+.yModal .y-modal-body img {max-width: 100%;}
 .yModal .y-modal-body .content {width: 100%; padding: var(--gap);}
 .yModal .y-modal-body h4 {
 	width: 100%; line-height: 39px; color: var(--text-main-color); font-weight: bold;
