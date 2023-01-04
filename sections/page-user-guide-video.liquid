@@ -24,7 +24,7 @@
   <button type="button">{{ section.settings.button }}</button>
 </div>
 
-<div class="swiper-container slideshow video-slideshow">
+<div class="swiper-container slideshow video-slideshow video-swiper">
   <div class="swiper-wrapper">
     {% for block in VIDEO_SG %}
     {%- assign img_url = block.settings.video_pic | img_url: '750x' -%}
