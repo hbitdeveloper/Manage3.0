@@ -28,7 +28,7 @@
 
 .banner {
 	width: 100%; height: 100vh; max-height: 890px; padding-top: 100px;
-	background: url("{{ block.settings.image | img_url: 'master' }}") center no-repeat; background-size: cover;
+	background: url("{{ section.settings.image | img_url: 'master' }}") center no-repeat; background-size: cover;
 }
 .banner h5 {width: 34vw; margin-top: 22px;}
 
@@ -82,7 +82,7 @@
 .maintenance .list li img {width: 100%; height: 200px; object-fit: cover;}
 
 @media only screen and (min-width: 768px) {
-  .banner {background-image: url("{{ block.settings.m_image | img_url: 'master' }}")}
+  .banner {background-image: url("{{ section.settings.m_image | img_url: 'master' }}")}
 }
 </style>
 
