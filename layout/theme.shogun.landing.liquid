@@ -14,8 +14,9 @@ This file can be re-written at any time.
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    {% comment %} iconfont {% endcomment %}
-    <link rel="stylesheet" rel="preload" href="https://at.alicdn.com/t/c/font_3813355_xxt8ufmzqa9.css?spm=a313x.7781069.1998910419.53&file=font_3813355_xxt8ufmzqa9.css">
+
+    {% comment %} ali iconfont {% endcomment %}
+    <link rel="stylesheet" rel="preload" href="https://at.alicdn.com/t/c/font_3813355_jg4re0ucock.css?spm=a313x.7781069.1998910419.55&file=font_3813355_jg4re0ucock.css">
     
     {{ 'theme.bundle.css' | asset_url | stylesheet_tag }}
 
@@ -27,17 +28,23 @@ This file can be re-written at any time.
 
     {%- if template contains 'index' -%}
       {{- 'page-index.bundle.css' | asset_url | stylesheet_tag -}}
-      {% comment %} {{ 'slide-swiper.bundle.css' | asset_url | stylesheet_tag }} {% endcomment %}
-      <link rel="stylesheet" rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+      <link rel="stylesheet" rel="preload" href="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/swiper-bundle.min.css?v=1670922528">
+      <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    {%- endif -%}
+
+    {%- if template contains 'index' -%}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+      {{ 'swiper.js' | asset_url | script_tag }}
+      <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+
+      {{ 'page-index.bundle.js' | asset_url | script_tag }}
     {%- endif -%}
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
-    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
-    {%- endunless -%}
+    <script src="{{ 'base.bundle.js' | asset_url }}" defer="defer"></script>
 
     <title>
       {{ page_title }}
@@ -52,35 +59,17 @@ This file can be re-written at any time.
 
     {% render 'meta-tags' %}
 
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'global.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {{ 'theme.bundle.js' | asset_url | script_tag }}
     {{ content_for_header }}
-
-    {%- liquid
-      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-    %}
-
-    {%- unless settings.type_body_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
-    {%- unless settings.type_header_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
-
-    {%- if settings.predictive_search_enabled -%}
-      <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
-    {%- endif -%}
-
+    
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
-  
+  {% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
 
-  {% render 'shogun-head' %}
 </head>
 
 
@@ -89,14 +78,14 @@ This file can be re-written at any time.
   
   
   {{ content_for_layout }}
-  {{ 'page-index.bundle.js' | asset_url | script_tag }}
+  
   <script>
-      window.shopUrl = '{{ request.origin }}';
+      window.shopUrl = '{{ shop.url }}';
+      window.shopId = '{{ shop.id }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
         cart_change_url: '{{ routes.cart_change_url }}',
         cart_update_url: '{{ routes.cart_update_url }}',
-        cart_url: '{{ routes.cart_url }}',
         predictive_search_url: '{{ routes.predictive_search_url }}'
       };
 
@@ -112,15 +101,9 @@ This file can be re-written at any time.
       }
 
       window.accessibilityStrings = {
-        imageAvailable: `{{ 'products.product.media.image_available' | t: index: '[index]' }}`,
         shareSuccess: `{{ 'general.share.success_message' | t }}`,
-        pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
-        playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       }
     </script>
-<script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
   <style type="text/css">
     body, html {
       width: 100% !important;
