@@ -49,6 +49,8 @@
   /* 主题边框线和颜色 */
   --border-grey: 1px solid #ccc;
   /* 次要边框线和颜色 */
+  --normal-color: #fff;
+  --border-color-link: 1px solid #ddd;
 }
 * {
   box-sizing: border-box;
@@ -273,19 +275,19 @@ p,
   display: flex;
   font-size: 1.25vw;
   font-weight: 300;
+  font-weight: bold;
   line-height: 1.25vw;
   padding: 0.625vw 1.5vw;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-weight: bold;
 }
 .a-button-fill:hover {
   background: var(--primary-color);
   color: #fff;
 }
 .a-button-fill .iconfont {
-  line-height: 1;
   font-weight: bold;
+  line-height: 1;
 }
 /* button */
 /* -----rate----- */
@@ -299,10 +301,10 @@ p,
   cursor: pointer;
   float: right;
   font-size: 1.71875vw;
+  margin-right: 8px;
   overflow: hidden;
   white-space: nowrap;
   width: 1.71875vw;
-  margin-right: 8px;
 }
 .rate > label::before {
   content: '\ea29';
@@ -315,19 +317,19 @@ p,
 /* -----rate----- */
 /* -----按钮箭头----- */
 .ra-btn {
+  align-items: center;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 3.125vw;
   height: 100px;
+  justify-content: center;
   position: relative;
   width: 100px;
-  font-size: 3.125vw;
 }
 .ra-btn .iconfont {
-  transition: all 0.2s;
   color: var(--text-info-color);
-  font-size: 60px!important;
+  font-size: 60px !important;
+  transition: all 0.2s;
 }
 .ra-btn:hover .iconfont {
   color: var(--primary-color);
