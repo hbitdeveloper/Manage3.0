@@ -19,3 +19,8 @@ npm run deploy dev main
 // 更新到指定模板仓库（先将本地变更提交）
 npm run push dev main
 ```
+
+### 快捷命令集合
+```
+yarn pull dev main && yarn deploy dev main && git add . && git commit -m "user-guide-v2" && git push && yarn push dev main
+```

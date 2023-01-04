@@ -47,6 +47,7 @@ class UserGuide {
       DOM = document.querySelector(".manuals.pdf");
 
       tab(document.querySelectorAll('.pdf .tab li'), document.querySelectorAll('.pdf .tab-content'));
+      tab(document.querySelectorAll('.maintenance .tab li'), document.querySelectorAll('.maintenance .tab-content'));
       DOM.querySelector(".search-box button").onclick = () => search()
     })
   }
