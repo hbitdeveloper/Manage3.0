@@ -27,6 +27,21 @@
   {% endfor %}
 </ul>
 
+<script type="application/ld+json" id="product-maintenance">
+{
+  "pps": [
+    {% for block in PPS %}
+      {"title": "{{ block.settings.title }}", "content": "{{ block.settings.content }}", "image": "{{ block.settings.image | img_url: '840x' }}"}{% if forloop.last != true %},{% endif %}
+    {% endfor %}
+  ],
+  "sp": [
+    {% for block in PPS %}
+      {"title": "{{ block.settings.title }}", "content": "{{ block.settings.content }}", "image": "{{ block.settings.image | img_url: '840x' }}"}{% if forloop.last != true %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+
 {% schema %}
 {
   "name": "product maintenance", "class": "layer layer-container manuals maintenance", "tag": "div",
