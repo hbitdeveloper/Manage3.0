@@ -9,7 +9,7 @@
 
 <ul class="list tab-content pps on">
   {% for block in PPS limit: 3 %}
-  <li data-content="{{ block.settings.content }}">
+  <li>
     <img src="{{ block.settings.image | img_url: '840x' }}" alt="{{ block.settings.title }}" />
     <b class="h5">{{ block.settings.title }}</b>
     <button class="h5">{{ section.settings.more }}<i class="iconfont jackery-icon-arrow-right"></i></button>
@@ -19,13 +19,28 @@
 
 <ul class="list tab-content sp">
   {% for block in SP limit: 3 %}
-  <li data-content="{{ block.settings.content }}">
+  <li>
     <img src="{{ block.settings.image | img_url: '840x' }}" alt="{{ block.settings.title }}" />
     <b class="h5">{{ block.settings.title }}</b>
     <button class="h5">{{ section.settings.more }}<i class="iconfont jackery-icon-arrow-right"></i></button>
   </li>
   {% endfor %}
 </ul>
+
+<script type="application/ld+json" id="product-maintenance">
+{
+  "pps": [
+    {% for block in PPS %}
+      {"title": "{{ block.settings.title }}", "content": "{{ block.settings.content }}", "image": "{{ block.settings.image | img_url: '840x' }}"}{% if forloop.last != true %},{% endif %}
+    {% endfor %}
+  ],
+  "sp": [
+    {% for block in PPS %}
+      {"title": "{{ block.settings.title }}", "content": "{{ block.settings.content }}", "image": "{{ block.settings.image | img_url: '840x' }}"}{% if forloop.last != true %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
 
 {% schema %}
 {
