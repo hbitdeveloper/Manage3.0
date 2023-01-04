@@ -4,7 +4,9 @@
       "type": "page-user-guide",
       "settings": {
         "title": "User Guide",
-        "subTitle": "Get detailed operating instructions and product care information for all Jackery products"
+        "subTitle": "Get detailed operating instructions and product care information for all Jackery products",
+        "image": "shopify:\/\/shop_images\/user-guide-banner.jpg",
+        "m_image": "shopify:\/\/shop_images\/user-guide-banner-m.jpg"
       }
     },
     "pdf": {
@@ -136,7 +138,85 @@
     },
     "video": {
       "type": "page-user-guide-video",
+      "blocks": {
+        "5cae3879-3a8a-4d8c-838b-359ffe67fde9": {
+          "type": "VIDEO_SG",
+          "settings": {
+            "title": "Osmo Action 3",
+            "link": "https:\/\/www.dji.com\/cn",
+            "link_text": "VIEW MORE",
+            "video_url": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/AC202%20Video\/F83_AC202_Showreel_Clean_-10s_V3_2400-1440_20220913.mp4",
+            "video_pic": "shopify:\/\/shop_images\/109f3404fb4ead1f3f5c080c7a70f404.png"
+          }
+        },
+        "82cd12c0-c85e-4186-b2f0-fa7277a5cc4a": {
+          "type": "VIDEO_SG",
+          "settings": {
+            "title": "2222",
+            "link": "#",
+            "link_text": "VIEW MORE",
+            "video_url": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/AC202%20Video\/F83_AC202_Showreel_Clean_-10s_V3_2400-1440_20220913.mp4"
+          }
+        },
+        "c3ceb558-f9aa-4225-b81a-0dd6b06ac22e": {
+          "type": "VIDEO_SG",
+          "settings": {
+            "title": "3333",
+            "link": "#",
+            "link_text": "VIEW MORE",
+            "video_url": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/AC202%20Video\/F83_AC202_Showreel_Clean_-10s_V3_2400-1440_20220913.mp4"
+          }
+        },
+        "53b87df1-375f-4188-bcde-8f1907d243d3": {
+          "type": "VIDEO_SG",
+          "settings": {
+            "title": "4444",
+            "link": "#",
+            "link_text": "VIEW MORE",
+            "video_url": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/AC202%20Video\/F83_AC202_Showreel_Clean_-10s_V3_2400-1440_20220913.mp4"
+          }
+        },
+        "1f166e17-043d-4723-9224-0bd59156e7db": {
+          "type": "VIDEO_PPS",
+          "settings": {
+            "title": "Two line slide title - 1.",
+            "link": "",
+            "link_text": "VIEW MORE",
+            "video_url": ""
+          }
+        },
+        "b75f028c-f367-41c4-abd7-f8e966cba0ed": {
+          "type": "VIDEO_SP",
+          "settings": {
+            "title": "Two line slide title - 1.",
+            "link": "",
+            "link_text": "VIEW MORE",
+            "video_url": ""
+          }
+        },
+        "1ee590c5-4ced-4fc9-ad14-f964aa1dea58": {
+          "type": "VIDEO_ACC",
+          "settings": {
+            "title": "Two line slide title - 1.",
+            "link": "",
+            "link_text": "VIEW MORE",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "5cae3879-3a8a-4d8c-838b-359ffe67fde9",
+        "82cd12c0-c85e-4186-b2f0-fa7277a5cc4a",
+        "c3ceb558-f9aa-4225-b81a-0dd6b06ac22e",
+        "53b87df1-375f-4188-bcde-8f1907d243d3",
+        "1f166e17-043d-4723-9224-0bd59156e7db",
+        "b75f028c-f367-41c4-abd7-f8e966cba0ed",
+        "1ee590c5-4ced-4fc9-ad14-f964aa1dea58"
+      ],
       "settings": {
+        "title": "User Guide Video",
+        "placeholder": "Search Video",
+        "button": "Search"
       }
     },
     "maintenance": {
