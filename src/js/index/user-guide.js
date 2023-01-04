@@ -1,10 +1,14 @@
 class UserGuide {
   constructor(el) {
     this.DOM = { el };
-    this.config = { pdf: null, maintenance: null };
-    this.pdf();
-    this.maintenance();
-    this.faq()
+    this.config = { pdf: null, maintenance: null, video: null };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      this.pdf();
+      this.maintenance();
+      this.faq();
+      this.video()
+    })
   }
 
   $$(entity) {
@@ -39,7 +43,7 @@ class UserGuide {
         li += `<li>
           <i class="img-icon iconfont jackery-icon-pdf"></i>
           <b class="h5">${item.file_name}</b>
-          <a class="h5" href="${item.link}"><i class="iconfont jackery-icon-download"></i>${download}</a>
+          <a class="a-button h5" href="${item.link}"><i class="iconfont jackery-icon-download"></i>${download}</a>
         </li>`;
       })
       ul.innerHTML = li;
@@ -54,13 +58,11 @@ class UserGuide {
       }
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      me.config.pdf = JSON.parse(document.querySelector("#user-guide-json").innerText);
-      DOM = document.querySelector(".manuals.pdf");
+    me.config.pdf = JSON.parse(document.querySelector("#user-guide-json").innerText);
+    DOM = document.querySelector(".manuals.pdf");
 
-      me.tab(me.all('.pdf .tab li'), me.all('.pdf .tab-content'), search);
-      DOM.querySelector(".search-box button").onclick = () => search()
-    })
+    me.tab(me.all('.pdf .tab li'), me.all('.pdf .tab-content'), search);
+    DOM.querySelector(".search-box button").onclick = () => search()
   }
 
   maintenance() {
@@ -93,21 +95,41 @@ class UserGuide {
       })
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      me.config.maintenance = JSON.parse(me.$$("#product-maintenance").innerText);
+    me.config.maintenance = JSON.parse(me.$$("#product-maintenance").innerText);
 
-      me.tab(me.all('.maintenance .tab li'), me.all('.maintenance .tab-content'));
+    me.tab(me.all('.maintenance .tab li'), me.all('.maintenance .tab-content'));
 
-      learn(me.all(".maintenance .tab-content.pps li"), "pps");
-      learn(me.all(".maintenance .tab-content.sp li"), "sp");
-    })
+    learn(me.all(".maintenance .tab-content.pps li"), "pps");
+    learn(me.all(".maintenance .tab-content.sp li"), "sp")
   }
 
   faq() {
     const me = this;
-    document.addEventListener('DOMContentLoaded', () => {
-      me.tab(me.all('.faq .tab li'), me.all('.faq .tab-content'));
-    })
+    me.tab(me.all('.faq .tab li'), me.all('.faq .tab-content'));
+  }
+
+  video() {
+    const me = this;
+    let DOM = null;
+
+    function search() {
+      const input = DOM.querySelector(".search-box input");
+      const { type } = DOM.querySelector(".tab li.on").dataset;
+      const data = input.value ? me.config.video[type].filter((v) => new RegExp(input.value).test(v.title)) : me.config.video[type];
+      console.log(data);
+    }
+
+    me.config.video = JSON.parse(document.querySelector("#user-guide-video").innerText);
+    DOM = document.querySelector(".manuals.video");
+
+    me.all('.manuals.video .tab li').forEach((item, index, arr) => {
+      item.onclick = () => {
+        arr.forEach((v) => { v.classList.remove("on") });
+        item.classList.add("on");
+        search()
+      }
+    });
+    DOM.querySelector(".search-box button").onclick = () => search()
   }
 }
 
