@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-05 18:29:39
  * @LastEditors: Leo
- * @LastEditTime: 2023-01-04 13:44:01
+ * @LastEditTime: 2023-01-04 13:50:37
  * @FilePath: \3.0-manger\src\js\index\product-swiper.js
  */
 class ProductSlideshow {
@@ -24,12 +24,13 @@ class ProductSlideshow {
         this.slideshow = new Swiper(this.DOM.el, {
             loop: true,
             loopAdditionalSlides: 2,
+            centeredSlides: true,
             autoplay: {
                 delay: this.config.slideshow.delay,
                 disableOnInteraction: false,
             },
             slidesPerView: $(window).width() > 750 ? 'auto' : 0,
-            spaceBetween: 0,
+            spaceBetween: 25,
             effect: $(window).width() > 750 ? "slide" : "fade",
             centeredSlides: true,
             preloadImages: true,

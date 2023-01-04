@@ -148,7 +148,12 @@
 .product-swiper .slide-content {
     opacity: 0.4!important;
 }
-
+.product-swiper .swiper-slide-prev {
+  transform-origin: right center;
+}
+.product-swiper .swiper-slide-next {
+  transform-origin: left center;
+}
 .product-swiper .swiper-slide-active .slide-content {
     opacity: 1!important;
 }
