@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-09-27 18:24:11
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-09 17:04:57
+ * @LastEditTime: 2023-01-04 11:26:14
  * @FilePath: \3.0-manger\webpack.config.dev.js
  * @description: DEV配置
  */
@@ -54,6 +54,16 @@ module.exports = merge(common, {
                 {
                     from: path.resolve(__dirname, 'src/liquid/common/assets/'),
                     to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/assets/`),
+                    noErrorOnMissing: true
+                },
+                {
+                    from: path.resolve(__dirname, 'src/liquid/dev/templates/'),
+                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/templates/`),
+                    noErrorOnMissing: true
+                },
+                {
+                    from: path.resolve(__dirname, 'src/liquid/common/templates/'),
+                    to: path.resolve(__dirname, `theme/dev/${process.env.SHOPIFY_THEME || 'main'}/templates/`),
                     noErrorOnMissing: true
                 }
             ]

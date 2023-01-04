@@ -159,12 +159,19 @@
 .product-swiper .swiper-slide {
     transform: scale(0.88);
     transition: all .3s ease;
+    box-shadow: 0px 2px 20px 12px rgba(98,98,98,0.05);
 }
 
 .product-swiper .swiper-slide-active,
 .product-swiper .swiper-slide-duplicate-active {
     transform: scale(1);
     box-shadow: 0px 2px 20px 12px rgba(98,98,98,0.1);
+}
+.product-swiper .swiper-slide-next {
+    transform-origin: left center;
+}
+.product-swiper .swiper-slide-prev {
+    transform-origin: right center;
 }
 .product-swiper .swiper-wrapper .slide, .product-swiper .swiper-container {
     overflow: visible;
@@ -961,7 +968,6 @@
     }
 
     .product-swiper .swiper-slide {
-        transform: scale(1);
         padding: 0;
     }
     .product-swiper .swiper-slide-active,
