@@ -4,7 +4,9 @@
       "type": "page-user-guide",
       "settings": {
         "title": "User Guide",
-        "subTitle": "Get detailed operating instructions and product care information for all Jackery products"
+        "subTitle": "Get detailed operating instructions and product care information for all Jackery products",
+        "image": "shopify:\/\/shop_images\/user-guide-banner.jpg",
+        "m_image": "shopify:\/\/shop_images\/user-guide-banner-m.jpg"
       }
     },
     "pdf": {
