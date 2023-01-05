@@ -249,11 +249,13 @@ p,
   transform: scale(1);
 }
 .a-button-solid {
-  /* background: #FFFFFF; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   background: var(--primary-color);
   border: solid 2px var(--primary-color);
   border-radius: 1.71875vw;
-  /* color: var(--primary-color); */
+  width: max-content;
   color: #fff;
   font-size: 1.25vw;
   font-weight: 300;
@@ -340,6 +342,11 @@ p,
   margin: 0 auto;
   max-width: 90%;
   width: 1671px;
+}
+.section-container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
 }
 /* 版心 */
 @media screen and (max-width: 768px) {
@@ -524,6 +531,26 @@ p,
 }
 .left-0 {
   left: 0;
+}
+.text-center {
+  text-align: center;
+}
+.font-bold {
+  font-weight: bold;
+}
+.text-overflow-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+}
+.text-overflow-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  word-break: break-all;
 }
 /* 定位/flex/display */
 /* components - modal */
@@ -807,6 +834,48 @@ p,
   transform: rotate(90deg);
 }
 /* section - header */
+/* section title/page-section-swiper */
+body .page-section-title {
+  line-height: 66px;
+  margin-bottom: 90px;
+  text-align: center;
+  font-size: 45px;
+}
+body .page-section-swiper .a-button-fill {
+  font-size: 20px;
+  line-height: 24px;
+  padding: 11px 35px;
+}
+.page-section-swiper .slideshow-navigation {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 260px;
+  height: 60px;
+  z-index: 9;
+}
+.page-section-swiper .slideshow-navigation-button.next {
+  right: 0;
+}
+.page-section-swiper .slideshow-navigation-button.prev {
+  left: 0;
+}
+.page-section-swiper:hover .slideshow-navigation-button {
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  body .page-section-title {
+    line-height: 8.8vw;
+    margin-bottom: 8vw;
+    font-size: 6vw;
+  }
+  body .page-section-swiper .a-button-fill {
+    padding: 2.4vw 4.66667vw;
+    font-size: 3.8vw;
+    line-height: 3.8vw;
+    padding: 2.4vw 10vw;
+  }
+}
+/* section title/a-button-fill */
 @media screen and (max-width: 1280px) {
   /* section - header */
   .header-main .index-container {
