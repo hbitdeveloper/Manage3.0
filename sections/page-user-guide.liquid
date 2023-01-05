@@ -31,6 +31,10 @@
 	background: url("{{ section.settings.image | img_url: 'master' }}") center no-repeat; background-size: cover;
 }
 .banner h5 {width: 34vw; margin-top: 22px;}
+@media screen and (max-width: 768px) {
+	.banner {padding-top: 32px;}
+	.banner h1, .banner h5 {width: 100%; text-align: center;}
+}
 
 .manuals h2 {text-align: center; margin-top: 6.25vw;}
 .manuals a {text-decoration: none;}
