@@ -19,19 +19,38 @@
     <script>window.__webpack_public_path__ = "{{ assetsPath }}"</script>
     <link rel="preload" href="{{ 'theme.bundle.js' | asset_url }}" as="script">
 
+
+
+
+
+
+
     {%- if template contains 'index' -%}
       {{- 'page-index.bundle.css' | asset_url | stylesheet_tag -}}
       <link rel="stylesheet" rel="preload" href="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/swiper-bundle.min.css?v=1670922528">
       <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
-    {%- endif -%}
 
-    {%- if template contains 'index' -%}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+      {{ 'gsap.js' | asset_url | script_tag }}
       {{ 'swiper.js' | asset_url | script_tag }}
       <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 
       {{ 'page-index.bundle.js' | asset_url | script_tag }}
     {%- endif -%}
+
+
+    {%- if template contains 'events' -%}
+      <link rel="stylesheet" rel="preload" href="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/swiper-bundle.min.css?v=1670922528">
+      {{- 'page-events.bundle.css' | asset_url | stylesheet_tag -}}
+
+      {{ 'gsap.js' | asset_url | script_tag }}
+      {{ 'swiper.js' | asset_url | script_tag }}
+      {{ 'page-events.bundle.js' | asset_url | script_tag }}
+    {%- endif -%}
+
+
+
+
+
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
