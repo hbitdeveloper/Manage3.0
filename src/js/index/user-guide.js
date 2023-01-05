@@ -118,7 +118,6 @@ class UserGuide {
       const input = DOM.querySelector(".search-box input");
       const { type } = DOM.querySelector(".tab li.on").dataset;
       const data = input.value ? me.config.video[type].filter((v) => new RegExp(input.value).test(v.title)) : me.config.video[type];
-      console.log(data);
 
       // 先销毁原先的video swiper
       videoSlideshow.destroy(() => {

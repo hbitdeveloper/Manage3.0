@@ -161,8 +161,8 @@ class VideoSlideshow {
   }
 
   destroy(fn) {
-    fn && fn();
-    this.slideshow.destroy()
+    this.slideshow.destroy();
+    fn && fn()
   }
 }
 
