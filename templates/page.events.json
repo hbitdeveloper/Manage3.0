@@ -1,11 +1,12 @@
 {
-    "sections": {
-        "main": {
-            "type": "page-events",
-            "settings": {}
-        }
-    },
-    "order": [
-        "main"
-    ]
+  "sections": {
+    "main": {
+      "type": "page-events",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
