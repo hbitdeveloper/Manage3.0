@@ -13,7 +13,10 @@ class VideoSlideshow {
         pagination: { duration: 5 }
       }
     };
-    this.init();
+    document.addEventListener('DOMContentLoaded', () => {
+      this.DOM.el = document.querySelector('.video-slideshow');
+      this.init()
+    })
   }
   init() {
     const self = this;
@@ -156,7 +159,12 @@ class VideoSlideshow {
       }
     });
   }
+
+  destroy(fn) {
+    fn && fn();
+    this.slideshow.destroy()
+  }
 }
 
-const videoslideshow = new VideoSlideshow(document.querySelector('.video-slideshow'));
-export default VideoSlideshow
+const videoSlideshow = new VideoSlideshow();
+export default videoSlideshow

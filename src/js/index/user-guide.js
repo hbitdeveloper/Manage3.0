@@ -1,3 +1,5 @@
+import videoSlideshow from "./video-swiper"
+
 class UserGuide {
   constructor(el) {
     this.DOM = { el };
@@ -117,6 +119,31 @@ class UserGuide {
       const { type } = DOM.querySelector(".tab li.on").dataset;
       const data = input.value ? me.config.video[type].filter((v) => new RegExp(input.value).test(v.title)) : me.config.video[type];
       console.log(data);
+
+      // 先销毁原先的video swiper
+      videoSlideshow.destroy(() => {
+        let html = "";
+        data.forEach((item) => {
+          html += `
+          <div class="swiper-slide slide" block-id="${item.id}" block-src="${item.video_url}">
+            <video data-dps-name="default_" name="media" muted="" loop="" class="slide-video pc-block">
+              <source data-layzr-src="${item.video_url}" type="video/mp4; codecs=&quot;avc1.4D401E, mp4a.40.2&quot;" src="${item.video_url}">
+            </video>
+            <div class="slide-image mobile-block" style="background-image: url(${item.video_pic})"></div>
+            <div class="slide-content absolute">
+              <span class="slide-title h3">${item.title}</span>
+              <a class="slide-link h5 underlines-btn" href="${item.link}">${item.link_text}<span class="iconfont jackery-icon-arrow-right"></span></a>
+            </div>
+            <div class="absolute mobile-block video-swiper-play" data-modal="#s${item.id}">
+              <span class="iconfont jackery-icon-24gl-playCircle"></span>
+            </div>
+          </div>
+          `;
+          me.$$(".manuals.video .video-slideshow .swiper-wrapper").innerHTML = html
+        })
+      });
+
+      videoSlideshow.init()
     }
 
     me.config.video = JSON.parse(document.querySelector("#user-guide-video").innerText);
