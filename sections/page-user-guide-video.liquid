@@ -73,22 +73,22 @@
 {
   "sg": [
     {% for block in VIDEO_SG %}
-      {"title": "{{ block.settings.title }}", "link": "{{ block.settings.link }}", "link_text": "{{ block.settings.link_text }}", "video_url": "{{ block.settings.video_url }}", "video_pic": "{{ block.settings.video_pic }}"}{% if forloop.last != true %},{% endif %}
+      {"id": "{{ block.id }}", "title": "{{ block.settings.title }}", "link": "{{ block.settings.link }}", "link_text": "{{ block.settings.link_text }}", "video_url": "{{ block.settings.video_url }}", "video_pic": "{{ block.settings.video_pic | img_url: '750x' }}"}{% if forloop.last != true %},{% endif %}
     {% endfor %}
   ],
   "pps": [
     {% for block in VIDEO_PPS %}
-      {"title": "{{ block.settings.title }}", "link": "{{ block.settings.link }}", "link_text": "{{ block.settings.link_text }}", "video_url": "{{ block.settings.video_url }}", "video_pic": "{{ block.settings.video_pic }}"}{% if forloop.last != true %},{% endif %}
+      {"id": "{{ block.id }}", "title": "{{ block.settings.title }}", "link": "{{ block.settings.link }}", "link_text": "{{ block.settings.link_text }}", "video_url": "{{ block.settings.video_url }}", "video_pic": "{{ block.settings.video_pic | img_url: '750x' }}"}{% if forloop.last != true %},{% endif %}
     {% endfor %}
   ],
   "sp": [
     {% for block in VIDEO_SP %}
-      {"title": "{{ block.settings.title }}", "link": "{{ block.settings.link }}", "link_text": "{{ block.settings.link_text }}", "video_url": "{{ block.settings.video_url }}", "video_pic": "{{ block.settings.video_pic }}"}{% if forloop.last != true %},{% endif %}
+      {"id": "{{ block.id }}", "title": "{{ block.settings.title }}", "link": "{{ block.settings.link }}", "link_text": "{{ block.settings.link_text }}", "video_url": "{{ block.settings.video_url }}", "video_pic": "{{ block.settings.video_pic | img_url: '750x' }}"}{% if forloop.last != true %},{% endif %}
     {% endfor %}
   ],
   "acc": [
     {% for block in VIDEO_ACC %}
-      {"title": "{{ block.settings.title }}", "link": "{{ block.settings.link }}", "link_text": "{{ block.settings.link_text }}", "video_url": "{{ block.settings.video_url }}", "video_pic": "{{ block.settings.video_pic }}"}{% if forloop.last != true %},{% endif %}
+      {"id": "{{ block.id }}", "title": "{{ block.settings.title }}", "link": "{{ block.settings.link }}", "link_text": "{{ block.settings.link_text }}", "video_url": "{{ block.settings.video_url }}", "video_pic": "{{ block.settings.video_pic | img_url: '750x' }}"}{% if forloop.last != true %},{% endif %}
     {% endfor %}
   ]
 }
