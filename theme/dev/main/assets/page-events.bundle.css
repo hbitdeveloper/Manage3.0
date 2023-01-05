@@ -81,6 +81,9 @@
     max-width: 80vw;
     transform: translateY(20px);
   }
+  .page-banner .ani-slide-top .page-banner-content {
+    transform: translateY(0);
+  }
   .page-banner .page-banner-content .h1 {
     margin-bottom: 3vw;
   }
