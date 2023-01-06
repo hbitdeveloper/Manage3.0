@@ -68,6 +68,36 @@
             "image": "shopify:\/\/shop_images\/brand_events_pc_01_1.png",
             "m_image": "shopify:\/\/shop_images\/brand_events_mb_01.png"
           }
+        },
+        "b6df179c-1513-4093-bd7a-fa6077925e40": {
+          "type": "announced_block",
+          "settings": {
+            "title": "Jackery, releases a powerful new flagship 2000 Pro to kick-off summer travel season.",
+            "sub_text": "2000 Pro was launched on Jackery Day in May 2022. SG2000  is capable of receiving a full charge to 2,160 …",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/announced_pc_02_1.png"
+          }
+        },
+        "bf495098-43ac-46dd-982e-344b23484536": {
+          "type": "announced_block",
+          "settings": {
+            "title": "Jackery, Honda Team Up On Solar Ready, Lithium Power License Deal",
+            "sub_text": "Jackery has been chosen by American Honda Motor Co., Inc. to develop a best‐in‐class consumer offering of outdoor…",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/announced_pc_03_1.png"
+          }
+        },
+        "9a6a526b-3317-46a9-8153-5d603e703507": {
+          "type": "announced_block",
+          "settings": {
+            "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest Ultra-Charging…",
+            "sub_text": "Jackery, the leader of innovative portable power and green outdoor energy solutions",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/announced_pc_01_1.png"
+          }
         }
       },
       "block_order": [
@@ -76,12 +106,16 @@
         "f94fd836-6b3d-4363-81cd-e44125d7b6e9",
         "0e18e408-fdbf-44a5-b635-32f78a276395",
         "df76ac5d-5755-4ae7-b008-baacd50bda67",
-        "76d726fb-c9d9-4919-946c-9c86198ce05f"
+        "76d726fb-c9d9-4919-946c-9c86198ce05f",
+        "b6df179c-1513-4093-bd7a-fa6077925e40",
+        "bf495098-43ac-46dd-982e-344b23484536",
+        "9a6a526b-3317-46a9-8153-5d603e703507"
       ],
       "settings": {
         "autoplay": true,
         "autoplay_speed": 7,
-        "recent_title": "VIEW RECENT JACKERY\nBRAND EVENTS"
+        "recent_title": "VIEW RECENT JACKERY\nBRAND EVENTS",
+        "announced_title": "Here’s what we announced"
       }
     }
   },
