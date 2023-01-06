@@ -886,6 +886,9 @@ body .page-section-swiper .a-button-fill {
     line-height: 3.8vw;
     padding: 2.4vw 10vw;
   }
+  .slideshow-navigation {
+    display: none;
+  }
 }
 /* section title/a-button-fill */
 @media screen and (max-width: 1280px) {
