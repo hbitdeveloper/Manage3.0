@@ -1,0 +1,142 @@
+<div class="image-text-swiper page-section-swiper relative">
+        <div class="image-text-swiper-title page-section-title h2 index-container">View recent Jackery<br>
+            brand events
+        </div>
+
+        <div class="image-text-container relative">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide flex flex-col">
+                    <div class="image-text-imgblock">
+                        <img src="https://cdn.shopify.com/s/files/1/0970/9262/files/brand_events_pc_02.png?v=1672824651"
+                            alt="">
+                    </div>
+                    <div class="image-text-swiper-content relative">
+                        <div class="image-text-swiper-name text-xl">10 Year Anniversary</div>
+                        <div class="flex justify-between items-center">
+                            <div class="image-text-swiper-des text-base text-overflow-2">Jackery, a global top-selling
+                                outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris
+                                Pratt to power outdoor experiences further …</div>
+
+                            <a class="slide-link a-button-fill text-base" href="https://us.roborock.com/">
+                                VIEW MORE
+                                <span class="iconfont jackery-icon-arrow-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide flex flex-col">
+                    <div class="image-text-imgblock">
+                        <img src="https://cdn.shopify.com/s/files/1/0970/9262/files/brand_events_pc_03.png?v=1672824651"
+                            alt="">
+                    </div>
+                    <div class="image-text-swiper-content relative">
+                        <div class="image-text-swiper-name text-xl">Jackery Day</div>
+                        <div class="flex justify-between items-center">
+                            <div class="image-text-swiper-des text-base text-overflow-2">Jackery has ushered in its 10th
+                                anniversary in 2022, and we have held a 10th anniversary appreciation meeting in
+                                Shenzhen in October, which was completely powered by Jackery products from the beginning
+                                to the end. On site Jackery donated a batch of solar generators to the Shenzhen Public
+                                Welfare Rescue Team to contribute to the urban emergency rescue.</div>
+
+                            <a class="slide-link a-button-fill text-base" href="https://us.roborock.com/">
+                                VIEW MORE
+                                <span class="iconfont jackery-icon-arrow-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide flex flex-col">
+                    <div class="image-text-imgblock">
+                        <img src="https://cdn.shopify.com/s/files/1/0970/9262/files/brand_events_pc_01.png?v=1672824650"
+                            alt="">
+                    </div>
+                    <div class="image-text-swiper-content relative">
+                        <div class="image-text-swiper-name text-xl">Events Title Goes on Here</div>
+                        <div class="flex justify-between items-center">
+                            <div class="image-text-swiper-des text-base text-overflow-2">Jackery, a global top-selling
+                                outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris
+                                Pratt to power outdoor experiences further …</div>
+
+                            <a class="slide-link a-button-fill text-base" href="https://us.roborock.com/">
+                                VIEW MORE
+                                <span class="iconfont jackery-icon-arrow-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="index-container absolute slideshow-navigation">
+                <div class="slideshow-navigation-button prev"><span class="iconfont jackery-icon-Next"></span></div>
+                <div class="slideshow-navigation-button next"><span class="iconfont jackery-icon-Next"></span></div>
+            </div>
+        </div>
+
+        <div class="slideshow-pagination"></div>
+</div>
+
+<script>
+    class ImageTextSwiper {
+        constructor(el) {
+            this.DOM = {
+                el: el
+            };
+            this.init();
+        }
+        init() {
+            this.swiper = new Swiper(this.DOM.el, {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                centeredSlides: true,
+                loop: true,
+                followFinger: false,
+                pagination: {
+                    el: '.image-text-swiper .slideshow-pagination',
+                    clickable: true,
+                    bulletClass: 'slideshow-pagination-item',
+                    bulletActiveClass: 'active pagination-active',
+                    clickableClass: 'slideshow-pagination-clickable',
+                    modifierClass: 'slideshow-pagination-',
+                    renderBullet: function (index, className) {
+                        var slideIndex = index,
+                            number = (index <= 8) ? '0' + (slideIndex + 1) : (slideIndex + 1);
+
+                        var paginationItem = '<span class="slideshow-pagination-item">';
+                        paginationItem = (index <= 8) ? paginationItem +
+                            '<span class="pagination-separator"><span class="pagination-separator-loader"></span></span>' :
+                            paginationItem;
+                        paginationItem += '</span>';
+                        return paginationItem;
+                    },
+                },
+                on: {
+                    init: function (swiper) {
+                        let slide = this.slides.eq(0);
+                        slide.addClass('ani-fade-img');
+                    },
+                    transitionStart: function () {
+                        for (let i = 0; i < this.slides.length; i++) {
+                            let slide = this.slides.eq(i);
+                            slide.removeClass('ani-fade-img');
+                        }
+                    },
+                    transitionEnd: function () {
+                        slide = this.slides.eq(this.activeIndex);
+                        slide.addClass('ani-fade-img');
+                    },
+                    resize: function () {
+                        this.update()
+                    }
+                },
+                navigation: {
+                    nextEl: `${this.DOM.el} .slideshow-navigation-button.next`,
+                    prevEl: `${this.DOM.el} .slideshow-navigation-button.prev`,
+                },
+            });
+        }
+    }
+
+    new ImageTextSwiper('.image-text-swiper');
+</script>
