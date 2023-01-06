@@ -50,10 +50,12 @@
         "61ae8fdf-7060-4c04-88e2-6a1f8517687f": {
           "type": "recent_events",
           "settings": {
-            "title": "",
-            "sub_text": "",
-            "link": "",
-            "link_text": "VIEW MORE"
+            "title": "How To Survive a Nat",
+            "sub_text": "The best action in surviving a natural disaster is having a plan beforehand. In this guide, we cover 5 key steps to ensure you are prepared.",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/brand_events_pc_03_1.png",
+            "m_image": "shopify:\/\/shop_images\/brand_events_mb_03.png"
           }
         },
         "969d3785-1537-4107-a4be-add2d31bfdcb": {
