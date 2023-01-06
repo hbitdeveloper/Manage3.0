@@ -172,19 +172,21 @@
         "c20b7605-6a8d-476a-88f5-5892cb31d045": {
           "type": "grid_item",
           "settings": {
-            "title": "",
-            "date": "",
+            "title": "Lorem ipsum dolor sit amet, consectetur  elit, sed do eiusmod ...",
+            "date": "October 17, 2021",
             "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE"
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_08.png"
           }
         },
         "b50c14ef-5e7d-4e24-80b3-df58895fd17a": {
           "type": "grid_item",
           "settings": {
-            "title": "",
-            "date": "",
+            "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest",
+            "date": "October 17, 2021",
             "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE"
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_09.png"
           }
         }
       },
