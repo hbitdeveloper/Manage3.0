@@ -132,10 +132,11 @@
         "a053caaf-168c-4e93-abf5-af954f0413ca": {
           "type": "grid_item",
           "settings": {
-            "title": "",
-            "date": "",
+            "title": "Lorem ipsum dolor sit amet, consectetur  elit, sed do eiusmod ...",
+            "date": "October 17, 2021",
             "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE"
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_04.png"
           }
         },
         "1a431c06-57d9-4db4-a754-d2113c35a35a": {
