@@ -82,10 +82,11 @@
         "542f5a78-89b5-4533-9e61-01498729d7b5": {
           "type": "announced_block",
           "settings": {
-            "title": "",
-            "sub_text": "",
+            "title": "What To Put In Your Survival Backpack: A quick checklist",
+            "sub_text": "This article is a lifestyle article that talks about what people should put in their backpacks in case of an emergency. Th…",
             "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE"
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/announced_pc_01_1.png"
           }
         },
         "6210c6fd-2ae2-4d72-a217-2864625680f1": {
