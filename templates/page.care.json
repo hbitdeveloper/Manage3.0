@@ -68,6 +68,33 @@
             "image": "shopify:\/\/shop_images\/brand_events_pc_01_1.png",
             "m_image": "shopify:\/\/shop_images\/brand_events_mb_01.png"
           }
+        },
+        "5dd8a153-ad30-41ab-9fbd-13dd937b4bad": {
+          "type": "announced_block",
+          "settings": {
+            "title": "",
+            "sub_text": "",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "542f5a78-89b5-4533-9e61-01498729d7b5": {
+          "type": "announced_block",
+          "settings": {
+            "title": "",
+            "sub_text": "",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "6210c6fd-2ae2-4d72-a217-2864625680f1": {
+          "type": "announced_block",
+          "settings": {
+            "title": "",
+            "sub_text": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
         }
       },
       "block_order": [
@@ -76,7 +103,10 @@
         "80d47a78-180e-4c62-81e5-e7b51ab2d77b",
         "e8b5c20d-0f47-42f7-8745-e4c64b429c77",
         "61ae8fdf-7060-4c04-88e2-6a1f8517687f",
-        "969d3785-1537-4107-a4be-add2d31bfdcb"
+        "969d3785-1537-4107-a4be-add2d31bfdcb",
+        "5dd8a153-ad30-41ab-9fbd-13dd937b4bad",
+        "542f5a78-89b5-4533-9e61-01498729d7b5",
+        "6210c6fd-2ae2-4d72-a217-2864625680f1"
       ],
       "settings": {
         "autoplay": true,
