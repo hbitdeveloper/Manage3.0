@@ -668,6 +668,18 @@ p,
 }
 /* videojs modal skin */
 /* slideshow-pagination */
+.slideshow-pagination {
+  align-items: center;
+  bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  transition: opacity 0.3s;
+  width: 100%;
+  z-index: 10;
+}
 .slideshow-pagination-item {
   display: flex;
   align-items: center;
@@ -836,8 +848,8 @@ p,
 /* section - header */
 /* section title/page-section-swiper */
 body .page-section-title {
-  line-height: 66px;
-  margin-bottom: 90px;
+  line-height: 50px;
+  margin-bottom: 60px;
   text-align: center;
   font-size: 45px;
 }
