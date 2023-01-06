@@ -98,6 +98,87 @@
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/announced_pc_03_1.png"
           }
+        },
+        "0aac75df-9e87-4e1c-b600-b248fae171d3": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "1b0bc092-d160-4a99-bb25-011d57467ed9": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "bad8a27c-8134-412f-8144-4e06259b5da6": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "780b8856-083a-4040-ba09-2338f782211c": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "7b602a46-80f2-42c2-9115-b6e79b0356a1": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "e1ee8a58-ee5b-4a84-bf20-1b44c5eb13fd": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "cb638c3c-4409-4ccb-83dd-b9608fea4452": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "c20b7605-6a8d-476a-88f5-5892cb31d045": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "b50c14ef-5e7d-4e24-80b3-df58895fd17a": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
         }
       },
       "block_order": [
@@ -109,7 +190,16 @@
         "969d3785-1537-4107-a4be-add2d31bfdcb",
         "5dd8a153-ad30-41ab-9fbd-13dd937b4bad",
         "542f5a78-89b5-4533-9e61-01498729d7b5",
-        "6210c6fd-2ae2-4d72-a217-2864625680f1"
+        "6210c6fd-2ae2-4d72-a217-2864625680f1",
+        "0aac75df-9e87-4e1c-b600-b248fae171d3",
+        "1b0bc092-d160-4a99-bb25-011d57467ed9",
+        "bad8a27c-8134-412f-8144-4e06259b5da6",
+        "780b8856-083a-4040-ba09-2338f782211c",
+        "7b602a46-80f2-42c2-9115-b6e79b0356a1",
+        "e1ee8a58-ee5b-4a84-bf20-1b44c5eb13fd",
+        "cb638c3c-4409-4ccb-83dd-b9608fea4452",
+        "c20b7605-6a8d-476a-88f5-5892cb31d045",
+        "b50c14ef-5e7d-4e24-80b3-df58895fd17a"
       ],
       "settings": {
         "autoplay": true,
