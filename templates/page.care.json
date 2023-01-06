@@ -72,10 +72,11 @@
         "5dd8a153-ad30-41ab-9fbd-13dd937b4bad": {
           "type": "announced_block",
           "settings": {
-            "title": "",
-            "sub_text": "",
+            "title": "Jackery, releases a powerful new flagship 2000 Pro to kick-off summer travel season.",
+            "sub_text": "On December 10, 2021, an unprecedented winter tornado hit Mayfield, Kentucky, and  Jackery saw this opportunity to",
             "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE"
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/announced_pc_02_1.png"
           }
         },
         "542f5a78-89b5-4533-9e61-01498729d7b5": {
