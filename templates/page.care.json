@@ -92,10 +92,11 @@
         "6210c6fd-2ae2-4d72-a217-2864625680f1": {
           "type": "announced_block",
           "settings": {
-            "title": "",
-            "sub_text": "",
+            "title": "How To Survive a Natural Disaster (The Survival Kit Guide)",
+            "sub_text": "You won’t know when exactly a blizzard is going to strike. That’s why you need to know how to get yourself prepare",
             "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE"
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/announced_pc_03_1.png"
           }
         }
       },
