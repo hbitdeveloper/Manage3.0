@@ -81,7 +81,8 @@
     class ImageTextSwiper {
         constructor(el) {
             this.DOM = {
-                el: el
+                el: el.el,
+                swiperContainer: el.swiperContainer
             };
             this.init();
         }
@@ -93,7 +94,7 @@
                 loop: true,
                 followFinger: false,
                 pagination: {
-                    el: '.image-text-swiper .slideshow-pagination',
+                    el: `${this.DOM.el} .slideshow-pagination`,
                     clickable: true,
                     bulletClass: 'slideshow-pagination-item',
                     bulletActiveClass: 'active pagination-active',
@@ -138,5 +139,8 @@
         }
     }
 
-    new ImageTextSwiper('.image-text-swiper');
+    new ImageTextSwiper({
+        swiperContainer: '.image-text-container',
+        el: '.image-text-swiper'
+    });
 </script>
