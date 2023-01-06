@@ -39,9 +39,9 @@
         "0e18e408-fdbf-44a5-b635-32f78a276395": {
           "type": "recent_events",
           "settings": {
-            "title": "",
-            "sub_text": "",
-            "link": "",
+            "title": "10 Year Anniversary",
+            "sub_text": "Jackery, a global top-selling outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris Pratt to power outdoor experiences further …",
+            "link": "https:\/\/www.jackery.com\/##",
             "link_text": "VIEW MORE"
           }
         },
@@ -74,7 +74,8 @@
       ],
       "settings": {
         "autoplay": true,
-        "autoplay_speed": 7
+        "autoplay_speed": 7,
+        "recent_title": "VIEW RECENT JACKERY\nBRAND EVENTS"
       }
     }
   },
