@@ -1,135 +1,135 @@
 {
   "sections": {
     "main": {
-      "type": "page-events",
+      "type": "page-care",
       "blocks": {
-        "02e58a0c-ad25-418e-914b-7048bde4603c": {
+        "ccca7096-3122-43e0-acf0-f23c192ce6fc": {
           "type": "page_banner",
           "settings": {
             "title": "Explore Further\nwith Jackery Solar",
             "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE",
-            "image": "shopify:\/\/shop_images\/5_5eb8f554-e857-47be-b54a-261a17670366.png",
-            "m_image": "shopify:\/\/shop_images\/2bfda3079c41ec83492919e87bb7d519.png",
-            "banner_icon": "shopify:\/\/shop_images\/2_197c65be-de94-4101-9f46-9fb24ee7fcc8.png"
-          }
-        },
-        "33012b3e-52c3-46f2-a8a6-e44d3bdf7ca2": {
-          "type": "page_banner",
-          "settings": {
-            "title": "Explore Further\nwith Jackery Solar",
-            "link": "",
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/6_57131712-2e7b-4e6f-bd3e-6c5a9098c639.png",
             "m_image": "shopify:\/\/shop_images\/1_1e94ab8e-5081-4220-91c4-cc619f227a93.png",
             "banner_icon": "shopify:\/\/shop_images\/2_197c65be-de94-4101-9f46-9fb24ee7fcc8.png"
           }
         },
-        "f94fd836-6b3d-4363-81cd-e44125d7b6e9": {
+        "5379a94a-7b2a-4f9e-97af-8dbcce4f4f77": {
           "type": "page_banner",
           "settings": {
             "title": "Explore Further\nwith Jackery Solar",
             "link": "https:\/\/www.jackery.com\/##",
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/7_24fd0bd2-b321-457b-8d39-24c999d839de.png",
-            "m_image": "shopify:\/\/shop_images\/2bfda3079c41ec83492919e87bb7d519.png",
+            "m_image": "shopify:\/\/shop_images\/1_1e94ab8e-5081-4220-91c4-cc619f227a93.png",
             "banner_icon": "shopify:\/\/shop_images\/2_197c65be-de94-4101-9f46-9fb24ee7fcc8.png"
           }
         },
-        "0e18e408-fdbf-44a5-b635-32f78a276395": {
-          "type": "recent_events",
+        "80d47a78-180e-4c62-81e5-e7b51ab2d77b": {
+          "type": "page_banner",
           "settings": {
-            "title": "10 Year Anniversary",
-            "sub_text": "Jackery, a global top-selling outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris Pratt to power outdoor experiences further …",
+            "title": "Explore Further\nwith Jackery Solar",
             "link": "https:\/\/www.jackery.com\/##",
             "link_text": "VIEW MORE",
-            "image": "shopify:\/\/shop_images\/3_2297d48d-159a-4258-971a-7011bf7f0065.png",
+            "image": "shopify:\/\/shop_images\/5_5eb8f554-e857-47be-b54a-261a17670366.png",
+            "m_image": "shopify:\/\/shop_images\/1_1e94ab8e-5081-4220-91c4-cc619f227a93.png",
+            "banner_icon": "shopify:\/\/shop_images\/2_197c65be-de94-4101-9f46-9fb24ee7fcc8.png"
+          }
+        },
+        "e8b5c20d-0f47-42f7-8745-e4c64b429c77": {
+          "type": "recent_events",
+          "settings": {
+            "title": "How to Prepare for Winter Storm",
+            "sub_text": "You may feel like your home and vehicle are ready for anything, but many people underestimate just how severe winter weather can be. It’s always better get prepared…",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/01a22581cd48885d61cfb3aaafa5ff2d.png",
             "m_image": "shopify:\/\/shop_images\/brand_events_mb_02.png"
           }
         },
-        "df76ac5d-5755-4ae7-b008-baacd50bda67": {
+        "61ae8fdf-7060-4c04-88e2-6a1f8517687f": {
           "type": "recent_events",
           "settings": {
-            "title": "Jackery Day",
-            "sub_text": "Jackery has ushered in its 10th anniversary in 2022, and we have held a 10th anniversary appreciation meeting in Shenzhen in October, which was completely powered by Jackery products from the beginning to the end. On site Jackery  donated a batch of solar generators to the Shenzhen Public Welfare Rescue Team to contribute to the urban emergency rescue.",
+            "title": "How To Survive a Nat",
+            "sub_text": "The best action in surviving a natural disaster is having a plan beforehand. In this guide, we cover 5 key steps to ensure you are prepared.",
             "link": "https:\/\/www.jackery.com\/##",
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/brand_events_pc_03_1.png",
             "m_image": "shopify:\/\/shop_images\/brand_events_mb_03.png"
           }
         },
-        "76d726fb-c9d9-4919-946c-9c86198ce05f": {
+        "969d3785-1537-4107-a4be-add2d31bfdcb": {
           "type": "recent_events",
           "settings": {
-            "title": "Events Title Goes on",
-            "sub_text": "Jackery, a global top-selling outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris Pratt to power outdoor experiences further …",
+            "title": "What To Put In Your",
+            "sub_text": "The best action in surviving a natural disaster is having a plan beforehand. In this guide, we cover 5 key steps to ensure you are prepared.",
             "link": "https:\/\/www.jackery.com\/##",
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/brand_events_pc_01_1.png",
             "m_image": "shopify:\/\/shop_images\/brand_events_mb_01.png"
           }
         },
-        "b6df179c-1513-4093-bd7a-fa6077925e40": {
+        "5dd8a153-ad30-41ab-9fbd-13dd937b4bad": {
           "type": "announced_block",
           "settings": {
             "title": "Jackery, releases a powerful new flagship 2000 Pro to kick-off summer travel season.",
-            "sub_text": "2000 Pro was launched on Jackery Day in May 2022. SG2000  is capable of receiving a full charge to 2,160 …",
+            "sub_text": "On December 10, 2021, an unprecedented winter tornado hit Mayfield, Kentucky, and  Jackery saw this opportunity to",
             "link": "https:\/\/www.jackery.com\/##",
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/announced_pc_02_1.png"
           }
         },
-        "bf495098-43ac-46dd-982e-344b23484536": {
+        "542f5a78-89b5-4533-9e61-01498729d7b5": {
           "type": "announced_block",
           "settings": {
-            "title": "Jackery, Honda Team Up On Solar Ready, Lithium Power License Deal",
-            "sub_text": "Jackery has been chosen by American Honda Motor Co., Inc. to develop a best‐in‐class consumer offering of outdoor…",
-            "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE",
-            "image": "shopify:\/\/shop_images\/announced_pc_03_1.png"
-          }
-        },
-        "9a6a526b-3317-46a9-8153-5d603e703507": {
-          "type": "announced_block",
-          "settings": {
-            "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest Ultra-Charging…",
-            "sub_text": "Jackery, the leader of innovative portable power and green outdoor energy solutions",
+            "title": "What To Put In Your Survival Backpack: A quick checklist",
+            "sub_text": "This article is a lifestyle article that talks about what people should put in their backpacks in case of an emergency. Th…",
             "link": "https:\/\/www.jackery.com\/##",
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/announced_pc_01_1.png"
           }
         },
-        "cfaa4599-26c6-41e1-83db-e2c54f626376": {
+        "6210c6fd-2ae2-4d72-a217-2864625680f1": {
+          "type": "announced_block",
+          "settings": {
+            "title": "How To Survive a Natural Disaster (The Survival Kit Guide)",
+            "sub_text": "You won’t know when exactly a blizzard is going to strike. That’s why you need to know how to get yourself prepare",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/announced_pc_03_1.png"
+          }
+        },
+        "0aac75df-9e87-4e1c-b600-b248fae171d3": {
           "type": "grid_item",
           "settings": {
-            "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest Ultra-Charging ...",
+            "title": "Response to Fire Across California",
             "date": "October 17, 2021",
             "link": "https:\/\/www.jackery.com\/##",
             "link_text": "VIEW MORE",
-            "image": "shopify:\/\/shop_images\/exihibition_events_pc_01.png"
+            "image": "shopify:\/\/shop_images\/2_c13c0d98-8f4e-4fba-ab0c-73241ec4440d.png"
           }
         },
-        "bbfc457c-e35b-452f-a551-bea35f0dae6b": {
+        "1b0bc092-d160-4a99-bb25-011d57467ed9": {
           "type": "grid_item",
           "settings": {
-            "title": "CES, The Most Influential Tech Event in the World",
+            "title": "Jackery Powers Disaster Relief",
             "date": "October 17, 2021",
             "link": "https:\/\/www.jackery.com\/##",
             "link_text": "VIEW MORE",
-            "image": "shopify:\/\/shop_images\/exihibition_events_pc_02.png"
+            "image": "shopify:\/\/shop_images\/2_1_82446d1d-ea63-4ce4-b00c-d98b41250398.png"
           }
         },
-        "5c642746-a7e3-41d6-8b0f-5303efd9d8a4": {
+        "bad8a27c-8134-412f-8144-4e06259b5da6": {
           "type": "grid_item",
           "settings": {
-            "title": "Jackery to Showcase New Models at CES 2023",
+            "title": "Jackery Explorer 1500 Portable Power Station Has The Power To R…",
             "date": "October 17, 2021",
             "link": "https:\/\/www.jackery.com\/##",
             "link_text": "VIEW MORE",
-            "image": "shopify:\/\/shop_images\/exihibition_events_pc_03.png"
+            "image": "shopify:\/\/shop_images\/2_2.png"
           }
         },
-        "a053caaf-168c-4e93-abf5-af954f0413ca": {
+        "780b8856-083a-4040-ba09-2338f782211c": {
           "type": "grid_item",
           "settings": {
             "title": "Lorem ipsum dolor sit amet, consectetur  elit, sed do eiusmod ...",
@@ -139,7 +139,7 @@
             "image": "shopify:\/\/shop_images\/exihibition_events_pc_04.png"
           }
         },
-        "1a431c06-57d9-4db4-a754-d2113c35a35a": {
+        "7b602a46-80f2-42c2-9115-b6e79b0356a1": {
           "type": "grid_item",
           "settings": {
             "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest Ultra-Charging ...",
@@ -149,7 +149,7 @@
             "image": "shopify:\/\/shop_images\/exihibition_events_pc_05.png"
           }
         },
-        "f917dd3a-ac48-4f4d-935f-da054c322e27": {
+        "e1ee8a58-ee5b-4a84-bf20-1b44c5eb13fd": {
           "type": "grid_item",
           "settings": {
             "title": "Lorem ipsum dolor sit amet, consectetur  elit, sed do eiusmod ...",
@@ -159,7 +159,7 @@
             "image": "shopify:\/\/shop_images\/exihibition_events_pc_06.png"
           }
         },
-        "627e0271-e13f-4bcf-b19b-ad35173f5097": {
+        "cb638c3c-4409-4ccb-83dd-b9608fea4452": {
           "type": "grid_item",
           "settings": {
             "title": "CES, The Most Influential Tech Event in the World",
@@ -169,7 +169,7 @@
             "image": "shopify:\/\/shop_images\/exihibition_events_pc_07.png"
           }
         },
-        "0c416502-269f-4a6c-bffe-139264d9f379": {
+        "c20b7605-6a8d-476a-88f5-5892cb31d045": {
           "type": "grid_item",
           "settings": {
             "title": "Lorem ipsum dolor sit amet, consectetur  elit, sed do eiusmod ...",
@@ -179,7 +179,7 @@
             "image": "shopify:\/\/shop_images\/exihibition_events_pc_08.png"
           }
         },
-        "95d55643-fe2d-4cbb-a012-8eab29780b21": {
+        "b50c14ef-5e7d-4e24-80b3-df58895fd17a": {
           "type": "grid_item",
           "settings": {
             "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest",
@@ -191,31 +191,31 @@
         }
       },
       "block_order": [
-        "02e58a0c-ad25-418e-914b-7048bde4603c",
-        "33012b3e-52c3-46f2-a8a6-e44d3bdf7ca2",
-        "f94fd836-6b3d-4363-81cd-e44125d7b6e9",
-        "0e18e408-fdbf-44a5-b635-32f78a276395",
-        "df76ac5d-5755-4ae7-b008-baacd50bda67",
-        "76d726fb-c9d9-4919-946c-9c86198ce05f",
-        "b6df179c-1513-4093-bd7a-fa6077925e40",
-        "bf495098-43ac-46dd-982e-344b23484536",
-        "9a6a526b-3317-46a9-8153-5d603e703507",
-        "cfaa4599-26c6-41e1-83db-e2c54f626376",
-        "bbfc457c-e35b-452f-a551-bea35f0dae6b",
-        "5c642746-a7e3-41d6-8b0f-5303efd9d8a4",
-        "a053caaf-168c-4e93-abf5-af954f0413ca",
-        "1a431c06-57d9-4db4-a754-d2113c35a35a",
-        "f917dd3a-ac48-4f4d-935f-da054c322e27",
-        "627e0271-e13f-4bcf-b19b-ad35173f5097",
-        "0c416502-269f-4a6c-bffe-139264d9f379",
-        "95d55643-fe2d-4cbb-a012-8eab29780b21"
+        "ccca7096-3122-43e0-acf0-f23c192ce6fc",
+        "5379a94a-7b2a-4f9e-97af-8dbcce4f4f77",
+        "80d47a78-180e-4c62-81e5-e7b51ab2d77b",
+        "e8b5c20d-0f47-42f7-8745-e4c64b429c77",
+        "61ae8fdf-7060-4c04-88e2-6a1f8517687f",
+        "969d3785-1537-4107-a4be-add2d31bfdcb",
+        "5dd8a153-ad30-41ab-9fbd-13dd937b4bad",
+        "542f5a78-89b5-4533-9e61-01498729d7b5",
+        "6210c6fd-2ae2-4d72-a217-2864625680f1",
+        "0aac75df-9e87-4e1c-b600-b248fae171d3",
+        "1b0bc092-d160-4a99-bb25-011d57467ed9",
+        "bad8a27c-8134-412f-8144-4e06259b5da6",
+        "780b8856-083a-4040-ba09-2338f782211c",
+        "7b602a46-80f2-42c2-9115-b6e79b0356a1",
+        "e1ee8a58-ee5b-4a84-bf20-1b44c5eb13fd",
+        "cb638c3c-4409-4ccb-83dd-b9608fea4452",
+        "c20b7605-6a8d-476a-88f5-5892cb31d045",
+        "b50c14ef-5e7d-4e24-80b3-df58895fd17a"
       ],
       "settings": {
         "autoplay": true,
         "autoplay_speed": 7,
-        "recent_title": "VIEW RECENT JACKERY\nBRAND EVENTS",
-        "announced_title": "Here’s what we announced",
-        "exihibition_title": "View recent Jackery\nexihibition events",
+        "recent_title": "VIEW RECENT \nJACKERY EVENTS",
+        "announced_title": "VIEW RECENT JACKERY EVENTS",
+        "exihibition_title": "HERE’S WHAT WE ANNOUNCED",
         "show_all": "EXPLORE MORE"
       }
     }

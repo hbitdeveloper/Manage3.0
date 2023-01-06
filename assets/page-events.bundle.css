@@ -202,6 +202,9 @@
     object-fit: cover;
     overflow: hidden;
   }
+  .image-text-swiper .slideshow-pagination {
+    bottom: 12px;
+  }
 }
 .card-swiper {
   background: #fff;
@@ -367,9 +370,16 @@
     padding: 8.4vw 0 27.6vw 0;
   }
   .events-list-container {
-    grid-gap: 2vw;
+    --hide: 99;
+  }
+  .events-list-btn:checked + .events-list-container {
+    --hide: 0;
+  }
+  .events-list-container {
     grid-template-columns: repeat(1, 1fr);
     max-width: 85vw;
+    grid-template-rows: repeat(2, minmax(0, 1fr)) repeat(var(--hide), minmax(0, 0));
+    overflow: hidden;
   }
   .events-list-item img {
     height: 60vw;
@@ -387,7 +397,7 @@
   .events-item-action .a-button-fill {
     font-size: 3.5vw;
     line-height: 3.5vw;
-    padding: 2.4vw 10vw;
+    padding: 2.4vw 6.5vw;
   }
   .events-list-more {
     margin-top: 8.6vw;
@@ -395,9 +405,16 @@
   .events-list-more .a-button-solid {
     font-size: 3.5vw;
     line-height: 3.5vw;
-    padding: 2.4vw 7.5vw;
+    padding: 3vw 7.5vw;
     font-weight: bold;
     border-radius: 4.8vw;
+    min-width: 40vw;
+  }
+  .events-list-more .jackery-icon-arrow-right {
+    font-size: 16px;
+  }
+  .events-list-item {
+    margin: 0 0 20px 0;
   }
 }
 
