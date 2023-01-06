@@ -98,6 +98,96 @@
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/announced_pc_01_1.png"
           }
+        },
+        "cfaa4599-26c6-41e1-83db-e2c54f626376": {
+          "type": "grid_item",
+          "settings": {
+            "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest Ultra-Charging ...",
+            "date": "October 17, 2021",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_01.png"
+          }
+        },
+        "bbfc457c-e35b-452f-a551-bea35f0dae6b": {
+          "type": "grid_item",
+          "settings": {
+            "title": "CES, The Most Influential Tech Event in the World",
+            "date": "October 17, 2021",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_02.png"
+          }
+        },
+        "5c642746-a7e3-41d6-8b0f-5303efd9d8a4": {
+          "type": "grid_item",
+          "settings": {
+            "title": "Jackery to Showcase New Models at CES 2023",
+            "date": "October 17, 2021",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_03.png"
+          }
+        },
+        "a053caaf-168c-4e93-abf5-af954f0413ca": {
+          "type": "grid_item",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet, consectetur  elit, sed do eiusmod ...",
+            "date": "October 17, 2021",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_04.png"
+          }
+        },
+        "1a431c06-57d9-4db4-a754-d2113c35a35a": {
+          "type": "grid_item",
+          "settings": {
+            "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest Ultra-Charging ...",
+            "date": "October 17, 2021",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_05.png"
+          }
+        },
+        "f917dd3a-ac48-4f4d-935f-da054c322e27": {
+          "type": "grid_item",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet, consectetur  elit, sed do eiusmod ...",
+            "date": "October 17, 2021",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_06.png"
+          }
+        },
+        "627e0271-e13f-4bcf-b19b-ad35173f5097": {
+          "type": "grid_item",
+          "settings": {
+            "title": "CES, The Most Influential Tech Event in the World",
+            "date": "October 17, 2021",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_07.png"
+          }
+        },
+        "0c416502-269f-4a6c-bffe-139264d9f379": {
+          "type": "grid_item",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet, consectetur  elit, sed do eiusmod ...",
+            "date": "October 17, 2021",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_08.png"
+          }
+        },
+        "95d55643-fe2d-4cbb-a012-8eab29780b21": {
+          "type": "grid_item",
+          "settings": {
+            "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest",
+            "date": "October 17, 2021",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_09.png"
+          }
         }
       },
       "block_order": [
@@ -109,13 +199,24 @@
         "76d726fb-c9d9-4919-946c-9c86198ce05f",
         "b6df179c-1513-4093-bd7a-fa6077925e40",
         "bf495098-43ac-46dd-982e-344b23484536",
-        "9a6a526b-3317-46a9-8153-5d603e703507"
+        "9a6a526b-3317-46a9-8153-5d603e703507",
+        "cfaa4599-26c6-41e1-83db-e2c54f626376",
+        "bbfc457c-e35b-452f-a551-bea35f0dae6b",
+        "5c642746-a7e3-41d6-8b0f-5303efd9d8a4",
+        "a053caaf-168c-4e93-abf5-af954f0413ca",
+        "1a431c06-57d9-4db4-a754-d2113c35a35a",
+        "f917dd3a-ac48-4f4d-935f-da054c322e27",
+        "627e0271-e13f-4bcf-b19b-ad35173f5097",
+        "0c416502-269f-4a6c-bffe-139264d9f379",
+        "95d55643-fe2d-4cbb-a012-8eab29780b21"
       ],
       "settings": {
         "autoplay": true,
         "autoplay_speed": 7,
         "recent_title": "VIEW RECENT JACKERY\nBRAND EVENTS",
-        "announced_title": "Here’s what we announced"
+        "announced_title": "Here’s what we announced",
+        "exihibition_title": "View recent Jackery\nexihibition events",
+        "show_all": "EXPLORE MORE"
       }
     }
   },
