@@ -1,0 +1,129 @@
+<div class="card-swiper page-section-swiper relative">
+        <div class="h2 section-container text-center card-swiper-title page-section-title">Here’s what we announced
+        </div>
+        <div class="card-swiper-container relative">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide flex-col">
+                    <div class="image-text-imgblock">
+                        <img class="object-cover"
+                            src="https://cdn.shopify.com/s/files/1/0970/9262/files/announced_pc_02.png?v=1672887706"
+                            alt="">
+                    </div>
+                    <div class="card-swiper-slide-content flex flex-col items-center">
+                        <div class="font-bold text-lg card-swiper-slide-title text-overflow-2">
+                            Jackery, releases a powerful new flagship 2000 Pro to kick-off summer travel season.
+                        </div>
+                        <div class="card-swiper-slide-des text-base text-overflow-2">
+                            2000 Pro was launched on Jackery Day in May 2022. SG2000 is capable of receiving a full
+                            charge to 2,160 …
+                        </div>
+
+                        <a class="slide-link a-button-fill text-base" href="https://us.roborock.com/">
+                            VIEW MORE
+                            <span class="iconfont jackery-icon-arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide flex-col">
+                    <div class="image-text-imgblock">
+                        <img class="object-cover"
+                            src="https://cdn.shopify.com/s/files/1/0970/9262/files/announced_pc_03.png?v=1672887707"
+                            alt="">
+                    </div>
+                    <div class="card-swiper-slide-content flex flex-col items-center">
+                        <div class="font-bold text-lg card-swiper-slide-title text-overflow-2">
+                            Jackery, Honda Team Up On Solar Ready, Lithium Power License Deal
+                        </div>
+                        <div class="card-swiper-slide-des text-base text-overflow-2">
+                            Jackery has been chosen by American Honda Motor Co., Inc. to develop a best‐in‐class
+                            consumer offering of outdoor…
+                        </div>
+
+                        <a class="slide-link a-button-fill text-base" href="https://us.roborock.com/">
+                            VIEW MORE
+                            <span class="iconfont jackery-icon-arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide flex-col">
+                    <div class="image-text-imgblock">
+                        <img class="object-cover"
+                            src="https://cdn.shopify.com/s/files/1/0970/9262/files/announced_pc_01.png?v=1672887707"
+                            alt="">
+                    </div>
+                    <div class="card-swiper-slide-content flex flex-col items-center">
+                        <div class="font-bold text-lg card-swiper-slide-title text-overflow-2">
+                            Official Release at IFA 2022: Jackery Introduces Its Fastest Ultra-Charging…
+                        </div>
+                        <div class="card-swiper-slide-des text-base text-overflow-2">
+                            Jackery, the leader of innovative portable power and green outdoor energy solutions
+                        </div>
+
+                        <a class="slide-link a-button-fill text-base" href="https://us.roborock.com/">
+                            VIEW MORE
+                            <span class="iconfont jackery-icon-arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="index-container absolute slideshow-navigation">
+                <div class="slideshow-navigation-button prev"><span class="iconfont jackery-icon-Next"></span></div>
+                <div class="slideshow-navigation-button next"><span class="iconfont jackery-icon-Next"></span></div>
+            </div>
+        </div>
+
+        <div class="slideshow-pagination"></div>
+</div>
+
+
+<script>
+    class CardSwiper {
+        constructor(el) {
+            this.DOM = {
+                el: el.el,
+                swiperContainer: el.swiperContainer
+            };
+            this.init();
+        }
+        init() {
+            this.swiper = new Swiper(this.DOM.swiperContainer, {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                centeredSlides: true,
+                loop: true,
+                followFinger: false,
+                navigation: {
+                    nextEl: `${this.DOM.el} .slideshow-navigation-button.next`,
+                    prevEl: `${this.DOM.el} .slideshow-navigation-button.prev`,
+                },
+                pagination: {
+                    el: `${this.DOM.el} .slideshow-pagination`,
+                    clickable: true,
+                    bulletClass: 'slideshow-pagination-item',
+                    bulletActiveClass: 'active pagination-active',
+                    clickableClass: 'slideshow-pagination-clickable',
+                    modifierClass: 'slideshow-pagination-',
+                    renderBullet: function (index, className) {
+                        var slideIndex = index,
+                            number = (index <= 8) ? '0' + (slideIndex + 1) : (slideIndex + 1);
+
+                        var paginationItem = '<span class="slideshow-pagination-item">';
+                        paginationItem = (index <= 8) ? paginationItem +
+                            '<span class="pagination-separator"><span class="pagination-separator-loader"></span></span>' :
+                            paginationItem;
+                        paginationItem += '</span>';
+                        return paginationItem;
+                    }
+                }
+            })
+        }
+    }
+
+    new CardSwiper({
+        swiperContainer: '.card-swiper-container',
+        el: '.card-swiper'
+    });
+</script>
