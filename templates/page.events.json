@@ -30,7 +30,10 @@
           "settings": {
             "title": "Explore Further\nwith Jackery Solar",
             "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE"
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/7_24fd0bd2-b321-457b-8d39-24c999d839de.png",
+            "m_image": "shopify:\/\/shop_images\/2bfda3079c41ec83492919e87bb7d519.png",
+            "banner_icon": "shopify:\/\/shop_images\/2_197c65be-de94-4101-9f46-9fb24ee7fcc8.png"
           }
         }
       },
