@@ -98,6 +98,16 @@
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/announced_pc_01_1.png"
           }
+        },
+        "cfaa4599-26c6-41e1-83db-e2c54f626376": {
+          "type": "grid_item",
+          "settings": {
+            "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest Ultra-Charging ...",
+            "date": "October 17, 2021",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/exihibition_events_pc_01.png"
+          }
         }
       },
       "block_order": [
@@ -109,13 +119,16 @@
         "76d726fb-c9d9-4919-946c-9c86198ce05f",
         "b6df179c-1513-4093-bd7a-fa6077925e40",
         "bf495098-43ac-46dd-982e-344b23484536",
-        "9a6a526b-3317-46a9-8153-5d603e703507"
+        "9a6a526b-3317-46a9-8153-5d603e703507",
+        "cfaa4599-26c6-41e1-83db-e2c54f626376"
       ],
       "settings": {
         "autoplay": true,
         "autoplay_speed": 7,
         "recent_title": "VIEW RECENT JACKERY\nBRAND EVENTS",
-        "announced_title": "Here’s what we announced"
+        "announced_title": "Here’s what we announced",
+        "exihibition_title": "View recent Jackery\nexihibition events",
+        "show_all": "EXPLORE MORE"
       }
     }
   },
