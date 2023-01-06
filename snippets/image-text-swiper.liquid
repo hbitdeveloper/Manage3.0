@@ -1,71 +1,41 @@
 <div class="image-text-swiper page-section-swiper relative">
-        <div class="image-text-swiper-title page-section-title h2 index-container">View recent Jackery<br>
-            brand events
-        </div>
+        <div class="image-text-swiper-title page-section-title h2 index-container">{{title | escape}}</div>
 
         <div class="image-text-container relative">
             <div class="swiper-wrapper">
-                <div class="swiper-slide flex flex-col">
-                    <div class="image-text-imgblock">
-                        <img src="https://cdn.shopify.com/s/files/1/0970/9262/files/brand_events_pc_02.png?v=1672824651"
-                            alt="">
-                    </div>
-                    <div class="image-text-swiper-content relative">
-                        <div class="image-text-swiper-name text-xl">10 Year Anniversary</div>
-                        <div class="flex justify-between items-center">
-                            <div class="image-text-swiper-des text-base text-overflow-2">Jackery, a global top-selling
-                                outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris
-                                Pratt to power outdoor experiences further …</div>
+                {% for block in blocks %}
+                    {% case block.type %}
+                        {% when 'recent_events' %}
+                        <div class="swiper-slide flex flex-col">
+                            <div class="image-text-imgblock">
+                                <img 
+                                    class="pc-block"
+                                    src="{{block.settings.image | img_url: '1200x'}}"
+                                    alt="{{block.settings.title | escape}}"
+                                >
 
-                            <a class="slide-link a-button-fill text-base" href="https://us.roborock.com/">
-                                VIEW MORE
-                                <span class="iconfont jackery-icon-arrow-right"></span>
-                            </a>
+                                <img 
+                                    class="mobile-block"
+                                    src="{{block.settings.m_image | img_url: '630x'}}"
+                                    alt="{{block.settings.title | escape}}"
+                                >
+                            </div>
+                            <div class="image-text-swiper-content relative">
+                                <div class="image-text-swiper-name text-xl">
+                                    {{block.settings.title | escape}}
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="image-text-swiper-des text-base text-overflow-2">{{block.settings.sub_text | escape}}</div>
+
+                                    <a class="slide-link a-button-fill text-base" href="block.settings.link">
+                                        {{block.settings.link_text | escape}}
+                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide flex flex-col">
-                    <div class="image-text-imgblock">
-                        <img src="https://cdn.shopify.com/s/files/1/0970/9262/files/brand_events_pc_03.png?v=1672824651"
-                            alt="">
-                    </div>
-                    <div class="image-text-swiper-content relative">
-                        <div class="image-text-swiper-name text-xl">Jackery Day</div>
-                        <div class="flex justify-between items-center">
-                            <div class="image-text-swiper-des text-base text-overflow-2">Jackery has ushered in its 10th
-                                anniversary in 2022, and we have held a 10th anniversary appreciation meeting in
-                                Shenzhen in October, which was completely powered by Jackery products from the beginning
-                                to the end. On site Jackery donated a batch of solar generators to the Shenzhen Public
-                                Welfare Rescue Team to contribute to the urban emergency rescue.</div>
-
-                            <a class="slide-link a-button-fill text-base" href="https://us.roborock.com/">
-                                VIEW MORE
-                                <span class="iconfont jackery-icon-arrow-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide flex flex-col">
-                    <div class="image-text-imgblock">
-                        <img src="https://cdn.shopify.com/s/files/1/0970/9262/files/brand_events_pc_01.png?v=1672824650"
-                            alt="">
-                    </div>
-                    <div class="image-text-swiper-content relative">
-                        <div class="image-text-swiper-name text-xl">Events Title Goes on Here</div>
-                        <div class="flex justify-between items-center">
-                            <div class="image-text-swiper-des text-base text-overflow-2">Jackery, a global top-selling
-                                outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris
-                                Pratt to power outdoor experiences further …</div>
-
-                            <a class="slide-link a-button-fill text-base" href="https://us.roborock.com/">
-                                VIEW MORE
-                                <span class="iconfont jackery-icon-arrow-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    {% endcase %}
+                {% endfor %}
             </div>
 
             <div class="index-container absolute slideshow-navigation">
