@@ -93,7 +93,7 @@
 }
 .image-text-swiper {
   background: #F5F5F5;
-  padding: 120px 0 180px 0;
+  padding: 120px 0 150px 0;
 }
 .image-text-container {
   width: 100%;
@@ -139,7 +139,7 @@
   max-width: 800px;
 }
 .image-text-swiper .slideshow-pagination {
-  bottom: 170px;
+  bottom: 140px;
 }
 .image-text-swiper .image-text-imgblock {
   overflow: hidden;
@@ -285,6 +285,90 @@
   }
   .card-swiper-slide-title {
     margin-bottom: 4.8vw;
+  }
+}
+.events-list {
+  background: #F5F5F5;
+  padding: 120px 0 160px 0;
+}
+.events-list-container {
+  display: grid;
+  flex-wrap: wrap;
+  grid-gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+}
+.events-list-item {
+  background: #fff;
+}
+.events-list-item img {
+  height: 277px;
+}
+.events-item-info {
+  padding: 20px;
+}
+.events-item-action {
+  margin-top: 12px;
+}
+.events-item-action .date {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+}
+.events-item-action .a-button-fill {
+  font-size: 14px;
+  line-height: 17px;
+  padding: 12px 27px;
+}
+.events-list-more {
+  margin-top: 70px;
+}
+.events-list-more .a-button-solid {
+  font-size: 22px;
+  line-height: 27px;
+  padding: 20px 60px;
+  border-radius: 35px;
+}
+.events-list-more .jackery-icon-arrow-right {
+  transform: rotate(90deg);
+  font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  .events-list {
+    padding: 8.4vw 0 27.6vw 0;
+  }
+  .events-list-container {
+    grid-gap: 2vw;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 85vw;
+  }
+  .events-list-item img {
+    height: 60vw;
+    width: 100%;
+  }
+  .events-item-info {
+    padding: 5.3vw;
+  }
+  .events-item-action {
+    margin-top: 4.8vw;
+  }
+  .events-item-action .date {
+    font-size: 3.5vw;
+  }
+  .events-item-action .a-button-fill {
+    font-size: 3.5vw;
+    line-height: 3.5vw;
+    padding: 2.4vw 10vw;
+  }
+  .events-list-more {
+    margin-top: 8.6vw;
+  }
+  .events-list-more .a-button-solid {
+    font-size: 3.5vw;
+    line-height: 3.5vw;
+    padding: 2.4vw 7.5vw;
+    font-weight: bold;
+    border-radius: 4.8vw;
   }
 }
 
