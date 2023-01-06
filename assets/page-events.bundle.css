@@ -91,4 +91,114 @@
     bottom: 10px;
   }
 }
+.image-text-swiper {
+  background: #F5F5F5;
+  padding: 85px 0 70px 0;
+}
+.image-text-container {
+  width: 100%;
+  height: 740px;
+  overflow-x: hidden;
+}
+.image-text-container .swiper-slide {
+  background: #fff;
+  width: 1200px;
+  transition: all 0.3s;
+  height: 700px;
+  max-width: 100%;
+}
+.image-text-container .swiper-slide > img {
+  max-height: 520px;
+}
+.image-text-container .swiper-slide .image-text-swiper-content::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: transparent;
+}
+.image-text-container .swiper-slide-active .image-text-swiper-content::before {
+  background: var(--primary-color);
+}
+.image-text-container .swiper-slide-active {
+  margin: 0 25px;
+}
+.image-text-swiper-content {
+  padding: 28px 50px;
+  flex: 1;
+}
+.image-text-swiper-name {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.image-text-swiper-des {
+  max-width: 800px;
+}
+.image-text-swiper .slideshow-pagination {
+  bottom: 50px;
+}
+.image-text-swiper .image-text-imgblock {
+  overflow: hidden;
+}
+.image-text-swiper .ani-fade-img .image-text-imgblock img {
+  animation: zoom-fade 2s cubic-bezier(0.26, 0.54, 0.32, 1) 0s forwards;
+}
+@keyframes zoom-fade {
+  from {
+    /* opacity: 0.6; */
+    -webkit-transform: scale(1.4, 1.4);
+    transform: scale(1.4, 1.4);
+  }
+  to {
+    /* opacity: 1; */
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@media screen and (max-width: 768px) {
+  .image-text-swiper {
+    padding: 14vw 0 8.6vw 0;
+  }
+  .image-text-container {
+    height: auto;
+    width: 85vw;
+    margin: 0 auto;
+  }
+  .image-text-container .swiper-slide {
+    width: 100%;
+    overflow: hidden;
+    height: 121vw;
+  }
+  .image-text-container .swiper-slide > img {
+    max-height: 76vw;
+  }
+  .image-text-container .swiper-slide .image-text-swiper-content::before {
+    height: 4px;
+  }
+  .image-text-container .swiper-slide-active {
+    margin: 0;
+  }
+  .image-text-swiper-content {
+    padding: 10.6vw 0;
+    text-align: center;
+  }
+  .image-text-swiper-name {
+    margin-bottom: 10vw;
+  }
+  .image-text-swiper-des {
+    display: none;
+  }
+  .image-text-swiper-content .justify-between {
+    justify-content: center;
+  }
+  .image-text-swiper .image-text-imgblock img {
+    width: 100%;
+    height: 76vw;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
 
