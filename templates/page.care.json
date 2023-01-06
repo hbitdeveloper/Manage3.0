@@ -213,9 +213,9 @@
       "settings": {
         "autoplay": true,
         "autoplay_speed": 7,
-        "recent_title": "VIEW RECENT JACKERY\nBRAND EVENTS",
-        "announced_title": "Here’s what we announced",
-        "exihibition_title": "View recent Jackery\nexihibition events",
+        "recent_title": "VIEW RECENT \nJACKERY EVENTS",
+        "announced_title": "VIEW RECENT JACKERY EVENTS",
+        "exihibition_title": "HERE’S WHAT WE ANNOUNCED",
         "show_all": "EXPLORE MORE"
       }
     }
