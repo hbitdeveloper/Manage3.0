@@ -87,7 +87,7 @@
             this.init();
         }
         init() {
-            this.swiper = new Swiper(this.DOM.el, {
+            this.swiper = new Swiper(this.DOM.swiperContainer, {
                 slidesPerView: 'auto',
                 spaceBetween: 0,
                 centeredSlides: true,
@@ -124,7 +124,7 @@
                         }
                     },
                     transitionEnd: function () {
-                        slide = this.slides.eq(this.activeIndex);
+                        let slide = this.slides.eq(this.activeIndex);
                         slide.addClass('ani-fade-img');
                     },
                     resize: function () {
