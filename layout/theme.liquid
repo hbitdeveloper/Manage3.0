@@ -47,6 +47,14 @@
       {{ 'page-events.bundle.js' | asset_url | script_tag }}
     {%- endif -%}
 
+    {%- if template contains 'care' -%}
+      <link rel="stylesheet" rel="preload" href="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/swiper-bundle.min.css?v=1670922528">
+      {{- 'page-events.bundle.css' | asset_url | stylesheet_tag -}}
+
+      {{ 'gsap.js' | asset_url | script_tag }}
+      {{ 'swiper.js' | asset_url | script_tag }}
+    {%- endif -%}
+
 
 
 
