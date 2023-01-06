@@ -4,9 +4,9 @@
                 {% case block.type %}
                     {% when 'page_banner' %}
                     <div class="swiper-slide relative">
-                        <img class="pc-block slide-banner" src="{{block.image | img_url: '1920x'}}" alt="{{block.title | escape}}">
+                        <img class="pc-block slide-banner" src="{{block.settings.image | img_url: '1920x'}}" alt="{{block.settings.title | escape}}">
 
-                        <img class="mobile-block slide-banner" src="{{block.m_image | img_url: '750x'}}" alt="{{block.title | escape}}">
+                        <img class="mobile-block slide-banner" src="{{block.settings.m_image | img_url: '750x'}}" alt="{{block.settings.title | escape}}">
                         <div class="swiper-banner-foot"></div>
 
                         <div class="page-banner-container index-container absolute">
@@ -17,13 +17,13 @@
                                 src="https://cdn.shopify.com/s/files/1/0550/0524/9633/files/2_55109115-cdac-4786-9031-e7168f04d355.png?v=1670915016"
                                 alt="">
                             <img class="banner-icon absolute left-0 bottom-0"
-                                src="{{block.banner_icon | img_url: '625x'}}"
+                                src="{{block.settings.banner_icon | img_url: '625x'}}"
                                 alt="">
                             <div class="page-banner-content absolute right-0 top-0 flex flex-col">
                                 <div class="h1">
-                                    {{block.title | escape}}
+                                    {{block.settings.title | escape}}
                                 </div>
-                                <a class="slide-link h5 a-button-fill" href="{{block.link}}">{{block.link_text | escape}} <span
+                                <a class="slide-link h5 a-button-fill" href="{{block.settings.link}}">{{block.settings.link_text | escape}} <span
                                         class="iconfont jackery-icon-arrow-right"></span></a>
                             </div>
                         </div>
