@@ -35,16 +35,53 @@
             "m_image": "shopify:\/\/shop_images\/2bfda3079c41ec83492919e87bb7d519.png",
             "banner_icon": "shopify:\/\/shop_images\/2_197c65be-de94-4101-9f46-9fb24ee7fcc8.png"
           }
+        },
+        "0e18e408-fdbf-44a5-b635-32f78a276395": {
+          "type": "recent_events",
+          "settings": {
+            "title": "10 Year Anniversary",
+            "sub_text": "Jackery, a global top-selling outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris Pratt to power outdoor experiences further …",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/3_2297d48d-159a-4258-971a-7011bf7f0065.png",
+            "m_image": "shopify:\/\/shop_images\/brand_events_mb_02.png"
+          }
+        },
+        "df76ac5d-5755-4ae7-b008-baacd50bda67": {
+          "type": "recent_events",
+          "settings": {
+            "title": "Jackery Day",
+            "sub_text": "Jackery has ushered in its 10th anniversary in 2022, and we have held a 10th anniversary appreciation meeting in Shenzhen in October, which was completely powered by Jackery products from the beginning to the end. On site Jackery  donated a batch of solar generators to the Shenzhen Public Welfare Rescue Team to contribute to the urban emergency rescue.",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/brand_events_pc_03_1.png",
+            "m_image": "shopify:\/\/shop_images\/brand_events_mb_03.png"
+          }
+        },
+        "76d726fb-c9d9-4919-946c-9c86198ce05f": {
+          "type": "recent_events",
+          "settings": {
+            "title": "Events Title Goes on",
+            "sub_text": "Jackery, a global top-selling outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris Pratt to power outdoor experiences further …",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/brand_events_pc_01_1.png",
+            "m_image": "shopify:\/\/shop_images\/brand_events_mb_01.png"
+          }
         }
       },
       "block_order": [
         "02e58a0c-ad25-418e-914b-7048bde4603c",
         "33012b3e-52c3-46f2-a8a6-e44d3bdf7ca2",
-        "f94fd836-6b3d-4363-81cd-e44125d7b6e9"
+        "f94fd836-6b3d-4363-81cd-e44125d7b6e9",
+        "0e18e408-fdbf-44a5-b635-32f78a276395",
+        "df76ac5d-5755-4ae7-b008-baacd50bda67",
+        "76d726fb-c9d9-4919-946c-9c86198ce05f"
       ],
       "settings": {
         "autoplay": true,
-        "autoplay_speed": 7
+        "autoplay_speed": 7,
+        "recent_title": "VIEW RECENT JACKERY\nBRAND EVENTS"
       }
     }
   },
