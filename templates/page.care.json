@@ -1,13 +1,49 @@
 {
-    "sections": {
-        "main": {
-            "type": "page-care",
-            "settings": {
-                
-            }
+  "sections": {
+    "main": {
+      "type": "page-care",
+      "blocks": {
+        "ccca7096-3122-43e0-acf0-f23c192ce6fc": {
+          "type": "page_banner",
+          "settings": {
+            "title": "Explore Further\nwith Jackery Solar",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "5379a94a-7b2a-4f9e-97af-8dbcce4f4f77": {
+          "type": "page_banner",
+          "settings": {
+            "title": "Explore Further\nwith Jackery Solar",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "80d47a78-180e-4c62-81e5-e7b51ab2d77b": {
+          "type": "page_banner",
+          "settings": {
+            "title": "Explore Further\nwith Jackery Solar",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE"
+          }
         }
-    },
-    "order": [
-      "main"
-    ]
+      },
+      "block_order": [
+        "ccca7096-3122-43e0-acf0-f23c192ce6fc",
+        "5379a94a-7b2a-4f9e-97af-8dbcce4f4f77",
+        "80d47a78-180e-4c62-81e5-e7b51ab2d77b"
+      ],
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "recent_title": "VIEW RECENT JACKERY\nBRAND EVENTS",
+        "announced_title": "Here’s what we announced",
+        "exihibition_title": "View recent Jackery\nexihibition events",
+        "show_all": "EXPLORE MORE"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
