@@ -36,42 +36,6 @@
             "banner_icon": "shopify:\/\/shop_images\/2_197c65be-de94-4101-9f46-9fb24ee7fcc8.png"
           }
         },
-        "bf1570c4-c695-4d1e-9348-a4fdcb1e26f3": {
-          "type": "recent_events",
-          "settings": {
-            "title": "JACKERY 2000 PRO 2200w UPS Solar …",
-            "sub_text": "Jackery, a global top-selling outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris Pratt to power outdoor experiences further …",
-            "link": "https:\/\/www.jackery.com\/##",
-            "video_link": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/WM163-WebOnly\/F36_Wm163_Main_CLEAN_-10s_V3_2400x1440(1).mp4",
-            "link_text": "VIEW MORE",
-            "image": "shopify:\/\/shop_images\/6_3117e260-4e70-411b-880b-4d5b86440e27.png",
-            "m_image": "shopify:\/\/shop_images\/7_8beba9bf-85a9-45d3-9b8a-488e2fa59e1b.png"
-          }
-        },
-        "1b0ed68e-f64a-44e0-89e7-6a3ff2330a3e": {
-          "type": "recent_events",
-          "settings": {
-            "title": "Jackery Day",
-            "sub_text": "Jackery has ushered in its 10th anniversary in 2022, and we have held a 10th anniversary appreciation meeting in Shenzhen in October, which was completely powered by Jackery products from the beginning to the end. On site Jackery  donated a batch of solar generators to the Shenzhen Public Welfare Rescue Team to contribute to the urban emergency rescue.",
-            "link": "https:\/\/www.jackery.com\/##",
-            "video_link": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/WM163-WebOnly\/F36_Wm163_Main_CLEAN_-10s_V3_2400x1440(1).mp4",
-            "link_text": "VIEW MORE",
-            "image": "shopify:\/\/shop_images\/brand_events_pc_03_1.png",
-            "m_image": "shopify:\/\/shop_images\/brand_events_mb_03.png"
-          }
-        },
-        "7214c11e-4a1c-4744-a88b-1e58b9191d24": {
-          "type": "recent_events",
-          "settings": {
-            "title": "Events Title Goes on Here",
-            "sub_text": "Jackery has ushered in its 10th anniversary in 2022, and we have held a 10th anniversary appreciation meeting in Shenzhen in October, which was completely powered by Jackery products from the beginning to the end. On site Jackery  donated a batch of solar generators to the Shenzhen Public Welfare Rescue Team to contribute to the urban emergency rescue.",
-            "link": "https:\/\/www.jackery.com\/##",
-            "video_link": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/WM163-WebOnly\/F36_Wm163_Main_CLEAN_-10s_V3_2400x1440(1).mp4",
-            "link_text": "VIEW MORE",
-            "image": "shopify:\/\/shop_images\/3_2297d48d-159a-4258-971a-7011bf7f0065.png",
-            "m_image": "shopify:\/\/shop_images\/brand_events_mb_02.png"
-          }
-        },
         "3185ee03-4e24-45f3-8b0c-d54068185111": {
           "type": "announced_block",
           "settings": {
@@ -191,15 +155,48 @@
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/brand_events_mb_01.png"
           }
+        },
+        "bf1570c4-c695-4d1e-9348-a4fdcb1e26f3": {
+          "type": "recent_events",
+          "settings": {
+            "title": "JACKERY 2000 PRO 2200w UPS Solar …",
+            "sub_text": "Jackery, a global top-selling outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris Pratt to power outdoor experiences further …",
+            "link": "https:\/\/www.jackery.com\/##",
+            "video_link": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/WM163-WebOnly\/F36_Wm163_Main_CLEAN_-10s_V3_2400x1440(1).mp4",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/6_3117e260-4e70-411b-880b-4d5b86440e27.png",
+            "m_image": "shopify:\/\/shop_images\/7_8beba9bf-85a9-45d3-9b8a-488e2fa59e1b.png"
+          }
+        },
+        "1b0ed68e-f64a-44e0-89e7-6a3ff2330a3e": {
+          "type": "recent_events",
+          "settings": {
+            "title": "Jackery Day",
+            "sub_text": "Jackery has ushered in its 10th anniversary in 2022, and we have held a 10th anniversary appreciation meeting in Shenzhen in October, which was completely powered by Jackery products from the beginning to the end. On site Jackery  donated a batch of solar generators to the Shenzhen Public Welfare Rescue Team to contribute to the urban emergency rescue.",
+            "link": "https:\/\/www.jackery.com\/##",
+            "video_link": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/WM163-WebOnly\/F36_Wm163_Main_CLEAN_-10s_V3_2400x1440(1).mp4",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/brand_events_pc_03_1.png",
+            "m_image": "shopify:\/\/shop_images\/brand_events_mb_03.png"
+          }
+        },
+        "7214c11e-4a1c-4744-a88b-1e58b9191d24": {
+          "type": "recent_events",
+          "settings": {
+            "title": "Events Title Goes on Here",
+            "sub_text": "Jackery has ushered in its 10th anniversary in 2022, and we have held a 10th anniversary appreciation meeting in Shenzhen in October, which was completely powered by Jackery products from the beginning to the end. On site Jackery  donated a batch of solar generators to the Shenzhen Public Welfare Rescue Team to contribute to the urban emergency rescue.",
+            "link": "https:\/\/www.jackery.com\/##",
+            "video_link": "https:\/\/terra-1-g.djicdn.com\/851d20f7b9f64838a34cd02351370894\/WM163-WebOnly\/F36_Wm163_Main_CLEAN_-10s_V3_2400x1440(1).mp4",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/3_2297d48d-159a-4258-971a-7011bf7f0065.png",
+            "m_image": "shopify:\/\/shop_images\/brand_events_mb_02.png"
+          }
         }
       },
       "block_order": [
         "cd739b73-4a45-4993-b6bb-cdbb0acaf8a4",
         "b1417d2d-ca89-47b7-8459-5dd2b0d24a18",
         "51382abc-e43c-4c3c-8856-be536d07320c",
-        "bf1570c4-c695-4d1e-9348-a4fdcb1e26f3",
-        "1b0ed68e-f64a-44e0-89e7-6a3ff2330a3e",
-        "7214c11e-4a1c-4744-a88b-1e58b9191d24",
         "3185ee03-4e24-45f3-8b0c-d54068185111",
         "3252f802-e037-4cef-a7da-28ec20262ef5",
         "1c9cfba5-31a3-4282-ac50-edd6cb3780a0",
@@ -211,7 +208,10 @@
         "11b3ce4d-a4fe-4922-bd0b-8c07db85b841",
         "501563c4-1d66-4f56-b610-94ab1b017fbb",
         "d52a9bb4-dc44-4dfd-a7a0-85c6b68c4c9a",
-        "5dd5516a-077d-41c7-847b-abb5a023cdac"
+        "5dd5516a-077d-41c7-847b-abb5a023cdac",
+        "bf1570c4-c695-4d1e-9348-a4fdcb1e26f3",
+        "1b0ed68e-f64a-44e0-89e7-6a3ff2330a3e",
+        "7214c11e-4a1c-4744-a88b-1e58b9191d24"
       ],
       "settings": {
         "autoplay": true,
