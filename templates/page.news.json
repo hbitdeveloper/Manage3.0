@@ -35,18 +35,78 @@
             "m_image": "shopify:\/\/shop_images\/1_1e94ab8e-5081-4220-91c4-cc619f227a93.png",
             "banner_icon": "shopify:\/\/shop_images\/2_197c65be-de94-4101-9f46-9fb24ee7fcc8.png"
           }
+        },
+        "bf1570c4-c695-4d1e-9348-a4fdcb1e26f3": {
+          "type": "recent_events",
+          "settings": {
+            "title": "",
+            "sub_text": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "1b0ed68e-f64a-44e0-89e7-6a3ff2330a3e": {
+          "type": "recent_events",
+          "settings": {
+            "title": "",
+            "sub_text": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "7214c11e-4a1c-4744-a88b-1e58b9191d24": {
+          "type": "recent_events",
+          "settings": {
+            "title": "",
+            "sub_text": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "3185ee03-4e24-45f3-8b0c-d54068185111": {
+          "type": "announced_block",
+          "settings": {
+            "title": "",
+            "sub_text": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "3252f802-e037-4cef-a7da-28ec20262ef5": {
+          "type": "announced_block",
+          "settings": {
+            "title": "",
+            "sub_text": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "1c9cfba5-31a3-4282-ac50-edd6cb3780a0": {
+          "type": "announced_block",
+          "settings": {
+            "title": "",
+            "sub_text": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
         }
       },
       "block_order": [
         "cd739b73-4a45-4993-b6bb-cdbb0acaf8a4",
         "b1417d2d-ca89-47b7-8459-5dd2b0d24a18",
-        "51382abc-e43c-4c3c-8856-be536d07320c"
+        "51382abc-e43c-4c3c-8856-be536d07320c",
+        "bf1570c4-c695-4d1e-9348-a4fdcb1e26f3",
+        "1b0ed68e-f64a-44e0-89e7-6a3ff2330a3e",
+        "7214c11e-4a1c-4744-a88b-1e58b9191d24",
+        "3185ee03-4e24-45f3-8b0c-d54068185111",
+        "3252f802-e037-4cef-a7da-28ec20262ef5",
+        "1c9cfba5-31a3-4282-ac50-edd6cb3780a0"
       ],
       "settings": {
         "autoplay": true,
         "autoplay_speed": 7,
-        "recent_title": "VIEW RECENT JACKERY\nBRAND EVENTS",
-        "announced_title": "Here’s what we announced",
+        "recent_title": "NEWS HIGHLIGHT----1",
+        "announced_title": "NEWS HIGHLIGHT",
         "exihibition_title": "View recent Jackery\nexihibition events",
         "show_all": "EXPLORE MORE"
       }
