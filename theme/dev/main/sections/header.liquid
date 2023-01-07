@@ -1,0 +1,584 @@
+{%- assign main_menu = linklists[section.settings.main_menu_link_list] -%}
+<header class="site-header left-0 right-0 top-0 site-header-white {% if section.settings.show_announcement_bar %}announcement-bar-show{% endif %}">
+        <div class="announcement-bar text-base items-center justify-center relative">
+            {{section.settings.announcement_bar_text}} <span class="iconfont jackery-icon-fuliliwu-"></span>
+            <div class="index-container absolute right-0 left-0 top-0 bottom-0"><i class="iconfont jackery-icon-guanbi absolute right-0"></i>
+            </div>
+        </div>
+        <div class="header-main flex items-center relative">
+            <div class="index-container flex justify-between">
+                <a href="#" class="flex items-center" style="text-decoration: none;">
+                    <span class="iconfont jackery-icon-jackery header-logo"></span>
+                </a>
+                
+                <input class="mobile-toggle right-0" type="checkbox">
+
+                <div class="header-menu flex items-center">
+                    <div class="header-navs flex">
+                        <div class="nav-item text-base underlines-btn">
+                            Shop
+                            <div class="nav-shop-menu">
+                                    <div class="index-container flex">
+                                        <div class="nav-shop-collection">
+                                            <div class="nav-shop-collection-taps flex">
+                                                {% for link in main_menu.links %}
+                                                    {% case link.title %}
+                                                        {% when 'Products' %}
+
+                                                        {% for childlink in link.links %}
+                                                        <div class="collection-taps-item {% if forloop.index0 == 0 %}active{% endif %}">
+                                                            <span>{{childlink.title}}</span>
+                                                            <img class="collection-taps-img" src="{{childlink.image | img_url: '200x'}}" alt="{{childlink.title}}">
+                                                        </div>
+                                                        {% endfor %}
+                                                    {% endcase %}
+                                                {% endfor %}
+                                            </div>
+
+                                            {% for link in main_menu.links %}
+                                                {% case link.title %}
+                                                {% when 'Products' %}
+                                                {% for childlink in link.links %}
+                                                {%- assign category = childlink.url | replace: '/collections/', '' -%}
+                                                <div class="header-products-container {% if forloop.index0 == 0 %}active{% endif %}">
+                                                    <div class="nav-shop-collection-products">
+                                                        {% for product in collections[category].products limit: 8 %}
+                                                        <a href="{{product.url}}" class="collection-products-item">
+                                                            {% include 'product-tag', product: product %}
+                                                            <img class="collection-products-item-img" src="{{product.featured_image | img_url: '290x'}}" alt="{{ product.title }}">
+                                                            <span>{{ product.title }}</span>
+                                                        </a>
+                                                        {% endfor %}
+                                                    </div>
+                                                    {% if collections[category].products_count > 8 %}
+                                                        <a href="{{ childlink.url }}" class="a-button-fill nav-shop-collection-more">VIEW MORE</a>
+                                                    {% endif %}
+                                                </div>
+                                                {% endfor %}
+                                                {% endcase %}
+                                            {% endfor %}
+                                        </div>
+                                        <div class="nav-shop-scence">
+                                            {% for block in section.blocks %}
+                                                {%- assign img_url = block.settings.menu_img | img_url: '180x' -%}
+                                                {% case block.type %}
+                                                    {% when 'shop_link' %}
+                                                        <a href="{{block.settings.img_url}}" class="nav-shop-scence-item flex" style="background: url({{img_url}});">
+                                                            <span>{{block.settings.menu_title | escape}}</span>
+                                                        </a>
+                                                {% endcase %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item text-base underlines-btn">
+                            About Jackery
+                            <div class="nav-item-menu">
+                                <div class="index-container">
+                                    <div class="nav-menuItem-list">
+                                        {% for block in section.blocks %}
+                                            {%- assign img_url = block.settings.menu_img | img_url: '600x' -%}
+                                            {% case block.type %}
+                                                {% when 'about_jackery' %}
+                                                    <a 
+                                                        class="nav-menuItem underlines-btn" 
+                                                        href="{{block.settings.menu_url}}"
+                                                        img="{{img_url}}"
+                                                    >
+                                                        {{block.settings.menu_title | escape}}
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="nav-menuItem-bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item text-base underlines-btn">
+                            Support
+                            <div class="nav-item-menu">
+                                <div class="index-container">
+                                    <div class="nav-menuItem-list">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {%- assign img_url = block.settings.menu_img | img_url: '600x' -%}
+                                                {% when 'support' %}
+                                                    <a 
+                                                        class="nav-menuItem underlines-btn" 
+                                                        href="{{block.settings.menu_url}}"
+                                                        img="{{img_url}}"
+                                                    >
+                                                        {{block.settings.menu_title | escape}}
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="nav-menuItem-bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item text-base underlines-btn">
+                            Benefits
+                            <div class="nav-item-menu">
+                                <div class="index-container">
+                                    <div class="nav-menuItem-list">
+                                        {% for block in section.blocks %}
+                                            {%- assign img_url = block.settings.menu_img | img_url: '600x' -%}
+                                            {% case block.type %}
+                                                {% when 'benefits' %}
+                                                    <a 
+                                                        class="nav-menuItem underlines-btn"
+                                                        href="{{block.settings.menu_url}}"
+                                                        img="{{img_url}}"
+                                                    >
+                                                        {{block.settings.menu_title | escape}}
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="nav-menuItem-bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="header-icons flex">
+                        <details-modal class="header__search">
+                                <details>
+                                    <summary
+                                        class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
+                                        aria-haspopup="dialog" aria-label="Search" role="button">
+                                        <span class="iconfont jackery-icon-sousuo"></span>
+                                    </summary>
+                                    <div class="search-modal modal__content" role="dialog" aria-modal="true"
+                                        aria-label="Search">
+                                        <div class="modal-overlay"></div>
+                                        <div class="search-modal__content search-modal__content-bottom index-container relative" tabindex="-1">
+                                            <span class="iconfont jackery-icon-jackery"></span>
+                                            <predictive-search 
+                                                class="search-modal__form"
+                                                data-loading-text="Loading..."
+                                            >
+                                                <form action="/search" method="get" role="search"
+                                                    class="search search-modal__form">
+                                                    <div class="field">
+                                                        <input class="search__input field__input" id="Search-In-Modal"
+                                                            type="search" name="q" value="" placeholder="Search"
+                                                            role="combobox" aria-expanded="false"
+                                                            aria-owns="predictive-search-results-list"
+                                                            aria-controls="predictive-search-results-list"
+                                                            aria-haspopup="listbox" aria-autocomplete="list"
+                                                            autocorrect="off" autocomplete="off" autocapitalize="off"
+                                                            spellcheck="false" aria-activedescendant="">
+                                                        <input type="hidden" name="options[prefix]" value="last">
+                                                        <button class="search__button field__button"
+                                                            aria-label="Search">
+                                                            <span class="iconfont jackery-icon-sousuo"></span>
+                                                        </button>
+
+                                                        <button type="button"
+                                                class="search-modal__close-button modal__close-button link link--text focus-inset"
+                                                aria-label="Close">
+                                                <span class="iconfont jackery-icon-guanbi"></span>
+                                            </button>
+                                                    </div>
+
+                                                    <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                                                    <div class="predictive-search__loading-state">
+                                                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                        </svg>
+                                                    </div>
+                                                    </div>
+                                                    <span class="predictive-search-status visually-hidden" role="status"
+                                                        aria-hidden="true"></span>
+                                                </form>
+                                            </predictive-search>
+                                        </div>
+                                    </div>
+                                </details>
+                        </details-modal>
+                        <span class="iconfont jackery-icon-yonghu"></span>
+                        <span class="iconfont jackery-icon-gouwuche"></span>
+                    </div>
+
+                    <div class="header-local flex items-center">
+                        <details-disclosure>
+                                <details id="Details-HeaderMenu-1">
+                                    <summary 
+                                        class="header__menu-item list-menu__item link focus-inset" role="button" aria-expanded="false"
+                                        aria-controls="HeaderMenu-MenuList-1">
+                                        <span>EN</span>
+                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                    </summary>
+                                    
+                                    <ul id="HeaderMenu-MenuList-1"
+                                        class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list"
+                                        tabindex="-1">
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                USA
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                CA
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                JP
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                DE
+                                            </a></li>
+                                        <li><a href="/"
+                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                                KR
+                                            </a></li>
+                                    </ul>
+                                </details>
+                        </details-disclosure>
+                    </div>
+                </div>
+
+                <div class="mobile-toggle-nav header-m-menu absolute mobile-block right-0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="absolute mobile-block mb-search">
+                    <details-modal class="header__search">
+                                <details>
+                                    <summary
+                                        class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
+                                        aria-haspopup="dialog" aria-label="Search" role="button">
+                                        <div class="index-container relative">
+                                            <input style="text-indent: 24px;" type="text" placeholder="Search" disabled />
+
+                                            <span class="iconfont jackery-icon-sousuo absolute"></span>
+                                        </div>
+                                    </summary>
+                                    <div class="search-modal modal__content" role="dialog" aria-modal="true"
+                                        aria-label="Search">
+                                        <div class="modal-overlay"></div>
+                                        <div class="search-modal__content search-modal__content-bottom index-container relative" tabindex="-1">
+                                            <span class="iconfont jackery-icon-jackery"></span>
+                                            <predictive-search 
+                                                class="search-modal__form"
+                                                data-loading-text="Loading..."
+                                            >
+                                                <form action="/search" method="get" role="search"
+                                                    class="search search-modal__form">
+                                                    <div class="field">
+                                                        <input class="search__input field__input" id="Search-In-Modal"
+                                                            type="search" name="q" value="" placeholder="Search"
+                                                            role="combobox" aria-expanded="false"
+                                                            aria-owns="predictive-search-results-list"
+                                                            aria-controls="predictive-search-results-list"
+                                                            aria-haspopup="listbox" aria-autocomplete="list"
+                                                            autocorrect="off" autocomplete="off" autocapitalize="off"
+                                                            spellcheck="false" aria-activedescendant="">
+                                                        <input type="hidden" name="options[prefix]" value="last">
+                                                        <button class="search__button field__button"
+                                                            aria-label="Search">
+                                                            <span class="iconfont jackery-icon-sousuo"></span>
+                                                        </button>
+
+                                                        <button type="button"
+                                                class="search-modal__close-button modal__close-button link link--text focus-inset"
+                                                aria-label="Close">
+                                                <span class="iconfont jackery-icon-guanbi"></span>
+                                            </button>
+                                                    </div>
+
+                                                    <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                                                    <div class="predictive-search__loading-state">
+                                                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                        </svg>
+                                                    </div>
+                                                    </div>
+                                                    <span class="predictive-search-status visually-hidden" role="status"
+                                                        aria-hidden="true"></span>
+                                                </form>
+                                            </predictive-search>
+                                        </div>
+                                    </div>
+                                </details>
+                    </details-modal>
+                </div>
+
+                <div class="absolute m-menu m-h-menu mobile-block">
+						<div class="">
+							<ul class="nav">
+								<li class="menu-li">
+									<div class="flex items-center justify-between mobile-nav-product-header m-menu-content">
+										<div class="nav-product-header-title m-menu-item-name">Shop</div>
+										<span class="iconfont jackery-icon-arrow-right "></span>
+									</div>
+									<ul class="nav-child-item mobile-nav-product">
+                                        {% for link in main_menu.links %}
+                                            {% case link.title %}
+                                                {% when 'Products' %}
+                                                {% for childlink in link.links %}
+                                                <li class="menu-li nav-item">
+                                                    <div class="flex items-center justify-between nav-collection-header m-menu-content">
+                                                        <div class="flex items-center">
+                                                            <img src="{{childlink.image | img_url: '120x'}}" style="max-height: 30px;" alt="{{childlink.title}}">
+                                                            <span class="collection-name">{{childlink.title}}</span>
+                                                        </div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </div>
+
+                                                    <div class="mb-menu-product-main">
+                                                        <ul class="mb-menu-product-list">
+                                                            {% for link in main_menu.links %}
+                                                                {% case link.title %}
+                                                                {% when 'Products' %}
+                                                                {% for childlink in link.links %}
+                                                                {%- assign category = childlink.url | replace: '/collections/', '' -%}
+                                                                    {% for product in collections[category].products limit: 8 %}
+                                                                    <a href="{{product.url}}" class="mb-menu-product-line">
+                                                                        <img src="{{product.featured_image | img_url: '286x'}}" alt="{{ product.title }}">
+                                                                        <span>{{ product.title }}</span>
+                                                                    </a>
+                                                                    {% endfor %}
+                                                                {% endfor %}
+                                                                {% endcase %}
+                                                            {% endfor %}
+                                                        </ul>
+
+                                                        <div class="m-menu-content collection-more">
+                                                            <a class="a-button-fill" href="{{ childlink.url }}">
+                                                            
+                                                                VIEW MORE
+                                                                <span class="iconfont  jackery-icon-arrow-right"></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                {% endfor %}
+                                            {% endcase %}
+                                        {% endfor %}
+
+                                        <div class="m-header-scence m-menu-content flex">
+                                            {% for block in section.blocks %}
+                                                {%- assign img_url = block.settings.menu_img | img_url: '180x' -%}
+                                                {% case block.type %}
+                                                    {% when 'shop_link' %}
+                                                        <div class="m-header-scence-item flex items-center justify-center" style="background-image: url({{img_url}});">
+                                                            <span>{{block.settings.menu_title | escape}}</span>
+                                                        </div>
+                                                {% endcase %}
+                                            {% endfor %}
+                                        </div>
+									</ul>
+								</li>
+
+								<li class="menu-li">
+									<div class="flex items-center justify-between m-menu-content">
+										<div class="m-menu-item-name">About Jackery</div>
+										<span class="iconfont jackery-icon-arrow-right"></span>
+									</div>
+									<ul class="nav-child-item">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'about_jackery' %}
+                                                    <a href="{{block.settings.menu_url}}" class="m-menu-content nav-child-content flex items-center justify-between">
+                                                        <div class="m-menu-item-name">{{block.settings.menu_title | escape}}</div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+									</ul>
+								</li>
+
+                                <li class="menu-li">
+									<div class="flex items-center justify-between m-menu-content">
+										<div class="m-menu-item-name">Support</div>
+										<span class="iconfont jackery-icon-arrow-right"></span>
+									</div>
+									<ul class="nav-child-item">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'support' %}
+                                                    <a href="{{block.settings.menu_url}}" class="m-menu-content nav-child-content flex items-center justify-between">
+                                                        <div class="m-menu-item-name">{{block.settings.menu_title | escape}}</div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+									</ul>
+								</li>
+
+                                <li class="menu-li">
+									<div class="flex items-center justify-between m-menu-content">
+										<div class="m-menu-item-name">Benefits</div>
+										<span class="iconfont jackery-icon-arrow-right"></span>
+									</div>
+									<ul class="nav-child-item">
+                                        {% for block in section.blocks %}
+                                            {% case block.type %}
+                                                {% when 'benefits' %}
+                                                    <a href="{{block.settings.menu_url}}" class="m-menu-content nav-child-content flex items-center justify-between">
+                                                        <div class="m-menu-item-name">{{block.settings.menu_title | escape}}</div>
+                                                        <span class="iconfont jackery-icon-arrow-right"></span>
+                                                    </a>
+                                            {% endcase %}
+                                        {% endfor %}
+									</ul>
+								</li>
+							</ul>
+						</div>
+				</div>
+            </div> 
+        </div>
+    </header>
+
+<script>
+        $(document).ready(function(){
+            const headerSelectors = {
+                announcementBarBtn: {{ section.settings.show_announcement_bar }} ? document.querySelector(".site-header .announcement-bar .jackery-icon-guanbi") : null,
+                headerDom: document.querySelector(".site-header"),
+                mainContent: document.querySelector(".content-for-layout")
+            }
+            headerSelectors.mainContent.classList.add("layout-hide-announcement")
+            if(headerSelectors.announcementBarBtn) {
+                headerSelectors.mainContent.classList.remove("layout-hide-announcement")
+                headerSelectors.announcementBarBtn.addEventListener("click", () => {
+                    headerSelectors.headerDom.classList.remove("announcement-bar-show")
+                    headerSelectors.mainContent.classList.add("layout-hide-announcement")
+                })
+            }
+
+
+            const headerMenus = document.querySelectorAll(".nav-item")
+            headerMenus.forEach(menu => {
+                const menuNav = menu.querySelector(".nav-item-menu")
+                if(menuNav) {
+                    const list = menuNav.querySelectorAll(".nav-menuItem")
+                    const menuBg = menuNav.querySelector(".nav-menuItem-bg")
+                    // default 
+                    const _first = menuNav.querySelector(".nav-menuItem")
+                    if(_first) {
+                        _first.classList.add("active")
+                        menuBg.style.background = `url(${_first.getAttribute("img")})`
+                    }
+
+                    list.forEach(item => {
+                        item.addEventListener("mouseover", () => {
+                            list.forEach((e, i) => {
+                                e.classList.remove("active")
+                            });
+
+                            item.classList.add("active")
+                            const url = item.getAttribute("img")
+                            menuBg.style.background = `url(${url})`
+                        })
+                    })
+                }
+            })
+
+            const collectionMenus = document.querySelector(".nav-shop-menu")
+            const collectionItem = collectionMenus.querySelectorAll(".collection-taps-item")
+            const headerProducts = document.querySelectorAll(".header-products-container")
+            collectionItem.forEach((collection, index, arr) => {
+                collection.addEventListener("mouseover", () => {
+                    collectionItem.forEach((e, i) => {
+                        e.classList.remove("active")
+                        headerProducts[i].classList.remove("active")
+                    });
+
+                    collection.classList.add("active")
+                    headerProducts[index].classList.add("active")
+                })
+            })
+
+            const mHeaderMenu = document.querySelector(".m-h-menu")
+            const mHeaderItems = mHeaderMenu.querySelectorAll(".nav>.menu-li")
+            const mCollectins = document.querySelector(".mobile-nav-product")
+            const mCollectinItems = mCollectins.querySelectorAll(".mobile-nav-product>.menu-li ")
+            mHeaderItems.forEach(item => {
+                const closeEl = item.querySelector(".m-menu-content")
+                closeEl.addEventListener("click", (e) => {
+                    mHeaderItems.forEach(i => {
+                        !item.isSameNode(i) && i.classList.remove("active")
+                    })
+
+                    if(item.classList.contains('active')) {
+                        item.classList.remove("active")
+                    } else {
+                        item.classList.add("active")
+                    }
+                })
+            })
+
+            mCollectinItems.forEach(item => {
+                const closeEl = item.querySelector(".m-menu-content")
+                closeEl.addEventListener("click", (e) => {
+                    mCollectinItems.forEach(i => {
+                        !item.isSameNode(i) && i.classList.remove("active")
+                    })
+
+                    if(item.classList.contains('active')) {
+                        item.classList.remove("active")
+                    } else {
+                        item.classList.add("active")
+                    }
+                })
+            })
+        })
+    </script>
+
+{% schema %}
+{
+  "name": "Header and menus",
+  "class": "section-header",
+  "settings": [
+      {"type": "checkbox", "id": "show_announcement_bar", "label": "Show announcement bar", "default": true},
+      {"type": "richtext", "id": "announcement_bar_text", "label": "Announcement bar text", "default": "<p>Welcome to Jackery</p>"},
+      {"type": "link_list", "id": "main_menu_link_list", "label": "Menu", "default": "main-menu"}
+  ],
+  "blocks": [
+      {
+        "type": "benefits",
+        "name": "Benefits menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Menu title"},
+            {"type": "url", "id": "menu_url", "label": "Menu url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Menu image"}
+        ]
+      },
+      {
+        "type": "support",
+        "name": "Support menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Menu title"},
+            {"type": "url", "id": "menu_url", "label": "Menu url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Menu image"}
+        ]
+      },
+      {
+        "type": "about_jackery",
+        "name": "About jackery menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Menu title"},
+            {"type": "url", "id": "menu_url", "label": "Menu url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Menu image"}
+        ]
+      },
+      {
+        "type": "shop_link",
+        "name": "Shop link menu",
+        "settings": [
+            {"type": "text", "id": "menu_title", "label": "Link title"},
+            {"type": "url", "id": "menu_url", "label": "Url"},
+            {"type": "image_picker", "id": "menu_img", "label": "Link image"}
+        ]
+      }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,37 @@
+<div class="events-list">
+        <div class="h2 section-container text-center events-list-title page-section-title">
+            {{title | escape}}
+        </div>
+
+        <input class="events-list-btn none" type="checkbox" id="grid_all">
+        <div class="events-list-container section-container">
+            {% for block in blocks %}
+                {% case block.type %}
+                    {% when 'grid_item' %}
+                    <div class="events-list-item">
+                        <img src="{{block.settings.image | img_url: '338x'}}"
+                            alt="{{block.settings.title | escape}}" class="object-cover">
+                        <div class="events-item-info">
+                            <div class="text-base text-overflow-2">
+                                {{block.settings.title | escape}}
+                            </div>
+                            <div class="flex justify-between items-center events-item-action">
+                                <div class="date">{{block.settings.date | escape}}</div>
+                                <a class="slide-link a-button-fill" href="{{block.settings.link}}">
+                                    {{block.settings.link_text | escape}}
+                                    <span class="iconfont jackery-icon-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endcase %}
+            {% endfor %}
+        </div>
+        <label for="grid_all" class="flex justify-center events-list-more relative">
+            <div class="a-button-solid">
+                <span class="no_all">{{show_all | escape}}</span>
+                <span class="all">CLOSE</span>
+                <span class="iconfont jackery-icon-arrow-right"></span>
+            </div>
+        </div>
+</div>

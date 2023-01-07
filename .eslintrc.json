@@ -1,0 +1,38 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "svelte3"
+    ],
+    "ignorePatterns": [
+        "*.bundle.js",
+        "node_modules/"
+    ],
+    "rules": {
+        // 开发环境换行符
+        "linebreak-style": ["off", "windows"],
+        "quotes": "off",
+        // 要求或禁止末尾逗号
+        "comma-dangle": 0,
+        // js语句结尾必须使用分号
+        "semi": [0, "never"],
+        "no-param-reassign": ["error", { "props": false }],
+        "class-methods-use-this": 0,
+        "eslint-disable-next-line": 0,
+        "no-unused-expressions": 0,
+        "max-len": 0
+    }
+}

@@ -1,0 +1,67 @@
+<div class="thumbsSlider-slideshow swiper-container">
+    <div class="swiper-container collection-slideshow slideshow22222">
+        <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+                {%- assign img_url = block.settings.image | img_url: '1920x' -%}
+                {%- assign m_img_url = block.settings.m_image | img_url: '750x' -%}
+                {%- assign p_img_url = block.settings.thumbnail_image | img_url: '640x' -%}
+                <div class="swiper-slide slide">
+                    <div class="slide-image pc-block"
+                        style="background-image: url({{img_url}})">
+                    </div>
+                    <div class="slide-image mobile-block"
+                        style="background-image: url({{m_img_url}})">
+                    </div>
+
+                    <div class="index-container absolute">
+                        <div class="slide-content slide-content-img absolute ">
+                            <img src="{{p_img_url}}" alt="" srcset="">
+                            <a class="a-button-fill h5" href="{{block.settings.link}}">{{block.settings.link_text | escape}} <span class="iconfont jackery-icon-arrow-right"></span></a>
+                        </div>
+                        <div class="slide-info absolute left-0 top-0 flex flex-col">
+                            <div class="slid-collection-title h2">{{block.settings.title | escape}}</div>
+                            <a class="slid-collection-link h5 underlines-btn">{{block.settings.help_text | escape}} <span class="iconfont jackery-icon-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="slideshow-pagination slideshow-thumbnail-container">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                    {%- assign p_img_url = block.settings.thumbnail_image | img_url: '640x' -%}
+                    <div class="slideshow-thumbnail swiper-slide">
+                        <div class="slideshow-thumbnail-img"
+                            style="background-image: url({{p_img_url}});">
+                        </div>
+                        <div class="slideshow-thumbnail-name h5">{{block.settings.title | escape}}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ 'collection-swiper.bundle.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Collection swiper",
+  "tag": "section",
+  "class": "section collection-swiper",
+  "settings": [],
+  "blocks": [{
+      "type": "image", "name": "Collection Swiper",
+      "settings": [
+        {"type": "textarea", "id": "title", "label": "Heading", "default": "Two line slide title."},
+        {"type": "url", "id": "link", "label": "Slide link"},
+        {"type": "text", "id": "link_text", "label": "Slide link text", "default": "View more"},
+        {"type": "text", "id": "help_text", "label": "Help choose text", "default": "Help you choose"},
+        {"type": "url", "id": "help_link", "label": "Help choose link"},
+        {"type": "image_picker", "id": "image", "label": "Image"},
+        {"type": "image_picker", "id": "m_image", "label": "Mobile Image"},
+        {"type": "image_picker", "id": "thumbnail_image", "label": "Thumbnail Image"}
+    ]
+  }
+  ]
+}
+{% endschema %}

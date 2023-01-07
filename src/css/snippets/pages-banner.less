@@ -1,0 +1,97 @@
+.page-banner {
+    width: 100%;
+    border-bottom: solid 1px #A3A3A3;
+    overflow-x: hidden;
+    .slide-banner {
+        height: 37.5vw;
+        width: 100%;
+        object-fit: cover;
+    }
+    .swiper-banner-foot {
+        height: 8.85vw;
+        background: #fff;
+    }
+    .page-banner-container {
+        height: 32vw;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .brand-left-icon {
+        width: 3.645vw;
+    }
+    .brand-right-icon {
+        width: 4.5vw;
+    }
+    .banner-icon {
+        height: 5.55vw;
+    }
+    .page-banner-content {
+        max-width: 35vw;
+        text-align: right;
+        align-items: flex-end;
+        transform: translateY(50px);
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+    .slideshow-pagination {
+        align-items: center;
+        bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        transition: opacity .3s;
+        width: 100%;
+        z-index: 10;
+    }
+}
+.ani-slide-top .page-banner-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+.page-banner-content .h1 {
+    color: #fff;
+    margin-bottom: 24px;
+}
+@media screen and (max-width: 768px) {
+    .page-banner {
+        .slide-banner {
+            height: 118vw;
+            width: 100%;
+            object-fit: cover;
+        }
+        .swiper-banner-foot {
+            height: 27vw;
+        }
+        .page-banner-container {
+            height: 54vw;
+            bottom: 7.7vw;
+        }
+        .brand-left-icon {
+            width: 7.6vw;
+        }
+        .brand-right-icon {
+            width: 10.5vw;
+        }
+        .banner-icon {
+            height: 12vw;
+        }
+        .page-banner-content {
+            max-width: 80vw;
+            transform: translateY(20px);
+        }
+        .ani-slide-top {
+            .page-banner-content {
+                transform: translateY(0);
+            }
+        }
+        .page-banner-content .h1 {
+            margin-bottom: 3vw;
+        }
+        .slideshow-pagination {
+            bottom: 10px;
+        }
+    }
+}
