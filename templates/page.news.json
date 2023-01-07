@@ -216,7 +216,10 @@
         "recent_title": "KOL VIDEO",
         "announced_title": "NEWS HIGHLIGHT",
         "exihibition_title": "LATEST NEWS",
-        "show_all": "EXPLORE MORE"
+        "show_all": "EXPLORE MORE",
+        "kol_join_title": "Interested to be our KOL?\nLet join our Affiliate Program now!",
+        "kol_btn": "JOIN NOW",
+        "kol_url": "https:\/\/www.jackery.com\/##"
       }
     }
   },
