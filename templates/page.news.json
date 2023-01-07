@@ -176,10 +176,11 @@
         "5dd5516a-077d-41c7-847b-abb5a023cdac": {
           "type": "grid_item",
           "settings": {
-            "title": "",
-            "date": "",
+            "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest",
+            "date": "October 17, 2021",
             "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE"
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/brand_events_mb_01.png"
           }
         }
       },
