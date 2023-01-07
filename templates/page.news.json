@@ -156,10 +156,11 @@
         "501563c4-1d66-4f56-b610-94ab1b017fbb": {
           "type": "grid_item",
           "settings": {
-            "title": "",
-            "date": "",
+            "title": "CES, The Most Influential Tech Event in the World",
+            "date": "October 17, 2021",
             "link": "https:\/\/www.jackery.com\/##",
-            "link_text": "VIEW MORE"
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/user-guide-banner-m.jpg"
           }
         },
         "d52a9bb4-dc44-4dfd-a7a0-85c6b68c4c9a": {
