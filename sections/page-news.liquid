@@ -1,14 +1,14 @@
 <style>
-    .section-page-news .image-text-swiper {
+    .page-news-main .image-text-swiper {
         background: #ffffff;
     }
-    .section-page-news .events-list {
+    .page-news-main .events-list {
         padding-bottom: 120px;
     }
-    .section-page-news .image-text-swiper {
+    .page-news-main .image-text-swiper {
         padding-bottom: 70px;
     }
-    .section-page-news .image-text-swiper .slideshow-pagination {
+    .page-news-main .image-text-swiper .slideshow-pagination {
         bottom: 50px;
     }
     .kol-join-block {
@@ -20,21 +20,27 @@
     .kol-join-title {
         margin-right: 114px;
     }
+    .kol-join-block .a-button-fill {
+        padding: 12px 76px;
+        border-radius: 40px;
+    }
 </style>
 
-{% include 'pages-banner', blocks: section.blocks, autoplay_speed: section.settings.autoplay_speed, autoplay: section.settings.autoplay %}
-{% include 'card-swiper', title: section.settings.announced_title, blocks: section.blocks %}
-{% include 'grid-list', title: section.settings.exihibition_title, blocks: section.blocks, show_all: section.settings.show_all %}
-{% include 'image-text-swiper', title: section.settings.recent_title, blocks: section.blocks %}
-<div class="kol-join-block section-container flex justify-between items-center">
-    <div class="kol-join-title text-xl font-bold">
-        Let join our Affiliate Program now
-    </div>
+<div class="page-news-main">
+    {% include 'pages-banner', blocks: section.blocks, autoplay_speed: section.settings.autoplay_speed, autoplay: section.settings.autoplay %}
+    {% include 'card-swiper', title: section.settings.announced_title, blocks: section.blocks %}
+    {% include 'grid-list', title: section.settings.exihibition_title, blocks: section.blocks, show_all: section.settings.show_all %}
+    {% include 'image-text-swiper', title: section.settings.recent_title, blocks: section.blocks %}
+    <div class="kol-join-block section-container flex justify-between items-center">
+        <div class="kol-join-title text-xl font-bold">
+            {{section.settings.kol_join_title | escape}}
+        </div>
 
-    <a class="slide-link a-button-fill text-base" href="#">
-        JOIN NOW
-        <span class="iconfont jackery-icon-arrow-right"></span>
-    </a>
+        <a class="slide-link a-button-fill text-lg" href="{{section.settings.kol_url}}">
+            {{section.settings.kol_btn | escape}}
+            <span class="iconfont jackery-icon-arrow-right text-lg"></span>
+        </a>
+    </div>
 </div>
 
 {% schema %}
@@ -47,7 +53,11 @@
         {"type": "textarea", "id": "recent_title", "label": "Section recent events title", "default": "VIEW RECENT JACKERY\nBRAND EVENTS"},
         {"type": "textarea", "id": "announced_title", "label": "Section announced title", "default": "Here’s what we announced"},
         {"type": "textarea", "id": "exihibition_title", "label": "Section exihibition title", "default": "View recent Jackery\nexihibition events"},
-        {"type": "text", "id": "show_all", "label": "Show all text", "default": "EXPLORE MORE"}
+        {"type": "text", "id": "show_all", "label": "Show all text", "default": "EXPLORE MORE"},
+        {"type": "textarea", "id": "kol_join_title", "label": "KOL JOIN TITLE", "default": "Interested to be our KOL?\nLet join our Affiliate Program now!"},
+        {"type": "text", "id": "kol_btn", "label": "KOL Join buton text", "default": "JOIN NOW"},
+        {"type": "url", "id": "kol_url", "label": "KOL Join link"}
+
     ],
     "blocks": [
         {
