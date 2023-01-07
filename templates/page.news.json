@@ -50,10 +50,12 @@
         "1b0ed68e-f64a-44e0-89e7-6a3ff2330a3e": {
           "type": "recent_events",
           "settings": {
-            "title": "",
-            "sub_text": "",
-            "link": "",
-            "link_text": "VIEW MORE"
+            "title": "Jackery Day",
+            "sub_text": "Jackery has ushered in its 10th anniversary in 2022, and we have held a 10th anniversary appreciation meeting in Shenzhen in October, which was completely powered by Jackery products from the beginning to the end. On site Jackery  donated a batch of solar generators to the Shenzhen Public Welfare Rescue Team to contribute to the urban emergency rescue.",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/brand_events_pc_03_1.png",
+            "m_image": "shopify:\/\/shop_images\/brand_events_mb_03.png"
           }
         },
         "7214c11e-4a1c-4744-a88b-1e58b9191d24": {
