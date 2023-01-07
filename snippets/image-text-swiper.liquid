@@ -165,7 +165,7 @@
                     that.stopVideo(modal);
                 }
             });
-        },
+        }
         stopVideo(el) {
             let video = el.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
             if (!video) return;
@@ -175,7 +175,7 @@
             return;
             }
             video.src = video.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
-        },
+        }
         autoplayVideo(el) {
             let video = el.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
             if (!video) return;
