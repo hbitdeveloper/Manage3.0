@@ -86,10 +86,11 @@
         "1c9cfba5-31a3-4282-ac50-edd6cb3780a0": {
           "type": "announced_block",
           "settings": {
-            "title": "",
-            "sub_text": "",
-            "link": "",
-            "link_text": "VIEW MORE"
+            "title": "Official Release at IFA 2022: Jackery Introduces Its Fastest Ultra-Charging…",
+            "sub_text": "Jackery, the leader of innovative portable power and green outdoor energy solutions",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/announced_pc_01_1.png"
           }
         }
       },
