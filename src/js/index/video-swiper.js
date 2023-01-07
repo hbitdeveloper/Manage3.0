@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-01 17:11:17
  * @LastEditors: Leo
- * @LastEditTime: 2023-01-07 15:53:05
+ * @LastEditTime: 2023-01-07 16:17:13
  * @FilePath: \3.0-manger\src\js\index\video-swiper.js
  */
 import {autoplayVideo, stopVideo} from '../utils/index.js'
@@ -130,7 +130,6 @@ class VideoSlideshow {
     let player = videojs('index-section-video');
     player.src({ type: "video/mp4", src: vModalSrc });
 
-    const that = this
     modals.init({
       callbackOpen: function (toggle, modal) {
         autoplayVideo(modal);

@@ -6,8 +6,12 @@
                 {% for block in blocks %}
                     {% case block.type %}
                         {% when 'recent_events' %}
-                        <div class="swiper-slide flex flex-col">
-                            <div class="image-text-imgblock">
+                        <div 
+                            class="swiper-slide flex flex-col" 
+                            block-id="{{block.id}}" 
+                            block-src="{{block.settings.video_url}}"
+                        >
+                            <div class="image-text-imgblock relative">
                                 <img 
                                     class="pc-block"
                                     src="{{block.settings.image | img_url: '1200x'}}"
@@ -19,6 +23,12 @@
                                     src="{{block.settings.m_image | img_url: '630x'}}"
                                     alt="{{block.settings.title | escape}}"
                                 >
+
+                                {% if block.settings.video_link != blank%}
+                                    <div class="absolute mobile-block" data-modal="#s{{block.id}}">
+                                        <span class="iconfont jackery-icon-24gl-playCircle"></span>
+                                    </div>
+                                {% endif %}
                             </div>
                             <div class="image-text-swiper-content relative">
                                 <div class="image-text-swiper-name text-xl">
@@ -47,6 +57,27 @@
         <div class="slideshow-pagination"></div>
 </div>
 
+<div class="modal video-swiper-modal" data-modal-window id="">
+    <video 
+        id="index-section-video" 
+        class="video-js video-modal-video vjs-modal" 
+        controls 
+        preload="auto" 
+        poster="" 
+        data-setup=''
+>
+    <source
+        src="https://cdn.shopify.com/videos/c/o/v/b4c985e0a54e4f348521244be8303c05.mp4"
+        type="video/mp4"
+    />     
+    <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+    </video>
+    <div class="video-modal-close" data-modal-close></div>
+</div>
+
 <script>
     class ImageTextSwiper {
         constructor(el) {
@@ -57,6 +88,7 @@
             this.init();
         }
         init() {
+            const self = this
             this.swiper = new Swiper(this.DOM.swiperContainer, {
                 slidesPerView: 'auto',
                 spaceBetween: 0,
@@ -96,6 +128,7 @@
                     transitionEnd: function () {
                         let slide = this.slides.eq(this.activeIndex);
                         slide.addClass('ani-fade-img');
+                        self.animate();
                     },
                     resize: function () {
                         this.update()
@@ -106,6 +139,52 @@
                     prevEl: `${this.DOM.el} .slideshow-navigation-button.prev`,
                 },
             });
+        },
+        animate() { // video
+            const DOC = document.querySelector(this.DOM.el)
+            this.DOM.activeSlide = DOC.querySelector('.swiper-slide-active');
+
+            const vModalID = this.DOM.activeSlide.getAttribute("block-id");
+            const vModalSrc = this.DOM.activeSlide.getAttribute("block-src");
+            const vModalDOM = document.querySelector(".video-swiper-modal")
+            vModalDOM.setAttribute("id", 's' + vModalID);
+
+            if(!vModalSrc) {
+                return
+            }
+
+            let player = videojs('index-section-video');
+            player.src({ type: "video/mp4", src: vModalSrc });
+
+            const that = this
+            modals.init({
+                callbackOpen: function (toggle, modal) {
+                    that.autoplayVideo(modal);
+                },
+                callbackClose: function (toggle, modal) {
+                    that.stopVideo(modal);
+                }
+            });
+        },
+        stopVideo(el) {
+            let video = el.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+            if (!video) return;
+
+            if (video.tagName.toLowerCase() === 'video') {
+            video.pause();
+            return;
+            }
+            video.src = video.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
+        },
+        autoplayVideo(el) {
+            let video = el.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+            if (!video) return;
+            
+            if (video.tagName.toLowerCase() === 'video') {
+            video.play();
+            return;
+            }
+            video.src = video.src + (video.src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
         }
     }
 
