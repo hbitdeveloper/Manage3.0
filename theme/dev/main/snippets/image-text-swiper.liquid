@@ -9,7 +9,7 @@
                         <div 
                             class="swiper-slide flex flex-col" 
                             block-id="{{block.id}}" 
-                            block-src="{{block.settings.video_url}}"
+                            block-src="{{block.settings.video_link}}"
                         >
                             <div class="image-text-imgblock relative">
                                 <img 
@@ -25,7 +25,7 @@
                                 >
 
                                 {% if block.settings.video_link != blank%}
-                                    <div class="absolute mobile-block" data-modal="#s{{block.id}}">
+                                    <div class="absolute slide-video-btn" data-modal="#s{{block.id}}">
                                         <span class="iconfont jackery-icon-24gl-playCircle"></span>
                                     </div>
                                 {% endif %}
