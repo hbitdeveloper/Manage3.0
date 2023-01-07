@@ -1,12 +1,17 @@
+<style>
+
+</style>
+
 {% include 'pages-banner', blocks: section.blocks, autoplay_speed: section.settings.autoplay_speed, autoplay: section.settings.autoplay %}
-{% include 'image-text-swiper', title: section.settings.recent_title, blocks: section.blocks %}
 {% include 'card-swiper', title: section.settings.announced_title, blocks: section.blocks %}
 {% include 'grid-list', title: section.settings.exihibition_title, blocks: section.blocks, show_all: section.settings.show_all %}
+{% include 'image-text-swiper', title: section.settings.recent_title, blocks: section.blocks %}
+
 
 {% schema %}
 {
-    "name": "Page Events main",
-    "class": "section-page-events",
+    "name": "Page News main",
+    "class": "section-page-news",
     "settings": [
         {"type": "checkbox", "id": "autoplay", "label": "Auto-change slides", "default": true},
         {"type": "range", "id": "autoplay_speed", "label": "Change images every", "default": 7, "min": 5, "max": 10, "step": 1, "unit": "s"},
