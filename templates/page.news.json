@@ -76,10 +76,11 @@
         "3252f802-e037-4cef-a7da-28ec20262ef5": {
           "type": "announced_block",
           "settings": {
-            "title": "",
-            "sub_text": "",
-            "link": "",
-            "link_text": "VIEW MORE"
+            "title": "Jackery, Honda Team Up On Solar Ready, Lithium Power License Deal",
+            "sub_text": "Jackery has been chosen by American Honda Motor Co., Inc. to develop a best‐in‐class consumer offering of outdoor…",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/announced_pc_03_1.png"
           }
         },
         "1c9cfba5-31a3-4282-ac50-edd6cb3780a0": {
