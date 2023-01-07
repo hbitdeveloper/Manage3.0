@@ -282,6 +282,7 @@ p,
   padding: 0.625vw 1.5vw;
   text-decoration: none;
   transition: all 0.3s ease;
+  justify-content: center;
 }
 .a-button-fill:hover {
   background: var(--primary-color);
