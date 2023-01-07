@@ -66,10 +66,11 @@
         "3185ee03-4e24-45f3-8b0c-d54068185111": {
           "type": "announced_block",
           "settings": {
-            "title": "",
-            "sub_text": "",
-            "link": "",
-            "link_text": "VIEW MORE"
+            "title": "Marking a Decade of Engineering the Portable Power Revolution",
+            "sub_text": "While it might be seen as standard “van life” equipment now, the all-in-one portable power station didn’t exist as a …",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/1_6d6b31c0-1a63-46d0-bac7-0b7311666e33.png"
           }
         },
         "3252f802-e037-4cef-a7da-28ec20262ef5": {
