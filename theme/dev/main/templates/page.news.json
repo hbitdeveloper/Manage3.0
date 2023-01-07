@@ -39,28 +39,34 @@
         "bf1570c4-c695-4d1e-9348-a4fdcb1e26f3": {
           "type": "recent_events",
           "settings": {
-            "title": "",
-            "sub_text": "",
-            "link": "",
-            "link_text": "VIEW MORE"
+            "title": "JACKERY 2000 PRO 2200w UPS Solar …",
+            "sub_text": "Jackery, a global top-selling outdoor solar generator brand, has teamed up with actor and outdoors enthusiast Chris Pratt to power outdoor experiences further …",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/6_3117e260-4e70-411b-880b-4d5b86440e27.png",
+            "m_image": "shopify:\/\/shop_images\/7_8beba9bf-85a9-45d3-9b8a-488e2fa59e1b.png"
           }
         },
         "1b0ed68e-f64a-44e0-89e7-6a3ff2330a3e": {
           "type": "recent_events",
           "settings": {
-            "title": "",
-            "sub_text": "",
-            "link": "",
-            "link_text": "VIEW MORE"
+            "title": "Jackery Day",
+            "sub_text": "Jackery has ushered in its 10th anniversary in 2022, and we have held a 10th anniversary appreciation meeting in Shenzhen in October, which was completely powered by Jackery products from the beginning to the end. On site Jackery  donated a batch of solar generators to the Shenzhen Public Welfare Rescue Team to contribute to the urban emergency rescue.",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/brand_events_pc_03_1.png",
+            "m_image": "shopify:\/\/shop_images\/brand_events_mb_03.png"
           }
         },
         "7214c11e-4a1c-4744-a88b-1e58b9191d24": {
           "type": "recent_events",
           "settings": {
-            "title": "",
-            "sub_text": "",
-            "link": "",
-            "link_text": "VIEW MORE"
+            "title": "Events Title Goes on Here",
+            "sub_text": "Jackery has ushered in its 10th anniversary in 2022, and we have held a 10th anniversary appreciation meeting in Shenzhen in October, which was completely powered by Jackery products from the beginning to the end. On site Jackery  donated a batch of solar generators to the Shenzhen Public Welfare Rescue Team to contribute to the urban emergency rescue.",
+            "link": "https:\/\/www.jackery.com\/##",
+            "link_text": "VIEW MORE",
+            "image": "shopify:\/\/shop_images\/3_2297d48d-159a-4258-971a-7011bf7f0065.png",
+            "m_image": "shopify:\/\/shop_images\/brand_events_mb_02.png"
           }
         },
         "3185ee03-4e24-45f3-8b0c-d54068185111": {
@@ -207,7 +213,7 @@
       "settings": {
         "autoplay": true,
         "autoplay_speed": 7,
-        "recent_title": "NEWS HIGHLIGHT----1",
+        "recent_title": "KOL VIDEO",
         "announced_title": "NEWS HIGHLIGHT",
         "exihibition_title": "LATEST NEWS",
         "show_all": "EXPLORE MORE"
