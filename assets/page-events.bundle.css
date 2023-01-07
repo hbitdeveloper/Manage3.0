@@ -156,6 +156,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 .image-text-swiper .slide-video-btn .iconfont {
   font-size: 120px;
@@ -196,9 +197,10 @@
   }
   .image-text-container .swiper-slide-active {
     margin: 0;
+    box-shadow: 0px 2px 20px 12px rgba(98, 98, 98, 0.1);
   }
   .image-text-swiper-content {
-    padding: 10.6vw 0;
+    padding: 10.6vw 5.3vw;
     text-align: center;
   }
   .image-text-swiper-name {
@@ -289,7 +291,7 @@
     margin: 0;
   }
   .card-swiper-slide-content {
-    padding: 10.6vw 0 10.6vw 0;
+    padding: 10.6vw 5.3vw;
   }
   .card-swiper-slide-des {
     display: none;
