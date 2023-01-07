@@ -1,12 +1,41 @@
 <style>
-
+    .section-page-news .image-text-swiper {
+        background: #ffffff;
+    }
+    .section-page-news .events-list {
+        padding-bottom: 120px;
+    }
+    .section-page-news .image-text-swiper {
+        padding-bottom: 70px;
+    }
+    .section-page-news .image-text-swiper .slideshow-pagination {
+        bottom: 50px;
+    }
+    .kol-join-block {
+        background: #FFFFFF;
+        box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.2);
+        margin-bottom: 120px;
+        padding: 34px 40px;
+    }
+    .kol-join-title {
+        margin-right: 114px;
+    }
 </style>
 
 {% include 'pages-banner', blocks: section.blocks, autoplay_speed: section.settings.autoplay_speed, autoplay: section.settings.autoplay %}
 {% include 'card-swiper', title: section.settings.announced_title, blocks: section.blocks %}
 {% include 'grid-list', title: section.settings.exihibition_title, blocks: section.blocks, show_all: section.settings.show_all %}
 {% include 'image-text-swiper', title: section.settings.recent_title, blocks: section.blocks %}
+<div class="kol-join-block section-container flex justify-between items-center">
+    <div class="kol-join-title text-xl font-bold">
+        Let join our Affiliate Program now
+    </div>
 
+    <a class="slide-link a-button-fill text-base" href="#">
+        JOIN NOW
+        <span class="iconfont jackery-icon-arrow-right"></span>
+    </a>
+</div>
 
 {% schema %}
 {
