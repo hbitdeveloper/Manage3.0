@@ -147,20 +147,6 @@
 .image-text-swiper .ani-fade-img .image-text-imgblock img {
   animation: zoom-fade 2s cubic-bezier(0.26, 0.54, 0.32, 1) 0s forwards;
 }
-.image-text-swiper .image-text-imgblock img {
-  height: 500px;
-  width: 100%;
-  object-fit: cover;
-}
-.image-text-swiper .slide-video-btn {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.image-text-swiper .slide-video-btn .iconfont {
-  font-size: 120px;
-  color: #fff;
-}
 @keyframes zoom-fade {
   from {
     /* opacity: 0.6; */
@@ -211,14 +197,13 @@
     justify-content: center;
   }
   .image-text-swiper .image-text-imgblock img {
+    width: 100%;
     height: 76vw;
+    object-fit: cover;
     overflow: hidden;
   }
   .image-text-swiper .slideshow-pagination {
     bottom: 12px;
-  }
-  .image-text-swiper .slide-video-btn .iconfont {
-    font-size: 13.3vw;
   }
 }
 .card-swiper {
