@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-28 09:58:32
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-28 09:58:32
+ * @LastEditTime: 2023-01-07 15:45:27
  * @FilePath: \3.0-manger\src\js\utils\index.js
  */
 export function debounce(fn, wait) {
@@ -75,4 +75,33 @@ export function removeTrapFocus(elementToFocus = null) {
     document.removeEventListener('keydown', trapFocusHandlers.keydown);
 
     if (elementToFocus) elementToFocus.focus();
+}
+
+/*
+    指定容器下 - autoplay video
+    el - video 父元素
+*/ 
+export function autoplayVideo(el) {
+    let video = el.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+    if (!video) return;
+    
+    if (video.tagName.toLowerCase() === 'video') {
+      video.play();
+      return;
+    }
+    video.src = video.src + (video.src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
+}
+/*
+    指定容器下 - stop video
+    el - video 父元素
+*/ 
+export function stopVideo(el) {
+    let video = el.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+    if (!video) return;
+
+    if (video.tagName.toLowerCase() === 'video') {
+      video.pause();
+      return;
+    }
+    video.src = video.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
 }

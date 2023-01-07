@@ -1,9 +1,10 @@
 /*
  * @Date: 2022-12-01 17:11:17
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-16 15:35:08
- * @FilePath: \shopify3.0\src\js\index\video-swiper.js
+ * @LastEditTime: 2023-01-07 15:53:05
+ * @FilePath: \3.0-manger\src\js\index\video-swiper.js
  */
+import {autoplayVideo, stopVideo} from '../utils/index.js'
 class VideoSlideshow {
   constructor(el) {
     this.DOM = { el };
@@ -26,6 +27,7 @@ class VideoSlideshow {
       spaceBetween: 30,
       centeredSlides: true,
       preloadImages: true,
+      followFinger: false,
       updateOnImagesReady: true,
       lazy: true,
       pagination: {
@@ -67,28 +69,7 @@ class VideoSlideshow {
     this.slideshow.on('slideNextTransitionStart', () => this.animate('next'));
     this.slideshow.on('slidePrevTransitionStart', () => this.animate('prev'));
   }
-  autoplayVideo(modal) {
-    var video = modal.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
-    if (!video) return;
-    // HTML5 video play
-    if (video.tagName.toLowerCase() === 'video') {
-      video.play();
-      return;
-    }
-    video.src = video.src + (video.src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
-  }
-  stopVideo(modal) {
-    // YouTube or HTML5 video in the modal
-    var video = modal.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
-    if (!video) return;
-    // pause HTML5 video
-    if (video.tagName.toLowerCase() === 'video') {
-      video.pause();
-      return;
-    }
-    // Remove autoplay from video src
-    video.src = video.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
-  }
+
   animate(direction = 'next') {
     gsap.set(this.DOM.el.querySelectorAll(".slide-content"), {
       opacity: 0
@@ -152,10 +133,10 @@ class VideoSlideshow {
     const that = this
     modals.init({
       callbackOpen: function (toggle, modal) {
-        that.autoplayVideo(modal);
+        autoplayVideo(modal);
       },
       callbackClose: function (toggle, modal) {
-        that.stopVideo(modal);
+        stopVideo(modal);
       }
     });
   }
