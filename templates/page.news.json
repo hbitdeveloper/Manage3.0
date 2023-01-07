@@ -92,6 +92,87 @@
             "link_text": "VIEW MORE",
             "image": "shopify:\/\/shop_images\/announced_pc_01_1.png"
           }
+        },
+        "9a1f0702-829e-4287-a839-5f5a4488896e": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "f6ab8cdf-18cb-4315-94b9-2c7467ebb07c": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "5438d4db-07af-4750-88e1-9e6d67afbb7a": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "0bd6d6f7-576d-41fa-9a74-af64c1196038": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "a6fd4916-4bf4-409a-ae69-27a13b60d927": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "11b3ce4d-a4fe-4922-bd0b-8c07db85b841": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "501563c4-1d66-4f56-b610-94ab1b017fbb": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "d52a9bb4-dc44-4dfd-a7a0-85c6b68c4c9a": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
+        },
+        "5dd5516a-077d-41c7-847b-abb5a023cdac": {
+          "type": "grid_item",
+          "settings": {
+            "title": "",
+            "date": "",
+            "link": "",
+            "link_text": "VIEW MORE"
+          }
         }
       },
       "block_order": [
@@ -103,14 +184,23 @@
         "7214c11e-4a1c-4744-a88b-1e58b9191d24",
         "3185ee03-4e24-45f3-8b0c-d54068185111",
         "3252f802-e037-4cef-a7da-28ec20262ef5",
-        "1c9cfba5-31a3-4282-ac50-edd6cb3780a0"
+        "1c9cfba5-31a3-4282-ac50-edd6cb3780a0",
+        "9a1f0702-829e-4287-a839-5f5a4488896e",
+        "f6ab8cdf-18cb-4315-94b9-2c7467ebb07c",
+        "5438d4db-07af-4750-88e1-9e6d67afbb7a",
+        "0bd6d6f7-576d-41fa-9a74-af64c1196038",
+        "a6fd4916-4bf4-409a-ae69-27a13b60d927",
+        "11b3ce4d-a4fe-4922-bd0b-8c07db85b841",
+        "501563c4-1d66-4f56-b610-94ab1b017fbb",
+        "d52a9bb4-dc44-4dfd-a7a0-85c6b68c4c9a",
+        "5dd5516a-077d-41c7-847b-abb5a023cdac"
       ],
       "settings": {
         "autoplay": true,
         "autoplay_speed": 7,
         "recent_title": "NEWS HIGHLIGHT----1",
         "announced_title": "NEWS HIGHLIGHT",
-        "exihibition_title": "View recent Jackery\nexihibition events",
+        "exihibition_title": "LATEST NEWS",
         "show_all": "EXPLORE MORE"
       }
     }
