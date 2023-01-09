@@ -1,5 +1,8 @@
 <style>
 .img-icon {width: 96px; height: 96px; font-size: 96px; color: var(--primary-color); display: inline-block;}
+@media screen and (max-width: 768px) {
+	.img-icon {width: 12vw; height: 12vw; font-size: 12vw;}
+}
 
 .yModal, .yModal .mask {width: 100%; height: 100%; top: 0; left: 0;}
 .yModal {
@@ -17,14 +20,13 @@
 .yModal .y-modal-body .content {width: 100%; padding: var(--gap);}
 .yModal .y-modal-body h4 {
 	width: 100%; line-height: 39px; color: var(--text-main-color); font-weight: bold;
-	
 }
 .yModal .y-modal-body p {width: 100%; color: var(--text-sub-color); white-space: pre-line;}
 @media screen and (max-width: 768px) {
 	.yModal .y-modal-body {margin: 0; border-radius: 0;}
 }
 
-.layer-container {width: 100%; max-width: 1200px; margin: 0 auto;}
+.layer-container {width: calc(100% - 60px); max-width: 1200px; margin: 0 auto;}
 
 .banner {
 	width: 100%; height: 100vh; max-height: 890px; padding-top: 100px;
@@ -50,7 +52,7 @@
 
 @media screen and (max-width: 768px) {
 	.manuals .tab-container {width: 100%; overflow-x: auto; overflow-y: hidden;}
-	.manuals.pdf .tab {width: 180%;}
+	.manuals.pdf .tab {width: 180%; justify-content: space-between;}
 }
 
 .manuals .search-box {
@@ -74,7 +76,7 @@
 .manuals .list li:hover {transform: scale(1.035); box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.5);}
 .manuals .list li b {font-weight: 500; padding: 0 var(--gap); margin: 30px 0;}
 .manuals .list li .a-button {
-	width: 96%; max-width: 240px; height: 48px; color: var(--primary-color); background: transparent; border-radius: 24px; border: var(--border-primary);
+	width: calc(100% - 30px); max-width: 240px; height: 48px; color: var(--primary-color); background: transparent; border-radius: 24px; border: var(--border-primary);
 	margin: 0 auto; display: flex; align-items: center; justify-content: center; transition: all 0.3s;
 }
 .manuals .list li .a-button .jackery-icon-download {margin-right: 5px;}
@@ -82,10 +84,13 @@
 .manuals .list li .a-button:hover {color: #fff; background: var(--primary-color);}
 @media screen and (max-width: 768px) {
 	.manuals .list {grid-template-columns: repeat(2, 1fr);}
+	.manuals .list li {height: 200px;}
+	.manuals .list li .a-button {height: 32px;}
 }
 
 .manuals .more {color: var(--primary-color); text-align: center; margin: 2.6042vw auto 0; display: block;}
 .manuals .more i {margin-left: 5px;}
+.manuals .list li b {margin: 15px 0;}
 
 .maintenance .list {grid-template-columns: repeat(3,1fr);}
 .maintenance .list li {padding: var(--gap); justify-content: flex-start;}
