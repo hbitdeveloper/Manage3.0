@@ -1,0 +1,130 @@
+.events-list {
+    background: #F5F5F5;
+    padding: 120px 0 160px 0;
+}
+.events-list-container {
+    --hide: 99;
+}
+.events-list-btn:checked+.events-list-container {
+    --hide: 0;
+}
+.events-list-container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3,1fr);
+
+    grid-template-rows: repeat(2, minmax(0, 1fr)) repeat(var(--hide), minmax(0, 0));
+    overflow: hidden;
+}
+.events-list-item {
+    background: #fff;
+    margin: 0 18px 18px 0;
+}
+.events-list-item:nth-child(3n) {
+    margin-right: 0;
+}
+.events-list-item img {
+    height: 277px;
+    width: 100%;
+}
+.events-item-info {
+    padding: 20px;
+}
+.events-item-action {
+    margin-top: 12px;
+}
+.events-item-action .date {
+    font-size: 14px;
+    font-weight: 300;
+    color: #666666;
+}
+.events-item-action .a-button-fill {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 12px 27px;
+}
+
+.events-list-more {
+    margin: 0 auto;
+    margin-top: 70px;
+    width: max-content;
+}
+.events-list-more .a-button-solid {
+    font-size: 22px;
+    line-height: 27px;
+    padding: 20px 60px;
+    border-radius: 35px;
+    pointer-events: none;
+    min-width: 305px;
+    justify-content: center;
+}
+.events-list-more .jackery-icon-arrow-right {
+    transform: rotate(90deg);
+    font-size: 24px;
+    transition: all .3s;
+}
+.events-list-more .all {
+    display: none;
+}
+.events-list-btn:checked~.events-list-more .jackery-icon-arrow-right {
+    transform: rotate(270deg);
+}
+.events-list-btn:checked~.events-list-more .no_all {
+    display: none;
+}
+.events-list-btn:checked~.events-list-more .all {
+    display: inline-block;
+}
+@media screen and (max-width: 768px) {
+    .events-list {
+        padding: 8.4vw 0 27.6vw 0;
+    } 
+    .events-list-container {
+        --hide: 99;
+    }
+    .events-list-btn:checked+.events-list-container {
+        --hide: 0;
+    }
+    .events-list-container {
+        grid-template-columns: repeat(1,1fr);
+        max-width: 85vw;
+        grid-template-rows: repeat(2, minmax(0, 1fr)) repeat(var(--hide), minmax(0, 0));
+        overflow: hidden;
+    }
+    
+    .events-list-item img {
+        height: 60vw;
+        width: 100%;
+    }
+    .events-item-info {
+        padding: 5.3vw;
+    }
+    .events-item-action {
+        margin-top: 4.8vw;
+    }
+    .events-item-action .date {
+        font-size: 3.5vw;
+    }
+    .events-item-action .a-button-fill {
+        font-size: 3.5vw;
+        line-height: 3.5vw;
+        padding: 2.4vw 6.5vw;
+    }
+    .events-list-more {
+        margin-top: 8.6vw;
+    }
+    .events-list-more .a-button-solid {
+        font-size: 3.5vw;
+        line-height: 3.5vw;
+        padding: 3vw 7.5vw;
+        font-weight: bold;
+        border-radius: 4.8vw;
+        min-width: 40vw;
+    }
+    .events-list-more .jackery-icon-arrow-right {
+        font-size: 16px;
+    }
+    .events-list-item {
+        margin: 0 0 20px 0;
+    }
+}

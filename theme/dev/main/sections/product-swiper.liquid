@@ -1,0 +1,57 @@
+<div class="product-swiper-title h2">{{section.settings.title | escape}}</div>
+<div class="swiper-container slideshow product-slideshow">
+    <div class="swiper-wrapper">
+        {% for product in collections[section.settings.home_featured_products].products limit: section.settings.products_to_show %}
+            {% assign target = product.selected_or_first_available_variant %}
+            {% assign compare_at_price = target.compare_at_price %}
+            {% assign price = target.price | default: 1999 %}
+            {% assign available = target.available | default: false %}
+            {% assign money_price = price | money %}
+            {% if target == product and product.price_varies %}
+                {% assign money_price = 'products.product.price.from_price_html' | t: price: money_price %}
+            {% endif %}
+
+        <div class="swiper-slide slide">
+            <div class="slide-content absolute">
+                <div class="slide-product-name h3">{{product.title}}</div>
+                <a class="slide-product-button a-button-fill h4" href="{{product.url}}">{{section.settings.p_title | escape}} <span class="iconfont jackery-icon-arrow-right"></span></a>
+                <img src="{{product.featured_image | img_url: '600x'}}" alt="{{product.title}}" class="slide-product-img">
+                <div class="slide-product-price">
+                    <div class="slide-product-price-name h5">Sale price</div>
+                    <div class="slide-product-prices">
+                        <div class="slide-product-price-sale h3">{{ money_price }}</div>
+
+                        {%- unless product.price_varies == false and product.compare_at_price_varies %}
+                        <div class="slide-product-price-origin h3">{{ compare_at_price | money }}</div>
+                        {%- endunless -%}
+                    </div>
+                </div>
+                <a class="slide-product-compare underlines-btn">{{section.settings.p_more | escape}} <span class="iconfont jackery-icon-arrow-right"></span></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="slideshow-pagination"></div>
+    <div class="slideshow-navigation">
+        <div class="slideshow-navigation-button prev"><span class="iconfont jackery-icon-Next"></span></div>
+        <div class="slideshow-navigation-button next"><span class="iconfont jackery-icon-Next"></span></div>
+    </div>
+</div>
+<div class="product-swiper-bg"></div>
+
+<script src="{{ 'product-swiper.bundle.js' | asset_url }}" defer="defer"></script>
+{% schema %}
+{
+  "name": "Product swiper",
+  "tag": "section",
+  "class": "section product-swiper",
+  "settings": [
+      {"type": "textarea", "id": "title", "label": "Section title", "default": "Featured Products"},
+      {"type": "text", "id": "p_title", "label": "Link text", "default": "Shop now"},
+      {"type": "text", "id": "p_more", "label": "Button Compare text", "default": "Product Compare"},
+      {"type": "collection", "id": "home_featured_products", "label": "Collection"},
+      { "type": "range", "id": "products_to_show", "min": 3, "max": 12, "step": 1, "default": 4, "label": "Products show number" }
+  ],
+  "blocks": []
+}
+{% endschema %}

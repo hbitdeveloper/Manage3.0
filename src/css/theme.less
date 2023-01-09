@@ -1,0 +1,436 @@
+/* font-family */
+@font-face {
+  font-display: swap; font-family: 'Gilroy'; font-style: normal; font-weight: bold;
+  src: url('https://cdn.shopify.com/s/files/1/0550/0524/9633/files/gilroy-bold.woff2?v=1670917251') format('woff2'), url('https://cdn.shopify.com/s/files/1/0550/0524/9633/files/gilroy-bold.woff?v=1670917251') format('woff');
+}
+
+@font-face {
+  font-display: swap; font-family: 'Gilroy'; font-style: normal; font-weight: 700;
+  src: url('https://cdn.shopify.com/s/files/1/0550/0524/9633/files/gilroy-semibold.woff2?v=1670917251') format('woff2'), url('https://cdn.shopify.com/s/files/1/0550/0524/9633/files/gilroy-semibold.woff?v=1670917251') format('woff');
+}
+
+@font-face {
+  font-display: swap; font-family: 'Gilroy'; font-style: normal; font-weight: 500;
+  src: url('https://cdn.shopify.com/s/files/1/0550/0524/9633/files/gilroy-medium.woff2?v=1670917251') format('woff2'), url('https://cdn.shopify.com/s/files/1/0550/0524/9633/files/gilroy-medium.woff?v=1670917251') format('woff');
+}
+
+@font-face {
+  font-display: swap; font-family: 'Gilroy'; font-style: normal; font-weight: normal;
+  src: url('https://cdn.shopify.com/s/files/1/0550/0524/9633/files/gilroy-light.woff2?v=1670917251') format('woff2'), url('https://cdn.shopify.com/s/files/1/0550/0524/9633/files/gilroy-light.woff?v=1670917251') format('woff');
+}
+
+:root {
+  --primary-color: #fd5000;  /* 系统主题色 */
+  --text-black: #000;
+  --text-main-color: #333;  /* 标题、主要文本颜色 */
+  --text-sub-color: #666;  /* 常规、次要按钮颜色 */
+  --text-info-color: #999;  /* 副文案、辅助说明信息 */
+  --text-disable-color: #ccc;  /* 弱文案、失效、不可点 */
+  --input-border-color: #ddd;  /* 输入框、选择边框 */
+  --gap: 20px;  /* 通用边距和距离 */
+  --radius: 12px;  /* 通用圆角 */
+  --border-primary: 2px solid #fd5000;  /* 主题边框线和颜色 */
+  --border-grey: 1px solid #ccc;  /* 次要边框线和颜色 */
+  --normal-color: #fff;
+  --border-color-link: 1px solid #ddd;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Gilroy';
+  margin: 0; outline: none; padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+section {
+  max-width: 100vw;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+div,a,p,span,i,h1,h2,h3,h4,h5,h6,table,button,ul,li {
+  -webkit-tap-highlight-color: transparent;
+}
+ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article,
+aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { border: none; }
+
+em,i {
+  font-style: normal;
+}
+strong {
+  font-weight: normal;
+}
+ul,ol,li {
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+h1,
+.h1,
+.h1 .iconfont {
+  font-size: 3.64583vw;
+  font-weight: 700;
+  line-height: 3.64583vw;
+}
+
+h2,
+.h2,
+.h2 .iconfont {
+  font-size: 2.34375vw;
+  font-weight: 700;
+  line-height: 3.4375vw;
+}
+
+h3,
+.h3,
+.h3 .iconfont {
+  font-size: 1.875vw;
+  font-weight: 300;
+  line-height: 2.8125vw;
+}
+
+h4,
+.h4,
+.h4 .iconfont {
+  font-size: 1.35417vw;
+  font-weight: 300;
+  line-height: 2.03125vw;
+}
+
+h5,
+.h5,
+.h5 .iconfont {
+  font-size: 1.25vw;
+  font-weight: 300;
+  line-height: 1.875vw;
+}
+
+h6,
+.h6,
+.h6 .iconfont {
+  font-size: 0.72917vw;
+  font-weight: 300;
+  line-height: 1.09375vw;
+}
+
+p,
+.p,
+.p .iconfont {
+  font-size: 0.83333vw;
+  font-weight: 300;
+  line-height: 1.40625vw;
+}
+
+.p-text,
+.p-text .iconfont {
+  font-size: 0.83333vw;
+  font-weight: 300;
+  line-height: 1.40625vw;
+}
+
+.iconfont {
+  vertical-align: middle;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 5%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 147, 153, 30%);
+  border-radius: 2px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 20%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b6b7b9;
+}
+
+/* scrollbar */
+
+.pc-block {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.mobile-block {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+
+/* button */
+.underlines-btn {
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  width: max-content;
+}
+
+.underlines-btn::after {
+  border-bottom: 2px solid var(--primary-color);
+  bottom: -2px;
+  content: '';
+  left: 0;
+  position: absolute;
+  transform: scale(0);
+  transform-origin: 0 50%;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.underlines-btn:hover::after {
+  transform: scale(1);
+}
+
+.a-button-solid {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+  border: solid 2px var(--primary-color);
+  border-radius: 1.71875vw;
+  width: max-content;
+  color: #fff;
+  font-size: 1.25vw;
+  font-weight: 300;
+  line-height: 1.25vw;
+  padding: 0.625vw 1.66667vw;
+  transition: all 0.3s ease;
+}
+
+.a-button-solid:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.a-button-fill {
+  align-items: center;
+  background: transparent;
+  border: solid 0.105vw var(--primary-color);
+  border-radius: 1.71875vw;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.25vw;
+  font-weight: 300;
+  font-weight: bold;
+  line-height: 1.25vw;
+  padding: 0.625vw 1.5vw;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  justify-content: center;
+}
+
+.a-button-fill:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.a-button-fill .iconfont {
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* button */
+
+/* -----rate----- */
+.rate {
+  float: left;
+  height: 1.71875vw;
+  line-height: 1.71875vw;
+}
+
+.rate > label {
+  color: #ccc;
+  cursor: pointer;
+  float: right;
+  font-size: 1.71875vw;
+  margin-right: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1.71875vw;
+}
+
+.rate > label::before {
+  content: '\ea29';
+  font-family: 'iconfont';
+}
+
+.rate > label.checked ~ label,
+.rate > label.checked {
+  color: #ffc700;
+}
+
+/* -----rate----- */
+
+/* -----按钮箭头----- */
+.ra-btn {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 3.125vw;
+  height: 100px;
+  justify-content: center;
+  position: relative;
+  width: 100px;
+  .iconfont {
+    color: var(--text-info-color);
+    font-size: 60px !important;
+    transition: all 0.2s;
+  }
+}
+.ra-btn:hover .iconfont {
+  color: var(--primary-color);
+}
+
+/* -----按钮箭头----- */
+
+/* 版心 */
+.index-container {
+  margin: 0 auto;
+  max-width: 90%;
+  width: 1671px;
+}
+.section-container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+}
+/* 版心 */
+
+@media screen and (max-width: 768px) {
+  section {
+    overflow: visible;
+  }
+
+  ::-webkit-scrollbar {
+    height: unset;
+    width: unset;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: unset;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: unset;
+    border-radius: unset;
+    box-shadow: unset;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: unset;
+  }
+
+  h1,
+  .h1,
+  .h1 .iconfont {
+    font-size: 8.2vw;
+    letter-spacing: 0.5;
+    line-height: 8.8vw;
+  }
+
+  h2,
+  .h2,
+  .h2 .iconfont {
+    font-size: 7vw;
+    line-height: 8.46667vw;
+  }
+
+  h3,
+  .h3,
+  .h3 .iconfont {
+    font-size: 5.8vw;
+    line-height: 7.8vw;
+  }
+
+  h4,
+  .h4,
+  .h4 .iconfont {
+    font-size: 5.2vw;
+    line-height: 7.4vw;
+  }
+
+  h5,
+  .h5,
+  .h5 .iconfont {
+    font-size: 4.2vw;
+    line-height: 5.8vw;
+  }
+
+  h6,
+  .h6,
+  .h6 .iconfont {
+    font-size: 3.6vw;
+    line-height: 5vw;
+  }
+
+  p,
+  .p,
+  .p .iconfont {
+    font-size: 4.5vw;
+    line-height: 6vw;
+  }
+
+  .pc-block {
+    display: none !important;
+    opacity: 0 !important;
+  }
+
+  .mobile-block {
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  .a-button-solid,
+  .a-button-fill {
+    border-radius: 6.5vw;
+    border-width: 1px;
+    font-size: 4.5vw;
+    line-height: 4.5vw;
+    padding: 2.2vw 10vw;
+  }
+
+  /* 版心 */
+  .index-container {
+    margin: 0 auto;
+    max-width: 90%;
+    width: 85vw;
+  }
+  /* 版心 */
+
+  /* -----rate----- */
+  .rate {
+    height: 4.4vw;
+    line-height: 4.4vw;
+  }
+
+  .rate > label {
+    font-size: 4.4vw;
+    width: 4.4vw;
+  }
+  /* -----rate----- */
+}
+
+@import url(./common.less);
+@import url(./components//details-disclosure.less);
+@import url(./components/private-search.less);
+@import url(./components/header-menu.less);
