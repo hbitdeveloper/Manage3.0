@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-01 17:11:17
  * @LastEditors: Leo
- * @LastEditTime: 2023-01-09 10:33:41
+ * @LastEditTime: 2023-01-09 14:11:33
  * @FilePath: \3.0-manger\src\js\index\video-swiper.js
  */
 import {autoplayVideo, stopVideo} from '../utils/index.js'
@@ -49,7 +49,7 @@ class VideoSlideshow {
           return paginationItem;
         },
       },
-      effect: "fade",
+      effect: $(window).width() > 750 ? "slide" : "fade",
       navigation: {
         nextEl: '.slideshow-navigation-button.next',
         prevEl: '.slideshow-navigation-button.prev',
@@ -61,11 +61,6 @@ class VideoSlideshow {
         init: function () {
           self.animate('next');
         },
-      },
-      breakpoints: {
-        750: {
-          effect: "slide"
-        }
       }
     });
     this.initEvents();
