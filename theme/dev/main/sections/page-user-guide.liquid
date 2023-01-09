@@ -48,6 +48,11 @@
 
 .manuals .tab-content:not(.on) {display: none;}
 
+@media screen and (max-width: 768px) {
+	.manuals .tab-container {width: 100%; overflow-x: auto; overflow-y: hidden;}
+	.manuals.pdf .tab {width: 180%;}
+}
+
 .manuals .search-box {
 	width: 100%; max-width: 540px; height: 46px; margin: 0 auto 2.6vw;
 	display: flex; align-items: center; justify-content: center;
@@ -61,7 +66,7 @@
 	width: 146px; color: #fff; font-size: 18px; background-color: var(--primary-color);
 	border-top-right-radius: var(--radius); border-bottom-right-radius: var(--radius);
 }
-.manuals .list {display: grid; grid-template-columns: repeat(4,1fr); grid-gap: var(--gap);}
+.manuals .list {display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: var(--gap);}
 .manuals .list li {
 	width: 100%; height: 418px; text-align: center; background: #fff; box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.2);
 	display: flex; flex-flow: column; justify-content: center; align-items: center; transition: all 0.3s;
@@ -75,6 +80,9 @@
 .manuals .list li .a-button .jackery-icon-download {margin-right: 5px;}
 .manuals .list li .a-button .jackery-icon-arrow-right {margin-left: 5px;}
 .manuals .list li .a-button:hover {color: #fff; background: var(--primary-color);}
+@media screen and (max-width: 768px) {
+	.manuals .list {grid-template-columns: repeat(2, 1fr);}
+}
 
 .manuals .more {color: var(--primary-color); text-align: center; margin: 2.6042vw auto 0; display: block;}
 .manuals .more i {margin-left: 5px;}
