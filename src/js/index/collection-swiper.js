@@ -1,8 +1,8 @@
 /*
  * @Date: 2022-11-24 10:07:30
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-14 19:10:10
- * @FilePath: \shopify3.0\src\js\index\collection-swiper.js
+ * @LastEditTime: 2023-01-09 10:41:22
+ * @FilePath: \3.0-manger\src\js\index\collection-swiper.js
  */
 class Slideshow2 {
     constructor(el) {
@@ -20,8 +20,13 @@ class Slideshow2 {
           slidesPerGroup: 1,
           freeMode: true,
           watchSlidesProgress: true,
-          direction: $(window).width() > 750 ? "vertical" : "horizontal",
-          clickable: true
+          direction: "horizontal",
+          clickable: true,
+          breakpoints: {
+              750: {
+                direction: "vertical"
+              }
+          }
         });
         this.slideshow = new Swiper(document.querySelector('.slideshow22222'), {
             speed: 500,
@@ -29,7 +34,7 @@ class Slideshow2 {
             updateOnImagesReady: true,
             lazy: true,
             effect: "fade",
-            initialSlide: $(window).width() > 750 ? 0 : 1,
+            initialSlide: 1,
             scrollbar: {
                 el: '.swiper-scrollbar',
             },
@@ -41,6 +46,11 @@ class Slideshow2 {
             thumbs: {
               swiper: self.swiperImg
             },
+            breakpoints: {
+                750: {
+                    initialSlide: 0
+                }
+            }
         });
         this.initEvents();
     }

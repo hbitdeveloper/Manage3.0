@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-06 19:57:09
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-26 17:46:33
+ * @LastEditTime: 2023-01-09 10:37:12
  * @FilePath: \3.0-manger\src\js\index\voice-swiper.js
  */
 class vSlideshow {
@@ -23,7 +23,7 @@ class vSlideshow {
         var self = this;
         this.swiperImg = new Swiper(".user-voice .slideshow-thumbnail-container", {
           loop: true,
-          slidesPerView: $(window).width() > 750 ? "auto" : "auto",
+          slidesPerView: "auto",
           clickable: true,
           watchSlidesProgress: true,
           effect: "slide",
@@ -62,12 +62,16 @@ class vSlideshow {
                     self.animate('next');
                 },
             },
-
-            thumbs: $(window).width() > 750 ? {
-              swiper: this.swiperImg
-            } : null,
+            thumbs: null,
+            breakpoints: {
+                750: {
+                    thumbs: {
+                      swiper: this.swiperImg
+                    }
+                }
+            }
         });
-        this.initEvents();``
+        this.initEvents();
     }
     initEvents() {
         this.slideshow.on('slideNextTransitionStart', () => this.animate('next'));
