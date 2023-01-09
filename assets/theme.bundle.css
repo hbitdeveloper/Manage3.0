@@ -436,6 +436,11 @@ p,
     max-width: 90%;
     width: 85vw;
   }
+  .section-container {
+    margin: 0 auto;
+    max-width: 85vw;
+    width: 100%;
+  }
   /* 版心 */
   /* -----rate----- */
   .rate {
