@@ -42,15 +42,17 @@
     {% include 'card-swiper', title: section.settings.announced_title, blocks: section.blocks %}
     {% include 'grid-list', title: section.settings.exihibition_title, blocks: section.blocks, show_all: section.settings.show_all %}
     {% include 'image-text-swiper', title: section.settings.recent_title, blocks: section.blocks %}
-    <div class="kol-join-block section-container flex justify-between items-center">
-        <div class="kol-join-title text-xl font-bold">
-            {{section.settings.kol_join_title | escape}}
-        </div>
+    <div class="kol-join-block">
+        <div class="section-container flex justify-between items-center">
+            <div class="kol-join-title text-xl font-bold">
+                {{section.settings.kol_join_title | escape}}
+            </div>
 
-        <a class="slide-link a-button-fill text-lg" href="{{section.settings.kol_url}}">
-            {{section.settings.kol_btn | escape}}
-            <span class="iconfont jackery-icon-arrow-right text-lg"></span>
-        </a>
+            <a class="slide-link a-button-fill text-lg" href="{{section.settings.kol_url}}">
+                {{section.settings.kol_btn | escape}}
+                <span class="iconfont jackery-icon-arrow-right text-lg"></span>
+            </a>
+        </div>
     </div>
 </div>
 
