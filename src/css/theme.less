@@ -230,7 +230,6 @@ p,
   cursor: pointer;
   display: flex;
   font-size: 1.25vw;
-  font-weight: 300;
   font-weight: bold;
   line-height: 1.25vw;
   padding: 0.625vw 1.5vw;
@@ -317,6 +316,9 @@ p,
 /* 版心 */
 
 @media screen and (max-width: 768px) {
+  :root {
+    --gap: 10px;
+  }
   section {
     overflow: visible;
   }

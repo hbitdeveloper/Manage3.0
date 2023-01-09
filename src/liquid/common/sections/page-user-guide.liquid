@@ -1,6 +1,8 @@
 <style>
 .img-icon {width: 96px; height: 96px; font-size: 96px; color: var(--primary-color); display: inline-block;}
-
+@media screen and (max-width: 768px) {
+	.img-icon {width: 12vw; height: 12vw; font-size: 12vw;}
+}
 .yModal, .yModal .mask {width: 100%; height: 100%; top: 0; left: 0;}
 .yModal {
 	position: fixed;  z-index: 99999999; background: rgba(0, 0, 0, 0.7);
@@ -17,15 +19,12 @@
 .yModal .y-modal-body .content {width: 100%; padding: var(--gap);}
 .yModal .y-modal-body h4 {
 	width: 100%; line-height: 39px; color: var(--text-main-color); font-weight: bold;
-	
 }
 .yModal .y-modal-body p {width: 100%; color: var(--text-sub-color); white-space: pre-line;}
 @media screen and (max-width: 768px) {
 	.yModal .y-modal-body {margin: 0; border-radius: 0;}
 }
-
-.layer-container {width: 100%; max-width: 1200px; margin: 0 auto;}
-
+.layer-container {width: calc(100% - 60px); max-width: 1200px; margin: 0 auto;}
 .banner {
 	width: 100%; height: 100vh; max-height: 890px; padding-top: 100px;
 	background: url("{{ section.settings.image | img_url: 'master' }}") center no-repeat; background-size: cover;
@@ -35,7 +34,6 @@
 	.banner {padding-top: 32px;}
 	.banner h1, .banner h5 {width: 100%; text-align: center;}
 }
-
 .manuals h2 {text-align: center; margin-top: 6.25vw;}
 .manuals a {text-decoration: none;}
 .manuals .tab {
@@ -45,9 +43,11 @@
 .manuals .tab li {cursor: pointer; border-bottom: 3px transparent solid; margin-right: 3.125vw; transition: all 0.3s;}
 .manuals .tab li:last-child {margin-right: 0;}
 .manuals .tab li.on, .manuals .tab li:hover {font-weight: 500; border-color: var(--primary-color);}
-
 .manuals .tab-content:not(.on) {display: none;}
-
+@media screen and (max-width: 768px) {
+	.manuals .tab-container {width: 100%; overflow-x: auto; overflow-y: hidden;}
+	.manuals.pdf .tab {width: 180%; justify-content: space-between;}
+}
 .manuals .search-box {
 	width: 100%; max-width: 540px; height: 46px; margin: 0 auto 2.6vw;
 	display: flex; align-items: center; justify-content: center;
@@ -61,7 +61,7 @@
 	width: 146px; color: #fff; font-size: 18px; background-color: var(--primary-color);
 	border-top-right-radius: var(--radius); border-bottom-right-radius: var(--radius);
 }
-.manuals .list {display: grid; grid-template-columns: repeat(4,1fr); grid-gap: var(--gap);}
+.manuals .list {display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: var(--gap);}
 .manuals .list li {
 	width: 100%; height: 418px; text-align: center; background: #fff; box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.2);
 	display: flex; flex-flow: column; justify-content: center; align-items: center; transition: all 0.3s;
@@ -69,22 +69,25 @@
 .manuals .list li:hover {transform: scale(1.035); box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.5);}
 .manuals .list li b {font-weight: 500; padding: 0 var(--gap); margin: 30px 0;}
 .manuals .list li .a-button {
-	width: 96%; max-width: 240px; height: 48px; color: var(--primary-color); background: transparent; border-radius: 24px; border: var(--border-primary);
+	width: calc(100% - 30px); max-width: 240px; height: 48px; color: var(--primary-color); background: transparent; border-radius: 24px; border: var(--border-primary);
 	margin: 0 auto; display: flex; align-items: center; justify-content: center; transition: all 0.3s;
 }
 .manuals .list li .a-button .jackery-icon-download {margin-right: 5px;}
 .manuals .list li .a-button .jackery-icon-arrow-right {margin-left: 5px;}
 .manuals .list li .a-button:hover {color: #fff; background: var(--primary-color);}
-
+@media screen and (max-width: 768px) {
+	.manuals .list {grid-template-columns: repeat(2, 1fr);}
+	.manuals .list li {height: 200px;}
+	.manuals .list li .a-button {height: 32px;}
+}
 .manuals .more {color: var(--primary-color); text-align: center; margin: 2.6042vw auto 0; display: block;}
 .manuals .more i {margin-left: 5px;}
-
+.manuals .list li b {margin: 15px 0;}
 .maintenance .list {grid-template-columns: repeat(3,1fr);}
 .maintenance .list li {padding: var(--gap); justify-content: flex-start;}
 .maintenance .list li .a-button {max-width: 300px; height: 66px; border-radius: 33px;}
 .maintenance .list li b {height: 78px; padding: 0;}
 .maintenance .list li img {width: 100%; height: 200px; object-fit: cover;}
-
 @media only screen and (max-width: 768px) {
   .banner {background-image: url("{{ section.settings.m_image | img_url: 'master' }}")}
 }
