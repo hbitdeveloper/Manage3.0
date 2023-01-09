@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-02 15:16:12
  * @LastEditors: Leo
- * @LastEditTime: 2023-01-09 10:39:15
+ * @LastEditTime: 2023-01-09 14:16:41
  * @FilePath: \3.0-manger\src\js\index\scene-swiper.js
  */
 class sceneSlideshow {
@@ -28,21 +28,16 @@ class sceneSlideshow {
           slidesPerGroup: 1,
           freeMode: true,
           watchSlidesProgress: true,
-          direction: "horizontal",
+          direction: $(window).width() > 750 ? "vertical" : "horizontal",
           clickable: true,
-          breakpoints: {
-            750: {
-                direction: "vertical"
-            }
-          }
         });
         this.slideshow = new Swiper(this.DOM.el, {
             speed: 500,
             preloadImages: true,
             updateOnImagesReady: true,
             lazy: true,
-            effect: "fade",
-            direction: "horizontal",
+            effect: $(window).width() > 750 ? "slide" : "fade",
+            direction: $(window).width() > 750 ? "vertical" : "horizontal",
             scrollbar: {
                 el: '.swiper-scrollbar',
             },
@@ -54,12 +49,6 @@ class sceneSlideshow {
             thumbs: {
               swiper: this.swiperImg
             },
-            breakpoints: {
-                750: {
-                    effect: "slide",
-                    direction: "vertical"
-                }
-            }
         });
         this.initEvents();
     }

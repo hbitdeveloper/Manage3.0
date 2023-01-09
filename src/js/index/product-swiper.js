@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-05 18:29:39
  * @LastEditors: Leo
- * @LastEditTime: 2023-01-09 10:40:13
+ * @LastEditTime: 2023-01-09 14:17:06
  * @FilePath: \3.0-manger\src\js\index\product-swiper.js
  */
 class ProductSlideshow {
@@ -29,9 +29,9 @@ class ProductSlideshow {
                 delay: this.config.slideshow.delay,
                 disableOnInteraction: false,
             },
-            slidesPerView: 0,
+            slidesPerView: $(window).width() > 750 ? 'auto' : 0,
             spaceBetween: 25,
-            effect: "fade",
+            effect: $(window).width() > 750 ? "slide" : "fade",
             centeredSlides: true,
             preloadImages: true,
             updateOnImagesReady: true,
@@ -63,12 +63,6 @@ class ProductSlideshow {
                 init: function () {
                     self.animate('next');
                 },
-            },
-            breakpoints: {
-                750: {
-                    slidesPerView: "auto",
-                    effect: "slide"
-                }
             }
         });
         this.initEvents();
