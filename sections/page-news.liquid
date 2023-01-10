@@ -181,7 +181,7 @@
                 {% case block.type %}
                     {% when 'pdf_item' %}
                     <div class="pdf-grid-item">
-                        {% if block.image != blank %}
+                        {% if block.settings.image != blank %}
                             <img class="object-cover img-icon"
                                     src="{{block.settings.image | img_url: '100x'}}"
                                     alt="{{block.settings.title | escape}}">
@@ -189,7 +189,7 @@
                             <i class="img-icon iconfont jackery-icon-pdf"></i>
                         {% endif %}
                         <div class="text-sm text-center pdf-card-title">{{block.settings.title | escape}}</div>
-                        <a class="a-button-fill text-sm" href="{{block.link}}">
+                        <a class="a-button-fill text-sm" href="{{block.settings.link}}">
                             <i class="iconfont jackery-icon-download text-sm"></i>
                             {{block.settings.link_btn_txt}}
                         </a>
