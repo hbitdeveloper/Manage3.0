@@ -274,10 +274,21 @@
             "image": "shopify:\/\/shop_images\/icon_606d691d-21ee-4a89-8116-f14a6bb299fa.png",
             "link": "mailto:marketing@jackery.co"
           }
+        },
+        "11cd4241-2802-4ea5-883a-527d1e6e51f1": {
+          "type": "extra_block",
+          "settings": {
+            "title": "Press Inquiries",
+            "bolck_type": "url",
+            "info": "Press Inquiries:pr@jackery.com",
+            "image": "shopify:\/\/shop_images\/icon_1.png",
+            "link": "mailto:pr@jackery.com"
+          }
         }
       },
       "block_order": [
-        "151f93e8-a00c-42c5-9966-6f0ef9daeb3a"
+        "151f93e8-a00c-42c5-9966-6f0ef9daeb3a",
+        "11cd4241-2802-4ea5-883a-527d1e6e51f1"
       ],
       "settings": {
         "title": "Contact Us",
