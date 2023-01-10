@@ -188,10 +188,10 @@
                         {% else %}
                             <i class="img-icon iconfont jackery-icon-pdf"></i>
                         {% endif %}
-                        <div class="text-sm text-center pdf-card-title">{{block.title | escape}}</div>
+                        <div class="text-sm text-center pdf-card-title">{{block.settings.title | escape}}</div>
                         <a class="a-button-fill text-sm" href="{{block.link}}">
                             <i class="iconfont jackery-icon-download text-sm"></i>
-                            {{block.link_btn_txt}}
+                            {{block.settings.link_btn_txt}}
                         </a>
                     </div>
                 {% endcase %}
