@@ -50,7 +50,7 @@
         }
         init() {
             this.swiper = new Swiper(this.DOM.swiperContainer, {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 0,
                 centeredSlides: true,
                 loop: true,
@@ -76,6 +76,16 @@
                             paginationItem;
                         paginationItem += '</span>';
                         return paginationItem;
+                    }
+                },
+                on: {
+                    resize: function () {
+                        this.update()
+                    }
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3
                     }
                 }
             })
