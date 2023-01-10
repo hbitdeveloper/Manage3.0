@@ -906,9 +906,6 @@ body .page-section-swiper .a-button-fill {
     max-width: 90%;
     width: 85vw;
   }
-  .content-for-layout {
-    padding-top: 20.6vw;
-  }
   .announcement-bar .iconfont {
     color: var(--text-sub-color);
     font-size: 16px;
@@ -968,6 +965,9 @@ body .page-section-swiper .a-button-fill {
   /* section - header */
 }
 @media screen and (max-width: 768px) {
+  .content-for-layout {
+    padding-top: 20.6vw;
+  }
   .announcement-bar {
     background: #eeeae2;
     height: 10vw;
