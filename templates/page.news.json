@@ -191,6 +191,38 @@
             "image": "shopify:\/\/shop_images\/3_2297d48d-159a-4258-971a-7011bf7f0065.png",
             "m_image": "shopify:\/\/shop_images\/brand_events_mb_02.png"
           }
+        },
+        "59d80f66-1623-4954-b444-19c37d0a4ac6": {
+          "type": "pdf_item",
+          "settings": {
+            "title": "Brand Guidelines \n（Jackery VI 2.0)",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0970\/9262\/files\/Jackery_Explorer_1000_User_Manual_67c5df1f-c2b8-4f39-af69-ce5c7263ac90.pdf?v=1635235319",
+            "link_text": "DOWNLOAD"
+          }
+        },
+        "13a64854-704a-4624-ad16-41ca28b97a03": {
+          "type": "pdf_item",
+          "settings": {
+            "title": "",
+            "link": "",
+            "link_text": "DOWNLOAD"
+          }
+        },
+        "cfa2a6ce-74f5-4ea4-b6a5-ec142dd709a3": {
+          "type": "pdf_item",
+          "settings": {
+            "title": "",
+            "link": "",
+            "link_text": "DOWNLOAD"
+          }
+        },
+        "391c221b-ac93-4780-a9ba-1b1214ac261d": {
+          "type": "pdf_item",
+          "settings": {
+            "title": "",
+            "link": "",
+            "link_text": "DOWNLOAD"
+          }
         }
       },
       "block_order": [
@@ -211,7 +243,11 @@
         "5dd5516a-077d-41c7-847b-abb5a023cdac",
         "bf1570c4-c695-4d1e-9348-a4fdcb1e26f3",
         "1b0ed68e-f64a-44e0-89e7-6a3ff2330a3e",
-        "7214c11e-4a1c-4744-a88b-1e58b9191d24"
+        "7214c11e-4a1c-4744-a88b-1e58b9191d24",
+        "59d80f66-1623-4954-b444-19c37d0a4ac6",
+        "13a64854-704a-4624-ad16-41ca28b97a03",
+        "cfa2a6ce-74f5-4ea4-b6a5-ec142dd709a3",
+        "391c221b-ac93-4780-a9ba-1b1214ac261d"
       ],
       "settings": {
         "autoplay": true,
@@ -222,7 +258,8 @@
         "show_all": "EXPLORE MORE",
         "kol_join_title": "Interested to be our KOL?\nLet join our Affiliate Program now!",
         "kol_btn": "JOIN NOW",
-        "kol_url": "https:\/\/www.jackery.com\/##"
+        "kol_url": "https:\/\/www.jackery.com\/##",
+        "pdf_section_title": "MEDIA KITS"
       }
     },
     "contact": {
