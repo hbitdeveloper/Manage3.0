@@ -97,6 +97,7 @@
     .pdf-card-title {
         margin: 22px 0;
         font-weight: 500;
+        height: 108px;
     }
     .pdf-grid-item .a-button-fill {
         padding-top: 8px;
@@ -138,6 +139,7 @@
         }
         .pdf-card-title {
             margin: 2.9vw 0 4vw 0;
+            height: 8vw;
         }
         .pdf-grid-item .a-button-fill {
             padding: 1.6vw 0;
@@ -188,7 +190,7 @@
                         {% else %}
                             <i class="img-icon iconfont jackery-icon-pdf"></i>
                         {% endif %}
-                        <div class="text-sm text-center pdf-card-title">{{block.settings.title | escape}}</div>
+                        <div class="text-sm text-center pdf-card-title text-overflow-3">{{block.settings.title | escape}}</div>
                         <a class="a-button-fill text-sm" href="{{block.settings.link}}">
                             <i class="iconfont jackery-icon-download text-sm"></i>
                             {{block.settings.link_btn_txt}}
