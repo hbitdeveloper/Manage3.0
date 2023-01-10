@@ -13,9 +13,11 @@
     }
     .kol-join-block {
         background: #FFFFFF;
-        box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.2);
         margin-bottom: 120px;
+    }
+    .kol-join-block .section-container {
         padding: 34px 40px;
+        box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.2);
     }
     .kol-join-title {
         margin-right: 114px;
@@ -29,10 +31,117 @@
     @media screen and (max-width: 768px) {
         .kol-join-block {
             margin-bottom: 0;
-            padding:  5.33vw 9vw;
+            background: #fafafa;
+        }
+        .kol-join-block .section-container {
+            padding: 0;
+            box-shadow: none;
+            flex-direction: column;
+            background: #fff;
+            padding: 5.3vw 0.9vw;
+        }
+        .kol-join-title {
+            margin-right: 0;
+            text-align: center;
+            margin-bottom: 4.8vw;
         }
         .section-page-news .events-list {
             padding-bottom: 10vw;
+        }
+        .kol-join-block .a-button-fill {
+            padding: 1.6vw 0;
+            border-radius: 40px;
+            width: 40vw;
+        }
+    }
+
+    .pdf-grid {
+        background: #fff;
+        padding: 120px 0;
+    }
+    .pdf-grid-container {
+        --hide: 99;
+    }
+    .pdf-grid-btn:checked+.pdf-grid-container {
+        --hide: 0;
+    }
+    .pdf-grid-container {
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2, minmax(0, 1fr)) repeat(var(--hide), minmax(0, 0));
+        overflow: hidden;
+    }
+    .pdf-grid-item {
+        background: #fff;
+        margin: 10px;
+        padding: 60px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 6px 20px 0px rgba(85,85,85,0);
+        transition: all .3s ease;
+    }
+    .pdf-grid-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 6px 20px 0px rgba(85,85,85,0.3);
+    }
+
+    .pdf-grid-item .jackery-icon-pdf {
+        width: 96px;
+        height: 96px;
+        font-size: 96px;
+        color: var(--primary-color);
+        display: inline-block;
+    }
+    .pdf-card-title {
+        margin: 22px 0;
+        font-weight: 500;
+    }
+    .pdf-grid-item .a-button-fill {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    @media screen and (max-width: 768px) {
+        .pdf-grid {
+            padding: 14vw 0;
+        }
+        .pdf-grid-container {
+            --hide: 99;
+        }
+        .pdf-grid-btn:checked+.pdf-grid-container {
+            --hide: 0;
+        }
+        .pdf-grid-container {
+            grid-template-columns: repeat(2,1fr);
+            max-width: 85vw;
+            grid-template-rows: repeat(2, minmax(0, 1fr)) repeat(var(--hide), minmax(0, 0));
+            overflow: hidden;
+        }
+        .pdf-grid-item {
+            margin: 0 2vw 4vw 0;
+            padding: 6.6vw 2.6vw 3.7vw 2.6vw;
+        }
+        .pdf-grid-item:nth-child(2n) {
+            margin-left: 2vw;
+            margin-right: 0;
+        }
+        .pdf-grid-item:hover {
+            transform: scale(1);
+            box-shadow: none;
+        }
+        .pdf-grid-item .jackery-icon-pdf {
+            width: 12vw;
+            height: 12vw;
+            font-size: 12vw;
+            color: #333;
+        }
+        .pdf-card-title {
+            margin: 2.9vw 0 4vw 0;
+        }
+        .pdf-grid-item .a-button-fill {
+            padding: 1.6vw 0;
+            width: 100%;
         }
     }
 </style>
@@ -53,6 +162,72 @@
                 <span class="iconfont jackery-icon-arrow-right text-lg"></span>
             </a>
         </div>
+    </div>
+
+    <div class="pdf-grid">
+        <div class="h2 section-container text-center pdf-grid-title page-section-title">
+            MEDIA KITS
+        </div>
+
+        <input class="pdf-grid-btn none events-list-btn" type="checkbox" id="pdf-grid-btn">
+        <div class="pdf-grid-container section-container">
+            <div class="pdf-grid-item">
+                <i class="img-icon iconfont jackery-icon-pdf"></i>
+                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
+                <a class="a-button-fill text-sm" href="">
+                    <i class="iconfont jackery-icon-download text-sm"></i>
+                    DOWNLOAD
+                </a>
+            </div>
+            <div class="pdf-grid-item">
+                <i class="img-icon iconfont jackery-icon-pdf"></i>
+                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
+                <a class="a-button-fill text-sm" href="">
+                    <i class="iconfont jackery-icon-download text-sm"></i>
+                    DOWNLOAD
+                </a>
+            </div>
+            <div class="pdf-grid-item">
+                <i class="img-icon iconfont jackery-icon-pdf"></i>
+                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
+                <a class="a-button-fill text-sm" href="">
+                    <i class="iconfont jackery-icon-download text-sm"></i>
+                    DOWNLOAD
+                </a>
+            </div>
+            <div class="pdf-grid-item">
+                <i class="img-icon iconfont jackery-icon-pdf"></i>
+                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
+                <a class="a-button-fill text-sm" href="">
+                    <i class="iconfont jackery-icon-download text-sm"></i>
+                    DOWNLOAD
+                </a>
+            </div>
+            <div class="pdf-grid-item">
+                <i class="img-icon iconfont jackery-icon-pdf"></i>
+                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
+                <a class="a-button-fill text-sm" href="">
+                    <i class="iconfont jackery-icon-download text-sm"></i>
+                    DOWNLOAD
+                </a>
+            </div>
+            <div class="pdf-grid-item">
+                <i class="img-icon iconfont jackery-icon-pdf"></i>
+                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
+                <a class="a-button-fill text-sm" href="">
+                    <i class="iconfont jackery-icon-download text-sm"></i>
+                    DOWNLOAD
+                </a>
+            </div>
+        </div>
+
+		<label for="pdf-grid-btn" class="flex justify-center pdf-grid-more relative events-list-more">
+			<div class="a-button-solid">
+                <span class="no_all">VIEW MORE</span>
+                <span class="all">NO MORE</span>
+                <span class="iconfont jackery-icon-arrow-right"></span>
+            </div>
+		</label>
     </div>
 </div>
 
