@@ -191,7 +191,7 @@
                         <div class="text-sm text-center pdf-card-title">{{block.title | escape}}</div>
                         <a class="a-button-fill text-sm" href="{{block.link}}">
                             <i class="iconfont jackery-icon-download text-sm"></i>
-                            {{block.link_text | escape}}
+                            {{block.link_btn_txt}}
                         </a>
                     </div>
                 {% endcase %}
@@ -274,7 +274,7 @@
             "settings": [
                 {"type": "textarea", "id": "title", "label": "PDF title"},
                 {"type": "url", "id": "link", "label": "PDF link"},
-                {"type": "text", "id": "link_text", "label": "PDF link text", "default": "DOWNLOAD"},
+                {"type": "text", "id": "link_btn_txt", "label": "PDF link text", "default": "DOWNLOAD"},
                 {"type": "image_picker", "id": "image", "label": "Image"}
             ]
         }
