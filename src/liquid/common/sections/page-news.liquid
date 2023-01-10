@@ -172,59 +172,30 @@
 
     <div class="pdf-grid">
         <div class="h2 section-container text-center pdf-grid-title page-section-title">
-            MEDIA KITS
+            {{section.settings.pdf_section_title | escape}}
         </div>
 
         <input class="pdf-grid-btn none events-list-btn" type="checkbox" id="pdf-grid-btn">
         <div class="pdf-grid-container section-container">
-            <div class="pdf-grid-item">
-                <i class="img-icon iconfont jackery-icon-pdf"></i>
-                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
-                <a class="a-button-fill text-sm" href="">
-                    <i class="iconfont jackery-icon-download text-sm"></i>
-                    DOWNLOAD
-                </a>
-            </div>
-            <div class="pdf-grid-item">
-                <i class="img-icon iconfont jackery-icon-pdf"></i>
-                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
-                <a class="a-button-fill text-sm" href="">
-                    <i class="iconfont jackery-icon-download text-sm"></i>
-                    DOWNLOAD
-                </a>
-            </div>
-            <div class="pdf-grid-item">
-                <i class="img-icon iconfont jackery-icon-pdf"></i>
-                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
-                <a class="a-button-fill text-sm" href="">
-                    <i class="iconfont jackery-icon-download text-sm"></i>
-                    DOWNLOAD
-                </a>
-            </div>
-            <div class="pdf-grid-item">
-                <i class="img-icon iconfont jackery-icon-pdf"></i>
-                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
-                <a class="a-button-fill text-sm" href="">
-                    <i class="iconfont jackery-icon-download text-sm"></i>
-                    DOWNLOAD
-                </a>
-            </div>
-            <div class="pdf-grid-item">
-                <i class="img-icon iconfont jackery-icon-pdf"></i>
-                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
-                <a class="a-button-fill text-sm" href="">
-                    <i class="iconfont jackery-icon-download text-sm"></i>
-                    DOWNLOAD
-                </a>
-            </div>
-            <div class="pdf-grid-item">
-                <i class="img-icon iconfont jackery-icon-pdf"></i>
-                <div class="text-sm text-center pdf-card-title">Jackery Explorer 160 Power Station User Manual</div>
-                <a class="a-button-fill text-sm" href="">
-                    <i class="iconfont jackery-icon-download text-sm"></i>
-                    DOWNLOAD
-                </a>
-            </div>
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'pdf_item' %}
+                    <div class="pdf-grid-item">
+                        {% if block.image != blank %}
+                            <img class="object-cover img-icon"
+                                    src="{{block.settings.image | img_url: '100x'}}"
+                                    alt="{{block.settings.title | escape}}">
+                        {% else %}
+                            <i class="img-icon iconfont jackery-icon-pdf"></i>
+                        {% endif %}
+                        <div class="text-sm text-center pdf-card-title">{{block.title | escape}}</div>
+                        <a class="a-button-fill text-sm" href="{{block.link}}">
+                            <i class="iconfont jackery-icon-download text-sm"></i>
+                            {{block.link_text | escape}}
+                        </a>
+                    </div>
+                {% endcase %}
+            {% endfor %}
         </div>
 
 		<label for="pdf-grid-btn" class="flex justify-center pdf-grid-more relative events-list-more">
@@ -250,7 +221,8 @@
         {"type": "text", "id": "show_all", "label": "Show all text", "default": "EXPLORE MORE"},
         {"type": "textarea", "id": "kol_join_title", "label": "KOL JOIN TITLE", "default": "Interested to be our KOL?\nLet join our Affiliate Program now!"},
         {"type": "text", "id": "kol_btn", "label": "KOL Join buton text", "default": "JOIN NOW"},
-        {"type": "url", "id": "kol_url", "label": "KOL Join link"}
+        {"type": "url", "id": "kol_url", "label": "KOL Join link"},
+        {"type": "textarea", "id": "pdf_section_title", "label": "PDF Section Title", "default": "MEDIA KITS"}
 
     ],
     "blocks": [
@@ -294,6 +266,15 @@
                 {"type": "text", "id": "date", "label": "Exihibition Date"},
                 {"type": "url", "id": "link", "label": "Exihibition link"},
                 {"type": "text", "id": "link_text", "label": "Exihibition link text", "default": "VIEW MORE"},
+                {"type": "image_picker", "id": "image", "label": "Image"}
+            ]
+        },
+        {
+            "type": "pdf_item", "name": "PDF block",
+            "settings": [
+                {"type": "textarea", "id": "title", "label": "PDF title"},
+                {"type": "url", "id": "link", "label": "PDF link"},
+                {"type": "text", "id": "link_text", "label": "PDF link text", "default": "DOWNLOAD"},
                 {"type": "image_picker", "id": "image", "label": "Image"}
             ]
         }
