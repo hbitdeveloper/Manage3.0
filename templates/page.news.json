@@ -224,9 +224,16 @@
         "kol_btn": "JOIN NOW",
         "kol_url": "https:\/\/www.jackery.com\/##"
       }
+    },
+    "contact": {
+      "type": "card-contact",
+      "settings": {
+
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "contact"
   ]
 }
