@@ -13,6 +13,13 @@
 .contact ul li:last-child {
   margin-right: 0;
 }
+.contact ul li .img-icon {
+    width: 96px;
+    height: 96px;
+    font-size: 96px;
+    color: var(--primary-color);
+    display: inline-block;
+}
 .contact ul li img {
   width: 100px;
   height: 100px;
@@ -27,14 +34,14 @@
     <b class="h5">{{ section.settings.email_text }}</b>
     <a class="p-text" href="{{ section.settings.email }}">{{ section.settings.email }}</a>
     <p>{{ section.settings.email_country }}</p>
-    <p>&lt; {{ section.settings.email_time }} &gt;</p>
+    <p>{{ section.settings.email_time }}</p>
   </li>
   <li>
     <i class="img-icon iconfont jackery-icon-message"></i>
     <b class="h5">{{ section.settings.tel_text }}</b>
     <p class="p-text">{{ section.settings.tel }}</p>
     <p>{{ section.settings.tel_country }}</p>
-    <p>&lt; {{ section.settings.tel_time }} &gt;</p>
+    <p>{{ section.settings.tel_time }}</p>
   </li>
 
   {% for block in section.blocks %}
@@ -44,9 +51,9 @@
       <p class="p-text">
         {% case block.settings.bolck_type %}
           {% when 'phone' %}
-            <span>{{ block.settings.info | escape }}</span>
+            <span class="p-text">{{ block.settings.info | escape }}</span>
           {% when 'url' %}
-            <a href="{{block.settings.link}}">{{ block.settings.info | escape }}</a>
+            <a class="p-text" href="{{block.settings.link}}">{{ block.settings.info | escape }}</a>
         {% endcase %}
       </p>
     </li>
