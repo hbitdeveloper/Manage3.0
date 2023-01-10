@@ -25,21 +25,42 @@
   height: 100px;
 }
 .contact ul li b {margin-bottom: 25px; font-weight: 500;}
-.contact .p-text {color: var(--text-black);}
+.contact .text-base {color: var(--text-black);}
+@media screen and (max-width: 768px) {
+  .contact ul {
+    flex-direction: column;
+  }
+  .contact ul li {
+    height: auto;
+    padding: 10vw 5vw;
+    margin-right: 0;
+    margin-bottom: 3.2vw;
+  }
+  .contact ul li .img-icon {
+    width: 13vw;
+    height: 13vw;
+    font-size: 13vw;
+  }
+  .contact ul li img {
+    width: 13vw;
+    height: 13vw;
+  }
+  .contact ul li b {margin-bottom: 3.2vw;}
+}
 </style>
 <h2>{{ section.settings.title }}</h2>
 <ul class="section-container flex">
   <li>
     <i class="img-icon iconfont jackery-icon-email"></i>
     <b class="h5">{{ section.settings.email_text }}</b>
-    <a class="p-text" href="{{ section.settings.email }}">{{ section.settings.email }}</a>
+    <a class="text-base" href="{{ section.settings.email }}">{{ section.settings.email }}</a>
     <p>{{ section.settings.email_country }}</p>
     <p>{{ section.settings.email_time }}</p>
   </li>
   <li>
     <i class="img-icon iconfont jackery-icon-message"></i>
     <b class="h5">{{ section.settings.tel_text }}</b>
-    <p class="p-text">{{ section.settings.tel }}</p>
+    <p class="text-base">{{ section.settings.tel }}</p>
     <p>{{ section.settings.tel_country }}</p>
     <p>{{ section.settings.tel_time }}</p>
   </li>
@@ -48,12 +69,12 @@
     <li>
       <img class="object-cover" src="{{block.settings.image | img_url: '100x'}}" alt="{{block.settings.title}}">
       <b class="h5">{{ block.settings.title | escape }}</b>
-      <p class="p-text">
+      <p class="text-base">
         {% case block.settings.bolck_type %}
           {% when 'phone' %}
-            <span class="p-text">{{ block.settings.info | escape }}</span>
+            <span class="text-base">{{ block.settings.info | escape }}</span>
           {% when 'url' %}
-            <a class="p-text" href="{{block.settings.link}}">{{ block.settings.info | escape }}</a>
+            <a class="text-base" href="{{block.settings.link}}">{{ block.settings.info | escape }}</a>
         {% endcase %}
       </p>
     </li>
