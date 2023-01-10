@@ -50,7 +50,7 @@
 </style>
 <h2>{{ section.settings.title }}</h2>
 <ul class="section-container flex">
-  <li>
+  {% comment %} <li>
     <i class="img-icon iconfont jackery-icon-email"></i>
     <b class="h5">{{ section.settings.email_text }}</b>
     <a class="text-base" href="{{ section.settings.email }}">{{ section.settings.email }}</a>
@@ -63,7 +63,7 @@
     <p class="text-base">{{ section.settings.tel }}</p>
     <p>{{ section.settings.tel_country }}</p>
     <p>{{ section.settings.tel_time }}</p>
-  </li>
+  </li> {% endcomment %}
 
   {% for block in section.blocks %}
     <li>
