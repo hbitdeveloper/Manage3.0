@@ -265,6 +265,26 @@
     "contact": {
       "type": "card-contact",
       "blocks": {
+        "11cd4241-2802-4ea5-883a-527d1e6e51f1": {
+          "type": "extra_block",
+          "settings": {
+            "title": "Press Inquiries",
+            "bolck_type": "url",
+            "info": "Press Inquiries:pr@jackery.com",
+            "image": "shopify:\/\/shop_images\/icon_1.png",
+            "link": "mailto:pr@jackery.com"
+          }
+        },
+        "06b42579-83ec-4d36-a84d-6ea729301351": {
+          "type": "extra_block",
+          "settings": {
+            "title": "Influencer Collabora",
+            "bolck_type": "url",
+            "info": "kol@jackery.com",
+            "image": "shopify:\/\/shop_images\/icon_1.png",
+            "link": "mailto:kol@jackery.com"
+          }
+        },
         "151f93e8-a00c-42c5-9966-6f0ef9daeb3a": {
           "type": "extra_block",
           "settings": {
@@ -277,6 +297,8 @@
         }
       },
       "block_order": [
+        "11cd4241-2802-4ea5-883a-527d1e6e51f1",
+        "06b42579-83ec-4d36-a84d-6ea729301351",
         "151f93e8-a00c-42c5-9966-6f0ef9daeb3a"
       ],
       "settings": {

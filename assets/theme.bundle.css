@@ -703,6 +703,7 @@ body .text-3xl {
 }
 .slideshow-pagination-item.active .pagination-separator {
   width: 120px;
+  height: 6px;
 }
 .pagination-separator {
   position: relative;
@@ -906,16 +907,6 @@ body .page-section-swiper .a-button-fill {
     max-width: 90%;
     width: 85vw;
   }
-  .announcement-bar {
-    background: #eeeae2;
-    height: 10vw;
-  }
-  .content-for-layout {
-    padding-top: 20.6vw;
-  }
-  .layout-hide-announcement {
-    padding-top: 10.6vw;
-  }
   .announcement-bar .iconfont {
     color: var(--text-sub-color);
     font-size: 16px;
@@ -926,9 +917,6 @@ body .page-section-swiper .a-button-fill {
   }
   .announcement-bar .jackery-icon-fuliliwu- {
     color: var(--primary-color);
-  }
-  .site-header .header-main {
-    height: 10.6vw;
   }
   .site-header .header-menu .header-navs {
     display: none;
@@ -944,11 +932,6 @@ body .page-section-swiper .a-button-fill {
   }
   .site-header .index-container {
     justify-content: center;
-  }
-  .header-logo {
-    height: auto;
-    font-size: 6.5vw !important;
-    color: var(--primary-color);
   }
   .header-m-menu {
     top: 50%;
@@ -981,6 +964,26 @@ body .page-section-swiper .a-button-fill {
     display: none!important;
   }
   /* section - header */
+}
+@media screen and (max-width: 768px) {
+  .content-for-layout {
+    padding-top: 20.6vw;
+  }
+  .announcement-bar {
+    background: #eeeae2;
+    height: 10vw;
+  }
+  .layout-hide-announcement {
+    padding-top: 10.6vw;
+  }
+  .site-header .header-main {
+    height: 10.6vw;
+  }
+  .header-logo {
+    height: auto;
+    font-size: 6.5vw !important;
+    color: var(--primary-color);
+  }
 }
 @media screen and (max-width: 768px) {
   /* font-size & line-height */
@@ -1024,6 +1027,7 @@ body .page-section-swiper .a-button-fill {
   }
   .slideshow-pagination-item.active .pagination-separator {
     width: 12vw;
+    height: 3px;
   }
   /* slideshow-pagination */
 }

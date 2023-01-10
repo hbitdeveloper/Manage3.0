@@ -1,7 +1,6 @@
 .page-banner {
   width: 100%;
   border-bottom: solid 1px #A3A3A3;
-  overflow-x: hidden;
 }
 .page-banner .slide-banner {
   height: 37.5vw;
@@ -37,7 +36,7 @@
 }
 .page-banner .slideshow-pagination {
   align-items: center;
-  bottom: 30px;
+  bottom: -3.4vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -88,7 +87,7 @@
     margin-bottom: 3vw;
   }
   .page-banner .slideshow-pagination {
-    bottom: 10px;
+    bottom: -8.6vw;
   }
 }
 .image-text-swiper {
@@ -226,7 +225,7 @@
 }
 .card-swiper {
   background: #fff;
-  padding: 105px 0 170px 0;
+  padding: 191px 0 170px 0;
 }
 .card-swiper .card-swiper-container {
   overflow-x: hidden;
@@ -276,7 +275,7 @@
 }
 @media screen and (max-width: 768px) {
   .card-swiper {
-    padding: 15vw 0 22.4vw 0;
+    padding: 22vw 0 22.4vw 0;
   }
   .card-swiper .card-swiper-container {
     height: 121vw;
@@ -338,6 +337,9 @@
 }
 .events-item-info {
   padding: 20px;
+}
+.events-item-info .text-base {
+  height: 58px;
 }
 .events-item-action {
   margin-top: 12px;
@@ -405,6 +407,9 @@
   }
   .events-item-info {
     padding: 5.3vw;
+  }
+  .events-item-info .text-base {
+    height: 12.8vw;
   }
   .events-item-action {
     margin-top: 4.8vw;
