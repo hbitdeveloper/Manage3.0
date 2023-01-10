@@ -37,7 +37,7 @@
 }
 .page-banner .slideshow-pagination {
   align-items: center;
-  bottom: 30px;
+  bottom: -3.4vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -88,12 +88,12 @@
     margin-bottom: 3vw;
   }
   .page-banner .slideshow-pagination {
-    bottom: 10px;
+    bottom: -8.6vw;
   }
 }
 .image-text-swiper {
   background: #F5F5F5;
-  padding: 120px 0 150px 0;
+  padding: 191px 0 150px 0;
 }
 .image-text-container {
   width: 100%;
@@ -173,7 +173,7 @@
 }
 @media screen and (max-width: 768px) {
   .image-text-swiper {
-    padding: 14vw 0 8.6vw 0;
+    padding: 23vw 0 8.6vw 0;
   }
   .image-text-container {
     height: auto;

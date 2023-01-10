@@ -703,6 +703,7 @@ body .text-3xl {
 }
 .slideshow-pagination-item.active .pagination-separator {
   width: 120px;
+  height: 6px;
 }
 .pagination-separator {
   position: relative;
@@ -1026,6 +1027,7 @@ body .page-section-swiper .a-button-fill {
   }
   .slideshow-pagination-item.active .pagination-separator {
     width: 12vw;
+    height: 3px;
   }
   /* slideshow-pagination */
 }
