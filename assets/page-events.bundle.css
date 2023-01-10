@@ -276,6 +276,7 @@
 @media screen and (max-width: 768px) {
   .card-swiper {
     padding: 22vw 0 22.4vw 0;
+    background: #f6f6f6;
   }
   .card-swiper .card-swiper-container {
     height: 121vw;
