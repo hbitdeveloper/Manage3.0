@@ -225,7 +225,7 @@
 }
 .card-swiper {
   background: #fff;
-  padding: 105px 0 170px 0;
+  padding: 191px 0 170px 0;
 }
 .card-swiper .card-swiper-container {
   overflow-x: hidden;
@@ -275,7 +275,7 @@
 }
 @media screen and (max-width: 768px) {
   .card-swiper {
-    padding: 15vw 0 22.4vw 0;
+    padding: 22vw 0 22.4vw 0;
   }
   .card-swiper .card-swiper-container {
     height: 121vw;
