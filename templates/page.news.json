@@ -244,14 +244,14 @@
       ],
       "settings": {
         "title": "Contact Us",
-        "email_text": "Email",
-        "email": "hello@jackery.com",
-        "email_country": "( US\/CA )",
-        "email_time": "9AM to 5PM PST",
-        "tel_text": "Tel & SMS",
-        "tel": "1-888-502-2236",
-        "tel_country": "( US\/CA )",
-        "tel_time": "9AM to 5PM PST (Weekdays)"
+        "email_text": "Press Inquiries",
+        "email": "Press Inquiries:pr@jackery.com",
+        "email_country": "",
+        "email_time": "",
+        "tel_text": "Influencer Collabora",
+        "tel": "kol@jackery.com",
+        "tel_country": "",
+        "tel_time": ""
       }
     }
   },
