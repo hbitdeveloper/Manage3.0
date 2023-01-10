@@ -13,6 +13,7 @@
 .contact ul li:last-child {
   margin-right: 0;
 }
+<<<<<<< HEAD
 .contact ul li .img-icon {
     width: 96px;
     height: 96px;
@@ -20,6 +21,8 @@
     color: var(--primary-color);
     display: inline-block;
 }
+=======
+>>>>>>> 58f5eca051bf4c5d3290d6bcb7ded2d08b7f2e13
 .contact ul li img {
   width: 100px;
   height: 100px;
@@ -51,9 +54,15 @@
       <p class="p-text">
         {% case block.settings.bolck_type %}
           {% when 'phone' %}
+<<<<<<< HEAD
             <span class="p-text">{{ block.settings.info | escape }}</span>
           {% when 'url' %}
             <a class="p-text" href="{{block.settings.link}}">{{ block.settings.info | escape }}</a>
+=======
+            <span>{{ block.settings.info | escape }}</span>
+          {% when 'url' %}
+            <a href="{{block.settings.link}}">{{ block.settings.info | escape }}</a>
+>>>>>>> 58f5eca051bf4c5d3290d6bcb7ded2d08b7f2e13
         {% endcase %}
       </p>
     </li>

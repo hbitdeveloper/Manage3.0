@@ -227,8 +227,31 @@
     },
     "contact": {
       "type": "card-contact",
+      "blocks": {
+        "151f93e8-a00c-42c5-9966-6f0ef9daeb3a": {
+          "type": "extra_block",
+          "settings": {
+            "title": "Marketing",
+            "bolck_type": "url",
+            "info": "marketing@jackery.co",
+            "image": "shopify:\/\/shop_images\/icon_606d691d-21ee-4a89-8116-f14a6bb299fa.png",
+            "link": "mailto:marketing@jackery.co"
+          }
+        }
+      },
+      "block_order": [
+        "151f93e8-a00c-42c5-9966-6f0ef9daeb3a"
+      ],
       "settings": {
-
+        "title": "Contact Us",
+        "email_text": "Press Inquiries",
+        "email": "Press Inquiries:pr@jackery.com",
+        "email_country": "",
+        "email_time": "",
+        "tel_text": "Influencer Collabora",
+        "tel": "kol@jackery.com",
+        "tel_country": "",
+        "tel_time": ""
       }
     }
   },
