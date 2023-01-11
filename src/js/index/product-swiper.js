@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-05 18:29:39
  * @LastEditors: Leo
- * @LastEditTime: 2023-01-11 10:44:31
+ * @LastEditTime: 2023-01-11 10:42:49
  * @FilePath: \3.0-manger\src\js\index\product-swiper.js
  */
 class ProductSlideshow {
@@ -22,16 +22,16 @@ class ProductSlideshow {
     init() {
         var self = this;
         this.slideshow = new Swiper(this.DOM.el, {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            centeredSlides: true,
             loop: true,
             loopAdditionalSlides: 2,
+            centeredSlides: true,
             autoplay: {
                 delay: this.config.slideshow.delay,
                 disableOnInteraction: false,
             },
-            effect: "fade",
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            effect: $(window).width() > 750 ? "slide" : "fade",
             preloadImages: true,
             updateOnImagesReady: true,
             lazy: true,
@@ -70,7 +70,7 @@ class ProductSlideshow {
                 resize: function () {
                     setTimeout(() => {
                         self.slideshow.update()
-                    }, 666);
+                    }, 800);
                 }
             }
         });
