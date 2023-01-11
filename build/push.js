@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-09-29 11:28:42
  * @LastEditors: Leo
- * @LastEditTime: 2022-12-09 17:03:57
+ * @LastEditTime: 2023-01-11 10:30:17
  * @FilePath: \3.0-manger\build\push.js
  * @description: 修改模板上传至模板git
  */
@@ -21,4 +21,4 @@ console.log(`${name}店铺模板同步至shopify模板git中...`)
 // `git subtree push --prefix=theme/${name}/${branch} ${name.toUpperCase()} ${branch}`
 exec(`git subtree push --prefix=theme/${name}/${branch} ${name.toUpperCase()} ${branch}`)
 
-// git subtree split --prefix=theme/ca/master --rejoin // push很慢的时候用这个
+// git subtree split --prefix=theme/dev/main --rejoin // push很慢的时候用这个
