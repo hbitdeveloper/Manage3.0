@@ -49,6 +49,7 @@
             this.init();
         }
         init() {
+            let that = this
             this.swiper = new Swiper(this.DOM.swiperContainer, {
                 slidesPerView: 1,
                 spaceBetween: 0,
@@ -80,12 +81,10 @@
                 },
                 on: {
                     resize: function () {
-                        this.update()
-                    }
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 3
+                        that.swiper.params.spaceBetween = 0
+                        setTimeout(() => {
+                            that.swiper.update()
+                        }, 100);
                     }
                 }
             })
