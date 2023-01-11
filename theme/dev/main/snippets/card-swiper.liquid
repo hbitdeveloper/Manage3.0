@@ -1,6 +1,6 @@
 <div class="card-swiper page-section-swiper relative">
         <div class="h2 section-container text-center card-swiper-title page-section-title">{{title | escape}}</div>
-        <div class="card-swiper-container relative">
+        <div class="card-swiper-container relative swiper">
             <div class="swiper-wrapper">
                 {% for block in blocks %}
                     {% case block.type %}
@@ -81,10 +81,9 @@
                 },
                 on: {
                     resize: function () {
-                        that.swiper.params.spaceBetween = 0
                         setTimeout(() => {
                             that.swiper.update()
-                        }, 100);
+                        }, 600);
                     }
                 }
             })
