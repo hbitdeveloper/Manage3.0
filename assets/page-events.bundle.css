@@ -228,7 +228,6 @@
   padding: 191px 0 170px 0;
 }
 .card-swiper .card-swiper-container {
-  overflow-x: hidden;
   width: 100%;
   height: 700px;
   max-width: 1800px;
@@ -280,11 +279,10 @@
   }
   .card-swiper .card-swiper-container {
     height: 121vw;
-    max-width: 85vw;
   }
   .card-swiper .card-swiper-container .swiper-slide {
     transform: scale(1) !important;
-    width: 85.5vw;
+    width: 85.5vw !important;
     border-radius: 12vw 0px 0px 0px;
   }
   .card-swiper .card-swiper-container .swiper-slide-active {
