@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-05 18:29:39
  * @LastEditors: Leo
- * @LastEditTime: 2023-01-09 14:17:06
+ * @LastEditTime: 2023-01-11 10:35:59
  * @FilePath: \3.0-manger\src\js\index\product-swiper.js
  */
 class ProductSlideshow {
@@ -63,6 +63,11 @@ class ProductSlideshow {
                 init: function () {
                     self.animate('next');
                 },
+                resize: function () {
+                    setTimeout(() => {
+                        this.update()
+                    }, 666);
+                }
             }
         });
         this.initEvents();
